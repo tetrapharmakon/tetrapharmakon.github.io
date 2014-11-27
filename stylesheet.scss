@@ -46,8 +46,11 @@ html * {
 
 $phi: 1.618;
 
-$dimS:  $dimN/$phi;
 $dimN:  1rem;
+
+$dimS:  $dimN/$phi;
+$dimXS: $dimN/$phi/$phi;
+
 $dimL:  $dimN*$phi;
 $dimXL: $dimN*$phi*$phi;
 
