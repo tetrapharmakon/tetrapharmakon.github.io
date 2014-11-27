@@ -1,28 +1,26 @@
-# Permalinks
-permalink:           pretty
+# Custom
+title:               paolobrasolin.github.io
+author:
+  name:              Paolo Brasolin
+  url:               https://plus.google.com/+PaoloBrasolin
+  email:             paolo.brasolin@gmail.com
+
+# Filtering Content
+# show_drafts: null
+# limit_posts: 0
+# future:      true
+# unpublished: false
+
+# Conversion
+# markdown:    kramdown
+# highlighter: pygments
+# excerpt_separator: "\n\n"
+
+# Serving
+baseurl: http://paolobrasolin.github.io/
+
+# Backwards-compatibility
 relative_permalinks: true
 
-# Setup
-title:            Mathetic
-tagline:          Compelling tagline
-url:              http://paolobrasolin.github.io/
-paginate:         1
-baseurl:          http://paolobrasolin.github.io/
-author:
-  name:           Paolo Brasolin
-  url:            https://plus.google.com/+PaoloBrasolin
-  email:          paolo.brasolin@gmail.com
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
+# Outputting
+permalink:     pretty

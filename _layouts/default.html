@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
     <meta charset="UTF-8">
@@ -36,22 +36,26 @@
 
   <body>
 
-    <header class="header">
-      <nav>
+    <header>
+      <nav class="menu">
         <a href="{{ site.baseurl }}" title="index">index</a>
         <a href="{{ site.baseurl }}atom.xml" title="feed">feed</a>
         <a href="{{ site.baseurl }}about.html" title="about">about</a>
       </nav>
     </header>
 
+    <hr>
+
     <main>
       {{ content }}
     </main>
 
-    <footer class="footer">
-    <!--  <small>
+    <hr>
+
+    <footer>
+      <small>
         &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-      </small>-->
+      </small>
     </footer>
 
   </body>
