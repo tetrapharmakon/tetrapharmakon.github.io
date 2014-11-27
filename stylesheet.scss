@@ -49,7 +49,7 @@ $phi: 1.618;
 $dimS:     1/$phi rem;
 $dimN:          1 rem;
 $dimL:       $phi rem;
-$dimXL: $phi*$phi rem;
+$dimXL: ($phi*$phi)rem;
 
 body {
 	line-height: $phi rem;
