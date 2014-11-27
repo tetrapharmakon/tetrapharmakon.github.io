@@ -46,10 +46,10 @@ html * {
 
 $phi: 1.618;
 
-$dimS:     1/$phi rem;
-$dimN:          1 rem;
-$dimL:       $phi rem;
-$dimXL: ($phi*$phi)rem;
+$dimS:  $dimN/$phi;
+$dimN:  1rem;
+$dimL:  $dimN*$phi;
+$dimXL: $dimN*$phi*$phi;
 
 body {
 	line-height: $phi rem;
