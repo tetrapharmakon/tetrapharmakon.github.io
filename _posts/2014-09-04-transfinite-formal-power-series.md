@@ -15,6 +15,7 @@ The isomorphism $$p\mapsto X^p$$ induce $$(X^{(E)},\cdot)\cong(E,+)$$ asking for
 
 The collection of formal polynomials in a single variable with coefficients in $$C$$ is $$C^E$$.
 The fact is made clearer representing such functions with formal sums over $$E$$:
+
 $$
 a = \sum_{i} a_i X^i
 $$
@@ -26,6 +27,7 @@ The same could be done for pointwise (Hadamard) product, if we wanted.
 ## Cauchy product
 
 The only problem left is making sense of the structure $$(C^E,\cdot)$$ defined by some interpretation of the Cauchy product
+
 $$
 (ab)_i=\sum_{j+k=i}a_jb_k
 $$
@@ -46,12 +48,14 @@ Let $$(\mathbb{O};+,0,\cdot,1,\leq)$$ be the totally ordered left near-semiring 
 We call transfinite the formal series with ordinal exponents and taking coefficients in an additive semigroup.
 
 Ordinal sum has left-subtraction, i.e. for any $$i\leq j$$ there is a unique $$k$$ such that $$i+k=j$$; we will denote it as $$(-i+j)$$. Furthermore we assume the non-commutative summations are performed respecting the order on $$\mathbb{O}$$. So we have a uniquely defined Cauchy product
+
 $$
 (ab)_i=\sum_{j\leq i}a_jb_{(-j+i)}
 $$
 
 If we also take coefficients to be ordinal numbers we can define a good notion of derivation.
 For example,
+
 $$
 \begin{align}
 D(X^\omega)
