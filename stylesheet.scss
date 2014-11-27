@@ -53,3 +53,33 @@ body {
     border: solid 1px $colHlgt;
 }
 
+strong { font-weight: bold; }
+em     { font-style: italic; }
+
+a { text-decoration: none; }
+a:link    { color: $green; }
+a:hover   { color: $yellow; }
+a:focus   { color: $yellow; }
+a:visited { color: $red; }
+
+::selection {
+	color: $colBckg;
+	background-color: $colBody;
+}
+
+p {
+	text-align: justify;
+	text-indent: $dimL;
+}
+
+hr {
+	border: solid 1px colCmnt;
+	margin: $dimL;
+}
+
+.menu {
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: $dimXXL;
+	margin-bottom: -1*$dimN;
+}
