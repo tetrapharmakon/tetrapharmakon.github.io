@@ -51,12 +51,15 @@ $dimN:  1rem;
 $dimS:  $dimN/$phi;
 $dimXS: $dimN/$phi/$phi;
 
-$dimL:  $dimN*$phi;
-$dimXL: $dimN*$phi*$phi;
+$dimL:    $dimN*$phi;
+$dimXL:   $dimN*$phi*$phi;
+$dimXXL:  $dimN*$phi*$phi*$phi*$phi;
+$dimXXXL: $dimN*$phi*$phi*$phi*$phi*$phi*$phi*$phi*$phi;
 
 body {
 	line-height: $dimL;
 	font-size: 20px;
 	margin: $dimXL $dimL $dimL $dimL;
     padding: $dimXL auto $dimXL auto;
+    width: $dimXXXL;
 }
