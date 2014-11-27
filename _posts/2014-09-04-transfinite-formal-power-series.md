@@ -1,5 +1,4 @@
 ---
-author: Paolo Brasolin
 title: Transfinite formal power series
 category: math
 ---
@@ -8,8 +7,8 @@ Polynomials are for the weak and we want a generalization.
 
 ## Foundation
 
-Let $$ (E,+) $$ and $(C,+,\cdot)$ be two algebraic structures with binary operations.
-$E$ and $C$ are the collections of exponents and coefficients respectively.
+Let $$ (E,+) $$ and $$ (C,+,\cdot) $$ be two algebraic structures with binary operations.
+$$E$$ and $$C$$ are the collections of exponents and coefficients respectively.
 
 Let $X^{(E)}$ be the collection of formal monomials in the variable $X$ with exponents in $E$.
 The isomorphism $p\mapsto X^p$ induce $(X^{(E)},\cdot)\cong(E,+)$ asking for the commutation $X^pX^q=X^{p+q}$ we all love. We will often confuse the two isomorphic structures.
