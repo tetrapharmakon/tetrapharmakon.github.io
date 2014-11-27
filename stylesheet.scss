@@ -52,7 +52,7 @@ $dimL:  $dimN*$phi;
 $dimXL: $dimN*$phi*$phi;
 
 body {
-	line-height: $phi rem;
+	line-height: $dimL;
 	font-size: 20px;
 	margin: $dimXL $dimL $dimL $dimL;
     padding: $dimXL auto $dimXL auto;
