@@ -4,13 +4,10 @@ title: index
 ---
 
 <nav class="index">
-  <ol>
+  <dl>
     {% for post in site.posts %}
-      <li>
-      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt }}
-      </li>
+      <dt><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time> - <a href="{{ post.url }}">{{ post.title }}</a></dt>
+      <dd>{{ post.excerpt }}</dd>
     {% endfor %}
-  </ol>
+  </dl>
 </nav>
