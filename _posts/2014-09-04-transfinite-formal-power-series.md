@@ -8,7 +8,7 @@ Polynomials are for the weak and we want a generalization.
 
 ## Foundation
 
-Let $(E,+)$ and $(C,+,\cdot)$ be two algebraic structures with binary operations.
+Let $$ (E,+) $$ and $(C,+,\cdot)$ be two algebraic structures with binary operations.
 $E$ and $C$ are the collections of exponents and coefficients respectively.
 
 Let $X^{(E)}$ be the collection of formal monomials in the variable $X$ with exponents in $E$.
@@ -25,6 +25,7 @@ The same could be done for pointwise (Hadamard) product, if we wanted.
 ## Cauchy product
 
 The only problem left is making sense of the structure $(C^E,\cdot)$ defined by some interpretation of the Cauchy product
+
 $$
 (ab)_i=\sum_{j+k=i}a_jb_k
 $$
