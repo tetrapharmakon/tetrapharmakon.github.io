@@ -18,16 +18,11 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
-{
-    background-color:$rebase03;
-    color:$rebase0;
-    * { color:$rebase0; }
-}
-
-html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
-.dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
-
+$colBckg: $base3;
+$colHlgt: $base2;
+$colCmnt: $base1;
+$colBody: $base00;
+$colEmph: $base01;
 
 $phi: 1.618;
 
@@ -42,14 +37,19 @@ $dimXXL:  $dimN*$phi*$phi*$phi*$phi;
 $dimXXXL: $dimN*$phi*$phi*$phi*$phi*$phi*$phi*$phi*$phi;
 
 html {
-	font-size: 18px;
+	color: $colBody;
+	background-color: $colBckg;
+	font-size: 20px;
 	line-height: $dimL;
 	font-family: "Droid Serif", serif;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	margin: $dimXL $dimL $dimL $dimL;
-    padding: $dimXL auto $dimXL auto;
+	margin: $dimXL auto $dimXXL auto;
+    padding: $dimL;
     width: $dimXXXL;
-    border: solid 1px $red;
+    border: solid 1px $colHlgt;
 }
+
