@@ -51,7 +51,7 @@ $dimN:          1 rem;
 $dimL:       $phi rem;
 $dimXL: $phi*$phi rem;
 
-html {
+body {
 	line-height: $phi rem;
 	font-size: 20px;
 	margin: $dimXL $dimL $dimL $dimL;
