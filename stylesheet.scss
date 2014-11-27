@@ -58,9 +58,9 @@ em     { font-style: italic; }
 
 a { text-decoration: none; }
 a:link    { color: $green; }
-a:hover   { color: $yellow; }
-a:focus   { color: $yellow; }
 a:visited { color: $red; }
+a:focus   { color: $yellow; }
+a:hover   { color: $yellow; }
 
 ::selection {
 	color: $colBckg;
