@@ -1,5 +1,5 @@
 # Permalinks
-permalink:        pretty
+permalink:           pretty
 relative_permalinks: true
 
 # Setup
@@ -17,3 +17,17 @@ author:
 version:          1.0.0
 github:
   repo:           https://github.com/poole/poole
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
