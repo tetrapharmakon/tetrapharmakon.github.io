@@ -43,9 +43,17 @@ html * {
 }
 
 
+
 $phi: 1.618;
+
+$dimS:     1/$phi rem;
+$dimN:          1 rem;
+$dimL:       $phi rem;
+$dimXL: $phi*$phi rem;
 
 html {
 	line-height: $phi rem;
 	font-size: 20px;
+	margin: $dimXL $dimL $dimL $dimL;
+    padding: $dimXL auto $dimXL auto;
 }
