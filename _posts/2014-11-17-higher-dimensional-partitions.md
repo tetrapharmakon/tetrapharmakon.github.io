@@ -3,6 +3,8 @@ title: Higher-dimensional partitions
 category: math
 ---
 
+Just a quick note on the general notion of integer partition.
+
 Let the subscripts be $$n$$-dimensional multindices, i.e. elements of $$\mathbb{N}^n$$.
 
 An $$n$$-partition is an $$n$$-dimensional array of natural numbers $$p_i$$ such that only finitely many are nonzero and $$i \leq j$$ implies $$p_i \geq p_j$$. Its sum is $$\sum_i p_i$$.
