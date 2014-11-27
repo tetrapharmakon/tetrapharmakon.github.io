@@ -1,0 +1,116 @@
+---
+---
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+$colBckg: $base3;
+$colHlgt: $base2;
+$colCmnt: $base1;
+$colBody: $base00;
+$colEmph: $base01;
+
+$phi: 1.618;
+
+$dimN:  1em;
+
+$dimS:  $dimN/$phi;
+$dimXS: $dimN/$phi/$phi;
+
+$dimL:    $dimN*$phi;
+$dimXL:   $dimN*$phi*$phi;
+$dimXXL:  $dimN*$phi*$phi*$phi*$phi;
+$dimXXXL: $dimN*$phi*$phi*$phi*$phi*$phi*$phi*$phi*$phi;
+
+html {
+	color: $colBody;
+	background-color: $colBckg;
+	font-size: 20px;
+	line-height: $dimL;
+	font-family: "Droid Serif", serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: $dimXL auto $dimXXL auto;
+    padding: $dimL;
+    width: $dimXXXL;
+    border: solid 1px $colHlgt;
+}
+
+strong { font-weight: bold; }
+em     { font-style: italic; }
+
+a { text-decoration: none; }
+a:link    { color: $green; }
+a:visited { color: $red; }
+a:focus   { color: $blue; }
+a:hover   { color: $yellow; }
+
+::selection {
+	color: $colBckg;
+	background-color: $colBody;
+}
+
+p {
+	text-align: justify;
+	text-indent: $dimL;
+}
+
+hr {
+	border: solid 1px colCmnt;
+	margin: $dimL;
+}
+
+.menu {
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: $dimXXL;
+	margin-bottom: -1*$dimN;
+}
+
+
+
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Droid Sans", sans;
+	line-height: $dimN;
+	margin: $dimS auto;
+	font-size: $dimN;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: $dimXL;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: $dimL;
+}
+
+h3, h4, h5, h6 {
+	text-transform: uppercase;
+	color: $red;
+}
