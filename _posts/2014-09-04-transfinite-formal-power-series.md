@@ -1,6 +1,7 @@
 ---
 author: Paolo Brasolin
 title: Transfinite formal power series
+category: math
 ---
 
 Polynomials are for the weak and we want a generalization.

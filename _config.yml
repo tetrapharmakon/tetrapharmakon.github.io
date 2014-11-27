@@ -3,20 +3,15 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:            Poole
-tagline:          The Jekyll Butler
-url:              http://getpoole.com
+title:            Mathetic
+tagline:          Compelling tagline
+url:              http://paolobrasolin.github.io/
 paginate:         1
 baseurl:          http://paolobrasolin.github.io/
 author:
-  name:           Mark Otto
-  url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
-
-# Custom vars
-version:          1.0.0
-github:
-  repo:           https://github.com/poole/poole
+  name:           Paolo Brasolin
+  url:            https://plus.google.com/+PaoloBrasolin
+  email:          paolo.brasolin@gmail.com
 
 defaults:
   -
