@@ -59,7 +59,7 @@ em     { font-style: italic; }
 a { text-decoration: none; }
 a:link    { color: $green; }
 a:visited { color: $red; }
-a:focus   { color: $yellow; }
+a:focus   { color: $blue; }
 a:hover   { color: $yellow; }
 
 ::selection {
@@ -82,4 +82,35 @@ hr {
 	text-transform: uppercase;
 	word-spacing: $dimXXL;
 	margin-bottom: -1*$dimN;
+}
+
+
+
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Droid Sans", sans;
+	line-height: $dimN;
+	margin: $dimS auto;
+	font-size: $dimN;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: $dimXL;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: $dimL;
+}
+
+h3, h4, h5, h6 {
+	text-transform: uppercase;
+	color: $red;
 }
