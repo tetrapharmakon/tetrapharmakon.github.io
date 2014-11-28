@@ -1,7 +1,6 @@
 ---
-author: Paolo Brasolin
 title: A couple of curious fractals
-date: 2014-09-04
+category: math
 ---
 
 Let $\Delta^n_0$ be the regular $n$-simplex of side length $s$.
