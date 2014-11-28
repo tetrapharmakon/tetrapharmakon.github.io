@@ -20,6 +20,7 @@ $$
     1 \text{ se } n=p
   \end{cases}
 $$
+
 mentre un semplice argomento ricorsivo mostra
 
 $$
@@ -34,6 +35,7 @@ Conviene traslare un po' d'indici:
 $$
 \tilde{k}_i\mapsto k_i=\tilde{k}_i-1 \qquad \tilde{f}_i\mapsto f_i=\tilde{f}_{i+1}
 $$
+
 sicché
 
 $$
@@ -48,6 +50,7 @@ Definiamo ora la funzione generatrice
 $$
 F(x) = \sum_{k=0}^\infty f_kx^k
 $$
+
 e notiamo che
 
 $$
@@ -57,6 +60,7 @@ $$
      \right)x^k
   = \sum_{k=0}^\infty f_{k+p-1}x^k
 $$
+
 ovvero
 
 $$
