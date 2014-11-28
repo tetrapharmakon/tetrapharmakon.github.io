@@ -2,8 +2,6 @@
 title: Molesting Collatz conjecture
 ---
 
-# Molesting Collatz conjecture
-
 Mandated by insomnia.
 
 $$
@@ -44,4 +42,4 @@ C_{\left(\{x_1,\dotsc,x_n\}\right)}
 \end{align}
 $$
 
-P_k has period 2*3^(n-k).
+$$P_k$$ has period $$2*3^(n-k)$$.
