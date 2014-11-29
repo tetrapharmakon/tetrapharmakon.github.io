@@ -1,6 +1,7 @@
 ---
-title: Higher-dimensional partitions
+title: "Higher-dimensional partitions"
 category: math
+published: false
 ---
 
 A quick note on the general notion of integer partition.
