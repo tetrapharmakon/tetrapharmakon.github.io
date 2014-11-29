@@ -1,7 +1,7 @@
 ---
 title: "Higher-dimensional partitions"
 category: math
-published: false
+published: true
 ---
 
 A quick note on the general notion of integer partition.
