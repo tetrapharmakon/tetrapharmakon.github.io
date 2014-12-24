@@ -2,6 +2,7 @@
 author: Paolo Brasolin
 title: Plane curves
 date: 2014-08-19
+tags: draft
 ---
 
 # Plane curves
