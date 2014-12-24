@@ -4,8 +4,6 @@ title: Plane curves
 tags: draft
 ---
 
-# Plane curves
-
 This is a terse note on plane curves, transformations between them and relations between transformations.
 While being mainly encyclopedic, the effort stems from the compelling categorial flavour that the opening period should suggest.
 
