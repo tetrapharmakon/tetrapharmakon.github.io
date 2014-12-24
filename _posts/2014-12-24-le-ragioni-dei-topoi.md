@@ -1,7 +1,8 @@
 ---
-published: false
+title: Le ragioni dei topoi
+tags: draft
 ---
 
-## A New Post
+Dopo aver letto l'ottima rassegna [Leinster2011](http://ncatlab.org/publications/published/Leinster2011 "An informal introduction to topos theory") sbobino alcune idee.
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+Bla.
