@@ -20,7 +20,8 @@
     </script>
     <title>{{ page.title }}</title>
   </head>
-  <body class="ui centered three column stackable padded relaxed page grid">
+  <body>
+  <div class="ui centered three column stackable padded relaxed page grid">
     <header class="ui row">
       <nav class="ui horizontal fluid menu">
         <a class="item" href="{{ site.baseurl }}" title="index">index</a>
@@ -38,5 +39,6 @@
         &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
       </small>-->
     </footer>
+  </div>
   </body>
 </html>
