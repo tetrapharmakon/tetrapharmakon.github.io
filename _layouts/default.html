@@ -20,19 +20,19 @@
     </script>
     <title>{{ page.title }}</title>
   </head>
-  <body class="ui stackable padded relaxed page grid">
-    <header class="ui three wide column">
+  <body class="ui centered three column stackable padded relaxed page grid">
+    <header class="ui column">
       <nav class="ui vertical fluid menu">
         <a class="item" href="{{ site.baseurl }}" title="index">index</a>
         <a class="item" href="{{ site.baseurl }}atom.xml" title="feed">feed</a>
         <a class="item" href="{{ site.baseurl }}about/" title="about">about</a>
       </nav>
     </header>
-    <main class="ui ten wide column">
+    <main class="ui column">
       <h1>{{ page.title }}</h1>
       {{ content }}
     </main>
-    <footer class="ui three wide column">
+    <footer class="ui column">
       <p>{{ site.time | date_to_xmlschema }}</p>
       <!--<small>
         &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
