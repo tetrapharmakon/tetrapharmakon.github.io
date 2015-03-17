@@ -4,4 +4,8 @@ title: Rational layouts grammar
 tags: draft
 ---
 
-GORL.
+
+    spacer := ,!;
+
+
+
