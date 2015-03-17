@@ -1,6 +1,6 @@
 ---
 author: Paolo Brasolin
-title: Rational layouts gramma
+title: Rational layouts grammar
 tags: draft
 ---
 
