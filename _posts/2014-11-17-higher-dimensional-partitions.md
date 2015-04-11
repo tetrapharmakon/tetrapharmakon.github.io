@@ -12,21 +12,21 @@ An *$n$-partition* is an $n$-dimensional array of natural numbers $p_i$ such tha
 
 Let $P_n(k)$ be the number of $n$-partitions whose sum is k. The generating function of $n$-partitions can be written as
 
-\[
+$$
 \mathcal{P}_n(x) = \sum_{k=0}^\infty P_n(k) x^k
-\]
+$$
 
 Euler proved that
 
-\[
+$$
 \mathcal{P}_1(x) = \prod_{k=1}^\infty (1-x^k)^{-1}
-\]
+$$
 
 MacMahon showed that for plane partitions
 
-\[
+$$
 \mathcal{P}_2(x) = \prod_{k=1}^\infty (1-x^k)^{-k}
-\]
+$$
 
 No generalization is known.
 
