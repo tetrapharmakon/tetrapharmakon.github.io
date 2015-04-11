@@ -13,6 +13,8 @@ Future eons
 * Endymion, Dan Simmons
 * Rise of Endymion, Dan Simmons
 * O Alquimista, Paulo Coelho
+* Doskonała próżnia, Stanisław Lem
+* El Aleph, Jorge Luis Borges
 
 
 
@@ -27,6 +29,7 @@ Spring 2015
 * V., Thomas Pynchon
 * Evaristo Carriego, Jorge Luis Borges
 * **Coraline**, *Neil Gaiman*
+* <del> Śledztwo, Stanisław Lem </del>
 
 
 ###### English
