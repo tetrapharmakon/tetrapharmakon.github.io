@@ -6,6 +6,16 @@ title: Books
 
 
 
+Future eons
+-----------
+
+* Fall of Hyperion, Dan Simmons
+* Endymion, Dan Simmons
+* Rise of Endymion, Dan Simmons
+
+
+
+
 Spring 2015
 -----------
 
@@ -38,6 +48,10 @@ Past eons
 * **Dune Messiah**, *Frank Herbert*
 * **Children of Dune**, *Frank Herbert*
 * ~~God Emperor of Dune, Frank Herbert~~
+* **Hyperion**, *Dan Simmons*
+* ~~Fall of Hyperion, Dan Simmons~~
+* **Ficciones**, *Jorge Luis Borges*
+* ~~Evaristo Carriego, Jorge Luis Borges~~
 * ...
 
 
