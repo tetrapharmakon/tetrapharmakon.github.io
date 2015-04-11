@@ -23,22 +23,22 @@ baseurl: http://paolobrasolin.github.io/
 relative_permalinks: true
 
 # Outputting
-permalink:     pretty
+permalink: pretty
 
 # Markdown flavouring
 markdown: redcarpet
 redcarpet:
-  extensions: ["autolink", "strikethrough"]
+  extensions: ["strikethrough"]
 
 # Defaults
-defaults:
-  -
-    scope:
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      type: "pages"
-    values:
-      layout: "page"
+#defaults:
+#  -
+#    scope:
+#      type: "posts"
+#    values:
+#      layout: "post"
+#  -
+#    scope:
+#      type: "pages"
+#    values:
+#      layout: "page"
