@@ -27,8 +27,9 @@ permalink: pretty
 
 # Markdown flavouring
 markdown: redcarpet
-redcarpet:
-  extensions: ["strikethrough"]
+markdown: kramdown
+#redcarpet:
+#  extensions: ["strikethrough"]
 
 # Defaults
 defaults:
