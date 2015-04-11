@@ -31,14 +31,14 @@ redcarpet:
   extensions: ["strikethrough"]
 
 # Defaults
-#defaults:
-#  -
-#    scope:
-#      type: "posts"
-#    values:
-#      layout: "post"
-#  -
-#    scope:
-#      type: "pages"
-#    values:
-#      layout: "page"
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: "page"
