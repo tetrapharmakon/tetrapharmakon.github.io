@@ -48,11 +48,11 @@ Past eons
 * **Dune**, *Frank Herbert*
 * **Dune Messiah**, *Frank Herbert*
 * **Children of Dune**, *Frank Herbert*
-* ~~God Emperor of Dune, Frank Herbert~~
+* <del> God Emperor of Dune, Frank Herbert </del>
 * **Hyperion**, *Dan Simmons*
-* ~~Fall of Hyperion, Dan Simmons~~
+* <del> Fall of Hyperion, Dan Simmons </del>
 * **Ficciones**, *Jorge Luis Borges*
-* ~~Evaristo Carriego, Jorge Luis Borges~~
+* <del> Evaristo Carriego, Jorge Luis Borges </del>
 * ...
 
 
