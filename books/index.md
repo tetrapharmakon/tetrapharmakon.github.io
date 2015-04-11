@@ -6,15 +6,21 @@ title: Books
 Spring 2015
 -----------
 
+###### Italian
+
 * Seta, Alessandro Baricco
 * V., Thomas Pynchon
 * Evaristo Carriego, Jorge Luis Borges
-* **The Great Gatsby**, *Francis Scott Fitzgerald*.
-* **Coraline**, *Neil Gaiman*.
+* **Coraline**, *Neil Gaiman*
 
+###### English
+
+* **The Great Gatsby**, *Francis Scott Fitzgerald*
 
 Past eons
 ---------
+
+###### Italian
 
 * **American gods**, *Neil Gaiman*
 * **Saltatempo**, *Stefano Benni*
