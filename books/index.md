@@ -25,9 +25,13 @@ Spring 2015
 
 ###### Italian
 
-* Seta, Alessandro Baricco
+* Seminario sulla gioventù, Aldo Busi
+* Le città invisibili, Italo Calvino
+* Le cosmicomiche, Italo Calvino
 * V., Thomas Pynchon
 * Evaristo Carriego, Jorge Luis Borges
+* T con zero, Italo calvino
+* **Seta**, *Alessandro Baricco*
 * **Coraline**, *Neil Gaiman*
 * <del> Śledztwo, Stanisław Lem </del>
 
