@@ -9,6 +9,8 @@ title: Movies
 Future eons
 -----------
 
+Some, already seen.
+
 * The shawshank redemption (1994)
 * Casablanca (1942)
 * Raging Bull (1980)
@@ -68,6 +70,36 @@ Future eons
 * Cloud atlas (2012)
 * Dark shadows (2012)
 * The monk (2013)
+* The end of time (2013)
+* The big Kahuna (2000)
+* The intouchables (2012)
+* Flawless (2008)
+* Big fish (2003)
+* Kumaré (2012)
+* Empire of the sun (1987)
+* The fisher king (1991)
+* American history X (1998)
+* True legend (2011)
+* Jacob's ladder (1990)
+* Spiral (2002)
+* DOGMA (1999)
+* Chocolat (2000)
+* Samsara (2012)
+* Scalene (2012)
+* Timecode (2000)
+* Coffee and cigarettes (2004)
+* The source (1999)
+* Another earth (2011)
+* 25ht hour (2002)
+* In Bruges (2008)
+* Ghost Dog: The Way of the Samurai (2000)
+* 71 fragments of a chronology of chance (2006)
+* Kink (2014)
+* Timecrimes (2008)
+* Europa report (2013)
+* The illusionist (2006)
+* O Brother, Where Art Thou? (2000)
+* The bad lieutenant
 
 
 Spring 2015
@@ -91,11 +123,16 @@ Spring 2015
 * The interview (2014)
 * John Wick (2014)
 
+###### Other
+
+* Fearless (2006)
+
 
 
 Past eons
 ---------
 
+Exceedigly bad ones omitted.
 
 ###### Italian
 
@@ -233,6 +270,107 @@ Past eons
 * Troy (2004)
 * Ghostbusters II (1989)
 * Perfume: the story of a murderer (2006)
+* La femme Nikita (1991)
+* Watchmen (2013)
+* 007 ???
+* Once upon a time in Mexico (2013)
+* Cars
+* Cars 2 (2011)
+* Journey to the center of the Earth (2008)
+* Sherlock Holmes (2009)
+* Army of darkness (1993)
+* The mask (1994)
+* Total recall (1990)
+* Madagascar (2005)
+* Indiana Jones ???
+* Ocean's twelve (2004)
+* The ring (2002)
+* Dracula (1992)
+* Ice age
+* The hunt for Red October (1990)
+* Pocahontas (1995)
+* Mortal Kombat (1995)
+* Die Hard ???
+* Point break (1991)
+* Naqoyqatsi (2002)
+* Anastasia (1997)
+* I, robot (2004)
+* Night Watch: Nochnoi Dozor (2006)
+* Hitch (2005)
+* The mist (2007)
+* x-men ???
+* Cloudy with a chance of meatballs (2009)
+* Alien ???
+* Signs (2002)
+* Indipendence day (1996)
+* Limitless (2011)
+* Day Watch (Dnevnoi Dozor) (2007)
+* Interview with the Vampire: The Vampire Chronicles (1994)
+* Cliffhanger (1993)
+* Mission: impossible (1996)
+* Mission: impossible II (2000)
+* Cowboy Bebop the Movie: Knockin' on Heaven's Door (2003)
+* The shining (1980)
+* Transformers (2007)
+* bourne ???
+* The machinist (2004)
+* Cube (1998)
+* The devil's advocate (1998)
+* The count of Monte Cristo (2002)
+* Broken Arrow (1996)
+* The green mile (1999)
+* This must be the place (2012)
+* The game (1997) (???)
+* The weatherman (2005) (???)
+* Zoolander (2001) (???)
+* The devil wears Prada (2006)
+* The man without a face (1993)
+* Polar express (2004)
+* The negotiator (1998)
+* Lemony Snicket's A Series of Unfortunate Events (2004)
+* Despicable me
+* Contact (1997)
+* V for Vendetta (2006)
+* iron man ???
+* Lord of war (2005)
+* True lies (1994)
+* Shutter island (2010)
+* Home alone ???
+* harry potter ???
+* The professional (1994)
+* The pursuit of happyness (2006)
+* The sixth sense (1999)
+* Gladiator (2000)
+* American psycho (2000)
+* Cloverfield (2008)
+* Se7en (1995)
+* Prometheus (2012)
+* Sleepy Hollow (1999)
+* The Imaginarium of Doctor Parnassus (2009)
+* Artificial Intelligence: AI (2001)
+* Tremors (1990)
+* Rain man (1988)
+* Scarface (1983)
+* Fight club (1999)
+* The prestige (2006)
+* Kick-ass (2010)
+* Moulin rouge! (2001)
+* Dark city (1998)
+* Ghost in the Shell 2: Innocence (2004)
+* Zathura: A Space Adventure (2005)
+* Beetle juice (1988)
+* Lethal weapon (1987)
+* Ronin (1998)
+* Enemy of the State (1998)
+* Eyes wide shut (1999)
+* The italian job (2003)
+* Shaolin soccer (2003)
+* Kill Bill ???
+* Requiem for a dream (2000)
+* Braveheart (1995)
+* Inglorous Basterds (2006)
+* Brave (2012)
+* Amélie (2001)
 
 ###### English
 
@@ -277,6 +415,21 @@ Past eons
 * Deep blue sea (1999)
 * Real steel (2011)
 * Dom Hemingway (2014)
+* I origins (2014)
+* The Rocky Horror Picture how (1975)
+* Mr. Peabody & Sherman (2014)
+* The importance of being Earnest (2002)
+* Elysium (2013)
+* The dreamers (2004)
+* The Hitchhiker's Guide to the Galaxy (2005)
+* Gattaca (1997)
+* Sunshine (2007)
+* Pacific rim (2013)
+* Kill your darlings (2013)
+* Primer (2004)
+* eXistenZ (1999)
+* Enter the void (2010)
+* The Big Lebowski (1998)
 
 
 
@@ -284,3 +437,4 @@ Past eons
 
 * Immortel (ad vitam) (2004)
 * Old boy (2003)
+* Patema inverted (2014)
