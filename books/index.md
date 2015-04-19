@@ -30,7 +30,7 @@ Spring 2015
 * Le cosmicomiche, Italo Calvino
 * V., Thomas Pynchon
 * Evaristo Carriego, Jorge Luis Borges
-* T con zero, Italo calvino
+* **T con zero**, *Italo calvino*
 * **Seta**, *Alessandro Baricco*
 * **Coraline**, *Neil Gaiman*
 * <del> Śledztwo, Stanisław Lem </del>
