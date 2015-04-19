@@ -61,7 +61,6 @@ Some, already seen.
 * Sky blue (2004)
 * Onmyoji: The Yin Yang Master (2003)
 * The signal (2014)
-* Alpha dog (2007)
 * The book thief (2013)
 * The immortalists (2014)
 * The color wheel (2012)
@@ -105,7 +104,6 @@ Some, already seen.
 * Gangs of New york (2002)
 * Shame (2011)
 * Brick (2005)
-* Dangerous Liaisons (1988)
 * Into the abyss (2011)
 * Is the man who is tall happy? (2013)
 * Magnolia (1999)
@@ -140,6 +138,8 @@ Spring 2015
 * Interstellar (2014)
 * The interview (2014)
 * John Wick (2014)
+* Alpha dog (2007)
+* Dangerous Liaisons (1988)
 
 ###### Other
 
