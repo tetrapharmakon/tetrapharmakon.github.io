@@ -1,7 +1,12 @@
 html {
   font: 16px/2em "Libre Baskerville";
   text-align: justify;
-  max-width: 512px;
-  margin: auto;
   padding: 32px;
+}
+
+@media (min-width: 576px) {
+  html { 
+    max-width: 512px;
+    margin: auto;
+  }
 }
