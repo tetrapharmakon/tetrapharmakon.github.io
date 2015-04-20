@@ -1,13 +1,6 @@
 ---
-author: Paolo Brasolin
 title: Sierpiński graphs
-date: 2014-08-20
 ---
-
-
-
-
-# Sierpiński graphs
 
 Grinding through some math riddles I found one that really struck me.
 The solution was slick and I longed for a generalization.
