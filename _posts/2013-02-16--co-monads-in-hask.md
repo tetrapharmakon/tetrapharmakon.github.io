@@ -1,5 +1,6 @@
 ---
 title: (Co)monads in Hask
+tags: draft
 ---
 
 
