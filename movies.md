@@ -127,24 +127,24 @@ Spring 2015
 : Beautifully crafted. Really liked Jarmush' work here.
 
 <del>Dangerous Liaisons</del> (1988), Stephen Frears
-: Meh. Probably not in the mood.
+: Meh. Not in the mood.
 
 It's such a beautiful day (2012), Don Hertzfeldt
 : It's Don. Interesting at the very least.
 
-Tusk (2014), Kevin Smith
+<del>Tusk</del> (2014), Kevin Smith
 : Not really sure what I've seen.
 
-Maleficient (2014), Robert Stromberg
-: Awesome. Loved the screenplay. Angelina Jolie was amazing.
+**Maleficient** (2014), Robert Stromberg
+: Awesome! Loved the screenplay. Angelina Jolie was amazing.
 
-The night of the Hunter (1955), Charles Laughton
-: Wow. Incredible direction. Wicked performance by Robert Mitchum. Also, the kid was really good!
+**The night of the Hunter** (1955), Charles Laughton
+: Wow. Incredible direction. Wicked performance by Robert Mitchum. Also, the kid was really good.
 
-The Godfather: Part II (1974), Francis Ford Coppola
-: Meh. Surely not bad.
+<del>The Godfather: Part II</del> (1974), Francis Ford Coppola
+: Meh. Not in the mood.
 
-Interstellar (2014), Christopher Nolan
+**Interstellar** (2014), Christopher Nolan
 : Exceeded high expectations.
 
 The interview (2014), Evan Goldberg, Seth Rogen
@@ -153,17 +153,17 @@ The interview (2014), Evan Goldberg, Seth Rogen
 John Wick (2014), Chad Stahelski
 : Really fun!
 
-Good Will Hunting (1997), Gus Van Sant
-: Great.
+**Good Will Hunting** (1997), Gus Van Sant
+: Just great.
 
-Down by law (1986), Jim Jarmush
-: Strangely compelling. Liked it more than I expected.
+**Down by law** (1986), Jim Jarmush
+: Strangely compelling. Liked it way more than I expected.
 
 
 ###### Other
 
 Fearless (2006), Ronny Yu
-: Entertaining!
+: Entertaining.
 
 
 
