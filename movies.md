@@ -121,7 +121,10 @@ Spring 2015
 -----------
 
 
+
+
 ### English
+
 
 **Ghost dog: the way of the samurai** (2007), Jim Jarmusch
 : Beautifully crafted. Really liked Jarmush' work here.
@@ -162,6 +165,7 @@ John Wick (2014), Chad Stahelski
 
 ### Chinese
 
+
 Huo Yuanjia (2006), Ronny Yu
 : Entertaining.
 
@@ -172,7 +176,10 @@ Past eons
 ---------
 
 
+
+
 ###### Italian
+
 
 * 101 dalmatians (1996)
 * 2 fast 2 furious (2003)
@@ -491,6 +498,7 @@ Past eons
 
 ###### English
 
+
 * Maleficient
 * The grey
 * Citizen Kane (1941)
@@ -573,6 +581,7 @@ Past eons
 
 
 ###### Other
+
 
 * Immortel (ad vitam) (2004)
 * Old boy (2003)
