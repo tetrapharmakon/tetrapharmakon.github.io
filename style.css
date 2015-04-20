@@ -13,10 +13,10 @@ body {
   margin: 2rem;
 }
 
-@media (min-width: 44rem) {
+@media (min-width: 48rem) {
   body { 
-    max-width: 40rem;
-    margin: 8rem auto;
+    max-width: 44rem;
+    margin: 6rem auto;
   }
 }
 
@@ -28,7 +28,7 @@ h1 {
 h1, h2 {
   font-family: "Oswald";
   font-weight: 300;
-  margin: 3rem 0 2rem 0;
+  margin: 6rem 0 3rem 0;
 }
 
 
