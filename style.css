@@ -54,6 +54,7 @@ dl dd {
 
 dt > small {
   float:right;
+  font-weight: 300;
 }
 
 dd > p {
