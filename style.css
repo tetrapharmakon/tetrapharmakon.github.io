@@ -33,5 +33,19 @@ h1, h2 {
 
 a {
   color: #000;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+}
+
+
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
+}
+
+li ul, li ol {
+  margin: 0 2rem;
+}
+
+dl dd {
+  margin-left: 2rem;
 }
