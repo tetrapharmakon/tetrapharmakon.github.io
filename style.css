@@ -23,3 +23,7 @@ h1, h2 {
   font-weight: 300;
   margin: 3rem 0 2rem 0;
 }
+
+h1 {
+  text-align: center;
+}
