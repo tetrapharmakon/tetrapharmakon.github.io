@@ -8,8 +8,6 @@ title: Movies
 Future eons
 -----------
 
-Some, already seen.
-
 * The shawshank redemption (1994)
 * Casablanca (1942)
 * Raging Bull (1980)
@@ -117,39 +115,37 @@ Some, already seen.
 * Blue Is the Warmest Color (2013)
 
 
+
+
 Spring 2015
 -----------
 
 
-###### Italian
-
-*
-
-
 ###### English
 
-* It's such a beautiful day
-* Maleficient
-* The night of the Hunter
-* Tusk (2014)
-* The Godfather: Part II (1974)
-* Good Will Hunting (1997)
-* Interstellar (2014)
-* The interview (2014)
-* John Wick (2014)
-* Alpha dog (2007)
-* Dangerous Liaisons (1988)
+* It's such a beautiful day (2012), Don Hertzfeldt
+* Maleficient (2014), Robert Stromberg
+* The night of the Hunter (1955), Charles Laughton
+* Tusk (2014), Kevin Smith
+* The Godfather: Part II (1974), Francis Ford Coppola
+* Good Will Hunting (1997), Gus Van Sant
+* Interstellar (2014), Christopher Nolan
+* The interview (2014), Evan Goldberg, Seth Rogen
+* John Wick (2014), Chad Stahelski
+* Ghost dog: the way of the samurai (2007), Jim Jarmusch
+* Dangerous Liaisons (1988), Stephen Frears
 
 ###### Other
 
-* Fearless (2006)
+Fearless (2006), Ronny Yu
+: Testing the description.
+
 
 
 
 Past eons
 ---------
 
-Exceedigly bad ones omitted.
 
 ###### Italian
 
@@ -466,7 +462,6 @@ Exceedigly bad ones omitted.
 * Finding Nemo (2003)
 * Saving private Ryan (1998)
 * Crouching Tiger, Hidden Dragon (2000)
-
 
 
 ###### English
