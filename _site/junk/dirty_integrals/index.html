@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="author" content="{{ site.author.name }}">
-    <title>{{ page.title }}</title>
+    <meta name="author" content="Paolo Brasolin">
+    <title>Dirty integrals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-    <!--<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}atom.xml">-->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!--<link rel="alternate" type="application/atom+xml" title="paolobrasolin.github.io" href="atom.xml">-->
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
@@ -31,8 +31,23 @@
     </script>
   </head>
   <body>
-    <header><h1>{{ page.title }}</h1></header>
-    <main>{{ content }}</main>
+    <header><h1>Dirty integrals</h1></header>
+    <main><h1 id="dirty-integrals">Dirty integrals</h1>
+
+<h6 id="specimen-1">Specimen 1</h6>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+e^{ax+kx}
+  & = \sum_{n=0}^{+\infty} \frac{x^n}{n!}(a+k)^n \\
+  & = \sum_{n=0}^{+\infty} \frac{x^n}{n!} \sum_{m=0}^n{n\choose m}a^mk^{n-m} \\
+  & = \sum_{n=0}^{+\infty} \frac{x^n}{n!} \sum_{m=0}^n \frac{a^m}{m!} \frac{n!k^{n-m}}{(n-m)!} \\
+  & = \sum_{n=0}^{+\infty} \frac{x^n}{n!} \sum_{m=0}^{+\infty} \frac{a^m}{m!} \frac{d^mk^n}{dk^m} \\
+  & = \sum_{m=0}^{+\infty} \frac{1}{m!} \left(a\frac{d}{dk}\right)^m \sum_{n=0}^{+\infty} \frac{(kx)^n}{n!} \\
+  & = e^{a\frac{d}{dk}}e^{kx}
+\end{align} %]]></script>
+
+</main>
     <footer><hr></footer>
   </body>
 </html>

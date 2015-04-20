@@ -17,7 +17,7 @@ author:
 # excerpt_separator: "\n\n"
 
 # Serving
-baseurl: http://paolobrasolin.github.io/
+#baseurl: http://paolobrasolin.github.io/
 
 # Backwards-compatibility
 relative_permalinks: true
@@ -26,20 +26,12 @@ relative_permalinks: true
 permalink: pretty
 
 # Markdown flavouring
-#markdown: redcarpet
 markdown: kramdown
-#redcarpet:
-#  extensions: ["strikethrough"]
 
 # Defaults
 defaults:
   -
     scope:
-      type: "posts"
+      path: ""
     values:
-      layout: "post"
-  -
-    scope:
-      type: "pages"
-    values:
-      layout: "page"
+      layout: "default"

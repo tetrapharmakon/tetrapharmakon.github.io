@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="author" content="{{ site.author.name }}">
-    <title>{{ page.title }}</title>
+    <meta name="author" content="Paolo Brasolin">
+    <title>Drafts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-    <!--<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}atom.xml">-->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!--<link rel="alternate" type="application/atom+xml" title="paolobrasolin.github.io" href="atom.xml">-->
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
@@ -31,8 +31,46 @@
     </script>
   </head>
   <body>
-    <header><h1>{{ page.title }}</h1></header>
-    <main>{{ content }}</main>
+    <header><h1>Drafts</h1></header>
+    <main><dl>
+  
+  
+  <dt>
+    <a href="/2015/03/17/rational-layouts-grammar/">Rational layouts grammar</a>
+    <small> (25 words) <time datetime="2015-03-17T00:00:00+01:00" class="post-date">17 Mar 2015</time> </small>
+  </dt>
+  <dd><pre><code>whole   &lt;- void | solid
+space   &lt;- whole | sliced
+sliced  &lt;- 1-slice{1-slice} | ... | N-slice{N-slice}
+1-slice &lt;- space{1-mark}
+ ...
+N-slice &lt;- space{N-mark}
+</code></pre>
+
+</dd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <dt>
+    <a href="/2014/08/19/plane-curves/">Plane curves</a>
+    <small> (602 words) <time datetime="2014-08-19T00:00:00+02:00" class="post-date">19 Aug 2014</time> </small>
+  </dt>
+  <dd><p>This is a terse note on plane curves, transformations between them and relations between transformations.
+While being mainly encyclopedic, the effort stems from the compelling categorial flavour that the opening period should suggest.</p>
+
+</dd>
+  
+  
+  
+  
+</dl>
+</main>
     <footer><hr></footer>
   </body>
 </html>

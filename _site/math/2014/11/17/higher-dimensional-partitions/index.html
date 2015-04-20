@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Paolo Brasolin">
+    <title>Higher-dimensional partitions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!--<link rel="alternate" type="application/atom+xml" title="paolobrasolin.github.io" href="atom.xml">-->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ]/*,
+          processEscapes: true*/
+        }
+      });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34703595-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <header><h1>Higher-dimensional partitions</h1></header>
+    <main><p>A quick note on the general notion of integer partition.</p>
+
+<p>Let the subscripts be $n$-dimensional multindices, i.e. elements of $\mathbb{N}^n$.</p>
+
+<p>An <em>$n$-partition</em> is an $n$-dimensional array of natural numbers $p_i$ such that only finitely many are nonzero and $i \leq j$ implies $p_i \geq p_j$. Its <em>sum</em> is $\sum_i p_i$.</p>
+
+<p>Let $P_n(k)$ be the number of $n$-partitions whose sum is k. The generating function of $n$-partitions can be written as</p>
+
+<script type="math/tex; mode=display">\mathcal{P}_n(x) = \sum_{k=0}^\infty P_n(k) x^k</script>
+
+<p>Euler proved that</p>
+
+<script type="math/tex; mode=display">\mathcal{P}_1(x) = \prod_{k=1}^\infty (1-x^k)^{-1}</script>
+
+<p>MacMahon showed that for plane partitions</p>
+
+<script type="math/tex; mode=display">\mathcal{P}_2(x) = \prod_{k=1}^\infty (1-x^k)^{-k}</script>
+
+<p>No generalization is known.</p>
+
+<p>Details can be found in <em>The Theory of Partitions</em> by George Eyre Andrews.</p>
+</main>
+    <footer><hr></footer>
+  </body>
+</html>

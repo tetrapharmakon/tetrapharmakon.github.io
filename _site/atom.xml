@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>paolobrasolin.github.io</title>
+ <link href="atom.xml" rel="self"/>
+ <link href=""/>
+ <updated>2015-04-20T23:09:47+02:00</updated>
+ <id></id>
+ <author>
+   <name>Paolo Brasolin</name>
+   <email>paolo.brasolin@gmail.com</email>
+ </author>
+ 
+ <entry>
+   <title>Rational layouts grammar</title>
+   <link href="/2015/03/17/rational-layouts-grammar/"/>
+   <updated>2015-03-17T00:00:00+01:00</updated>
+   <id>/2015/03/17/rational-layouts-grammar/</id>
+   <summary>whole   &lt;- void | solid
+space   &lt;- whole | sliced
+sliced  &lt;- 1-slice{1-slice} | ... | N-slice{N-slice}
+1-slice &lt;- space{1-mark}
+ ...
+N-slice &lt;- space{N-mark}
+
+
+</summary>
+   <content type="html">&lt;pre&gt;&lt;code&gt;whole   &amp;lt;- void | solid
+space   &amp;lt;- whole | sliced
+sliced  &amp;lt;- 1-slice{1-slice} | ... | N-slice{N-slice}
+1-slice &amp;lt;- space{1-mark}
+ ...
+N-slice &amp;lt;- space{N-mark}
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Higher-dimensional partitions</title>
+   <link href="/math/2014/11/17/higher-dimensional-partitions/"/>
+   <updated>2014-11-17T00:00:00+01:00</updated>
+   <id>/math/2014/11/17/higher-dimensional-partitions/</id>
+   <summary>A quick note on the general notion of integer partition.
+
+</summary>
+   <content type="html">&lt;p&gt;A quick note on the general notion of integer partition.&lt;/p&gt;
+
+&lt;p&gt;Let the subscripts be $n$-dimensional multindices, i.e. elements of $\mathbb{N}^n$.&lt;/p&gt;
+
+&lt;p&gt;An &lt;em&gt;$n$-partition&lt;/em&gt; is an $n$-dimensional array of natural numbers $p_i$ such that only finitely many are nonzero and $i \leq j$ implies $p_i \geq p_j$. Its &lt;em&gt;sum&lt;/em&gt; is $\sum_i p_i$.&lt;/p&gt;
+
+&lt;p&gt;Let $P_n(k)$ be the number of $n$-partitions whose sum is k. The generating function of $n$-partitions can be written as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{P}_n(x) = \sum_{k=0}^\infty P_n(k) x^k&lt;/script&gt;
+
+&lt;p&gt;Euler proved that&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{P}_1(x) = \prod_{k=1}^\infty (1-x^k)^{-1}&lt;/script&gt;
+
+&lt;p&gt;MacMahon showed that for plane partitions&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{P}_2(x) = \prod_{k=1}^\infty (1-x^k)^{-k}&lt;/script&gt;
+
+&lt;p&gt;No generalization is known.&lt;/p&gt;
+
+&lt;p&gt;Details can be found in &lt;em&gt;The Theory of Partitions&lt;/em&gt; by George Eyre Andrews.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Transfinite formal power series</title>
+   <link href="/math/2014/09/04/transfinite-formal-power-series/"/>
+   <updated>2014-09-04T00:00:00+02:00</updated>
+   <id>/math/2014/09/04/transfinite-formal-power-series/</id>
+   <summary>Polynomials are for the weak and we want a generalization.
+
+</summary>
+   <content type="html">&lt;p&gt;Polynomials are for the weak and we want a generalization.&lt;/p&gt;
+
+&lt;h2 id=&quot;foundation&quot;&gt;Foundation&lt;/h2&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;(E,+)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;(C,+,\cdot)&lt;/script&gt; be two algebraic structures with binary operations.
+&lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; are the collections of exponents and coefficients respectively.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;X^{(E)}&lt;/script&gt; be the collection of formal monomials in the variable &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; with exponents in &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;.
+The isomorphism &lt;script type=&quot;math/tex&quot;&gt;p\mapsto X^p&lt;/script&gt; induce &lt;script type=&quot;math/tex&quot;&gt;(X^{(E)},\cdot)\cong(E,+)&lt;/script&gt; asking for the commutation &lt;script type=&quot;math/tex&quot;&gt;X^pX^q=X^{p+q}&lt;/script&gt; we all love. We will often confuse the two isomorphic structures.&lt;/p&gt;
+
+&lt;p&gt;The collection of formal polynomials in a single variable with coefficients in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;C^E&lt;/script&gt;.
+The fact is made clearer representing such functions with formal sums over &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;a = \sum_{i} a_i X^i&lt;/script&gt;
+
+&lt;p&gt;The structure &lt;script type=&quot;math/tex&quot;&gt;(C^E,+)&lt;/script&gt; defined by pointwise sum &lt;script type=&quot;math/tex&quot;&gt;(a+b)_i=a_i+b_i&lt;/script&gt; inherits exactly the algebraic properties of &lt;script type=&quot;math/tex&quot;&gt;(C,+)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The same could be done for pointwise (Hadamard) product, if we wanted.&lt;/p&gt;
+
+&lt;h2 id=&quot;cauchy-product&quot;&gt;Cauchy product&lt;/h2&gt;
+
+&lt;p&gt;The only problem left is making sense of the structure &lt;script type=&quot;math/tex&quot;&gt;(C^E,\cdot)&lt;/script&gt; defined by some interpretation of the Cauchy product&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(ab)_i=\sum_{j+k=i}a_jb_k&lt;/script&gt;
+
+&lt;p&gt;A few alternatives come to mind:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;inductively completing &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; with such formal sums over &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;asking &lt;script type=&quot;math/tex&quot;&gt;(C,+)&lt;/script&gt; to be an abelian monoid;&lt;/li&gt;
+  &lt;li&gt;asking &lt;script type=&quot;math/tex&quot;&gt;(C,+)&lt;/script&gt; to be a monoid and &lt;script type=&quot;math/tex&quot;&gt;(E,+)&lt;/script&gt; to be left-subtractive (or right-subtractive) and totally ordered.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first possibility would be maximally general, but it seems to need some care and further meditation.
+The other two cost a great loss in generality.
+The structure that elicited this brief investigation is a particular case of the third possibility, so I’ll concentrate on that for now.&lt;/p&gt;
+
+&lt;h2 id=&quot;transfinite-formal-series&quot;&gt;Transfinite formal series&lt;/h2&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;(\mathbb{O};+,0,\cdot,1,\leq)&lt;/script&gt; be the totally ordered left near-semiring of ordinal arithmetic.
+We call transfinite the formal series with ordinal exponents and taking coefficients in an additive semigroup.&lt;/p&gt;
+
+&lt;p&gt;Ordinal sum has left-subtraction, i.e. for any &lt;script type=&quot;math/tex&quot;&gt;i\leq j&lt;/script&gt; there is a unique &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;i+k=j&lt;/script&gt;; we will denote it as &lt;script type=&quot;math/tex&quot;&gt;(-i+j)&lt;/script&gt;. Furthermore we assume the non-commutative summations are performed respecting the order on &lt;script type=&quot;math/tex&quot;&gt;\mathbb{O}&lt;/script&gt;. So we have a uniquely defined Cauchy product&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(ab)_i=\sum_{j\leq i}a_jb_{(-j+i)}&lt;/script&gt;
+
+&lt;p&gt;If we also take coefficients to be ordinal numbers we can define a good notion of derivation.
+For example,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+D(X^\omega)
+&amp; = D(X^{1+\omega})=D(XX^\omega)=D(X)X^\omega+XD(X^\omega) \\
+&amp; = X^0X^\omega+X^1X^\omega+\ldots=X^\omega+X^\omega+\ldots=\omega X^\omega \\
+D(X^{\omega+1})
+&amp; = D(X^\omega)X+D(X)X^\omega=\omega X^{\omega+1}+X^\omega
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;At this point one naturally hopes to generalize the techniques of generating functions, since the derivation makes perfect combinatorial sense as a rooting.
+On the other side, all this is probably a decategorification akin to the one on combinatorial species.
+It would make more sense to try and define a notion of species on &lt;script type=&quot;math/tex&quot;&gt;\mathrm{core}(\mathbf{Set})&lt;/script&gt; and then decategorify it to obtain transfinite formal series.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Elementary properties of simplicial gaskets</title>
+   <link href="/math/2014/09/03/elementary%20properties-of-simplicial-gaskets/"/>
+   <updated>2014-09-03T00:00:00+02:00</updated>
+   <id>/math/2014/09/03/elementary%20properties-of-simplicial-gaskets/</id>
+   <summary>Let’s compute some basic characteristics of straightforwardly generalized Sierpinski gaskets.
+
+</summary>
+   <content type="html">&lt;p&gt;Let’s compute some basic characteristics of straightforwardly generalized Sierpinski gaskets.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\Delta^n_0&lt;/script&gt; be the regular &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-simplex of side length &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt;.
+We define &lt;script type=&quot;math/tex&quot;&gt;\Delta^n_{i+1}&lt;/script&gt; as the simplicial complex given by &lt;script type=&quot;math/tex&quot;&gt;(n+1)&lt;/script&gt; half-sized copies of &lt;script type=&quot;math/tex&quot;&gt;\Delta^n_i&lt;/script&gt;, each one glued to every other by a single vertex not used in previous gluings.&lt;/p&gt;
+
+&lt;p&gt;The number of &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;-faces (let &lt;script type=&quot;math/tex&quot;&gt;\delta&lt;/script&gt; be &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt; if the condition at subscript holds and &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; otherwise):&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+k_j(\Delta^n_i)
+&amp; = \delta_{j \leq n} (n+1) k_j(\Delta^n_{i-1}) -
+    \delta_{j =    0} \frac{n(n+1)}{2} \\
+&amp; = \delta_{j \leq n} (n+1)^i k_j(\Delta^n_0) -
+    \delta_{j =    0} \frac{(n+1)}{2} \left[(n+1)^i-1\right] \\
+&amp; = \delta_{j \leq n} (n+1)^i{ {n+1}\choose{j+1} } -
+    \delta_{j =    0} \frac{(n+1)}{2} \left[(n+1)^i-1\right]
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;The Euler characteristic:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+\chi(\Delta^n_i)
+&amp; = \sum_{j=0}^n(-1)^jk_j(\Delta^n_i) \\
+&amp; = -\frac{(n+1)}{2}\left[(n+1)^i-1\right] + \sum_{j=0}^n(-1)^j{ {n+1}\choose{j+1} }(n+1)^j \\
+&amp; = \frac{n+1}{2}+\frac{1-n}{2}(n+1)^i
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;The &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;-volume:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+V_j(\Delta^n_i)
+&amp; = k_j(\Delta^n_i) V_j(\Delta^j_0) 2^{-ij} \\
+&amp; = k_j(\Delta^n_i) \frac{s^j\sqrt{j+1}}{j!\sqrt{2^j}} 2^{-ij}
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;j&gt;0&lt;/script&gt; we have&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;V_j(\Delta^n_i)
+ = (n+1)^i{ {n+1}\choose{j+1} } \frac{s^j\sqrt{j+1}}{j!\sqrt{2^j}} 2^{-ij}&lt;/script&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Plane curves</title>
+   <link href="/2014/08/19/plane-curves/"/>
+   <updated>2014-08-19T00:00:00+02:00</updated>
+   <id>/2014/08/19/plane-curves/</id>
+   <summary>This is a terse note on plane curves, transformations between them and relations between transformations.
+While being mainly encyclopedic, the effort stems from the compelling categorial flavour that the opening period should suggest.
+
+</summary>
+   <content type="html">&lt;p&gt;This is a terse note on plane curves, transformations between them and relations between transformations.
+While being mainly encyclopedic, the effort stems from the compelling categorial flavour that the opening period should suggest.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-definitions&quot;&gt;Basic definitions&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Plane curves&lt;/strong&gt; are maps from a real interval $I$ to $\mathbb{C}$.
+We will often omit the variable.&lt;/p&gt;
+
+&lt;p&gt;We will denote &lt;strong&gt;complex conjugation&lt;/strong&gt; with overbars and &lt;strong&gt;derivation&lt;/strong&gt; with overdots.
+We define an antisymmetric &lt;strong&gt;cross product&lt;/strong&gt; and a symmetric &lt;strong&gt;dot product&lt;/strong&gt; as
+&lt;script type=&quot;math/tex&quot;&gt;z\times w := \mathrm{Im}(\overline{z}w)
+\qquad
+z\cdot  w := \mathrm{Re}(z\overline{w}) = z\times iw&lt;/script&gt;
+We define &lt;strong&gt;norm&lt;/strong&gt; and &lt;strong&gt;normalization&lt;/strong&gt; as
+&lt;script type=&quot;math/tex&quot;&gt;\vert z \vert := \sqrt{ z \overline{z} }
+\qquad
+\widehat{z} := z / \vert z \vert&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tangent&lt;/strong&gt;, &lt;strong&gt;normal&lt;/strong&gt; and &lt;strong&gt;curvature&lt;/strong&gt; of a curve $c$ are
+&lt;script type=&quot;math/tex&quot;&gt;T_c := \widehat{\dot{c}}
+\qquad
+N_c := iT_c
+\qquad
+K_c :=
+% (\dot{c}\times\ddot{c})/|\dot{c}|^3 = 
+\dot{T_c}/\dot{c}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Arc length
+&lt;script type=&quot;math/tex&quot;&gt;c(t) \mapsto s_{t_0}(t) := \int_{t_0}^t|\dot{c}(\tau)|d\tau&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;unary-transformations&quot;&gt;Unary transformations&lt;/h2&gt;
+
+&lt;p&gt;These are maps $\mathbb{C}^D\rightarrow\mathbb{C}^D$.&lt;/p&gt;
+
+&lt;h3 id=&quot;isometries&quot;&gt;Isometries&lt;/h3&gt;
+
+&lt;p&gt;Identity
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Id}: c \mapsto c&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Translation
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Tra}[o]: c \mapsto c+o&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Rotation
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Rot}[\alpha]: c \mapsto ce^{i\alpha}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Rot}[\alpha,o] = \mathrm{Tra}[o]\circ\mathrm{Rot}[\alpha]\circ\mathrm{Tra}[-o]&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Reflection&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Ref}[o,\alpha]: c \mapsto \overline{c-o}e^{2i\alpha}+o&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Ref}[p,q]: c \mapsto \overline{c-q}\frac{p-q}{\overline{p-q}}+q&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;affine-transformations&quot;&gt;Affine transformations&lt;/h3&gt;
+
+&lt;p&gt;Dilation
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Sca}[\sigma]: c \mapsto c\sigma&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Sca}[\sigma,o] = \mathrm{Tra}[o]\circ\mathrm{Sca}[\sigma]\circ\mathrm{Tra}[-o]&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shear&lt;/p&gt;
+
+&lt;h3 id=&quot;evolute&quot;&gt;Evolute&lt;/h3&gt;
+
+&lt;p&gt;The &lt;strong&gt;evolute&lt;/strong&gt; of a curve is defined in any of the sequent ways:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;locus of centers of curvature;&lt;/li&gt;
+  &lt;li&gt;envelope of normals;&lt;/li&gt;
+  &lt;li&gt;locus of the cusps of parallels.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;From 1 we have an explicit definition:
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Evolute}: c \mapsto c+n/k&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Properties&lt;/p&gt;
+
+&lt;p&gt;by 3  (All involutes are parallel.)&lt;/p&gt;
+
+&lt;p&gt;If curve A is the involute of curve B, then curve B is the evolute of curve A.
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Evolute}\circ\mathrm{Involute}=\mathrm{Id}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The converse is true locally, that is: If curve B is the evolute of curve A, then any part of curve A is the involute of some parts of B.&lt;/p&gt;
+
+&lt;h3 id=&quot;involute&quot;&gt;Involute&lt;/h3&gt;
+
+&lt;p&gt;It’s the roulette of a line.&lt;/p&gt;
+
+&lt;p&gt;It’s the locus of the end of a string winded around the curve. That is, it’s a curve orthogonal to the tangents. The evolute of an involute is the original curve (lezz portions of zero or undefined curvature), but while the evolute is unique there are infinite involutes. Note the arc length (natural) parametrization is needed.
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Involute}[p]: c \mapsto c-s_{c^{-1}(p)}\dot{c}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;All involutes are parallel. (Evolute is envelope of normals.)&lt;/p&gt;
+
+&lt;h3 id=&quot;radial&quot;&gt;Radial&lt;/h3&gt;
+
+&lt;p&gt;(cfr. Gauss Map)
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Radial}: c \mapsto o+n/k&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;parallel&quot;&gt;Parallel&lt;/h3&gt;
+
+&lt;p&gt;Envelope of circles of fixed radius centered on the curve. Locus of points on normals at fixed distance from curve.
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Parallel}[\delta]: c \mapsto c+n\delta&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;inverse&quot;&gt;Inverse&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathrm{Inverse}[o,\rho]: c \mapsto o+\rho/\overline{c-o}&lt;/script&gt;
+
+&lt;p&gt;Inversion is an involution; its fixed points are anallagmatic curves.&lt;/p&gt;
+
+&lt;h3 id=&quot;dual&quot;&gt;Dual&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathrm{Dual}: c \mapsto ic/c\times\dot{c}&lt;/script&gt;
+
+&lt;h3 id=&quot;pedal&quot;&gt;Pedal&lt;/h3&gt;
+
+&lt;p&gt;The pedal with respect to a point $o$ is the locus of the foot of the perpendicular from $o$ to the tangents of the curve.
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Pedal}[o]: c \mapsto c+(t\cdot(o-c))t&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;negative-pedal&quot;&gt;Negative pedal&lt;/h3&gt;
+
+&lt;p&gt;$\mathrm{NPed}[o]\circ\mathrm{Ped}[o]=\mathrm{Id}$.
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{NegativePedal}[o]: c \mapsto c+i(c-o)\frac{(c-o)\cdot\dot{c}}{(c-o)\times\dot{c}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;contrapedal&quot;&gt;Contrapedal&lt;/h3&gt;
+
+&lt;p&gt;The contrapedal with respect to a point $o$ is the locus of the foot of the perpendicular from $o$ to the normals of the curve.
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{ContraPedal}[o]: c \mapsto c+(n\cdot(o-c))n&lt;/script&gt;
+Since $\mathrm{CPed}[o]=\mathrm{Ped}[o]\circ\mathrm{Evo}$ it has no inverse.&lt;/p&gt;
+
+&lt;h3 id=&quot;conchoid&quot;&gt;Conchoid&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathrm{Conchoid}[\delta]: c \mapsto c+\delta\widehat{c-o}&lt;/script&gt;
+
+&lt;h3 id=&quot;strophoid&quot;&gt;Strophoid&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathrm{Strophoid}: c \mapsto c\pm |c-a|\widehat{c-o}&lt;/script&gt;
+
+&lt;h3 id=&quot;catacaustic&quot;&gt;Catacaustic&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathrm{Catacaustic}: c \mapsto c+\overline{o-c}n^2\frac{\dot{c}\times(\overline{o-c}n^2)}{(\overline{o-c}n^2)\times(\overline{o-c}n^2)&#39;}&lt;/script&gt;
+
+&lt;h3 id=&quot;diacaustic&quot;&gt;Diacaustic&lt;/h3&gt;
+
+&lt;h3 id=&quot;orthotomic&quot;&gt;Orthotomic&lt;/h3&gt;
+
+&lt;h3 id=&quot;isoptic&quot;&gt;Isoptic&lt;/h3&gt;
+
+&lt;p&gt;Given an invertible Gauss map $g$,
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Isoptic}[\alpha]: c \mapsto c+t\left.\frac{((c\circ\lambda)-c)\cdot (n\circ\lambda)}{t\cdot (n\circ\lambda)}\right\vert_{\lambda=g^{-1}\circ(e^{i\alpha}g)}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Isoptic}[\alpha]: c \mapsto c+t\frac{((c\circ n^{-1}\circ(e^{i\alpha}n))-c)\cdot (e^{i\alpha}n)}{t\cdot (e^{i\alpha}n)}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;orthoptic&quot;&gt;Orthoptic&lt;/h3&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Orthoptic}: c \mapsto c+t\left[((c\circ n^{-1}\circ in)-c)\cdot t\right]&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Orthoptic}=\mathrm{Isoptic}[\pi/2]&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;funky-stuff&quot;&gt;Funky stuff&lt;/h2&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+\mathcal{Roulette}[f,r,g](s) &amp;= f(s)+(g-r(s))\frac{\dot{f}(s)}{\dot{r}(s)} \\
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;http://xahlee.info/SpecialPlaneCurves_dir/specialPlaneCurves.html
+http://alexandria.tue.nl/repository/books/475961.pdf&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Associare prodotti</title>
+   <link href="/2013/04/01/associare-prodotti/"/>
+   <updated>2013-04-01T00:00:00+02:00</updated>
+   <id>/2013/04/01/associare-prodotti/</id>
+   <summary>In quanti modi un’operazione -aria sopra un magma può agire su un’-upla di elementi?
+
+</summary>
+   <content type="html">&lt;p&gt;In quanti modi un’operazione &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;-aria sopra un magma può agire su un’&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-upla di elementi?&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{p(n-1) \choose n-1}\frac{1}{(p-1)(n-1)+1}&lt;/script&gt;
+
+&lt;p&gt;But why?&lt;/p&gt;
+
+&lt;p&gt;È immediato che&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\tilde{f}_n =
+  \begin{cases}
+    1 \text{ se } n=1 \\
+    0 \text{ se } 1&lt;n&lt;p \\
+    1 \text{ se } n=p
+  \end{cases} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;mentre un semplice argomento ricorsivo mostra&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tilde{f}_n =
+  \sum_{1\leq \tilde{k}_1,\ldots,\tilde{k}_p}
+      ^{n=\tilde{k}_1+\ldots+\tilde{k}_p}
+    \prod_{i=1}^p\tilde{f}_{\tilde{k}_i} \qquad \text{ se } n&gt;p&lt;/script&gt;
+
+&lt;p&gt;Conviene traslare un po’ d’indici:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tilde{k}_i\mapsto k_i=\tilde{k}_i-1 \qquad \tilde{f}_i\mapsto f_i=\tilde{f}_{i+1}&lt;/script&gt;
+
+&lt;p&gt;sicché&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_{n+p-1} =
+  \sum_{0\leq k_1,\ldots,k_p}
+      ^{n=k_1+\ldots+k_p}
+    \prod_{i=1}^pf_{k_i}&lt;/script&gt;
+
+&lt;p&gt;Definiamo ora la funzione generatrice&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(x) = \sum_{k=0}^\infty f_kx^k&lt;/script&gt;
+
+&lt;p&gt;e notiamo che&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;[F(x)]^p
+  = \sum_{k=0}\left(
+     \sum_{0\leq k_1,\ldots,k_p}^{k=k_1+\ldots+k_p}\prod_{i=1}^pf_{k_i}
+     \right)x^k
+  = \sum_{k=0}^\infty f_{k+p-1}x^k&lt;/script&gt;
+
+&lt;p&gt;ovvero&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x^{p-1}[F(x)]^p
+  = F(x) - \sum_{k=0}^{p-2} f_kx^k
+  = F(x) - 1&lt;/script&gt;
+
+&lt;p&gt;Risolvendo queste equazioni per &lt;script type=&quot;math/tex&quot;&gt;p=2,3,4&lt;/script&gt;, e studiando gli sviluppi delle soluzioni reali e pole free sull’origine, ci si rende conto di un pattern che suggerisce&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_k={pk \choose k}\frac{1}{(p-1)k+1}&lt;/script&gt;
+
+&lt;p&gt;Ovviamente la validità di tale espressione andrebbe verificata a posteriori in qualche maniera.&lt;/p&gt;
+
+&lt;p&gt;Comunque, quanto detto basta a rintracciare il nome dei numeri in questione, appartenenti alla serie multivariata di Fuss-Catalan. In &lt;em&gt;arXiv:0711.0906&lt;/em&gt; c’è una soluzione completa al problema.&lt;/p&gt;
+</content>
+ </entry>
+ 
+</feed>

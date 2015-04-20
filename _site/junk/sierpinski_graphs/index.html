@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Paolo Brasolin">
+    <title>Sierpiński graphs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!--<link rel="alternate" type="application/atom+xml" title="paolobrasolin.github.io" href="atom.xml">-->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ]/*,
+          processEscapes: true*/
+        }
+      });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34703595-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <header><h1>Sierpiński graphs</h1></header>
+    <main><h1 id="sierpiski-graphs">Sierpiński graphs</h1>
+
+<p>Grinding through some math riddles I found one that really struck me.
+The solution was slick and I longed for a generalization.
+This is the account of a very brief success.</p>
+
+<h2 id="the-riddle">The riddle</h2>
+
+<p>Let $S_0$ be the complete graph of order three, and $S_{n+1}$ be three copies of $S_n$ joined in pairs by their vertices of degree $2$.</p>
+
+<p><img src="S_0_to_S_3.svg" alt="" /></p>
+
+<p>The succession gives the steps in the construction of the Sierpiński graph.
+We want to know the number of hamiltonian cycles on $S_n$, i.e. the number of closed paths crossing every vertex exactly once.</p>
+
+<p>Try to answer now - it’s a lot of fun!</p>
+
+<h2 id="finger-counting">Finger counting</h2>
+
+<p>Let us be naïf and just count the cycles.
+It’s easy to see that we have one on $S_0$ and $S_1$.
+Things start to get interesting with $S_2$, where we have eight.
+What about $S_3$?</p>
+
+<p><img src="O_paths_on_S_2.svg" alt="" /></p>
+
+<p>It turns out we have roughly a lot - precisely, too much for us to count: $13824$.
+Any pedestrian computational intent would also be easily choked by $S_4$ with its $71328803586048$ hamiltonian cycles.
+That number means every single cell in a kid could take a different path on the graph.
+Now that’s gruesome.</p>
+
+<h2 id="recurrence-relations">Recurrence relations</h2>
+
+<p>The laernean nature of the problem is easily tamed exploiting the recursive structure of $S_n$.
+In fact, it reflects on the counting problem giving an anticlimatic way to break it down.</p>
+
+<p>Let’s lighten the prose naming the various kind of paths on $S_n$ we will need:</p>
+
+<ul>
+  <li>$O$-paths are hamiltonian cycles;</li>
+  <li>$C$-paths are hamiltonian paths between vertices of degree $2$;</li>
+  <li>$V$-paths are hamiltonian paths between vertices of degree $2$ that don’t tread the third one.</li>
+</ul>
+
+<p>We denote their number on $S_n$ adding $n$ as a subscript.</p>
+
+<p>The vertices joining copies of $S_n$ to form $S_{n+1}$ are the only possible crossing points between them.
+Therefore the portion of an $O$-path between a pair of them must completely tread one.
+This leads to the observation that an $O$-path on $S_{n+1}$ is the gluing of three $C$-paths on $S_n$.</p>
+
+<script type="math/tex; mode=display">O_{n+1}=C_n^3</script>
+
+<p>A $C$-path must cross two of the joining vertices to reach the third vertex of degree $2$, but it’s not a cycle so it can’t cross the third joining vertex to the adjacent copy of $S_{n}$.
+This means a $C$-path on $S_{n+1}$ is one of the two possible gluings of two $C$-paths and a $V$-path on $S_n$.</p>
+
+<script type="math/tex; mode=display">C_{n+1}=2C_n^2V_n</script>
+
+<p>A similar argument holds for $V$-paths, except that it must skip the third vertex of degree $2$. Therefore a $V$-path on $S_{n+1}$ is one of the two possible gluings of two $V$-paths and a $C$-path on $S_n$.</p>
+
+<script type="math/tex; mode=display">V_{n+1}=2V_n^2C_n</script>
+
+<p>Excellent!
+We captured the counting problem into some recurrence relations.
+Doing some easy counting we complete the description with the starting values:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{lll}
+O_0=1 \quad& O_1=1 \quad& O_{n+1}=C_n^3     \\
+C_0=1 \quad& C_1=2 \quad& C_{n+1}=2C_n^2V_n \\
+V_0=1 \quad& V_1=3 \quad& V_{n+1}=2V_n^2C_n
+\end{array} %]]></script>
+
+<p>We’re lucky: these can be solved into a closed form. Plugging the last two recurrence relations into themselves $i$ times we obtain
+<script type="math/tex">% <![CDATA[
+\begin{array}{lll}
+C_{n+1} &= 2^{x_i}C_{n+1-i}^{y_i}V_{n+1-i}^{z_i} &= 2^{x_n}C_1^{y_n}V_1^{z_n} \\
+V_{n+1} &= 2^{x_i}V_{n+1-i}^{y_i}C_{n+1-i}^{z_i} &= 2^{x_n}V_1^{y_n}C_1^{z_n}
+\end{array} %]]></script>
+where $x_1=z_1=1$ and $y_1=2$.</p>
+
+<p>The recurrence relations constrain the exponents as
+<script type="math/tex">% <![CDATA[
+\begin{array}{rrrrrr}
+x_n = & x_{n-1} & + &  y_{n-1} & + &  z_{n-1} \\
+y_n = &         &   & 2y_{n-1} & + &  z_{n-1} \\
+z_n = &         &   &  y_{n-1} & + & 2z_{n-1} \\
+\end{array} %]]></script>
+and are easily solved:
+<script type="math/tex">% <![CDATA[
+\begin{array}{ll}
+(y+z)_n = 3(y+z)_{n-1} = 3^n(y+z)_1 & = 3^n \\
+(y-z)_n =  (y-z)_{n-1} =    (y-z)_1 & = 1 \\
+\end{array}
+\quad\Rightarrow\quad
+\begin{array}{ll}
+y_n & = (3^n+1)/2 \\
+z_n & = (3^n-1)/2
+\end{array} %]]></script>
+<script type="math/tex">x_n
+ = x_{n-1} + 3^n
+ = x_1 + 3 + \ldots + 3^n
+ = 1 + \ldots + 3^n
+ = \frac{3^{n+1}-1}{3-1}</script></p>
+
+<p>We nailed it:
+<script type="math/tex">% <![CDATA[
+\begin{array}{lll}
+O_0=1 \quad& O_1=1 \quad& O_{n+1}=2^{3^n}3^{\frac{3^n-3}{2}} \\
+C_0=1 & C_1=2 & C_{n+1}=2^{3^n}3^{\frac{3^n-1}{2}} \\
+V_0=1 & V_1=3 & V_{n+1}=2^{3^n-1}3^{\frac{3^n+1}{2}}
+\end{array} %]]></script></p>
+
+<h2 id="general-construction">General construction</h2>
+
+<p>The Sierpińskian construction is easily generalized to any base graph $S_0=(V_0,E_0)$.</p>
+
+<p>Let’s call the steps $S_{n}=(V_n,E_n)$.
+To build $S_{n+1}$ we take a copy of $S_n$ for each vertex of $S_0$.
+Thus, the vertex set $V_{n+1}$ and the relation $E_{n+1}$ can be drafted as
+<script type="math/tex">\coprod_{V_0} V_n
+\qquad
+(x,v)\sim_{E_{n+1}}(y,v) \Leftrightarrow x \sim_{E_n} y</script>
+We need to join the subgraphs. Denoting $v_{(n+1)}=(v_{(n)},v)$ and $v_{(1)}=v$, the vertices to join are given by the relation $J_{n+1}$ defined as
+<script type="math/tex">(x_{(n)},y)\sim_{J_{n+1}}(y_{(n)},x) \Leftrightarrow x \sim_{E_0} y</script>
+Quotienting the vertices, we obtain
+<script type="math/tex">V_{n+1}=\coprod_{V_0} V_n \Big/ J_{n+1}
+\qquad
+(x,v)\sim_{E_{n+1}}(y,v) \Leftrightarrow x \sim_{E_n} y</script></p>
+
+<p>The properties of $S_n$ vary wildly depending on $S_0$ and $n$.
+However, if $S_0$ is a complete graph it’s easy to show that every step of the iteration $S_n$ has an hamiltonian cycle.
+For this reason we restrict our attention to complete graphs.</p>
+
+<h2 id="picture-staring">Picture staring</h2>
+
+<p>The Sierpińskian construction happens to be trivial for complete graphs of order $0$, $1$ and $2$ and easily handled at order three, as we have seen.
+At order four things get awkward: we were able to solve the triangular case in closed form only because the low order brought some non apparent simplifications into the involved combinatorics.
+On the other hand, at orders higher than four no new phenomenology appears.
+This means that the case of order four is both the first to fully manifest the structure of the construction and the last wieldy enough to be manually dealt with.</p>
+
+<p>To keep this readable we need some graphical notation.
+Let’s review the case of $K_3$.</p>
+
+<p><img src="combinatorics_over_K_3.svg" alt="" /></p>
+
+<p>Lines and dots represent edges and vertices.
+Each one of the graphs represent $S_{n+1}$.
+The gluing vertices have been prolonged to an edge.
+Gray triangles represent $S_n$.
+Edges and vertices with the same color belong to the same path, while gray ones belong to none. An edge leading out of the graph represents the end of an open path.</p>
+
+<p>The three graphs perfectly capture the three recurrence relations we found.</p>
+
+<p>Let’s take it up a notch and think about $K_4$.</p>
+
+<p><img src="combinatorics_over_K_4.svg" alt="" /></p>
+
+<p>The left column gives the possible choices for the vertices of $S_{n+1}$ of lowest degree.
+An omitted vertex can belong to any path, or to none.
+Each left graph must be completed choosing a possible set of gluing vertices from its right.
+These are listed up to permutations of the subgraphs $S_n$.
+A special care must be taken when gluing a pair of disjoint paths, as this can be done in various inequivalent ways.</p>
+
+<p>This is complicated, but as we said no other special notations are necessary to handle higher orders.</p>
+
+<p>Let’s name the needed kinds of paths using somewhat suggestive letters:</p>
+
+<ul>
+  <li>$O$-paths are hamiltonian cycles;</li>
+  <li>$C$-paths are hamiltonian paths between vertices of degree $3$;</li>
+  <li>$V$-paths are hamiltonian paths between vertices of degree $3$ skipping one of the other two;</li>
+  <li>$I$-paths are hamiltonian paths between vertices of degree $3$ skipping the other two;</li>
+  <li>$X$-paths are a pair of hamiltonian paths between vertices of degree $3$.</li>
+</ul>
+
+<p>The pictures allow us to write the recurrence relations avoiding an excessive amount of pain to keep track of symmetries.
+I present the calculations using a bizarre notation.
+The first factors are the possible gluings of subpaths and represent just the product of their numbers.
+The other factors handle symmetries by just counting them.
+Each symbol can be just interpreted as a $1$.
+Boxes are identity, opposing arrowheads are permutations of the subgraphs and $=$, $\shortparallel$ and $\times$ are the possible gluings of pairs of paths.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+O_{n+1} =& \left[
+           {^C_V{}^C_V}+{^V_V{}^C_C}+
+           {^C_C{}^V_V}+{^V_C{}^V_C}
+           \right]
+           \times
+           \left[
+           {^\blacksquare_\blacksquare{
+           }^\blacksquare_\blacksquare}+
+           {^\blacksquare_\blacktriangleright{
+           }^\blacksquare_\blacktriangleleft}+
+           {^\blacksquare_\blacksquare{
+           }^\blacktriangledown_\blacktriangle}
+           \right] \\
+        =& 12C_n^2V_n^2
+\end{align} %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+C_{n+1}    =& C'_{n+1}+C''_{n+1}+C'''_{n+1} & \\
+C'_{n+1}   =& \left[\begin{array}{l}
+                {^C_C{}^I_V}+{^V_C{}^V_V}+
+                {^V_C{}^I_C}+{^I_C{}^V_C}+\\
+                {^C_V{}^V_V}+{^V_V{}^C_V}+
+                {^V_V{}^V_C}+{^I_V{}^C_C}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\blacksquare_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\blacktriangleright_\blacksquare{
+                }^\blacktriangleleft_\blacksquare}
+              \end{array}\right] \\
+           =& 8C_n^2V_nI_n+8C_nV_n^3\\
+C''_{n+1}  =& \left[\begin{array}{l}
+                {^X_V{}^C_V}+{^X_C{}^V_V}+
+                {^X_V{}^V_C}+{^X_C{}^I_C}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\shortparallel_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\times_\blacksquare{
+                }^\blacksquare_\blacksquare}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\blacksquare_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\blacktriangleright_\blacksquare{
+                }^\blacktriangleleft_\blacksquare}
+              \end{array}\right] \\
+           =& 4X_nC_n^2I_n+12X_nC_nV^2_n\\
+C'''_{n+1} =& \left[\begin{array}{l}
+                {^X_C{}^X_V}+{^X_V{}^X_C}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^=_\blacksquare{
+                }^\times_\blacksquare}+
+                {^\times_\blacksquare{
+                }^=_\blacksquare}+
+                {^\shortparallel_\blacksquare{
+                }^=_\blacksquare}+\\
+                {^=_\blacksquare{
+                }^\shortparallel_\blacksquare}+
+                {^\times_\blacksquare{
+                }^\times_\blacksquare}+
+                {^\shortparallel_\blacksquare{
+                }^\shortparallel_\blacksquare}
+              \end{array}\right] \\
+           =& 12X_n^2C_nV_n
+\end{align} %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+V_{n+1}    =& V'_{n+1}+V''_{n+1}+V'''_{n+1} & \\
+V'_{n+1}   =& \left[\begin{array}{l}
+                {^C_C{}^I_I}+{^V_C{}^V_I}+
+                {^V_C{}^I_V}+{^I_C{}^V_V}+\\
+                {^C_V{}^V_I}+{^V_V{}^C_I}+
+                {^V_V{}^V_V}+{^I_V{}^C_V}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\blacksquare_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\blacktriangleright_\blacksquare{
+                }^\blacktriangleleft_\blacksquare}
+              \end{array}\right] \\
+           =& 2C_n^2I_n^2+12C_nV_n^2I_n+2V_n^4\\
+V''_{n+1}  =& \left[\begin{array}{l}
+                {^X_V{}^C_I}+{^X_C{}^V_I}+
+                {^X_V{}^V_V}+{^X_C{}^I_V}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\shortparallel_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\times_\blacksquare{
+                }^\blacksquare_\blacksquare}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\blacksquare_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\blacktriangleright_\blacksquare{
+                }^\blacktriangleleft_\blacksquare}
+              \end{array}\right] \\
+           =& 12X_nC_nV_nI_n+4X_nV_n^3\\
+V'''_{n+1} =& \left[\begin{array}{l}
+                {^X_C{}^X_I}+{^X_V{}^X_V}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^=_\blacksquare{
+                }^\times_\blacksquare}+
+                {^\times_\blacksquare{
+                }^=_\blacksquare}+
+                {^\shortparallel_\blacksquare{
+                }^=_\blacksquare}+\\
+                {^=_\blacksquare{
+                }^\shortparallel_\blacksquare}+
+                {^\times_\blacksquare{
+                }^\times_\blacksquare}+
+                {^\shortparallel_\blacksquare{
+                }^\shortparallel_\blacksquare}
+              \end{array}\right] \\
+           =& 6X_n^2C_nI_n+6X_n^2V^2_n
+\end{align} %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+I_{n+1}    =& I'_{n+1}+I''_{n+1}+I'''_{n+1} & \\
+I'_{n+1}   =& \left[\begin{array}{l}
+                {^C_V{}^I_I}+{^V_V{}^V_I}+
+                {^V_V{}^I_V}+{^I_V{}^V_V}+\\
+                {^C_I{}^V_I}+{^V_I{}^C_I}+
+                {^V_I{}^V_V}+{^I_I{}^C_V}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\blacksquare_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\blacktriangleright_\blacksquare{
+                }^\blacktriangleleft_\blacksquare}
+              \end{array}\right] \\
+           =& 8C_nV_nI_n^2+8V_n^3I_n\\
+I''_{n+1}  =& \left[\begin{array}{l}
+                {^X_I{}^C_I}+{^X_V{}^V_I}+
+                {^X_I{}^V_V}+{^X_V{}^I_V}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\shortparallel_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\times_\blacksquare{
+                }^\blacksquare_\blacksquare}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^\blacksquare_\blacksquare{
+                }^\blacksquare_\blacksquare}+
+                {^\blacktriangleright_\blacksquare{
+                }^\blacktriangleleft_\blacksquare}
+              \end{array}\right] \\
+           =& 4X_nC_nI_n^2+12X_nV^2_nI_n\\
+I'''_{n+1} =& \left[\begin{array}{l}
+                {^X_V{}^X_I}+{^X_I{}^X_V}
+              \end{array}\right]
+              \times
+              \left[\begin{array}{l}
+                {^=_\blacksquare{
+                }^\times_\blacksquare}+
+                {^\times_\blacksquare{
+                }^=_\blacksquare}+
+                {^\shortparallel_\blacksquare{
+                }^=_\blacksquare}+\\
+                {^=_\blacksquare{
+                }^\shortparallel_\blacksquare}+
+                {^\times_\blacksquare{
+                }^\times_\blacksquare}+
+                {^\shortparallel_\blacksquare{
+                }^\shortparallel_\blacksquare}
+              \end{array}\right] \\
+           =& 12X_n^2V_nI_n\\
+\end{align} %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+X_{n+1}     =& X'_{n+1}+X''_{n+1}+X'''_{n+1}+X''''_{n+1} & \\
+X'_{n+1}    =& \left[\begin{array}{l}
+                 {^C_I{}^C_I}+{^V_V{}^C_I}+
+                 {^V_I{}^C_V}+{^I_V{}^C_V}+\\
+                 {^C_V{}^V_I}+{^V_C{}^V_I}+
+                 {^V_V{}^V_V}+{^I_C{}^V_V}+\\
+                 {^C_I{}^V_V}+{^V_V{}^V_V}+
+                 {^V_I{}^V_C}+{^I_V{}^V_C}+\\
+                 {^C_V{}^I_V}+{^V_C{}^I_V}+
+                 {^V_V{}^I_C}+{^I_C{}^I_C}
+               \end{array}\right]
+            =& 2C_n^2I_n^2+12C_nV_n^2I_n+2V_n^4\\
+X''_{n+1}   =& \left[\begin{array}{l}
+                 {^X_V{}^C_I}+{^X_C{}^V_I}+
+                 {^X_V{}^V_V}+{^X_C{}^I_V}+\\
+                 {^X_I{}^C_V}+{^X_V{}^V_V}+
+                 {^X_I{}^V_C}+{^X_V{}^I_C}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^=_\blacksquare{
+                 }^\blacksquare_\blacksquare}
+               \end{array}\right]
+               \times\\
+             & \left[\begin{array}{l}
+                 {^\blacksquare_\blacksquare{
+                 }^\blacksquare_\blacksquare}+
+                 {^\blacktriangleright_\blacksquare{
+                 }^\blacktriangleleft_\blacksquare}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^\blacksquare_\blacksquare{
+                 }^\blacksquare_\blacksquare}+
+                 {^\blacktriangledown_\blacktriangle{
+                 }^\blacktriangledown_\blacktriangle}
+               \end{array}\right]
+            =& 24X_nC_nV_nI_n+8X_nV_n^3\\
+X'''_{n+1}  =& \left[\begin{array}{l}
+                 {^X_X{}^X_X}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^=_\shortparallel{
+                 }^\blacksquare_\times}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^\blacksquare_\blacksquare{
+                 }^\times_\blacksquare}+
+                 {^\blacksquare_\blacksquare{
+                 }^\shortparallel_\blacksquare}
+               \end{array}\right]
+               \times\\
+             & \left[\begin{array}{l}
+                 {^\blacksquare_\blacksquare{
+                 }^\blacksquare_\blacksquare}+
+                 {^\blacktriangleright_\blacksquare{
+                 }^\blacktriangleleft_\blacksquare}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^\blacksquare_\blacksquare{
+                 }^\blacksquare_\blacksquare}+
+                 {^\blacktriangledown_\blacktriangle{
+                 }^\blacktriangledown_\blacktriangle}
+               \end{array}\right]
+            =& 8X_n^4\\
+X''''_{n+1} =& \left[\begin{array}{l}
+                 {^X_X{}^X_X}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^\shortparallel_\times{
+                 }^\shortparallel_\times}
+               \end{array}\right]
+               \times
+               \left[\begin{array}{l}
+                 {^\blacksquare_\blacksquare{
+                 }^\blacksquare_\blacksquare}+
+                 {^\blacktriangledown_\blacktriangle{
+                 }^\blacktriangledown_\blacktriangle}
+               \end{array}\right]
+            =& 2X_n^4
+\end{align} %]]></script>
+
+<p>So we obtain</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+O_{n+1} =& 12C_n^2V_n^2\\
+C_{n+1} =& 12X_n^2C_nV_n+4X_nC_n^2I_n+12X_nC_nV^2_n+8C_n^2V_nI_n+8C_nV_n^3\\
+V_{n+1} =& 6X_n^2C_nI_n+6X_n^2V^2_n+12X_nC_nV_nI_n+4X_nV_n^3+2C_n^2I_n^2+12C_nV_n^2I_n+2V_n^4\\
+I_{n+1} =& 12X_n^2V_nI_n+4X_nC_nI_n^2+12X_nV^2_nI_n+8C_nV_nI_n^2+8V_n^3I_n\\
+X_{n+1} =& 10X_n^4+24X_nC_nV_nI_n+8X_nV_n^3+2C_n^2I_n^2+12C_nV_n^2I_n+2V_n^4
+\end{align} %]]></script>
+
+<p>These are going to be hard to disentangle. The best I can do is noticing</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+O_{n+1} =& 12C_n^2V_n^2\\
+C_{n+1} =& 4C_n\left(C_nI_n\left(X_n+2V_n\right)+3X_n^2V_n+3X_nV^2_n+2V_n^3\right)\\
+I_{n+1} =& 4I_n\left(C_nI_n\left(X_n+2V_n\right)+3X_n^2V_n+3X_nV^2_n+2V_n^3\right)\\
+V_{n+1} =& 2C_nI_n\left(3X_n^2+6X_nV_n+C_nI_n+6V_n^2\right)+2\left(3X_n^2V^2_n+2X_nV_n^3+V_n^4\right)\\
+X_{n+1} =& 2C_nI_n\left(12X_nV_n+C_nI_n+6V_n^2\right)+2\left(5X_n^4+4X_nV_n^3+V_n^4\right)
+\end{align} %]]></script>
+
+<p>So the problem is reduced to</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+C_{n+1}I_{n+1} =& 4C_nI_n\left(C_nI_n\left(X_n+2V_n\right)+3X_n^2V_n+3X_nV^2_n+2V_n^3\right)^2\\
+V_{n+1} =& 2C_nI_n\left(3X_n^2+6X_nV_n+C_nI_n+6V_n^2\right)+2\left(3X_n^2V^2_n+2X_nV_n^3+V_n^4\right)\\
+X_{n+1} =& 2C_nI_n\left(12X_nV_n+C_nI_n+6V_n^2\right)+2\left(5X_n^4+4X_nV_n^3+V_n^4\right)
+\end{align} %]]></script>
+
+<p>Welp.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+O_0 =& 3\\
+C_0 =& 2\\
+I_0 =& 1\\
+V_0 =& 2\\
+X_0 =& 1
+\end{align} %]]></script>
+
+</main>
+    <footer><hr></footer>
+  </body>
+</html>
