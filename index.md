@@ -4,6 +4,7 @@ title: Index
 published: true
 ---
 
+
 ## Epistolae
 
 <dl>
@@ -21,11 +22,10 @@ published: true
   {% endfor %}
 </dl>
 
+
 ## Diaria
 
 <ul>
   <li><a href="{{ site.baseurl }}books">Books</a></li>
   <li><a href="{{ site.baseurl }}movies">Movies</a></li>
 </ul>
-
-
