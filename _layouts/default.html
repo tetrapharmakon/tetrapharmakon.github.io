@@ -31,23 +31,8 @@
     </script>
   </head>
   <body>
-    <header>
-      <!--<nav>
-        <a href="{{ site.baseurl }}" title="index">index</a>
-        <a href="{{ site.baseurl }}atom.xml" title="feed">feed</a>
-        <a href="{{ site.baseurl }}about/" title="about">about</a>
-      </nav>-->
-      <h1>{{ page.title }}</h1>
-    </header>
-    <main>
-      {{ content }}
-    </main>
-    <footer>
-      <!--<p>{{ site.time | date_to_xmlschema }}</p>-->
-      <!--<small>
-        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-      </small>-->
-    </footer>
-  </div>
+    <header><h1>{{ page.title }}</h1></header>
+    <main>{{ content }}</main>
+    <footer><hr></footer>
   </body>
 </html>
