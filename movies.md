@@ -121,7 +121,7 @@ Spring 2015
 -----------
 
 
-###### English
+### English
 
 **Ghost dog: the way of the samurai** (2007), Jim Jarmusch
 : Beautifully crafted. Really liked Jarmush' work here.
@@ -130,7 +130,7 @@ Spring 2015
 : Meh. Not in the mood.
 
 It's such a beautiful day (2012), Don Hertzfeldt
-: It's Don. Interesting at the very least.
+: It's Don - I like him.
 
 <del>Tusk</del> (2014), Kevin Smith
 : Not really sure what I've seen.
@@ -160,9 +160,9 @@ John Wick (2014), Chad Stahelski
 : Strangely compelling. Liked it way more than I expected.
 
 
-###### Other
+### Chinese
 
-Fearless (2006), Ronny Yu
+Huo Yuanjia (2006), Ronny Yu
 : Entertaining.
 
 
