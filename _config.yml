@@ -23,7 +23,7 @@ baseurl: http://paolobrasolin.github.io/
 relative_permalinks: true
 
 # Outputting
-permalink: none
+permalink: /:title/
 
 # Markdown flavouring
 markdown: kramdown
