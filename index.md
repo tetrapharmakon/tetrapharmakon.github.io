@@ -20,10 +20,7 @@ published: true
   {% if post.tags contains 'draft' %}{% else %}
   <dt>
     <a href="{{ post.url }}">{{ post.title }}</a>
-    <small>
-      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-      <span>{{ post.content | number_of_words }} words</span>
-    </small>
+    <small> ({{ post.content | number_of_words }} words) <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time> </small>
   </dt>
   <dd>{{ post.excerpt }}</dd>
   {% endif %}
