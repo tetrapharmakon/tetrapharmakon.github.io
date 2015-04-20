@@ -13,11 +13,10 @@ body {
   margin: 2rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 44rem) {
   body { 
-    max-width: 44rem;
-    margin: auto;
-    margin-bottom: 22rem;
+    max-width: 40rem;
+    margin: 8rem auto;
   }
 }
 
