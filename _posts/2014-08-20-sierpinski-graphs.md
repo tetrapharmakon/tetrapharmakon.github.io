@@ -1,5 +1,6 @@
 ---
 title: Sierpiński graphs
+tags: draft
 ---
 
 Grinding through some math riddles I found one that really struck me.
