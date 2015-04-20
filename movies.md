@@ -123,25 +123,47 @@ Spring 2015
 
 ###### English
 
+**Ghost dog: the way of the samurai** (2007), Jim Jarmusch
+: Beautifully crafted. Really liked Jarmush' work here.
 
-* **Ghost dog: the way of the samurai** (2007), Jim Jarmusch
-* <del>Dangerous Liaisons</del> (1988), Stephen Frears
-* It's such a beautiful day (2012), Don Hertzfeldt
-* <del>Tusk</del> (2014), Kevin Smith
-* **Maleficient** (2014), Robert Stromberg
-* **The night of the Hunter** (1955), Charles Laughton
-* <del>The Godfather: Part II</del> (1974), Francis Ford Coppola
-* **Interstellar** (2014), Christopher Nolan
-* The interview (2014), Evan Goldberg, Seth Rogen
-* John Wick (2014), Chad Stahelski
-* **Good Will Hunting** (1997), Gus Van Sant
-* **Down by law** (1986), Jim Jarmush
+<del>Dangerous Liaisons</del> (1988), Stephen Frears
+: Meh. Probably not in the mood.
+
+It's such a beautiful day (2012), Don Hertzfeldt
+: It's Don. Interesting at the very least.
+
+Tusk (2014), Kevin Smith
+: Not really sure what I've seen.
+
+Maleficient (2014), Robert Stromberg
+: Awesome. Loved the screenplay. Angelina Jolie was amazing.
+
+The night of the Hunter (1955), Charles Laughton
+: Wow. Incredible direction. Wicked performance by Robert Mitchum. Also, the kid was really good!
+
+The Godfather: Part II (1974), Francis Ford Coppola
+: Meh. Surely not bad.
+
+Interstellar (2014), Christopher Nolan
+: Exceeded high expectations.
+
+The interview (2014), Evan Goldberg, Seth Rogen
+: Not my kind of movie. Had some laughs, though!
+
+John Wick (2014), Chad Stahelski
+: Really fun!
+
+Good Will Hunting (1997), Gus Van Sant
+: Great.
+
+Down by law (1986), Jim Jarmush
+: Strangely compelling. Liked it more than I expected.
 
 
 ###### Other
 
-
-* Fearless (2006), Ronny Yu
+Fearless (2006), Ronny Yu
+: Entertaining!
 
 
 
