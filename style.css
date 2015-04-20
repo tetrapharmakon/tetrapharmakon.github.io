@@ -1,7 +1,6 @@
 html {
   font: 16px/2rem "Merriweather";
   text-align: justify;
-  padding: 2rem;
 
   /*background-image:
     repeating-linear-gradient(0deg,transparent,transparent 15px,#CCC 15px,#CCC 16px),
@@ -10,14 +9,17 @@ html {
 
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 48rem) {
   html { 
     max-width: 44rem;
     margin: auto;
-    padding-bottom: calc(50vw - 22rem);
+    margin-bottom: 22rem;
   }
 }
 
+body {
+  padding: 2rem;
+}
 
 h1 {
   text-align: center;
