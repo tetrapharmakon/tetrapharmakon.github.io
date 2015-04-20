@@ -58,7 +58,15 @@ dt small {
 }
 
 dd p {
-  margin-top: 0;
+  margin: 0;
+}
+
+dt + dd {
+  margin-bottom:1rem
+}
+
+dd + dt {
+  margin-top:1rem
 }
 
 
