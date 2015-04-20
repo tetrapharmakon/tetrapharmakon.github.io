@@ -17,7 +17,7 @@ author:
 # excerpt_separator: "\n\n"
 
 # Serving
-#baseurl: http://paolobrasolin.github.io/
+baseurl: http://paolobrasolin.github.io/
 
 # Backwards-compatibility
 relative_permalinks: true
