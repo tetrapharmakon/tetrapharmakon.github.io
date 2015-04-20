@@ -51,3 +51,11 @@ li ul, li ol {
 dl dd {
   margin-left: 2rem;
 }
+
+dt > small {
+  float:right;
+}
+
+dd > p {
+  margin: 0;
+}
