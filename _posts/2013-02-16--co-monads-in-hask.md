@@ -1,8 +1,5 @@
 ---
-author: Paolo Brasolin
 title: (Co)monads in Hask
-created: 2013-02-16
-published: 2013-02-16
 ---
 
 

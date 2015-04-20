@@ -1,6 +1,5 @@
 ---
 title: Elementary properties of simplicial gaskets
-category: math
 ---
 
 Let's compute some basic characteristics of straightforwardly generalized Sierpinski gaskets.

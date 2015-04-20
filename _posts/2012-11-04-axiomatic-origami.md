@@ -1,8 +1,6 @@
 ---
-author: Paolo Brasolin
 title: Axiomatic origami
-created: 2012-11-04
-published: 2012-11-04
+tags: draft
 ---
 
 What can be done with origami?

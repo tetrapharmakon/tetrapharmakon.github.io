@@ -1,6 +1,6 @@
 ---
 title: Molesting Collatz conjecture
-published: false
+tags: draft
 ---
 
 Mandated by insomnia.

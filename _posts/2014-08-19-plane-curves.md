@@ -1,5 +1,4 @@
 ---
-author: Paolo Brasolin
 title: Plane curves
 tags: draft
 ---
