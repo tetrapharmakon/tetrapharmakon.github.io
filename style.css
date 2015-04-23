@@ -21,16 +21,23 @@ body {
 }
 
 
-h1 {
-  text-align: center;
-}
-
-h1, h2 {
+h1, h2, h3 {
   font-family: "Oswald";
   font-weight: 300;
+}
+
+h1 {
+  text-align: center;
   margin: 6rem 0 3rem 0;
 }
 
+h2 {
+  margin: 6rem 0 3rem 0;
+}
+
+h3 {
+  margin: 4rem 0 2rem 0;
+}
 
 
 a {
