@@ -64,15 +64,37 @@ Le finalità sono varie: se ad un estremo alcuni hanno interesse immediato per a
 Se lo chiedi a me, sì.
 
 Si tratta di domande pericolose perché il consenso in filosofia della scienza è piuttosto limitato.
-Per questa ragione ho cercato di delinere un'idea precisa ma non dettagliata abbastanza da sollevare il genere di *vespaio filosofico* che trascenderebbe i fini di questa lezione.
+Per questa ragione ho cercato di delineare un'idea precisa ma non così dettagliata da sollevare il genere di *vespaio filosofico* che trascenderebbe i fini di questa lezione.
 
-[...unfinished...]
+L'avrai notato, le due descrizioni si somigliano in forma e contenuto.
+Non è un caso: le due discipline sono inscindibilmente intrecciate.
+
+La matematica è un linguaggio irrinunciabile per la fisica e vi introduce l'astrazione garantendo visioni impossibili con la mera osservazione dei fenomeni. La fisica è un'ispirazione inesauribile per la matematica e suggerendo il confronto con l'esperienza ne permette una comprensione intuitiva altrimenti irraggiungibile.
+
+
+
+
+### Chiosa
+
+
+Si potrebbe arguire che fossero due manifestazioni della medesima entità, e la convinzione che ho maturato è esattamente questa.
+Fisica e matematica sono entrambe frutto della tensione degli esseri umani alla comprensione della *realtà*.
+
+La ragione per cui rimangono una necessaria all'altra pur divergendo è che sono l'effetto del medesimo slancio sottoposto a due vincoli differenti ma complementari:
+
+* la Fisica è obbligata al confronto con l'esperienza,
+* la Matematica è tenuta ad esserne indipendente.
+
+Non si tratta di *fare gli studi di funzione* o *risolvere i piani inclinati*: la posta in gioco è molto più alta.
+Chiunque ti abbia insegnato il contrario o ti mentiva o lo ignorava e quindi, comunque, si trovava dal lato sbagliato della cattedra.
 
 
 
 
 
+<hr>
 
+Ok, adesso facciamo le cose.
 
 ## TODO
 
