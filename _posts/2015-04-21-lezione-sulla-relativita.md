@@ -12,6 +12,7 @@ Inoltre, un esercizio di equilibrismo per me: niente ontologia da un lato, nient
 
 $$
 \def\x{\mathbf{x}}
+\def\o{\mathbf{o}}
 \def\veccoord#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \def\matcoord#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
 $$
@@ -126,7 +127,6 @@ Chiunque ti abbia insegnato il contrario o ti mentiva o lo ignorava e quindi, co
 
 
 
-
 Anubi è il nostro cane.
 
 È nero, ha una macchia bianca attorno all'occhio sinistro e ci guarda perplesso.
@@ -140,8 +140,197 @@ E Xolotl? Eh, mo' c'arrivo.
 
 
 
-### Sistemi di riferimento
+ * * *
 
+
+
+
+
+
+
+
+# Il cronotopo
+
+
+Squit.
+*Cronotopo* è una parola buffa di etimologia greca.
+Si forma unendo χρόνος (chrónos) e τόπος (tópos), ovvero tempo e luogo.
+Esso è infatti la collezione di tutti gli *eventi*, intesi come il dato congiunto di un tempo ed un luogo.
+Si tratta di un elemento essenziale per fare fisica: gioca il ruolo di modello dell'ambiente in cui si collocano tutte le nostre esperienze sensibili.
+
+
+## Sistemi di riferimento
+
+Per orientarci e parlare concretamente di eventi abbiamo bisogno di un *sistema di riferimento*.
+Esso è individuato da un evento privilegiato, la sua *origine*, da cui dipartono degli *assi* temporali e spaziali a cui sono associate delle *unità di misura*.
+
+BLA
+
+queste son cose di cui già ha comprensione intuitiva, posticipo scrittura
+
+BLA
+
+$$
+\x = \veccoord{t}{x}
+$$
+
+
+## Eventi et cetera
+
+$$
+\x_1 = \veccoord{t_1}{x_1}
+\qquad
+\x_2 = \veccoord{t_2}{x_2}
+$$
+
+Separati da *durata* $t_2-t_1$.
+
+*Sincronici* se $t_2-t_1=0$.
+
+*Diacronici* se $t_2-t_1\neq0$.
+
+Separati da *lunghezza* $x_2-x_1$.
+
+*Sintopici* se $x_2-x_1=0$.
+
+*Diatopici* se $x_2-x_1\neq0$.
+
+
+
+
+
+## Trasformazioni tra sistemi di riferimento
+
+La scelta di un sistema di riferimento però non è unica!
+BLA.
+Si può decidere quale sia famiglia ammissibile a seconda di scopi.
+BLA.
+trasformazioni tra essi.
+BLA.
+Facciamo che usiamo solo gli inerziali.
+BLA.
+Preservano moti rettilinei per definizione, quindi le trasformazioni tra essi sono descritte al massimo della generalità da una matrice.
+BLA.
+
+$$
+\x' =
+\matcoord{\gamma}{\varepsilon}{\rho}{\sigma} \x
+$$
+
+Se $S'$ muove rispetto ad $S$ con velocità $v$ partendo coincidenti conosco bene i moti rettilinei delle origini in ognuno dei due riferimenti:
+
+$$
+\o_S = \veccoord{t}{0}
+\qquad
+\o_{S'} = \veccoord{t}{vt}
+\qquad
+\o'_{S'} = \veccoord{t'}{0}
+\qquad
+\o'_S = \veccoord{t'}{-vt'}
+$$
+
+come minimo mi aspetto che siano rispettati, ovvero
+
+$$
+\veccoord{t'}{0}
+=
+\matcoord{\gamma}{\varepsilon}{\rho}{\sigma}
+\veccoord{t}{vt}
+=
+\veccoord{(\gamma+\varepsilon v)t}{(\rho+\sigma v)t}
+\qquad
+\veccoord{t'}{-vt'}
+=
+\matcoord{\gamma}{\varepsilon}{\rho}{\sigma}
+\veccoord{t}{0}
+=
+\veccoord{\gamma t}{\rho t}
+$$
+
+da cui ricaviamo subito che dev'essere $\rho=-v\sigma=-v\gamma$ e limitiamo cos' la forma della matrice a
+
+$$
+\matcoord{\gamma}{\varepsilon}{-v\gamma}{\gamma}
+$$
+
+Mi aspetto che valgano proprietà di gruppo.
+In particolare, la composizione:
+
+$$
+\matcoord{\gamma}{\varepsilon}{-v\gamma}{\gamma}
+\matcoord{\gamma'}{\varepsilon'}{-v'\gamma'}{\gamma'}
+=
+\matcoord{\gamma'(\gamma-\varepsilon v')}{\ldots}{\ldots}{\gamma(-v\varepsilon'+\gamma')}
+$$
+
+I due elementi sulla diagonale devono essere uguali e ciò implica
+
+$$
+-\varepsilon\gamma'v'=-\varepsilon'\gamma v
+$$
+
+ma da ciò segue che WLOG per una costante $\kappa$ fissata
+
+$$
+\varepsilon = -\kappa\gamma v
+$$
+
+Ora, cosa dice inoltre la composizione?
+
+$$\begin{align}
+\gamma\matcoord{1}{-\kappa v}{-v}{1}
+\gamma'\matcoord{1}{-\kappa' v'}{-v'}{1}
+&=
+\gamma\gamma'
+\matcoord{1+\kappa vv'}{-\kappa(v+v')}{-\kappa(v+v')}{1+\kappa vv'} \\
+&=
+\gamma''\matcoord{1}{-\kappa v''}{-v''}{1}
+\end{align}$$
+
+ovvero
+
+$$\left\{\begin{align}
+\gamma\gamma'(1+\kappa vv') &= \gamma'' \\
+-\gamma\gamma'(v+v') &= -\gamma''v''
+\end{align}\right.$$
+
+da cui
+
+$$
+v'' = \frac{v+v'}{1+\kappa vv'}
+$$
+
+(Abbiamo appena avuto a gratis *tutte* le composizioni di velocità)
+
+Poi per una considerazione di simmetria sull'inversa (potrebbe anche seguire da isotropia ma non è banale in generale mi pare)
+
+BLA
+
+$$
+\gamma = \frac{1}{\sqrt{1-\kappa v^2}}
+$$
+
+Morale della favola in completa generalità
+
+$$
+\matcoord{\gamma}{-v\kappa\gamma}{-v\gamma}{\gamma}
+\qquad
+\gamma = \frac{1}{\sqrt{1-\kappa v^2}}
+$$
+
+Avanza solo da capire chi è $\kappa$.
+Ci sono tre principali scelte:
+
+* $\kappa < 0$ dà una teoria bizzarra che non ha riscontro sperimentale e che ignoreremo;
+* $\kappa = 0$ dà la meccanica Newtoniana;
+* $\kappa > 0$ dà la meccanica Einsteininana (ristretta) e sperimentalmente si vede che $\kappa=1/c^2$ dove $c$ è la velocità della luce.
+
+
+
+## Trasformazioni tra sistemi di riferimento inerziali
+
+
+### Caso classico
 
 $$
 \x'=\Gamma\x
@@ -156,19 +345,30 @@ $$
 \veccoord{t}{-vt+x}
 $$
 
+
+
+
+### Caso relativistico
+
+
 $$
 \x'=\Lambda\x
 $$
 
 $$
-\veccoord{ct'}{x'}
+\veccoord{t'}{x'}
 =
-\matcoord{\gamma}{-\gamma\beta}{-\gamma\beta}{\gamma}
-\veccoord{ct}{x}
+\matcoord{\gamma}{-\gamma v/c^2}{-\gamma v}{\gamma}
+\veccoord{t}{x}
 =
-\veccoord{\gamma ct-\gamma\beta x}{-\gamma\beta ct+\gamma x}
+\veccoord{\gamma t-\gamma vx/c^2}{-\gamma vt+\gamma x}
 $$
 
+
+
+
+
+
  * * *
 
 
@@ -187,11 +387,19 @@ $$
 
 
 
-## Cinematica: orologi in moto
+# La cinematica
+
+Da qui in poi fissiamo due sistemi di riferimento $S$ ed $S'$, il secondo in moto nel primo a velictà $v$.
+
+
+
+
+
+
+## Orologi in moto
 
 Immaginiamo di essere in $S$ ed osservare un orologio in moto solidale con $S'$.
-Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti a due ticchettii.
-Essi sono diacronici e sintopici, ovvero $t'_2-t'_1\neq0$ ed $x'_2-x'_1=0$.
+Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti a due ticchettii: essi sono diacronici e sintopici.
 
 
 
@@ -295,21 +503,15 @@ Questo significa che *la sintopia è relativa* al sistema di riferimento.
 
 
 
- * * *
 
 
 
 
-
-
-
-
-## Cinematica: metri in moto
+## Metri in moto
 
 
 Immaginiamo di essere in $S$ ed osservare un metro in moto solidale con $S'$.
-Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti ai suoi estremi.
-Essi sono sincronici e diatopici, ovvero $t'_2-t'_1=0$ ed $x'_2-x'_1\neq0$.
+Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti ai suoi estremi: essi sono sincronici e diatopici.
 
 
 
@@ -409,16 +611,8 @@ Questo significa che *la diacronia è relativa* al sistema di riferimento.
 
 
 
- * * *
 
-
-
-
-
-
-
-
-## Cinematica: moti relativi
+## Moti relativi
 
 
 
@@ -520,16 +714,10 @@ $$
 
 
 
- * * *
 
 
 
-
-
-
-
-
-## Cinematica: sorgenti in moto
+## Sorgenti in moto
 
 
 
@@ -595,3 +783,11 @@ $$\begin{align}
 $$
 f = f'\gamma\left(1-\frac{v}{u'}\right)
 $$
+
+
+
+
+ * * *
+
+
+# La dinamica
