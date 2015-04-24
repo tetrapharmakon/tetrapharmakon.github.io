@@ -5,8 +5,16 @@ tags: draft
 
 
 Una piccola lezione per una liceale astuta.
-Inoltre, un esercizio di equilibrismo per me: niente filosofia (apparente) da un lato, niente mistificazioni dall'altro.
+Inoltre, un esercizio di equilibrismo per me: niente ontologia da un lato, niente mistificazioni dall'altro.
 
+
+
+
+$$
+\def\x{\mathbf{x}}
+\def\veccoord#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
+\def\matcoord#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
+$$
 
 
 
@@ -36,6 +44,10 @@ La qualità di una teoria si misura con l'affidabilità combinata in queste due 
 
 La *fisica* è la disciplina di chi osserva fenomeni e produce teorie.
 Le finalità sono varie: se ad un estremo c'è chi s'interessa ai fenomeni e produce un modello empirico per ragioni eminentemente pratiche, all'altro alcuni esplorano le possibilità delle teorie ricercando ragioni profonde dietro alle manifestazioni dei fenomeni.
+
+
+
+**NB modello non dev'essere verosimile. E.g. predictivity of Jam Axiom.**
 
 
 
@@ -91,34 +103,495 @@ Chiunque ti abbia insegnato il contrario o ti mentiva o lo ignorava e quindi, co
 
 
 
+ * * *
 
-<hr>
 
-Ok, adesso facciamo le cose.
 
-## TODO
 
-### Principio di corrispondenza
+## Prerequisiti
 
-### Principio di relatività
 
-### Crash course di algebra 1 (grp th) (rly?)
 
-### Crash course di algebra 2 (lin alg)
+
+### Simmetria
+
+
+
+
+
+
+
+
+
+
+
+
+
+Anubi è il nostro cane.
+
+È nero, ha una macchia bianca attorno all'occhio sinistro e ci guarda perplesso.
+Se lo guardiamo allo specchio però la macchia bianca è attorno all'occhio destro. D'altra parte guardandolo attraverso *due* specchi la macchia torna sull'occhio sinistro.
+
+Se i tre cani che abbiamo visto siano il medesimo dipende solo da quanto raffinate sono le distinzioni che vogliamo fare. Ognuno era più vecchio del precedente di qualche istante e quindi potremmo dire che abbiamo visto tre cani distinti. D'altra parte trascurando l'età solo uno si distingue per una macchia differente e forse i cani erano solo due. In fondo, però, ognuno era Anubi e potremmo dire che ne abbiamo visto solo uno.
+
+
+E Xolotl? Eh, mo' c'arrivo.
+
+
+
 
 ### Sistemi di riferimento
 
-### Meccanica Gallifreyana
 
-### Meccanica Einsteiniana (come la faceva Albert)
+$$
+\x'=\Gamma\x
+$$
 
-### Meccanica Einsteiniana (ristretta, come la faccio io)
+$$
+\veccoord{t'}{x'}
+=
+\matcoord{1}{0}{-v}{1}
+\veccoord{t}{x}
+=
+\veccoord{t}{-vt+x}
+$$
 
-### Conticini di base
+$$
+\x'=\Lambda\x
+$$
 
-### Esempi astuti
+$$
+\veccoord{ct'}{x'}
+=
+\matcoord{\gamma}{-\gamma\beta}{-\gamma\beta}{\gamma}
+\veccoord{ct}{x}
+=
+\veccoord{\gamma ct-\gamma\beta x}{-\gamma\beta ct+\gamma x}
+$$
 
-### ???
+ * * *
 
-### Profit
 
+
+
+
+
+
+
+ * * *
+
+
+
+
+
+
+
+
+## Cinematica: orologi in moto
+
+Immaginiamo di essere in $S$ ed osservare un orologio in moto solidale con $S'$.
+Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti a due ticchettii.
+Essi sono diacronici e sintopici, ovvero $t'_2-t'_1\neq0$ ed $x'_2-x'_1=0$.
+
+
+
+
+### Caso classico
+
+Le coordinate del vettore che separa i ticchettii in $S'$ sono
+
+$$
+\veccoord{t'_2-t'_1}{0}
+=
+\veccoord{t_2-t_1}{-v(t_2-t_1)+(x_2-x_1)}
+$$
+
+Da esse ricaviamo immediatamente due equazioni da interpretare fisicamente:
+
+$$
+\left\{\begin{align}
+  (t_2-t_1) &= (t'_2-t'_1) \\
+  (x_2-x_1) &= v(t_2-t_1)
+\end{align}\right.
+$$
+
+
+La prima afferma che gli intervalli temporali misurati in $S$ ed $S'$ sono uguali.
+In altri termini *la durata è assoluta*, ovvero indipendente dal sistema di riferimento.
+
+Ricordando che i ticchettii dell'orologio sono diacronici in $S'$, esaminiamo la seconda:
+
+$$
+(x_2-x_1) = v(t'_2-t'_1) \neq 0
+$$
+
+cioè i due eventi sintopici in $S'$ sono diatopici in $S$.
+Questo significa che *la sintopia è relativa* al sistema di riferimento.
+
+
+
+
+### Caso relativistico
+
+Le coordinate del vettore spaziotemporale che separa i ticchettii in $S'$ sono
+
+$$
+\veccoord{c(t'_2-t'_1)}{0}
+=
+\veccoord{\gamma c(t_2-t_1)-\gamma\beta(x_2-x_1)}
+      {-\gamma\beta c(t_2-t_1)+\gamma(x_2-x_1)}
+$$
+
+Eseguiamo alcune manipolazioni sulla parte spaziale, poi su quella temporale e poi ancora sulla prima:
+
+$$
+\begin{align*}
+\gamma(x_2-x_1)
+&= \gamma\beta c(t_2-t_1) \\ \\
+c(t'_2-t'_1)
+&= \gamma c(t_2-t_1) - \gamma\beta(x_2-x_1) \\
+&= \gamma c(t_2-t_1) - \gamma\beta^2c(t_2-t_1) \\
+&= \gamma(1-\beta^2)c(t_2-t_1) \\
+&= \frac{1}{\gamma}c(t_2-t_1) \\ \\
+\gamma(x_2-x_1)
+&= \gamma^2\beta c(t'_2-t'_1)
+\end{align*}
+$$
+
+Semplificando le espressioni possiamo stabilire che
+
+$$
+\left\{\begin{align}
+  (t_2-t_1) &= \gamma(t'_2-t'_1) \\
+  (x_2-x_1) &= \gamma\beta c(t'_2-t'_1)
+\end{align}\right.
+$$
+
+Interpretiamo fisicamente queste due equazioni.
+
+Ricordando che $\gamma>1$, esaminiamo la prima:
+
+$$
+(t_2-t_1) = \gamma(t'_2-t'_1) > (t'_2-t'_1)
+$$
+
+cioè gli intervalli temporali misurati in $S$ risultano maggiori di quelli misurati in $S'$, precisamente di un fattore $\gamma$.
+Questo è il fenomeno noto come *dilatazione degli intervalli temporali*.
+In altri termini, *la durata è relativa* al sistema di riferimento.
+
+Ricordando che i ticchettii dell'orologio sono diacronici in $S'$, esaminiamo la seconda:
+
+$$
+(x_2-x_1) = \gamma\beta c(t'_2-t'_1) \neq 0
+$$
+
+cioè i due eventi sintopici in $S'$ sono diatopici in $S$.
+Questo significa che *la sintopia è relativa* al sistema di riferimento.
+
+
+
+
+
+
+
+
+ * * *
+
+
+
+
+
+
+
+
+## Cinematica: metri in moto
+
+
+Immaginiamo di essere in $S$ ed osservare un metro in moto solidale con $S'$.
+Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti ai suoi estremi.
+Essi sono sincronici e diatopici, ovvero $t'_2-t'_1=0$ ed $x'_2-x'_1\neq0$.
+
+
+
+
+### Caso classico
+
+
+Le coordinate del vettore che separa gli estremi in $S'$ sono
+
+$$
+\veccoord{0}{x'_2-x'_1}
+=
+\veccoord{t_2-t_1}{-v(t_2-t_1)+(x_2-x_1)}
+$$
+
+Da esse ricaviamo immediatamente due equazioni da interpretare fisicamente:
+
+$$
+\left\{\begin{align}
+  (t_2-t_1) &= 0 \\
+  (x_2-x_1) &= (x'_2-x'_1)
+\end{align}\right.
+$$
+
+
+La seconda afferma che gli intervalli spaziali misurati in $S$ ed $S'$ sono uguali.
+In altri termini *la lunghezza è assoluta*, ovvero indipendente dal sistema di riferimento.
+
+La prima afferma che gli estremi del metro, sincronici in $S'$, lo sono anche in $S$.
+Questo significa che *la sincronia è assoluta*, ovvero indipendente dal sistema di riferimento.
+
+
+
+
+### Caso relativistico
+
+
+Le coordinate del vettore spaziotemporale che li separa in $S'$ sono dunque
+
+$$
+\veccoord{0}{x'_2-x'_1}
+=
+\veccoord{\gamma c(t_2-t_1)-\gamma\beta(x_2-x_1)}
+      {-\gamma\beta c(t_2-t_1)+\gamma(x_2-x_1)}
+$$
+
+Eseguiamo alcune manipolazioni sulla parte temporale, poi su quella spaziale e poi ancora sulla prima:
+
+$$
+\begin{align*}
+\gamma c(t_2-t_1)
+&= \gamma\beta(x_2-x_1) \\ \\
+(x'_2-x'_1)
+&= -\gamma\beta c(t_2-t_1)+\gamma(x_2-x_1) \\
+&= -\gamma\beta^2 (x_2-x_1)+\gamma(x_2-x_1) \\
+&= \gamma(-\beta^2 +1)(x_2-x_1) \\
+&= \gamma (x_2-x_1) \\ \\
+\gamma c(t_2-t_1)
+&= \beta (x'_2-x'_1)
+\end{align*}
+$$
+
+Semplificando le espressioni possiamo stabilire che
+
+$$
+\left\{\begin{align}
+  (t_2-t_1) &= \frac{\beta}{\gamma c}(x'_2-x'_1) \\
+  (x_2-x_1) &= \frac{1}{\gamma}(x'_2-x'_1)
+\end{align}\right.
+$$
+
+Interpretiamo fisicamente queste due equazioni.
+
+Ricordando che $\gamma>1$, esaminiamo la seconda:
+
+$$
+(x_2-x_1) = \frac{1}{\gamma}(x'_2-x'_1) < (x'_2-x'_1)
+$$
+
+cioè gli intervalli spaziali misurati in $S$ risultano minori di quelli misurati in $S'$, precisamente di un fattore $\gamma$.
+Questo è il fenomeno noto come *contrazione degli intervalli spaziali*.
+In altri termini, *la lunghezza è relativa* al sistema di riferimento.
+
+Ricordando che gli estremi del metro sono diatopici in $S'$, esaminiamo la prima:
+
+$$
+(t_2-t_1) = \frac{\beta}{\gamma c}(x'_2-x'_1) \neq 0
+$$
+
+cioè i due eventi sincronici in $S'$ sono diacronici in $S$.
+Questo significa che *la diacronia è relativa* al sistema di riferimento.
+
+
+
+
+
+
+
+
+ * * *
+
+
+
+
+
+
+
+
+## Cinematica: moti relativi
+
+
+
+
+### Caso classico
+
+
+$$\begin{align}
+\Gamma_u\Gamma_v
+=
+\matcoord{1}{0}{-u}{1}
+\matcoord{1}{0}{-v}{1}
+=
+\matcoord{1}{0}{-(u+v)}{1}
+=
+\Gamma_{u\oplus v}
+\end{align}$$
+
+$$
+u\oplus v = u+v
+$$
+
+
+
+
+### Caso relativistico
+
+
+$$\begin{align}
+\Lambda_u\Lambda_v
+&=
+\matcoord{\gamma_u}{-\gamma_u\beta_u}{-\gamma_u\beta_u}{\gamma_u}
+\matcoord{\gamma_v}{-\gamma_v\beta_v}{-\gamma_v\beta_v}{\gamma_v} \\
+&=
+\gamma_u\gamma_v
+\matcoord{1}{-\beta_u}{-\beta_u}{1}
+\matcoord{1}{-\beta_v}{-\beta_v}{1} \\
+&=
+\gamma_u\gamma_v
+\matcoord{1+\beta_u\beta_v}{-(\beta_u+\beta_v)}
+       {-(\beta_u+\beta_v)}{1+\beta_u\beta_v}
+\end{align}$$
+
+$$\begin{align}
+\frac{1}{\gamma_u\gamma_v}
+&=
+\sqrt{1-\beta_u^2}\sqrt{1-\beta_v^2}
+=
+\sqrt{(1-\beta_u^2)(1-\beta_v^2)} \\
+&=
+\sqrt{1-\beta_u^2-\beta_v^2+\beta_u^2\beta_v^2}
+=
+\sqrt{(1+\beta_u^2\beta_v^2)-(\beta_u^2+\beta_v^2)} \\
+&=
+\sqrt{(1+2\beta_u\beta_v+\beta_u^2\beta_v^2)-(\beta_u^2+2\beta_u\beta_v+\beta_v^2)} \\
+&=
+\sqrt{(1+\beta_u\beta_v)^2-(\beta_u+\beta_v)^2} \\
+&=
+(1+\beta_u\beta_v)\sqrt{1-\left(\frac{\beta_u+\beta_v}{1+\beta_u\beta_v}\right)^2} \\
+\end{align}$$
+
+$$
+\beta_{u\oplus v}
+= \frac{\beta_u+\beta_v}{1+\beta_u\beta_v}
+= \frac{u+v}{c^2+uv}
+\qquad
+\gamma_{u\oplus v} = \frac{1}{\sqrt{1-\beta_{u\oplus v}^2}}
+$$
+
+$$
+\frac{1}{\gamma_u\gamma_v}
+=
+(1+\beta_u\beta_v)\frac{1}{\gamma_{u\oplus v}}
+$$
+
+
+$$\begin{align}
+\Lambda_u\Lambda_v
+&=
+\frac{\gamma_{u\oplus v}}{1+\beta_u\beta_v}
+\matcoord{1+\beta_u\beta_v}{-(\beta_u+\beta_v)}
+       {-(\beta_u+\beta_v)}{1+\beta_u\beta_v} \\
+&=
+\matcoord{\gamma_{u\oplus v}}{-\gamma_{u\oplus v}\beta_{u\oplus v}}
+       {-\gamma_{u\oplus v}\beta_{u\oplus v}}{\gamma_{u\oplus v}}
+=
+\Lambda_{u\oplus v}
+\end{align}
+$$
+
+$$
+u\oplus v = \frac{c(u+v)}{c^2+uv}
+$$
+
+
+
+
+
+
+
+
+ * * *
+
+
+
+
+
+
+
+
+## Cinematica: sorgenti in moto
+
+
+
+
+### Caso classico
+
+$$
+\x'_2-\x'_1 = \veccoord{1/f'}{0}
+$$
+
+$$
+\x_2-\x_1 = \veccoord{1/f'}{v/f'}
+$$
+
+$$
+\frac{1}{f}
+= \frac{1}{f'} + \frac{v/f'}{u}
+= \frac{1}{f'}\left(1+\frac{v}{u}\right)
+$$
+
+$$
+(-u) = (-u')\oplus v = -u'+v
+$$
+
+$$\begin{align}
+\left(1+\frac{v}{u}\right)
+= \left(1+\frac{v}{u'-v}\right)
+= \left(1-\frac{v}{u'}\right)^{-1}
+\end{align}$$
+
+$$
+f = f'\left(1-\frac{v}{u'}\right)
+$$
+
+### Caso relativistico
+
+$$
+\x'_2-\x'_1 = \veccoord{c/f'}{0}
+$$
+
+$$
+\x_2-\x_1 = \veccoord{\gamma c/f'}{\gamma\beta c/f'}
+$$
+
+$$
+\frac{1}{f}
+= \frac{\gamma}{f'} + \frac{\gamma\beta c/f'}{u}
+= \frac{1}{f'}\gamma\left(1+\frac{\beta c}{u}\right)
+$$
+
+$$
+(-u) = (-u')\oplus v = \frac{-u'+v}{1-u'v/c^2}
+$$
+
+$$\begin{align}
+\gamma\left(1+\frac{\beta c}{u}\right)
+&= \gamma\left(1+\frac{\beta c(1-u'v/c^2)}{u'-v}\right) \\
+&= \gamma\frac{u'-v+v(1-u'v/c^2)}{u'-v} \\
+&= \gamma(1-v^2/c^2)\frac{u'}{u'-v} \\
+&= \frac{1}{\gamma}\left(1-\frac{v}{u'}\right)^{-1}
+\end{align}$$
+
+$$
+f = f'\gamma\left(1-\frac{v}{u'}\right)
+$$
