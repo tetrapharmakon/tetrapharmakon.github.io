@@ -4,22 +4,41 @@ tags: draft
 ---
 
 
-Una piccola lezione per una liceale astuta.
-Inoltre, un esercizio di equilibrismo per me: niente ontologia da un lato, niente mistificazioni dall'altro.
+Si tratta di una piccola lezione per una liceale astuta.
 
 
 
 
+
+
+<p style="display:none;">
+Questo paragrafo contiene le macro per $\LaTeX$ e dovrebbe essere invisibile.
 $$
 \def\x{\mathbf{x}}
 \def\o{\mathbf{o}}
+\def\M{\mathbf{M}}
 \def\veccoord#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \def\matcoord#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
 $$
+</p>
 
 
 
-## Le discipline coinvolte
+
+
+
+
+
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+
+
+
+
+
+
+# Le discipline coinvolte
 
 
 Apriamo le danze azzardando delle domande estremamente pericolose.
@@ -27,7 +46,7 @@ Apriamo le danze azzardando delle domande estremamente pericolose.
 
 
 
-### Cos'è la fisica?
+## Cos'è la fisica?
 
 
 Un *fenomeno fisico* è un evento concreto.
@@ -53,7 +72,7 @@ Le finalità sono varie: se ad un estremo c'è chi s'interessa ai fenomeni e pro
 
 
 
-### Cos'è la matematica?
+## Cos'è la matematica?
 
 
 Una *struttura matematica* è un'idea rigida.
@@ -71,7 +90,7 @@ Le finalità sono varie: se ad un estremo alcuni hanno interesse immediato per a
 
 
 
-### Ma è vero?
+## Ma è vero?
 
 
 Se lo chiedi a me, sì.
@@ -87,7 +106,7 @@ La matematica è un linguaggio irrinunciabile per la fisica e vi introduce l'ast
 
 
 
-### Chiosa
+## Chiosa
 
 
 Si potrebbe arguire che fossero due manifestazioni della medesima entità, e la convinzione che ho maturato è esattamente questa.
@@ -104,17 +123,11 @@ Chiunque ti abbia insegnato il contrario o ti mentiva o lo ignorava e quindi, co
 
 
 
- * * *
 
 
 
 
-## Prerequisiti
-
-
-
-
-### Simmetria
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
 
@@ -123,24 +136,78 @@ Chiunque ti abbia insegnato il contrario o ti mentiva o lo ignorava e quindi, co
 
 
 
+# Rudimenti di algebra
+
+
+**Da riscrivere.
+Questo è solo uno schizzo per permetterti di continuare la lettura.**
+
+# Matrici e vettori
+
+Le matrici sono griglie di numeri:
+
+$$
+\begin{pmatrix}a&b&\ldots\\c&d&\ldots\\\vdots&\vdots&\ddots\end{pmatrix}
+$$
+
+I vettori sono colonne di numeri: 
+
+$$
+\begin{pmatrix}x\\y\\\vdots\end{pmatrix}
+$$
+
+Noi useremo solo matrici con due righe e due colonne, e solo vettori con due righe.
+
+Esiste un prodotto tra matrici, detto *riga per colonna*, ed il risultato è una matrice:
+
+$$
+\matcoord{\mathbf{a}}{\mathbf{b}}{c}{d}
+\matcoord{\mathbf{e}}{f}{\mathbf{g}}{h}
+=
+\matcoord{\mathbf{ae+bg}}{af+bh}{ce+dg}{cf+dh}
+$$
+
+Esiste un analogo prodotto tra matrici e vettori, ed il risultato è un vettore:
+
+$$
+\matcoord{\mathbf{a}}{\mathbf{b}}{c}{d}
+\veccoord{\mathbf{x}}{\mathbf{y}}
+=
+\veccoord{\mathbf{ax+by}}{cx+dy}
+$$
+
+Le matrici si possono sommare e moltiplicare per un numero:
+
+$$
+\matcoord{a}{b}{c}{d}
++
+\matcoord{e}{f}{g}{h}
+=
+\matcoord{a+e}{b+f}{c+g}{d+h}
+\qquad
+k\matcoord{a}{b}{c}{d} = \matcoord{ka}{kb}{kc}{kd}
+$$
+
+Anche i vettori:
+
+$$
+\veccoord{x}{y}
++
+\veccoord{z}{w}
+=
+\veccoord{x+z}{y+w}
+\qquad
+k\veccoord{x}{y} = \veccoord{kx}{ky}
+$$
 
 
 
 
-Anubi è il nostro cane.
-
-È nero, ha una macchia bianca attorno all'occhio sinistro e ci guarda perplesso.
-Se lo guardiamo allo specchio però la macchia bianca è attorno all'occhio destro. D'altra parte guardandolo attraverso *due* specchi la macchia torna sull'occhio sinistro.
-
-Se i tre cani che abbiamo visto siano il medesimo dipende solo da quanto raffinate sono le distinzioni che vogliamo fare. Ognuno era più vecchio del precedente di qualche istante e quindi potremmo dire che abbiamo visto tre cani distinti. D'altra parte trascurando l'età solo uno si distingue per una macchia differente e forse i cani erano solo due. In fondo, però, ognuno era Anubi e potremmo dire che ne abbiamo visto solo uno.
-
-
-E Xolotl? Eh, mo' c'arrivo.
 
 
 
 
- * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
 
@@ -152,140 +219,355 @@ E Xolotl? Eh, mo' c'arrivo.
 # Il cronotopo
 
 
-Squit.
-*Cronotopo* è una parola buffa di etimologia greca.
+Squit!
+*Cronotopo* è una parola buffa di etimo greco.
 Si forma unendo χρόνος (chrónos) e τόπος (tópos), ovvero tempo e luogo.
-Esso è infatti la collezione di tutti gli *eventi*, intesi come il dato congiunto di un tempo ed un luogo.
-Si tratta di un elemento essenziale per fare fisica: gioca il ruolo di modello dell'ambiente in cui si collocano tutte le nostre esperienze sensibili.
+È infatti il nome che diamo alla collezione di ogni possibile *evento*, inteso come il dato congiunto di un tempo ed un luogo.
+Si tratta di un elemento essenziale per fare fisica: gioca il ruolo di modello dell'ambiente in cui si collocano i fenomeni fisici.
 
 
-## Sistemi di riferimento
-
-Per orientarci e parlare concretamente di eventi abbiamo bisogno di un *sistema di riferimento*.
-Esso è individuato da un evento privilegiato, la sua *origine*, da cui dipartono degli *assi* temporali e spaziali a cui sono associate delle *unità di misura*.
-
-BLA
-
-queste son cose di cui già ha comprensione intuitiva, posticipo scrittura
-
-BLA
-
-$$
-\x = \veccoord{t}{x}
-$$
 
 
-## Eventi et cetera
+## Osservatori e sistemi di riferimento
 
-$$
-\x_1 = \veccoord{t_1}{x_1}
-\qquad
-\x_2 = \veccoord{t_2}{x_2}
-$$
 
-Separati da *durata* $t_2-t_1$.
+Noi stessi ci collochiamo nel cronotopo col ruolo di *osservatori* che percepiscono gli eventi.
+Per parlare di questi ultimi però abbiamo bisogno di un *sistema di riferimento*.
+Ovvero, dobbiamo scegliere un modo di descriverli *univocamente rispetto alla nostra esperienza*.
+È pratica comune identificare un osservatore col suo sistema di riferimento e lo faremo anche noi poiché non genera ambiguità.
 
-*Sincronici* se $t_2-t_1=0$.
+**In realtà questo vero solo in un senso adeguato, ma per quello che faremo non crea problemi.
+Magari ti spiego a voce, non voglio allungare troppo il brodo.**
 
-*Diacronici* se $t_2-t_1\neq0$.
 
-Separati da *lunghezza* $x_2-x_1$.
 
-*Sintopici* se $x_2-x_1=0$.
 
-*Diatopici* se $x_2-x_1\neq0$.
+## Assoluto e relativo
 
+
+Si dice che qualcosa è *assoluto* se è indipendente dall'osservatore.
+
+Si dice che qualcosa è *relativo* quando non è assoluto.
+
+Ad esempio, un evento in quanto oggetto astratto nel cronotopo è assoluto.
+Le descrizioni che gli osservatori danno di esso, invece, sono univoche solo rispetto all'esperienza di ognuno e quindi sono relative.
 
 
 
 
 ## Trasformazioni tra sistemi di riferimento
 
-La scelta di un sistema di riferimento però non è unica!
-BLA.
-Si può decidere quale sia famiglia ammissibile a seconda di scopi.
-BLA.
-trasformazioni tra essi.
-BLA.
-Facciamo che usiamo solo gli inerziali.
-BLA.
-Preservano moti rettilinei per definizione, quindi le trasformazioni tra essi sono descritte al massimo della generalità da una matrice.
-BLA.
+
+Confrontare esperienze di osservatori differenti è una pretesa del tutto naturale, ma la relatività delle descrizioni degli eventi ci impedisce di farlo.
+Infatti se già solo descrizioni dfferenti del medesimo evento potrebbero essere discordi, in generale le esperienze di osservatori diversi sono imcomparabili.
+Abbiamo allora bisogno di *trasformazioni tra i sistemi di riferimento* in grado di compiere la traduzione da un osservatore all'altro.
+
+Immaginiamo che il medesimo evento sia descritto come $\x$ oppure $\x'$ rispettivamente dai sistemi di riferimento $S$ ed $S'$.
+Vorremmo una trasformazione $T_{S'\leftarrow S}$ tale che
 
 $$
-\x' =
-\matcoord{\gamma}{\varepsilon}{\rho}{\sigma} \x
+\x'=T_{S'\leftarrow S}(\x)
 $$
 
-Se $S'$ muove rispetto ad $S$ con velocità $v$ partendo coincidenti conosco bene i moti rettilinei delle origini in ognuno dei due riferimenti:
+Coinvolgendo anche un terzo osservatore in $S''$ avremmo anche
+
+$$
+\x''
+=
+T_{S''\leftarrow S}(\x)
+\qquad
+\x''
+=
+T_{S''\leftarrow S'}(\x')
+$$
+
+È naturale richiedere che le trasformazioni siano coerenti tra loro, ovvero:
+
+$$
+T_{S''\leftarrow S}(\x)
+=
+\x''
+=
+T_{S''\leftarrow S'}(\x')
+=
+T_{S''\leftarrow S'}(T_{S'\leftarrow S}(\x))
+=
+T_{S''\leftarrow S'}\circ T_{S'\leftarrow S}(\x)
+$$
+
+e che ciò valga indipendentemente per qualsiasi evento:
+
+$$
+T_{S''\leftarrow S}
+=
+T_{S''\leftarrow S'}\circ T_{S'\leftarrow S}
+$$
+
+È ragionevole aspettarsi l'esistenza di una trasformazione banale da un osservatore qualsiasi verso sé stesso, e quindi dell'inversa di qualsiasi trasformazione:
+
+$$
+T_{S\leftarrow S}
+=
+T_{S\leftarrow S'}\circ T_{S'\leftarrow S}
+\qquad
+T_{S'\leftarrow S'}
+=
+T_{S'\leftarrow S}\circ T_{S\leftarrow S'}
+$$
+
+In breve, ciò che stiamo chiedendo è che l'insieme delle trasformazioni tra sistemi di riferimento possegga una struttura di gruppo.
+
+
+
+
+## Sistemi di riferimento inerziali
+
+
+**Da rifrasare un po', forse.**
+
+Si dice *apparente* una forza priva di *agente*, ovvero una forza che non è causata dall'interazione con un oggetto fisico.
+La definizione è bizzarra e vale la pena di soffermarsi su qualche esempio.
+
+Alla partenza di una giostra avvertiamo chiaramente una reazione all'indietro, e per tutto il giro ci sentiamo tirare verso l'esterno; scendendo in corsa e camminando sul pianale siamo disorientati da una spinta laterale.
+Abbiamo nominato le tre forze apparenti abbastanza comuni da essere state battezzate: sono rispettivamente la f. di Eulero, la f. centrifuga e la f. di Coriolis.
+Non c'è alcun oggetto a causarle, eppure i loro effetti sono evidenti.
+
+Per capire cosa sta succedendo ragioniamo su un esempio più semplice.
+Alla partenza di un treno vediamo l'intero paesaggio accelerare verso la coda.
+Anche alla partenza di un aereo notiamo un'accelerazione, addirittura maggiore.
+Invece dando gas alla retromarcia lo vediamo accelerare verso il muso.
+Nonostante questo, da terra chiunque ci garantirà in ognuno di questi casi che non avverte alcuna forza.
+Allora è chiaro la causa possiamo essere solo noi - o meglio, il nostro sistema di riferimento in quanto osservatori.
+
+Chiameremo *inerziali* i *sistemi di riferimento privi di forze apparenti*.
+Il nostro studio si limiterà ai soli sistemi inerziali poiché in essi abbiamo la garanzia che la descrizione della dinamica dipende solo dalle interazioni tra oggetti fisici e non dal nostro punto di vista.
+
+Per caratterizzarli esplicitamente ci serve una definizione più pratica: *un moto rettilineo ed uniforme è tale osservato da qualsiasi sistema di riferimento inerziale*.
+Infatti se un oggetto è in tale regime di moto significa che non sta accelerando, ovvero che non è soggetto ad una forza netta.
+Ma allora ciò deve rimanere vero per qualsiasi osservatore inerziale, visto che devono tutti percepire le medesime forze fisiche e nessuna forza apparente.
+
+Un'altra definizione equivalente ma più comune è: *i sistemi di riferimento inerziali sono quelli in cui vale la Prima Legge di Newton*.
+
+Da qui in avanti ogni sistema di riferimento nominato sarà implicitamente inerziale.
+
+
+
+
+
+
+
+
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+
+
+
+
+
+
+# Il modello
+
+
+La teoria che svilupperemo sarà un modello giocattolo con due sole dimensioni: una temporale ed una spaziale.
+Inoltre, i nostri osservatori useranno solo sistemi di riferimento basati su un sistema di assi cartesiani ortogonali.
+Il vantaggio è che semplificheremo enormemente le procedure di calcolo pur preservando la maggior parte della fenomenologia.
+
+**Qui sono sbrigativo perché non è un'usanza è nuova.
+Un giorno sistemerò.**
+
+Concretamente dunque un evento osservato da un sistema di riferimento $S$ sarà univocamente determinato da due *coordinate* che denoteremo come la tradizione comanda: $t$ ed $x$.
+Con degli apici indicheremo i punti di vista di altri osservatori quando ne avremo bisogno.
+
+
+
+
+## Trasformazioni tra sistemi di riferimento
+
+
+Non sappiamo come sono fatte le trasformazioni, ma sappiamo che devono rispettare i moti rettilinei ed uniformi in virtù del fatto che essi devono risultatare tali per qualsiasi osservatore.
+Faremo leva su ciò per capire che forma hanno.
+
+
+
+
+### Generalità
+
+Un moto rettilineo ed uniforme in $S$ è descritto da una relazione lineare tra spazio e tempo, come ad esempio $x=x_0+vt$.
+Analogamente in $S'$ avremo $x'=x'_0+v't'$.
+Nel massimo della generalità possibile la trasformazione di coordinate sarà una coppia di funzioni $t'(x,t)$ ed $x'(x,t)$ che per ogni evento ne esprimono le coordinate di $S'$ in termini di quelle di $S$.
+Inserendole nella legge di $S'$ otteniamo $x'(x,t)=x'_0+v't'(x,t)$.
+Quest'ultima diventa così una legge su $t$ ed $x$ ma deve continuare a valere.
+Allora non può essere che lineare poiché la legge del moto in $S$ stabilisce che $t$ ed $x$ sono in relazione lineare.
+L'unico modo perché ciò avvenga è ognuna delle funzioni sia a propria volta lineare.
+Ovvero, se usiamo lettere greche per denotare delle costanti dipendenti solo da $S$ ed $S'$, la forma più generale ammissibile per la trasformazione è
+
+$$\left\{\begin{align}
+t' &= \tau+\gamma t+\varepsilon x\\
+x' &= \sigma+\alpha t+\delta x	
+\end{align}\right.
+$$
+
+Definendo un vettore $T$ ed una matrice $M$ legati alla trasformazione possiamo scrivere in modo molto più elegante il cambio di coordinate:
+
+$$
+T = \veccoord{\tau}{\sigma}
+\qquad
+M = \matcoord{\gamma}{\varepsilon}{\alpha}{\delta}
+\qquad
+\x' = T+M\x
+$$
+
+Naturalmente l'eleganza non è il motivo principale: facendolo abbiamo reso evidente la struttura di gruppo.
+Infatti, se $(T,M)$ è la trasformazione da $S$ ad $S'$ e $(T',M')$ la trasformazione da $S'$ ad $S''$ allora possiamo calcolarne la composizione:
+
+$$\begin{align}
+\x' &= T + M\x \\
+\x''
+&= T'+M'\x' \\
+&= T'+M'(T+M\x) \\
+&= (T'+M'T)+(M'M)\x
+\end{align}$$
+
+e quindi la trasformazione da $S$ ad $S''$ è
+
+$$
+(T',M')\circ(T,M)
+=
+(T'+M'T,M'M)
+$$
+
+Abbiamo trovato esplicitamente l'operazione di prodotto del gruppo.
+Non è difficile rendersi conto dell'esistenza dell'identità $(\mathbf{0},\mathbb{1})$.
+Piuttosto, notiamo che si può sempre spezzare una trasformazione in due più semplici:
+
+$$
+(T,\mathbb{1})\circ(\mathbf{0},M)
+=
+(T,M)
+$$
+
+Ciò permette di spezzarene lo studio.
+
+
+
+
+### Traslazioni
+
+
+La trasformazione $(T,\mathbb{1})$ agisce come
+
+$$
+\x' = T+\mathbb{1}\x = T+\x
+$$
+
+che in coordinate dà
+
+$$\left\{\begin{align}
+\tau &= t'-t \\
+\sigma &= x'-x
+\end{align}\right.$$
+
+Le due costanti sono indipendenti dagli eventi, quindi capiamo subito qual è il senso della trasformazione: si tratta di una traslazione di $\tau$ nella direzione del tempo e di $\sigma$ nella direzione dello spazio.
+È facile anche verificare che rispettano i moti rettilinei ed uniformi senza alcuna restrizione su $\tau$ e $\sigma$.
+Trasformazioni di questo tipo mettono in comunicazione osservatori con sistemi di riferimento identici eccetto che per la scelta dell'origine.
+
+
+
+
+### Boost
+
+
+Questa è la parte *veramente* interessante e infatti è un po' laboriosa.
+La trasformazione $(\mathbf{0},M)$ agisce come
+
+$$
+\x' = \mathbf{0}+M\x = M\x
+$$
+
+Quale sia l'effetto sfugge all'intuizione, quindi appoggiamoci allo studio di alcune situazioni particolarmente semplici.
+
+Immaginiamo che $S'$ si muova in $S$ con moto uniforme di velocità $v$ partendo dall'origine al tempo zero.
+In $S$ il moto delle due origini è
 
 $$
 \o_S = \veccoord{t}{0}
 \qquad
 \o_{S'} = \veccoord{t}{vt}
-\qquad
-\o'_{S'} = \veccoord{t'}{0}
-\qquad
-\o'_S = \veccoord{t'}{-vt'}
 $$
 
-come minimo mi aspetto che siano rispettati, ovvero
+In $S'$ la situazione è reciproca:
+
+$$
+\o'_S = \veccoord{t'}{-vt'}
+\qquad
+\o'_{S'} = \veccoord{t'}{0}
+$$
+
+Conosciamo la descrizione dei due moti in entrambi i sistemi, ed esse devono essere compatibili secondo
+
+$$
+\o'_S = \M \o_S
+\qquad
+\o'_{S'} = \M \o_{S'}
+$$
+
+che in coordinate si scrive
 
 $$
 \veccoord{t'}{0}
-=
-\matcoord{\gamma}{\varepsilon}{\rho}{\sigma}
-\veccoord{t}{vt}
 =
 \veccoord{(\gamma+\varepsilon v)t}{(\rho+\sigma v)t}
 \qquad
 \veccoord{t'}{-vt'}
 =
-\matcoord{\gamma}{\varepsilon}{\rho}{\sigma}
-\veccoord{t}{0}
-=
 \veccoord{\gamma t}{\rho t}
 $$
 
-da cui ricaviamo subito che dev'essere $\rho=-v\sigma=-v\gamma$ e limitiamo cos' la forma della matrice a
+È facile vedere che ciò implica $\rho=-v\sigma=-v\gamma$ e le matrici sono vincolate ad avere la forma
 
 $$
-\matcoord{\gamma}{\varepsilon}{-v\gamma}{\gamma}
+M = \matcoord{\gamma}{\varepsilon}{-v\gamma}{\gamma}
 $$
 
-Mi aspetto che valgano proprietà di gruppo.
-In particolare, la composizione:
+Mi aspetto che valgano proprietà di gruppo, e che quindi la composizione $MM'=M''$ abbia la medesima forma.
+In particolare, gli elementi lungo la diagonale dovranno essere uguali:
 
 $$
 \matcoord{\gamma}{\varepsilon}{-v\gamma}{\gamma}
 \matcoord{\gamma'}{\varepsilon'}{-v'\gamma'}{\gamma'}
 =
-\matcoord{\gamma'(\gamma-\varepsilon v')}{\ldots}{\ldots}{\gamma(-v\varepsilon'+\gamma')}
+\matcoord{\gamma'(\gamma-\varepsilon v')}{\gamma\varepsilon'+\gamma'\varepsilon}{-\gamma\gamma'(v+v')}{\gamma(-v\varepsilon'+\gamma')}
+=
+\matcoord{\gamma''}{\varepsilon''}{-v''\gamma''}{\gamma''}
 $$
 
-I due elementi sulla diagonale devono essere uguali e ciò implica
+e quindi
 
 $$
 -\varepsilon\gamma'v'=-\varepsilon'\gamma v
 $$
 
-ma da ciò segue che WLOG per una costante $\kappa$ fissata
+Solo $\varepsilon$, $\gamma$ e $v$ dipendono dalla scelta di $M$.
+Siccome l'uguaglianza deve valere per qualunque scelta, $\varepsilon$ deve dipendere essa esattamente come $\gamma v$.
+Il medesimo ragionamento si può fare per $M'$.
+Da ciò segue che la forma più generale è
 
 $$
 \varepsilon = -\kappa\gamma v
 $$
 
-Ora, cosa dice inoltre la composizione?
+dove $\kappa$ è una costante universale per tutte le trasformazioni.
+Su cosa sia ci ragioneremo dopo.
 
-$$\begin{align}
-\gamma\matcoord{1}{-\kappa v}{-v}{1}
-\gamma'\matcoord{1}{-\kappa' v'}{-v'}{1}
-&=
+Riesaminiamo la composizione alla luce di queste nuove informazioni:
+
+$$
 \gamma\gamma'
-\matcoord{1+\kappa vv'}{-\kappa(v+v')}{-\kappa(v+v')}{1+\kappa vv'} \\
-&=
+\matcoord{1+\kappa vv'}{-\kappa(v+v')}{-\kappa(v+v')}{1+\kappa vv'}
+=
 \gamma''\matcoord{1}{-\kappa v''}{-v''}{1}
-\end{align}$$
+$$
 
 ovvero
 
@@ -300,76 +582,138 @@ $$
 v'' = \frac{v+v'}{1+\kappa vv'}
 $$
 
-(Abbiamo appena avuto a gratis *tutte* le composizioni di velocità)
+Consideriamo ora il caso particolare in cui $M'$ sia l'inversa di $M$, e quindi $M''=\mathbb{1}$.
+Certamente $\gamma''=1\neq 0$ e quindi affinché $-\gamma''v''=0$ è necessario che $v''=0$, ovvero $v'=-v$.
+La prima equazione dell'ultimo sistema si riduce dunque a
 
-Poi per una considerazione di simmetria sull'inversa (potrebbe anche seguire da isotropia ma non è banale in generale mi pare)
+$$
+\gamma\gamma'=\frac{1}{1-\kappa v^2}
+$$
 
-BLA
+Poi per una considerazione **che è semplice ma non ho ancora capito come dire in modo semplice** otteniamo
 
 $$
 \gamma = \frac{1}{\sqrt{1-\kappa v^2}}
 $$
 
-Morale della favola in completa generalità
+Tiriamo le somme.
+La trasformazione da $S$ ad un sistema $S'$ che sia in moto relativo rispetto al primo con velocità $v$ è data da
 
 $$
-\matcoord{\gamma}{-v\kappa\gamma}{-v\gamma}{\gamma}
+M=\matcoord{\gamma}{-v\kappa\gamma}{-v\gamma}{\gamma}
 \qquad
 \gamma = \frac{1}{\sqrt{1-\kappa v^2}}
 $$
 
-Avanza solo da capire chi è $\kappa$.
-Ci sono tre principali scelte:
-
-* $\kappa < 0$ dà una teoria bizzarra che non ha riscontro sperimentale e che ignoreremo;
-* $\kappa = 0$ dà la meccanica Newtoniana;
-* $\kappa > 0$ dà la meccanica Einsteininana (ristretta) e sperimentalmente si vede che $\kappa=1/c^2$ dove $c$ è la velocità della luce.
+L'unico aspetto che non abbiamo ancora affrontato è la scelta di $\kappa$.
+Lo posticipiamo ancora un po' perché sarà un colpo di scena.
 
 
 
-## Trasformazioni tra sistemi di riferimento inerziali
+
+### Riflessioni
 
 
-### Caso classico
+Abbiamo esaurito tutte le trasformazioni?
+No, in effetti ce ne sono ancora due.
+**Ma sono poco importanti per noi quindi taglio corto.**
+Sappiamo ricondurre un osservatore in moto ad uno fermo, e sappiamo far combaciare le origini con una traslazione.
+Per cosa possono differire due sistemi di riferimento fermi e con la medesima origine?
+Il verso degli assi.
+Ecco, rispettivamente, l'inversione temporale e l'inversione spaziale:
 
 $$
-\x'=\Gamma\x
-$$
-
-$$
-\veccoord{t'}{x'}
-=
-\matcoord{1}{0}{-v}{1}
-\veccoord{t}{x}
-=
-\veccoord{t}{-vt+x}
+\matcoord{-1}{0}{0}{1}
+\qquad
+\matcoord{1}{0}{0}{-1}
 $$
 
 
 
 
-### Caso relativistico
+### Pensiero
 
+
+**Qui magari ci sta na postilla su cosa siano sti gruppi.**
+
+
+
+
+### Il colpo di scena
+
+Avanza solo da capire chi è $\kappa$. Esso compare sotto un radicale:
 
 $$
-\x'=\Lambda\x
+\sqrt{1-\kappa v^2}
 $$
 
+Allora sappiamo che deve valere, per qualsiasi velocità possibile,
+
 $$
-\veccoord{t'}{x'}
-=
-\matcoord{\gamma}{-\gamma v/c^2}{-\gamma v}{\gamma}
-\veccoord{t}{x}
-=
-\veccoord{\gamma t-\gamma vx/c^2}{-\gamma vt+\gamma x}
+\kappa v^2 < 1
 $$
 
+Ci sono essenzialmente tre possibilità.
+
+$\kappa < 0$.
+È la scelta noiosa.
+Produce un modello senza alcun riscontro sperimentale quindi la ignoreremo.
+
+$\kappa = 0$.
+È la scelta ovvia.
+In questo caso $\gamma=1$ ed i boost, che ribattezziamo, prendono la seguente forma:
+
+$$
+\Gamma=\matcoord{1}{0}{-v}{1}
+$$
+
+Si tratta di una trasformazione di Galileo.
+In pratica, abbiamo appena ottenuto la fisica classica.
+
+$\kappa > 0$.
+È la scelta interessante.
+Chiedere l'esistenza di una simile costante universale è equivalente a chiedere che $v^2 < 1/\kappa$, ovvero stiamo ponendo un limite massimo alle velocità fisiche ammissibili.
+Abbiamo appena ottenuto la fisica della relatività ristretta.
+Naturalmente $\kappa = 1/c^2$ dove $c$ è la velocità della luce.
+Ribattezziamo i boost come trasformazioni di Lorentz:
+
+$$
+\Lambda=\matcoord{\gamma}{-v\gamma/c^2}{-v\gamma}{\gamma}
+\qquad
+\gamma=\frac{1}{\sqrt{1-v^2/c^2}}
+$$
+
+**Ebbene sì.
+Tutta la differenza tra meccanica newtoniana e relatività ristretta si può ricondurre alla scelta di un parametro.
+Figo, eh?**
 
 
 
 
 
- * * *
+
+
+
+## Eventi e misure
+
+Avremo bisogno di parlare molto di eventi.
+Per evitare ripetizioni e noiose circonlocuzioni definiamo alcune parole nuove.
+Data una qualsiasi coppia di eventi osservati dal medesimo sistema di riferimento
+
+$$
+\x_1 = \veccoord{t_1}{x_1}
+\qquad
+\x_2 = \veccoord{t_2}{x_2}
+$$
+
+diremo che essi sono:
+
+* separati dalla *durata* $(t_2-t_1)$;
+* *sincronici* se $(t_2-t_1)=0$;
+* *diacronici* se $(t_2-t_1)\neq0$;
+* separati dalla *lunghezza* $(x_2-x_1)$;
+* *sintopici* se $(x_2-x_1)=0$;
+* *diatopici* se $(x_2-x_1)\neq0$.
 
 
 
@@ -378,7 +722,7 @@ $$
 
 
 
- * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
 
@@ -389,7 +733,10 @@ $$
 
 # La cinematica
 
-Da qui in poi fissiamo due sistemi di riferimento $S$ ed $S'$, il secondo in moto nel primo a velictà $v$.
+Da qui in avanti useremo in modo ricorrente due sistemi di riferimento $S$ ed $S'$, il secondo in moto nel primo a velocità $v$.
+Non lo ripeteremo.
+
+
 
 
 
@@ -399,16 +746,18 @@ Da qui in poi fissiamo due sistemi di riferimento $S$ ed $S'$, il secondo in mot
 ## Orologi in moto
 
 Immaginiamo di essere in $S$ ed osservare un orologio in moto solidale con $S'$.
-Siano gli eventi $\x'_1$ ed $\x'_2$ corrispondenti a due ticchettii: essi sono diacronici e sintopici.
+Siano $\x'_1$ ed $\x'_2$ gli eventi corrispondenti a due ticchettii: essi sono diacronici e sintopici.
 
 
 
 
 ### Caso classico
 
-Le coordinate del vettore che separa i ticchettii in $S'$ sono
+Le coordinate del vettore tra i ticchettii in $S'$ sono
 
 $$
+\x'_2-\x'_1
+=
 \veccoord{t'_2-t'_1}{0}
 =
 \veccoord{t_2-t_1}{-v(t_2-t_1)+(x_2-x_1)}
@@ -441,13 +790,13 @@ Questo significa che *la sintopia è relativa* al sistema di riferimento.
 
 ### Caso relativistico
 
-Le coordinate del vettore spaziotemporale che separa i ticchettii in $S'$ sono
+In $S'$ i ticchettii sono separati dal vettore di coordinate
 
 $$
-\veccoord{c(t'_2-t'_1)}{0}
+\veccoord{(t'_2-t'_1)}{0}
 =
-\veccoord{\gamma c(t_2-t_1)-\gamma\beta(x_2-x_1)}
-      {-\gamma\beta c(t_2-t_1)+\gamma(x_2-x_1)}
+\veccoord{\gamma (t_2-t_1)-\gamma v(x_2-x_1)/c^2}
+      {-\gamma v(t_2-t_1)+\gamma(x_2-x_1)}
 $$
 
 Eseguiamo alcune manipolazioni sulla parte spaziale, poi su quella temporale e poi ancora sulla prima:
@@ -455,14 +804,14 @@ Eseguiamo alcune manipolazioni sulla parte spaziale, poi su quella temporale e p
 $$
 \begin{align*}
 \gamma(x_2-x_1)
-&= \gamma\beta c(t_2-t_1) \\ \\
-c(t'_2-t'_1)
-&= \gamma c(t_2-t_1) - \gamma\beta(x_2-x_1) \\
-&= \gamma c(t_2-t_1) - \gamma\beta^2c(t_2-t_1) \\
-&= \gamma(1-\beta^2)c(t_2-t_1) \\
-&= \frac{1}{\gamma}c(t_2-t_1) \\ \\
-\gamma(x_2-x_1)
-&= \gamma^2\beta c(t'_2-t'_1)
+&= \gamma v(t_2-t_1) \\ \\
+(t'_2-t'_1)
+&= \gamma (t_2-t_1) - \gamma v(x_2-x_1)/c^2 \\
+&= \gamma (t_2-t_1) - \gamma v^2(t_2-t_1)/c^2 \\
+&= \gamma(1-v^2/c^2)c(t_2-t_1) \\
+&= \frac{1}{\gamma}(t_2-t_1) \\ \\
+(x_2-x_1)
+&= \gamma v(t'_2-t'_1)
 \end{align*}
 $$
 
@@ -471,7 +820,7 @@ Semplificando le espressioni possiamo stabilire che
 $$
 \left\{\begin{align}
   (t_2-t_1) &= \gamma(t'_2-t'_1) \\
-  (x_2-x_1) &= \gamma\beta c(t'_2-t'_1)
+  (x_2-x_1) &= \gamma v(t'_2-t'_1)
 \end{align}\right.
 $$
 
@@ -490,7 +839,7 @@ In altri termini, *la durata è relativa* al sistema di riferimento.
 Ricordando che i ticchettii dell'orologio sono diacronici in $S'$, esaminiamo la seconda:
 
 $$
-(x_2-x_1) = \gamma\beta c(t'_2-t'_1) \neq 0
+(x_2-x_1) = \gamma v(t'_2-t'_1) \neq 0
 $$
 
 cioè i due eventi sintopici in $S'$ sono diatopici in $S$.
@@ -615,6 +964,8 @@ Questo significa che *la diacronia è relativa* al sistema di riferimento.
 ## Moti relativi
 
 
+
+**Ok, questo è tutto da rifare**
 
 
 ### Caso classico
