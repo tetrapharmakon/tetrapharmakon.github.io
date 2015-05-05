@@ -4,9 +4,8 @@ tags: headless draft
 ---
 
 
-Una introduzione alla relatività con prerequisiti quasi nulli: rudimenti di cinematica e la nozione di funzione.
-È suddivisa in parti digeribili.
-Mancano ancora alcune cose, dove segnalato.
+Una introduzione alla relatività con prerequisiti quasi nulli, suddivisa in parti digeribili.
+È una bozza e mancano varie cose, alcune segnalate.
 
 
 {% include begin-macro %}
@@ -281,8 +280,7 @@ Da qui in avanti ogni sistema di riferimento nominato sarà implicitamente inerz
 
 
 La teoria che svilupperemo ora sarà un modello giocattolo con due sole dimensioni: una temporale ed una spaziale.
-Ciò permette quasi di azzerare i prerequisiti necessari alla descrizione.
-Inoltre, le caratteristiche qualitative più stupefacenti della teoria generale sopravvivono alla semplificazione.
+Le caratteristiche qualitative più stupefacenti della teoria generale sopravvivono alla semplificazione, ma i calcoli sono molto più semplici.
 
 
 Concretamente dunque un evento osservato da un sistema di riferimento $S$ sarà univocamente determinato da due *coordinate* che denoteremo come la tradizione comanda: $t$ ed $x$.
