@@ -3,8 +3,8 @@ title: Lorem ipsum
 tags: 
 ---
 
-Lorem ipsum dolor sit {:.tex}`\sum x` amet, consectetur `$\sum x$` adipisci elit,
- sed eiusmod *tempor*{: style="color:red;"} incidunt ut labore 
+Lorem "ipsum" dolor 'sit' `\sum x` amet, consectetur `$\sum x$` adipisci elit,
+ sed eiusmod *tempor*{: style="color:red;"} incidunt -- ut --- labore 
 
 ```
 $$
