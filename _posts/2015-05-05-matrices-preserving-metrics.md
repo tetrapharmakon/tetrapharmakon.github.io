@@ -1,6 +1,6 @@
 ---
 title: Matrices preserving metrics
-tags: draft
+tags: draft mathja
 ---
 
 

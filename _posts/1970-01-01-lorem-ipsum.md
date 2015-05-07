@@ -1,6 +1,6 @@
 ---
 title: Lorem ipsum
-tags: mathjax quicklatex
+tags: athjax uicklatex
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
@@ -36,3 +36,28 @@ onsequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore
 eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt 
 in culpa qui officia deserunt mollit anim id est laborum.
 </pre>
+
+
+{:.latex}
+    Mah
+
+
+
+
+
+{:.latex}
+~~~
+prova
+~~~
+
+
+
+
+
+~~~ haskell
+class Functor f where
+  fmap :: (a -> b) -> f a -> f b
+class Functor m => Monad m where
+  unit     :: a -> m a
+  mult     :: m (m a) -> m a
+~~~

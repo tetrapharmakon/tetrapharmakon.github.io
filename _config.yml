@@ -28,6 +28,8 @@ permalink: /epistolae/:title/
 # Markdown flavouring
 markdown: kramdown
 
+highlighter: rouge
+
 # Defaults
 defaults:
   -
