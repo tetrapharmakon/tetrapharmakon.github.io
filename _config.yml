@@ -30,7 +30,7 @@ markdown: kramdown
 
 kramdown:
   input: GFM
-  coderay_enable: true
+  enable_coderay: true
 
 
 #highlighter: rouge
