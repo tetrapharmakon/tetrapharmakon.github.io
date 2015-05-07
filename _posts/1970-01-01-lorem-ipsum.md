@@ -1,14 +1,14 @@
 ---
 title: Lorem ipsum
-tags: athjax uicklatex highlight haskell latex
+tags: athjax quicklatex ighlight haskell tex
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
 
-``` latex
+``` tex
 \usepackage[all]{xy}
 ```
-{:.preamble}
+{:.quicklatex-preamble}
 
 
 ## Ut enim ad minim
@@ -35,11 +35,11 @@ in culpa qui officia deserunt mollit anim id est laborum.
 
 
 
-``` latex
+``` tex
 \comando[12]{asd}
 123+123
 \begin{displaymath}
-  \xymatrix{
+  \xymaastrix{
     Ty \ar[r]^{Tg} & T^2z \ar[r]^{T^2h} \ar[d]_{\mu_z}
                    & T^3w \ar[d]^{T\mu_w} &  \\
     x \ar[u]^f     & Tz \ar[r]_{Th}
@@ -53,10 +53,10 @@ ehvabè
 
 
 
-``` latex
+``` tex
 % tex comment
 \begin{displaymath}
-  \xymatrix{
+  \xymatrasix{
     Ty \ar[r]^{Tg} & T^2z \ar[r]^{T^2h} \ar[d]_{\mu_z}
                    & T^3w \ar[d]^{T\mu_w} &  \\
     x \ar[u]^f     & Tz \ar[r]_{Th}
@@ -64,7 +64,7 @@ ehvabè
   }
 \end{displaymath}
 ```
-{:.live}
+{:.quicklatex-code}
 
 
 

@@ -15,7 +15,7 @@ author:
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: none
+highlighter: null
 # excerpt_separator: "\n\n"
 
 # Serving

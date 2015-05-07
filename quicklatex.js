@@ -1,19 +1,16 @@
 ﻿$(function() {
-  var preamble = $('.preamble').first().text();
-  $('.latex').each(function(){
-    var formula = $(this).text();
-
-      if(formula!='') {
-
-        var qlQuery = 'formula=' + encodeURIComponent(formula)
+  var preamble = $('.quicklatex-preamble').first().text();
+  $('.quicklatex-code').each(function(){
+    var code = $(this).text();
+      if(code) {
+        var qlQuery = 'formula=' + encodeURIComponent(code)
                     + '&fsize='  + '19px'
                     + '&fcolor=' + '000000'
                     + '&out='    + '2';
-        if (preamble!='')
+        if(preamble)
           qlQuery += '&preamble=' + encodeURIComponent(preamble);
         qlQuery += "&errors=1";      
         //qlQuery += '&rnd='+Math.random()*100;
-
         var yqlQuery = "q="
           + encodeURIComponent( 'select * from htmlpost where '
             + "url='http://www.quicklatex.com/latex3.f/' "
@@ -21,9 +18,7 @@
             + 'and xpath="/"' )
           + '&format=json'
           + '&env=' + encodeURIComponent( 'store://datatables.org/alltableswithkeys' );
-
-        var that = $(this);
-
+        var tag = $(this);
         $.ajax({
           url: 'http://query.yahooapis.com/v1/public/yql',
           dataType: 'json',
@@ -32,8 +27,7 @@
           success: function (response) {
             output = response.query.results.postresult.html.body;
             console.log (output);
-            if (output.length) {
-              //Parse server response
+            if(output.length) {
               var pattern = /^(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s?([\S\s]*)/;
               var regs   = output.match(pattern);   
               var status = regs[1];
@@ -42,13 +36,11 @@
               var imgw   = regs[4];
               var imgh   = regs[5];
               var errmsg = regs[6];                               
-
-              if(status=='0') {
-                that.replaceWith('<figure style="text-align:center;"><img src="'+imgurl+'" '
-                                    + 'width="'+imgw+'" '
-                                    + 'height="'+imgh+'"/></figure>');
+              if(status==='0') {
+                tag.replaceWith('<figure style="text-align:center;"><img src="'+imgurl+'" ' + 'width="'+imgw+'" '
+                               + 'height="'+imgh+'"/></figure>');
               } else {
-                console.log("Server Returns Error Message:"+errmsg);                     
+                console.log("Server Returns Error Message:"+errmsg);
               }
             }
           },
