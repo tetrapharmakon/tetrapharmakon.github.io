@@ -1,7 +1,10 @@
 ---
-title: (Co)monads in Hask
-tags: draft
+title: Monads in Haskell
+tags: draft mathjax quicklatex
 ---
+
+
+A whole lot of calculations using diagrams and metacode.
 
 
 
@@ -18,34 +21,45 @@ An $F$-algebra is an object $A$ together with a morphism $a:F(A)\rightarrow A$.
 
 
 
+{% include begin-macro %}
+\def\M{M}
+\def\u{\eta}
+\def\m{\mu}
+\def\to{\rightarrow}
+\def\C{C}
+\def\id{1}
+{% include end-macro %}
+
+{% include begin-preamble %}
+\usepackage[all]{xy}
+\def\M{M}
+\def\u{\eta}
+\def\m{\mu}
+\def\to{\rightarrow}
+\def\C{C}
+\def\id{1}
+{% include end-preamble %}
 
 
 
 
 
+## Monads
 
+A **monad** $\left<\M,\u,\m\right>$ in a category $\C$ is a functor $\M\colon\C\to\C$ together with two natural transformations, the unit $\u\colon \id\to\M$ and the multiplication $\m\colon\M^2\to\M$, such that the diagrams expressing associativity and unit laws commute:
 
+{% include begin-latex %}
+\begin{displaymath}\xymatrix{
+\id\M \ar[r]^{\u\M} \ar@{=}[dr] & \M^2 \ar[d]^\m & \M\id \ar[l]_{\M\u} \ar@{=}[dl] \\
+& \M & \\
+}\qquad\xymatrix{
+\M^3 \ar[r]^{\M\m} \ar[d]_{\m\M} & \M^2 \ar[d]^\m \\
+\M^2 \ar[r]_\m & \M
+}\end{displaymath}
+{% include end-latex %}
 
+An Haskell implementation would be
 
-<hr>
-
-# (Co)monads in $\mathbf{Hask}$
-
-<p class="definition">
-A monad $\left<T,\eta,\mu\right>$ in a category $X$ consists of a functor $T:X\rightarrow X$ and two natural transformations, the unit $\eta:I_X\rightarrow T$ and the multiplication $\mu:T^2\rightarrow T$, such that the following diagrams expressing the associativity and unit laws commute:
-<span class="diagram">
-$$\xymatrix{
-IT \ar[r]^{\eta T} \ar@{=}[dr] & T^2 \ar[d]^\mu & TI \ar[l]_{T\eta} \ar@{=}[dl] \\
-& T & \\
-}$$
-$$\xymatrix{
-T^3 \ar[r]^{T\mu} \ar[d]_{\mu T} & T^2 \ar[d]^\mu \\
-T^2 \ar[r]_\mu & T
-}$$
-</span>
-</p>
-
-This can be implemented in $\mathbf{Hask}$ as
 <pre>
 class Functor f where
   fmap :: (a -> b) -> f a -> f b
@@ -53,44 +67,49 @@ class Functor m => Monad m where
   unit     :: a -> m a
   mult     :: m (m a) -> m a
 </pre>
-ensuring that for every instance the following properties hold:
+
+if we ensure that every instance respects the following properties:
+
 <pre>
 Functoriality:
-  fmap id = id                                                           -- F1)
-  fmap (f . g) = (fmap f) . (fmap g)                                     -- F2)
+  fmap id = id                                                          -- (F1)
+  fmap (f . g) = (fmap f) . (fmap g)                                    -- (F2)
 Naturality:
-  fmap f . unit = unit . f                                               -- N1)
-  fmap f . mult = mult . fmap (fmap f)                                   -- N2)
+  fmap f . unit = unit . f                                              -- (N1)
+  fmap f . mult = mult . fmap (fmap f)                                  -- (N2)
 Consistency:
-  mult . fmap unit = mult . unit = id                                    -- C1)
-  mult . fmap mult = mult . mult                                         -- C2)
+  mult . fmap unit = mult . unit = id                                   -- (C1)
+  mult . fmap mult = mult . mult                                        -- (C2)
 </pre>
 
-A more economic implementation would be
+A more economic implementation is
+
 <pre>
 class Monad m where
   unit     :: a -> m a
   (>>=)    :: m a -> (a -> m b) -> m b
 </pre>
+
 whose instances must respect
+
 <pre>
 Monadicity: left unit, right unit, associativity
-  unit x >>= f = f x                                                     -- M1)
-  m >>= unit = m                                                         -- M2)
-  (m >>= f) >>= g = m >>= (\x -> f x >>= g)                              -- M3)
+  unit x >>= f = f x                                                    -- (M1)
+  m >>= unit = m                                                        -- (M2)
+  (m >>= f) >>= g = m >>= (\x -> f x >>= g)                             -- (M3)
 </pre>
 
 It's far from obvious but adding to the implementations respectively
 <pre>
   (>>=)    :: m a -> (a -> m b) -> m b
-  x >>= f   = join (fmap f x)                                            -- D1)
+  x >>= f   = join (fmap f x)                                           -- (D1)
 </pre>
 and
 <pre>
   fmap     :: (a -> b) -> f a -> f b
   join     :: m (m a) -> m a
-  fmap f x  = x >>= unit . f                                             -- D2)
-  join x    = x >>= id                                                   -- D3)
+  fmap f x  = x >>= unit . f                                            -- (D2)
+  join x    = x >>= id                                                  -- (D3)
 </pre>
 makes them completely equivalent, as one may painfully show in a direction first
 <pre>

@@ -5,12 +5,10 @@
     <meta name="author" content="{{ site.author.name }}">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
     <!--<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}atom.xml">-->
+{% if page.tags contains 'mathjax' %}
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
@@ -21,6 +19,11 @@
       });
     </script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+{% else %}{% endif %}
+{% if page.tags contains 'quicklatex' %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/quicklatex.js"></script>
+{% else %}{% endif %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,8 +34,17 @@
     </script>
   </head>
   <body>
-    <header>{% if page.tags contains 'headless' %}{% else %}<h1>{{ page.title }}</h1>{% endif %}</header>
+    <header>
+{% if page.tags contains 'headless' %}{% else %}
+      <h1>{{ page.title }}</h1>
+{% endif %}
+    </header>
     <main>{{ content }}</main>
-    <footer><hr></footer>
+    <footer>
+      <hr>
+{% if page.tags contains 'quicklatex' %}
+      <p class="credits"><small>This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.</small></p>
+{% else %}{% endif %}
+    </footer>
   </body>
 </html>
