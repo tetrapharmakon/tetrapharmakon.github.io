@@ -28,7 +28,7 @@ permalink: /epistolae/:title/
 # Markdown flavouring
 markdown: redcarpet
 
-highlighter: rouge
+#highlighter: rouge
 
 # Defaults
 defaults:
