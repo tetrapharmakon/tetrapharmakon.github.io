@@ -28,6 +28,10 @@ permalink: /epistolae/:title/
 # Markdown flavouring
 markdown: redcarpet
 
+kramdown:
+  coderay_wrap: nil
+
+
 #highlighter: rouge
 
 # Defaults
