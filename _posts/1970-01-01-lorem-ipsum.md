@@ -3,7 +3,7 @@ title: Lorem ipsum
 tags: 
 ---
 
-Lorem ipsum dolor sit {:.tex}`\sum x` amet, consectetur `\sum x` adipisci elit,
+Lorem ipsum dolor sit {:.tex}`\sum x` amet, consectetur `$\sum x$` adipisci elit,
  sed eiusmod *tempor*{: style="color:red;"} incidunt ut labore 
 
 ```
@@ -32,3 +32,4 @@ class Functor m => Monad m where
   unit     :: a -> m a
   mult     :: m (m a) -> m a
 ```
+{: .test}
