@@ -26,10 +26,10 @@ relative_permalinks: true
 permalink: /epistolae/:title/
 
 # Markdown flavouring
-markdown: kramdown
-kramdown:
-  input: GFM
-highlighter: pygments
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+#highlighter: pygments
 
 # Defaults
 defaults:
