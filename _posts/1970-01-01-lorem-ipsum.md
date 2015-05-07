@@ -1,9 +1,37 @@
 ---
 title: Lorem ipsum
-tags: athjax quicklatex ighlight haskell tex
+tags: athjax uicklatex ighlight askell te
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur `\sum x` adipisci elit,
+ sed eiusmod tempor incidunt ut labore $\LaTeX$ et dolore magna aliqua.
+
+$$
+\sum x
+$$
+
+e se invece
+
+```
+$$
+\sum x
+$$
+```
+
+
+$$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
+
+
+$$ \mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p} $$
+
+
+
+``` tex
+\mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p}
+```
+
+
+Vabe ma poi
 
 ``` tex
 \usepackage[all]{xy}
@@ -35,7 +63,7 @@ in culpa qui officia deserunt mollit anim id est laborum.
 
 
 
-``` tex
+```latex
 \comando[12]{asd}
 123+123
 \begin{displaymath}
@@ -48,6 +76,11 @@ in culpa qui officia deserunt mollit anim id est laborum.
 \end{displaymath}
 ```
 
+``` ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 ehvabè
 

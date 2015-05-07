@@ -12,10 +12,10 @@ author:
 # unpublished: false
 
 # Conversion
-markdown: kramdown
-kramdown:
-  input: GFM
-highlighter: null
+markdown: redcarpet
+#kramdown:
+#  input: GFM
+#highlighter: null
 # excerpt_separator: "\n\n"
 
 # Serving
