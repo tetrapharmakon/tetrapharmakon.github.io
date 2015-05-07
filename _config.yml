@@ -12,8 +12,10 @@ author:
 # unpublished: false
 
 # Conversion
-# markdown:    kramdown
-# highlighter: pygments
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: none
 # excerpt_separator: "\n\n"
 
 # Serving
@@ -24,12 +26,6 @@ relative_permalinks: true
 
 # Outputting
 permalink: /epistolae/:title/
-
-# Markdown flavouring
-markdown: kramdown
-kramdown:
-  input: GFM
-highlighter: none
 
 # Defaults
 defaults:
