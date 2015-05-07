@@ -116,7 +116,7 @@ pre code {
 /*           *   */ .hljs .command      { font-weight: bold; }
 /*           *   */ .hljs .parameter    { color: red; }
 /*           *   */ .hljs .formula      { color: red; }
-/*   *   *       */ .hljs .keyword      {  }
+/*   *   *       */ .hljs .keyword      { font-weight: bold; }
 /*   *   *       */ .hljs .string       {  }
 /*       *       */ .hljs .list         {  }
 /*   *           */ .hljs .pragma       {  }
@@ -126,7 +126,7 @@ pre code {
 /*   *           */ .hljs .container    {  }
 /*   *           */ .hljs .module       {  }
 /*   *           */ .hljs .import       {  }
-/*   *           */ .hljs .class        {  }
+/*   *           */ .hljs .class        { text-decoration: underline; }
 /*   *           */ .hljs .typedef      {  }
 /*   *           */ .hljs .default      {  }
 /*   *           */ .hljs .infix        {  }

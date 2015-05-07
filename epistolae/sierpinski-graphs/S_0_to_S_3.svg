@@ -8,14 +8,14 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 471.11783 128"
-   id="svg4300"
-   version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   width="100%"
+   style="enable-background:new"
+   sodipodi:docname="S_0_to_S_3.svg"
    height="100%"
-   sodipodi:docname="hamiltonian_polytopic_self_similar_graphs_recursion.svg"
-   style="enable-background:new">
+   width="100%"
+   inkscape:version="0.48.5 r10040"
+   version="1.1"
+   id="svg4300"
+   viewBox="0 0 471.11783 128">
   <metadata
      id="metadata4486">
     <rdf:RDF>
@@ -41,10 +41,10 @@
      id="namedview4484"
      showgrid="true"
      inkscape:zoom="1.9997864"
-     inkscape:cx="283.47325"
+     inkscape:cx="197.21404"
      inkscape:cy="18.074301"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4300"
      fit-margin-top="0"
@@ -64,76 +64,14 @@
        originy="0px" />
   </sodipodi:namedview>
   <defs
-     id="defs4302">
-    <marker
-       inkscape:stockid="DotS"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="DotS"
-       style="overflow:visible">
-      <path
-         id="path7313"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         transform="matrix(0.2,0,0,0.2,1.48,0.2)"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       inkscape:stockid="DotM"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="DotM"
-       style="overflow:visible">
-      <path
-         id="path7310"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       inkscape:stockid="DotL"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="DotL"
-       style="overflow:visible">
-      <path
-         id="path7307"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         transform="matrix(0.8,0,0,0.8,5.92,0.8)"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       inkscape:stockid="Arrow1Lstart"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="Arrow1Lstart"
-       style="overflow:visible">
-      <path
-         id="path7246"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         transform="matrix(0.8,0,0,0.8,10,0)"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <linearGradient
-       id="linearGradient4304">
-      <stop
-         offset="0"
-         id="stop4306" />
-    </linearGradient>
-  </defs>
+     id="defs4302" />
   <g
-     id="g7199">
+     id="g7199"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1">
     <path
        id="path4314"
        d="m 27.7128,16 v 96 l 83.1384,-48 z"
-       style="fill:none;stroke:#586e75;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-mid:none;marker-end:none"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-mid:none;marker-end:none;fill-opacity:1"
        inkscape:connector-curvature="0" />
   </g>
   <g
