@@ -33,7 +33,7 @@ in culpa qui officia deserunt mollit anim id est laborum.
 
 
 
-``` tex
+``` latex
 \begin{displaymath}
   \xymatrix{
     Ty \ar[r]^{Tg} & T^2z \ar[r]^{T^2h} \ar[d]_{\mu_z}
@@ -46,19 +46,10 @@ in culpa qui officia deserunt mollit anim id est laborum.
 
 Ma lol.
 
-``` haskell
+~~~ haskell
 class Functor f where
   fmap :: (a -> b) -> f a -> f b
 class Functor m => Monad m where
   unit     :: a -> m a
   mult     :: m (m a) -> m a
-```
-
-
-{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
-
+~~~
