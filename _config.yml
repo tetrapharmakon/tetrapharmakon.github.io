@@ -14,7 +14,7 @@ author:
 # Conversion
 markdown: redcarpet
 redcarpet:
-  extensions: ["no_intra_emphasis", "strikethrough", "smart"]
+  extensions: ["no_intra_emphasis", "strikethrough"]
 #kramdown:
 #  input: GFM
 #highlighter: null
