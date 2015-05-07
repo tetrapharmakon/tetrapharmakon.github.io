@@ -61,3 +61,12 @@ class Functor m => Monad m where
   unit     :: a -> m a
   mult     :: m (m a) -> m a
 ~~~
+
+
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+
