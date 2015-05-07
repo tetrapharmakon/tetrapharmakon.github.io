@@ -3,7 +3,7 @@ title: Lorem ipsum
 tags: 
 ---
 
-Lorem ipsum dolor sit amet, consectetur `\sum x` adipisci elit,
+Lorem ipsum dolor sit `\sum x`{:.tex} amet, consectetur `\sum x` adipisci elit,
  sed eiusmod tempor incidunt ut labore 
 
 ```
