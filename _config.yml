@@ -27,9 +27,7 @@ permalink: /epistolae/:title/
 
 # Markdown flavouring
 markdown: kramdown
-kramdown:
-  input: GFM
-#highlighter: pygments
+highlighter: none
 
 # Defaults
 defaults:
