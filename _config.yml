@@ -29,6 +29,7 @@ permalink: /epistolae/:title/
 markdown: kramdown
 
 kramdown:
+  input: GFM
   coderay_wrap: nil
 
 
