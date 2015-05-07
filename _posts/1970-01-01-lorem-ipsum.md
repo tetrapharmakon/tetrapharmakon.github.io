@@ -4,7 +4,7 @@ tags:
 ---
 
 Lorem ipsum dolor sit {:.tex}`\sum x` amet, consectetur `\sum x` adipisci elit,
- sed eiusmod tempor incidunt ut labore 
+ sed eiusmod *tempor*{: style="color:red;"} incidunt ut labore 
 
 ```
 $$
