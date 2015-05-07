@@ -46,10 +46,10 @@ in culpa qui officia deserunt mollit anim id est laborum.
 
 Ma lol.
 
-~~~ haskell
+``` haskell
 class Functor f where
   fmap :: (a -> b) -> f a -> f b
 class Functor m => Monad m where
   unit     :: a -> m a
   mult     :: m (m a) -> m a
-~~~
+```
