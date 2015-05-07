@@ -28,10 +28,10 @@ permalink: /epistolae/:title/
 # Markdown flavouring
 markdown: kramdown
 
-highlighter: rouge
-
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
+
 
 # Defaults
 defaults:
