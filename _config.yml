@@ -27,11 +27,6 @@ permalink: /epistolae/:title/
 
 # Markdown flavouring
 markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: pygments
-
 highlighter: pygments
 
 # Defaults
