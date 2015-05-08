@@ -8,7 +8,6 @@ Una introduzione alla relatività con prerequisiti quasi nulli, suddivisa in par
 È una bozza e mancano varie cose, alcune segnalate.
 
 
-{% include begin-macro %}
   \def\x{\mathbf{x}}
   \def\o{\mathbf{o}}
   \def\M{\mathbf{M}}
@@ -16,7 +15,6 @@ Una introduzione alla relatività con prerequisiti quasi nulli, suddivisa in par
 \def\mat#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
 \def\vec#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \def\sys#1{\left\{\begin{aligned}#1\end{aligned}\right.}
-{% include end-macro %}
 
 
 

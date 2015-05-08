@@ -1,41 +1,23 @@
 ---
 title: Monads in Haskell
-tags: draft mathjax uicklatex highlight tex haskell
+tags: draft
+packages: |
+  \usepackage[all]{xy}
+macros: |
+  \def\to{\rightarrow} % Just an alias
+  \def\C{C}            % Category
+  \def\M{M}            % Monad
+  \def\u{\eta}         % Unit
+  \def\m{\mu}          % Multiplication
+  \def\id{1}           % Identity functor
 ---
 
 
-A whole lot of calculations using diagrams and metacode.
+A whole lot of diagrams translated into metacode.
 
+Let `$F$` be an endofunctor on `$C$`.
 
-
-Let $F$ be an endofunctor on $C$.
-
-An $F$-algebra is an object $A$ together with a morphism $a:F(A)\rightarrow A$.
-
-
-
-
-{% include begin-macro %}
-\def\M{M}
-\def\u{\eta}
-\def\m{\mu}
-\def\to{\rightarrow}
-\def\C{C}
-\def\id{1}
-{% include end-macro %}
-
-``` tex
-\usepackage[all]{xy}
-\def\M{M}
-\def\u{\eta}
-\def\m{\mu}
-\def\to{\rightarrow}
-\def\C{C}
-\def\id{1}
-```
-{:.quicklatex-preamble}
-
-
+An `$F$`-algebra is an object `$A$` together with a morphism `$a:F(A)\rightarrow A$`.
 
 
 ## Monads
@@ -78,7 +60,7 @@ class Functor m => Monad m where
 
 if we ensure that every instance respects the following properties:
 
-``` haskell-metacode
+``` haskell
 Functoriality:
   fmap id = id                                                          -- (F1)
   fmap (f . g) = (fmap f) . (fmap g)                                    -- (F2)
@@ -101,7 +83,7 @@ class Monad m where
 
 whose instances must respect
 
-``` haskell-metacode
+``` haskell
 Monadicity: left unit, right unit, associativity
   unit x >>= f = f x                                                    -- (M1)
   m >>= unit = m                                                        -- (M2)

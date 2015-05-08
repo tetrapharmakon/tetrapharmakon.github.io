@@ -1,5 +1,11 @@
 ﻿$(function() {
-  var preamble = $('.quicklatex-preamble').first().text();
+  var preamble = '\\usepackage{amsmath}\n'
+               + '\\usepackage{amsfonts}\n'
+               + '\\usepackage{amssymb}\n'
+               + $('#preamble').data('packages')
+               + $('#preamble').data('macros');
+  console.log(preamble);
+  return false;
   $('.quicklatex-code').each(function(){
     var code = $(this).text();
       if(code) {
@@ -7,6 +13,8 @@
                     + '&fsize='  + '19px'
                     + '&fcolor=' + '000000'
                     + '&out='    + '2';
+
+
         if(preamble)
           qlQuery += '&preamble=' + encodeURIComponent(preamble);
         qlQuery += "&errors=1";      

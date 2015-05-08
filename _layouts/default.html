@@ -8,8 +8,11 @@
     <meta name="author" content="{{site.author.name}}">
     <title>{{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.png">
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/style.css"/>
+    <link rel="icon" type="image/png"
+          href="{{site.baseurl}}/favicon.png">
+    <link rel="stylesheet" type="text/css"
+          href="{{site.baseurl}}/assets/style.css"/>
+
     {% include javascript %}
 
   </head>
@@ -17,15 +20,15 @@
 
   <body>
 
-    {% if page.tags contains 'headless' %}{% else %}
-    <header><h1>{{page.title}}</h1></header>
-    {% endif %}
+    {% unless page.tags contains 'headless' %}
+    <header>{% include header %}</header>
+    {% endunless %}
 
     <main>{{content}}</main>
 
-    {% if page.tags contains 'footless' %}{% else %}
+    {% unless page.tags contains 'footless' %}
     <footer>{% include footer %}</footer>
-    {% endif %}
+    {% endunless %}
 
   </body>
 

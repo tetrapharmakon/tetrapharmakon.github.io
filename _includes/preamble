@@ -1,0 +1,13 @@
+<div id="preamble"
+     data-packages="{{page.packages}}"
+     data-macros="{{page.macros}}">
+{% highlight tex %}
+% ----------------------------  BEGIN  PREAMBLE  ---------------------------- %
+
+% Packages
+{{page.packages}}
+% Macros
+{{page.macros}}
+% -----------------------------  END  PREAMBLE  ----------------------------- %
+{% endhighlight %}
+</div>
