@@ -18,17 +18,8 @@ $$
 \]
 ```
 
-``` texalive
-\[
-\mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p}
-\]
-```
+asd
 
-```
-\[
-\mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p}
-\]
-```
 
 ``` ruby
 require 'redcarpet'
