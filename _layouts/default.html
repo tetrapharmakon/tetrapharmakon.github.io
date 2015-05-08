@@ -1,109 +1,33 @@
 <!DOCTYPE html>
 <html>
+
+
   <head>
+
     <meta charset="UTF-8">
-    <meta name="author" content="{{ site.author.name }}">
-    <title>{{ page.title }}</title>
+    <meta name="author" content="{{site.author.name}}">
+    <title>{{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.png">
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/style.css"/>
+    {% include javascript %}
 
-{% if page.tags contains 'mathjax' %}
-  {% assign needjquery = true %}
-{% elsif page.tags contains 'quicklatex' %}
-  {% assign needjquery = true %}
-{% endif %}
-{% if needjquery %}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-{% endif %}
-
-{% if page.tags contains 'mathjax' %}
-    <script type="text/javascript">
-$(document).ready(function() {
-  $('code').not('pre code').each(function() {
-    var test = /^\$([^\$]*)\$$/.exec($(this).text());
-    if(test) { $(this).replaceWith(
-      '<script type="math\/tex">'
-        +test[1]+'<\/script>'); }
-  });
-  $('.language-tex').parent().parent().each(function() {
-    var test = /^\$\$([^\$]*)\$\$$/m.exec($(this).text());
-    if(test) { $(this).replaceWith(
-      '<script type="math\/tex; mode=display">'
-        +test[1]+'<\/script>');}
-  });
-});
-    </script>
-    <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  /* No preprocessor. We already did the work. */
-  /* This is going to need some fine tuning. */
-  jax: ["input/TeX", "output/HTML-CSS", "output/CommonHTML"],
-  extensions: ["MathMenu.js", "MathZoom.js", "CHTML-preview.js", "MatchWebFonts.js"],
-  "HTML-CSS": {
-    preferredFont: "STIX",
-    webFont: "STIX-Web"
-  },
-  MatchWebFonts: {
-    matchFor: {
-      "HTML-CSS": true,
-      NativeMML: false,
-      SVG: false
-    },
-    fontCheckDelay: 2000,
-    fontCheckTimeout: 30 * 1000
-  },
-  TeX: {
-    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
-  }
-});
-    </script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-{% else %}{% endif %}
-
-
-
-{% if page.tags contains 'quicklatex' %}
-    <script type="text/javascript" src="{{ site.baseurl }}/quicklatex.js"></script>
-{% else %}{% endif %}
-{% if page.tags contains 'highlight' %}
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-  {% if page.tags contains 'haskell' %}
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/languages/haskell.min.js"></script>
-  {% else %}{% endif %}
-  {% if page.tags contains 'tex' %}
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/languages/tex.min.js"></script>
-  {% else %}{% endif %}
-    <script>
-hljs.configure({classPrefix:''});
-$(document).ready(function() {
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-});
-    </script>
-{% else %}{% endif %}
-    <script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-34703595-2', 'auto');
-ga('send', 'pageview');
-    </script>
   </head>
+
+
   <body>
-    <header>
-{% if page.tags contains 'headless' %}{% else %}
-      <h1>{{ page.title }}</h1>
-{% endif %}
-    </header>
-    <main>{{ content }}</main>
-    <footer>
-      <hr>
-{% if page.tags contains 'quicklatex' %}
-      <p class="credits"><small>This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.</small></p>
-{% else %}{% endif %}
-    </footer>
+
+    {% if page.tags contains 'headless' %}{% else %}
+    <header><h1>{{page.title}}</h1></header>
+    {% endif %}
+
+    <main>{{content}}</main>
+
+    {% if page.tags contains 'footless' %}{% else %}
+    <footer>{% include footer %}</footer>
+    {% endif %}
+
   </body>
+
+
 </html>

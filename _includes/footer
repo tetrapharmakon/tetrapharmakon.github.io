@@ -1,0 +1,18 @@
+<hr>
+
+{% if page.tags contains 'quicklatex' %}
+<div class="credits">
+  <small>
+    This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.
+  </small>
+</div>
+{% else %}{% endif %}
+
+<!--
+<nav>
+  {% if page.title != "Index" %}
+    Back to index.</br>
+  {% endif %}
+  Drop me a line!
+</nav>
+-->
