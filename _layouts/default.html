@@ -7,18 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 {% if page.tags contains 'mathjax' %}
+    <script type="text/javascript">
+$(document).ready(function() {
+  $('code').not('pre code').each(function() {
+    var test = /^\$([^\$]*)\$$/.exec($(this).text());
+    if(test) { $(this).replaceWith(
+      '<script type="math\/tex">'
+        +test[1]+'<\/script>'); }
+  });
+  $('.language-tex').parent().parent().each(function() {
+    var test = /^\$\$([^\$]*)\$\$$/m.exec($(this).text());
+    if(test) { $(this).replaceWith(
+      '<script type="math\/tex; mode=display">'
+        +test[1]+'<\/script>');}
+  });
+});
+    </script>
     <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [ ['`','`'] ],
-    displayMath: [ ['$$','$$'] ]
+  /* tex2jax.js is forbidden. We already did everything. */
+  jax: ["input/TeX","output/HTML-CSS", "output/CommonHTML"],
+  extensions: ["MathMenu.js","MathZoom.js", "CHTML-preview.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
   }
 });
     </script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 {% else %}{% endif %}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+
 {% if page.tags contains 'quicklatex' %}
     <script type="text/javascript" src="{{ site.baseurl }}/quicklatex.js"></script>
 {% else %}{% endif %}

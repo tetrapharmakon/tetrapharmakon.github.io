@@ -1,7 +1,8 @@
 ---
 title: Lorem ipsum
-tags: 
+tags: athjax
 ---
+
 
 Lorem "ipsum" dolor 'sit' `\sum x` amet, consectetur `$\sum x$` adipisci elit,
  sed eiusmod incidunt -- ut --- labore 
@@ -11,6 +12,14 @@ $$
 \sum x
 $$
 ```
+
+``` tex
+\[
+\mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p}
+\]
+```
+
+asd
 
 ``` tex
 \[
