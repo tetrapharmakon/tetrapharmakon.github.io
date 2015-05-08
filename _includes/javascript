@@ -6,7 +6,7 @@
 
 {% if needjquery %}
 <script type="text/javascript"
-        src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        src="{{site.baseurl}}/js/jquery-2.1.4.min.js"></script>
 {% endif %}
 
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 {% if page.tags contains 'quicklatex' %}
     <script type="text/javascript"
-            src="{{ site.baseurl }}/quicklatex.js"></script>
+            src="{{site.baseurl}}/js/quicklatex-custom.js"></script>
 {% else %}{% endif %}
 
 
