@@ -13,7 +13,6 @@
 {% elsif page.tags contains 'quicklatex' %}
   {% assign needjquery = true %}
 {% endif %}
-
 {% if needjquery %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 {% endif %}
@@ -37,9 +36,23 @@ $(document).ready(function() {
     </script>
     <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  /* tex2jax.js is forbidden. We already did everything. */
-  jax: ["input/TeX","output/HTML-CSS", "output/CommonHTML"],
-  extensions: ["MathMenu.js","MathZoom.js", "CHTML-preview.js"],
+  /* No preprocessor. We already did the work. */
+  /* This is going to need some fine tuning. */
+  jax: ["input/TeX", "output/HTML-CSS", "output/CommonHTML"],
+  extensions: ["MathMenu.js", "MathZoom.js", "CHTML-preview.js", "MatchWebFonts.js"],
+  "HTML-CSS": {
+    preferredFont: "STIX",
+    webFont: "STIX-Web"
+  },
+  MatchWebFonts: {
+    matchFor: {
+      "HTML-CSS": true,
+      NativeMML: false,
+      SVG: false
+    },
+    fontCheckDelay: 2000,
+    fontCheckTimeout: 30 * 1000
+  },
   TeX: {
     extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
   }

@@ -1,6 +1,6 @@
 ---
 title: Lorem ipsum
-tags: athjax
+tags: mathjax
 ---
 
 
