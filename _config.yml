@@ -15,10 +15,6 @@ author:
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "strikethrough", "smart"]
-#kramdown:
-#  input: GFM
-highlighter: rouge
-# excerpt_separator: "\n\n"
 
 # Serving
 #baseurl: http://paolobrasolin.github.io/
