@@ -40,16 +40,12 @@ $(document).ready(function() {
       "output/HTML-CSS",
       "output/CommonHTML"
     ],
-    extensions: [
+    /*extensions: [
       "MathMenu.js",
       "MathZoom.js",
       "CHTML-preview.js",
       "MatchWebFonts.js"
     ],
-    "HTML-CSS": {
-      preferredFont: "STIX",
-      webFont: "STIX-Web"
-    },
     MatchWebFonts: {
       matchFor: {
         "HTML-CSS": true,
@@ -58,6 +54,10 @@ $(document).ready(function() {
       },
       fontCheckDelay: 2000,
       fontCheckTimeout: 30 * 1000
+    },*/
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      webFont: "STIX-Web"
     },
     TeX: {
       extensions: [
