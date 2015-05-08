@@ -4,16 +4,18 @@ tags:
 ---
 
 Lorem "ipsum" dolor 'sit' `\sum x` amet, consectetur `$\sum x$` adipisci elit,
- sed eiusmod *tempor*{: style="color:red;"} incidunt -- ut --- labore 
+ sed eiusmod incidunt -- ut --- labore 
 
-```
+``` tex
 $$
 \sum x
 $$
 ```
 
 ``` tex
+\[
 \mathbf{X}_{n,p} = \mathbf{A}_{n,k} \mathbf{B}_{k,p}
+\]
 ```
 
 ``` ruby
