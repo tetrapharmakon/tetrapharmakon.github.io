@@ -5,7 +5,7 @@ tags: mathjax
 
 
 Polynomials are for weaklings.
-We want a generalization.
+We long for a generalization.
 
 
 ## Foundation

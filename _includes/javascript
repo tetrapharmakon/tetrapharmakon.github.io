@@ -18,7 +18,9 @@
 $(document).ready(function() {
   /* Hide and clean preamble */
   $('#preamble').addClass("hidden");
-  $('#preamble').text('$$'+$('#preamble').data('macros')+'$$');
+  $('#preamble').append(
+    '<script type="math\/tex; mode=display ">'
+        +$('#preamble').data('macros')+'<\/script>');
   /* Inline math */
   $('code').not('pre code').each(function() {
     var match = /^\$([^\$]*)\$$/.exec($(this).text());

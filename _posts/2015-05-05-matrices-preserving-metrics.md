@@ -1,14 +1,7 @@
 ---
 title: Matrices preserving metrics
-tags: draft mathja
----
-
-
-Just some dumb calculations.
-
-
-``` tex
-$$
+tags: draft mathjax
+macros: |
   \def\nn{M}
   \def\pp{A}%\aleph
   \def\pq{B}%\beth
@@ -26,11 +19,10 @@ $$
   \def\sys#1{\left\{\eqs{#1}\right.}
   \def\metric{\eta}
   \def\glnf{\mathrm{GL}_n(\mathbb{F})}
-$$
-```
+---
 
 
-
+Just some dumb calculations.
 
 
 

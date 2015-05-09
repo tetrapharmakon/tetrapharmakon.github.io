@@ -4,25 +4,44 @@ tags: draft
 packages: |
   \usepackage[all]{xy}
 macros: |
-  \def\to{\rightarrow} % Just an alias
+  % Some aliases
+  \def\to{\rightarrow}
+  \def\({\left(}
+  \def\){\right)}
+  \def\[{\left[}
+  \def\]{\right]}
+  \def\<{\left<}
+  \def\>{\right>}
+  \def\:{\colon}
+  % Notation
   \def\C{C}            % Category
+  \def\D{D}            % Category
   \def\M{M}            % Monad
+  \def\L{L}            % Left adjoint
+  \def\R{R}            % Right adjoint
   \def\u{\eta}         % Unit
+  \def\c{\epsilon}     % Counit
   \def\m{\mu}          % Multiplication
   \def\id{1}           % Identity functor
 ---
 
 
-A whole lot of diagrams translated into metacode.
-
-Let `$F$` be an endofunctor on `$C$`.
-
-An `$F$`-algebra is an object `$A$` together with a morphism `$a:F(A)\rightarrow A$`.
 
 
-## Monads
+A journey among diagrams and metacode.
+Still aimless.
 
-A **monad** $\left<\M,\u,\m\right>$ in a category $\C$ is a functor $\M\colon\C\to\C$ together with two natural transformations, the unit $\u\colon \id\to\M$ and the multiplication $\m\colon\M^2\to\M$, such that the diagrams expressing associativity and unit laws commute:
+
+
+
+
+
+
+
+## Monads for mathematicians
+
+
+A **monad** `$\<\M,\u,\m\>$` in a category `$\C$` is a functor `$\M\:\C\to\C$` together with two natural transformations, the unit `$\u\:\id\to\M$` and the multiplication `$\m\:\M^2\to\M$`, such that the diagrams expressing associativity and unit laws commute:
 
 ``` tex
 \begin{displaymath}
@@ -46,34 +65,45 @@ A **monad** $\left<\M,\u,\m\right>$ in a category $\C$ is a functor $\M\colon\C\
   }
 \end{displaymath}
 ```
-{:.quicklatex-code}
 
-An Haskell implementation would be
+We can straightforwardly implement it in Haskell as
 
 ``` haskell
 class Functor f where
   fmap :: (a -> b) -> f a -> f b
+
 class Functor m => Monad m where
   unit :: a -> m a
   mult :: m (m a) -> m a
 ```
 
-if we ensure that every instance respects the following properties:
+Everything is going to work just fine as long as we ensure that every instance respects the following properties:
 
-``` haskell
+``` text
 Functoriality:
   fmap id = id                                                          -- (F1)
   fmap (f . g) = (fmap f) . (fmap g)                                    -- (F2)
+
 Naturality:
   fmap f . unit = unit . f                                              -- (N1)
   fmap f . mult = mult . fmap (fmap f)                                  -- (N2)
+
 Consistency:
   mult . fmap unit = mult . unit = id                                   -- (C1)
   mult . fmap mult = mult . mult                                        -- (C2)
 ```
-{:.no-highlight}
 
-A more economic implementation is
+
+
+
+
+
+
+
+## Monads for programmers
+
+
+In the *amazing world of computers*, monads are more commonly and more economically implemented as
 
 ``` haskell
 class Monad m where
@@ -81,182 +111,285 @@ class Monad m where
   (>>=) :: m a -> (a -> m b) -> m b
 ```
 
-whose instances must respect
+ensuring all instances respect
 
-``` haskell
+``` text
 Monadicity: left unit, right unit, associativity
   unit x >>= f = f x                                                    -- (M1)
   m >>= unit = m                                                        -- (M2)
   (m >>= f) >>= g = m >>= (\x -> f x >>= g)                             -- (M3)
 ```
-{:.no-highlight}
 
-It's far from obvious but adding to the implementations respectively
+But are the two implementations any different?
+No, they are not.
+We will now show they are equivalent, and we will do it in a way so painstakingly straightforward we will probably just feel dull pain at the end.
 
-``` haskell
-class Functor f where
-  fmap :: (a -> b) -> f a -> f b
-class Functor m => Monad m where
-  unit  :: a -> m a
-  mult  :: m (m a) -> m a
-  (>>=) :: m a -> (a -> m b) -> m b
-  x >>= f = mult (fmap f x)                                             -- (D1)
-```
-
-and
+Let us enrich the first implementation with
 
 ``` haskell
-class Monad m where
-  unit  :: a -> m a
-  (>>=) :: m a -> (a -> m b) -> m b
-  fmap  :: (a -> b) -> f a -> f b
-  mult  :: m (m a) -> m a
-  fmap f x = x >>= unit . f                                             -- (D2)
-  mult x   = x >>= id                                                   -- (D3)
+(>>=) :: m a -> (a -> m b) -> m b
+x >>= f = mult (fmap f x)                                               -- (D1)
 ```
 
-makes them completely equivalent, as one may painfully show in a direction first
-<pre>
+Every propery of the second one holds:
+
+``` text
   unit x >>= f
-= join (fmap f (unit x))                                              -- By D1)
-= join (unit (f x))                                                   -- By N1)
+= join (fmap f (unit x))                                               -- by D1
+= join (unit (f x))                                                    -- by N1
 = (join . unit) (f x)
-= id (f x)                                                            -- By C1)
+= id (f x)                                                             -- by C1
 = f x
 
   x >>= unit
-= join (fmap unit x)                                                  -- By D1)
+= join (fmap unit x)                                                   -- by D1
 = (join . fmap unit) x
-= id x                                                                -- By C1)
+= id x                                                                 -- by C1
 = x
 
   (x >>= f) >>= g
-= (join (fmap f x)) >>= g                                             -- By D1)
-= join (fmap g (join (fmap f x)))                                     -- By D1)
+= (join (fmap f x)) >>= g                                              -- by D1
+= join (fmap g (join (fmap f x)))                                      -- by D1
 = (join . fmap g . join . fmap f) x
-= (join . join . fmap (fmap g) . fmap f) x                            -- By N2)
-= (join . join . fmap (fmap g . f)) x                                 -- By F2)
-= (join . fmap join . fmap (fmap g . f)) x                            -- By C2)
-= (join . fmap (join . fmap g . f)) x                                 -- By F2)
-= x >>= (join . fmap g . f)                                           -- By D1)
+= (join . join . fmap (fmap g) . fmap f) x                             -- by N2
+= (join . join . fmap (fmap g . f)) x                                  -- by F2
+= (join . fmap join . fmap (fmap g . f)) x                             -- by C2
+= (join . fmap (join . fmap g . f)) x                                  -- by F2
+= x >>= (join . fmap g . f)                                            -- by D1
 = x >>= (\y -> join . fmap g . f y)
-= x >>= (\y -> f y >>= g)                                             -- By D1)
-</pre>
-and then in the other one
-<pre>
+= x >>= (\y -> f y >>= g)                                              -- by D1
+```
+
+Let us enrich the second implementation with
+
+``` haskell
+fmap  :: (a -> b) -> f a -> f b
+mult  :: m (m a) -> m a
+fmap f x = x >>= unit . f                                               -- (D2)
+mult x   = x >>= id                                                     -- (D3)
+```
+
+Every propery of the first one holds:
+
+``` text
   fmap id x
-= x >>= unit . id                                                     -- By D2)
+= x >>= unit . id                                                      -- by D2
 = x >>= unit
-= x                                                                   -- By M2)
+= x                                                                    -- by M2
 = id x
 
   fmap (f . g) x
-= x >>= unit . (f . g)                                                -- By D2)
+= x >>= unit . (f . g)                                                 -- by D2
 = x >>= (\y -> unit . f . g y)
-= x >>= (\y -> unit . g y >>= unit . f)                               -- By M1)
-= (x >>= unit . g) >>= unit . f                                       -- By M3)
-= (fmap f) (x >>= unit . g)                                           -- By D2)
-= (fmap f) . (fmap g) x                                               -- By D2)
+= x >>= (\y -> unit . g y >>= unit . f)                                -- by M1
+= (x >>= unit . g) >>= unit . f                                        -- by M3
+= (fmap f) (x >>= unit . g)                                            -- by D2
+= (fmap f) . (fmap g) x                                                -- by D2
 
   (fmap f . unit) x
-= unit x >>= unit . f                                                 -- By D2)
-= (unit . f) x                                                        -- By M1)
+= unit x >>= unit . f                                                  -- by D2
+= (unit . f) x                                                         -- by M1
 
   (fmap f . join) x
-= (join x) >>= unit . f                                               -- By D2)
-= (x >>= id) >>= unit . f                                             -- By D3)
-= x >>= (\y -> id y >>= unit . f)                                     -- By M3)
+= (join x) >>= unit . f                                                -- by D2
+= (x >>= id) >>= unit . f                                              -- by D3
+= x >>= (\y -> id y >>= unit . f)                                      -- by M3
 = x >>= (\y -> y >>= unit . f)
-= x >>= (\y -> fmap f y)                                              -- By D2)
+= x >>= (\y -> fmap f y)                                               -- by D2
 = x >>= (\y -> id . (fmap f) y)
-= x >>= (\y -> unit . (fmap f) y >>= id)                              -- By D3)
-= (x >>= unit . (fmap f)) >>= id                                      -- By M3)
-= (fmap (fmap f) x) >>= id                                            -- By D2)
-= (join . fmap (fmap f)) x                                            -- By D3)
+= x >>= (\y -> unit . (fmap f) y >>= id)                               -- by D3
+= (x >>= unit . (fmap f)) >>= id                                       -- by M3
+= (fmap (fmap f) x) >>= id                                             -- by D2
+= (join . fmap (fmap f)) x                                             -- by D3
 
   (join . fmap unit) x
-= fmap unit x >>= id                                                  -- By D3)
-= (x >>= unit . unit) >>= id                                          -- By D2)
-= x >>= (\y -> unit (unit y) >>= id)                                  -- By M3)
-= x >>= (\y -> unit y)                                                -- By M1)
-= x >>= unit                                                          -- By M2)
+= fmap unit x >>= id                                                   -- by D3
+= (x >>= unit . unit) >>= id                                           -- by D2
+= x >>= (\y -> unit (unit y) >>= id)                                   -- by M3
+= x >>= (\y -> unit y)                                                 -- by M1
+= x >>= unit                                                           -- by M2
 = x
 
   (join . unit) x
-= unit x >>= id                                                       -- By D3)
-= id x                                                                -- By M1)
+= unit x >>= id                                                        -- by D3
+= id x                                                                 -- by M1
 
   (join . fmap join) x
-= (fmap join x) >>= id                                                -- By D3)
-= (x >>= unit . join) >>= id                                          -- By D2)
-= x >>= (\y -> unit . join y >>= id)                                  -- By M3)
-= x >>= (\y -> join y)                                                -- By M1)
-= x >>= (\y -> y >>= id)                                              -- By D3)
-= (x >>= id) >>= id                                                   -- By M3)
-= join (x >>= id)                                                     -- By D3)
-= (join . join) x                                                     -- By D3)
-</pre>
+= (fmap join x) >>= id                                                 -- by D3
+= (x >>= unit . join) >>= id                                           -- by D2
+= x >>= (\y -> unit . join y >>= id)                                   -- by M3
+= x >>= (\y -> join y)                                                 -- by M1
+= x >>= (\y -> y >>= id)                                               -- by D3
+= (x >>= id) >>= id                                                    -- by M3
+= join (x >>= id)                                                      -- by D3
+= (join . join) x                                                      -- by D3
+```
 
-Why is this even possible? Consider the so called Kleisli composition:
-<pre>
-  (>=>)       :: Monad m => (a -> m b) -> (b -> m c) -> a -> m c
-  (m >=> n) x  = m x >>= n
-</pre>
-This gives us another (obviously) equivalent point of view on what's fundamental in defining a monad:
-<pre>
+Everything worked fine.
+Are you happy?
+Neither I am.
+Luckily we're up for some candy now.
+
+
+
+
+
+
+
+
+## Monads for smarty pants
+
+
+I present to you the Kleisli composition:
+
+``` haskell
+(>=>) :: Monad m => (a -> m b) -> (b -> m c) -> a -> m c
+(m >=> n) x  = m x >>= n
+```
+
+It allows us to obtain a third implementation.
+This time the equivalence with the second one is obvious, as we are just directly translating it
+
+``` haskell
 class Monad m where
-  unit     :: a -> m a
-  (>=>)    :: (a -> m b) -> (b -> m c) -> a -> m c
-</pre>
-from whose instances one requires
-<pre>
+  unit  :: a -> m a
+  (>=>) :: (a -> m b) -> (b -> m c) -> a -> m c
+```
+
+along with its properties
+
+``` text
 Monadicity: left unit, right unit, associativity
-  unit >=> g = g                                                         -- K1)
-  f >=> unit = f                                                         -- K2)
-  (f >=> g) >=> h = f >=> (g >=> h)                                      -- K3)
-</pre>
-This time the monad laws are suspiciously elegant: there is something going on. Some math is in order to explain things clearly.
+  unit >=> g = g                                                        -- (K1)
+  f >=> unit = f                                                        -- (K2)
+  (f >=> g) >=> h = f >=> (g >=> h)                                     -- (K3)
+```
 
-<p class="definition">
-An adjunction $\left<F,G,\eta,\epsilon\right>:X\rightharpoonup A$ from a category $X$ to a category $A$ consists of two functors, $F:X\rightarrow A$ and $G:X\leftarrow A$, and two natural transformations, the unit $\eta:I_X\rightarrow GF$ and the counit $\epsilon:I_A\leftarrow FG$, such that the following diagrams espressing the triangle identities commute:
-<span class="diagram">
-$$\xymatrix{
-F \ar[r]^{F\eta} & FGF \ar[d]^{\epsilon F} \\
-& F \ar@{=}[ul] \\
-}$$
-$$\xymatrix{
-GFG \ar[d]_{G\epsilon} & G \ar[l]_{\eta G} \\
-G \ar@{=}[ur] & \\
-}$$
-</span>
-</p>
+This one looks surprisingly compelling, especially after seeing the other two for so long.
+The properties names make sense too.
+We may have struck something beautiful this time, but to delve deeper into the matter we need to do *some more of the maths*.
 
-So what? So adjunctions and monads are related.
 
-<p class="proposition">
-Every adjunction $\left<F,G,\eta,\epsilon\right>:X\rightharpoonup A$ defines a monad $\left<GF,\eta,G\epsilon F\right>$ in $X$.
-</p>
-<p class="proof">
-</p>
 
-The point is that the converse is also true - manifoldly. One of the two extremal cases, the Kleisli category of a monad, is given by the following theorem.
 
-<p class="theorem">
-Let $\left<T,\eta,\mu\right>$ be a monad in a category $X$. Consider to each object $x\in X$ a new object $x_T$ and to each arrow $f:x\rightarrow Ty$ a new arrow $f^\flat:x_T\rightarrow y_T$. These new objects and arrows constitute a category $X_T$ when the composite of $f^\flat$ and $g^\flat:y_T\rightarrow z_T$ is defined by
-$$g^\flat\circ f^\flat=(\mu_z\circ Tg\circ f)^\flat$$
-Moreover,
-$$\begin{align}
-F_T: & X\rightarrow X_T, k       : x   \rightarrow y
-       \mapsto (\eta_y\circ k)^\flat : x_T \rightarrow y_T \\
-G_T: & X_T\rightarrow X, f^\flat : x_T \rightarrow y_T
-       \mapsto         \mu_y\circ Tf : Tx  \rightarrow Ty  \\
-\eta_T    : & I_X\rightarrow G_TF_T
-          , (\eta_T)_x=\eta_x : x\rightarrow Tx\\
-\epsilon_T: & F_TG_T\rightarrow I_{X_T}
-          , (\epsilon_T)_{x_T}=(1_{Tx})^\flat : (Tx)_T\rightarrow x_T
-\end{align}$$
-define functors and natural transformations such that $\left<F_T,G_T,\eta_T,\epsilon_T\right>:X\rightharpoonup X_T$ is an adjunction inducing the given monad on $X$.
-</p>
+
+
+
+
+## Adjunctions for everyone
+
+
+An **adjunction** `$\<\L,\R,\u,\c\>\:\C\to\D$` from a category `$\C$` to a category `$\D$` consists of two functors, `$\L\:\C\to\D$` and `$\R\:\D\to\C$`, and two natural transformations, the unit `$\u\:\id\to\R\L$` and the counit `$\c\:\L\R\to\id$`, such that the following diagrams espressing the triangle identities commute:
+
+``` tex
+\begin{displaymath}
+  \xymatrix{
+    \L & \L\R\L \\
+       & \L
+    \ar     "1,1";"1,2" ^{\L\u}
+    \ar     "1,2";"2,2" ^{\c\L}
+    \ar@{=} "2,2";"1,1"
+  }
+  \qquad
+  \xymatrix{
+    \R\L\R & \R \\
+    \R     &
+    \ar     "1,1";"2,1" _{\R\u}
+    \ar     "1,2";"1,1" _{\c\R}
+    \ar@{=} "2,1";"1,2"
+  }
+\end{displaymath}
+```
+
+Obviously we care about them because they are related to monads:
+
+* to an adjunction `$\<\L,\R,\u,\c\>\:\C\to\D$` corresponds a monad `$\<\R\L,\u,\R\c\L\>$` over `$\C$`;
+* different adjunctions may correspond to the same monad.
+
+We don't care about the proofs of these facts -- if you are wary, that is an exercise for you -- we care about the relation they describe not being bijective.
+There are many solutions to the problem of finding an adjunction from a monad.
+
+When the question is made precise, the answers can be examined and one finds there are two *dually optimal* solutions.
+One is called *Eilenberg--Moore category of a monad* and we don't care about it.
+The other one is the *Kleisli category of a monad*: we already heard that name.
+
+
+
+
+
+
+
+
+## Categories for Kleisli
+
+We won't care about the sense in which Kleisli category is an optimal.
+We just want the result.
+
+### Statement
+
+Let `$\<\M,\u,\m\>$` be a monad over `$\C$`. 
+Consider to each object `$x\in\C$` a new object `$x_\M$` and to each arrow `$f:x\to\M y$` a new arrow `$f^\flat\:x_\M \to y_\M$`.
+These new objects and arrows constitute a category `$\C_\M$` when the composite of `$f^\flat$` and `$g^\flat:y_\M\to z_\M$` is defined by
+
+``` tex
+$$ g^\flat \circ f^\flat = (\m_z \circ \M g \circ f)^\flat $$
+```
+
+Moreover, `$\<\L_\M,\R_\M,\u_\M,\c_\M\>\:\C\to\C_\M$` is an adjunction inducing the given monad on `$\C$`, where we have defined functors and natural transformations as
+
+``` tex
+$$
+  \begin{aligned}
+    \L_\M \:
+      & \C \to \C_\M,
+      & \(k \: x \to y\) \mapsto
+        \[(\u_y \circ k)^\flat \: x_\M \to y_\M\] \\
+    \R_\M \:
+      & \C_\M \to \C,
+      & \(f^\flat \: x_\M \to y_\M\) \mapsto
+        \[\m_y \circ \M f \: \M x \to \M y\] \\
+    \u_\M \:
+      & \id_\C \to \R_\M \L_\M,
+      & (\u_\M)_x = \u_x \: x \to \M x \\
+    \c_\M \:
+      & \L_\M \R_\M \to \id_{\C_\M},
+      & (\c_\M)_{x_\M} = (\id_{\M x})^\flat \: (\M x)_\M \to x_\M
+  \end{aligned}
+$$
+```
+
+### Proof
+
+*Meep.*
+
+
+
+
+
+
+
+
+## The abrupt end
+
+Got tired.
+I'll continue another time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include begin-hidden %}
+
+
 <p class="proof">
 First we show $X_T$ is a category.
 <br>
@@ -605,3 +738,11 @@ Monadicity:
 
 
 
+
+
+Let `$F$` be an endofunctor on `$C$`.
+
+An `$F$`-algebra is an object `$A$` together with a morphism `$a:F(A)\rightarrow A$`.
+
+
+{% include end-hidden %}

@@ -8,11 +8,14 @@
 </div>
 {% else %}{% endif %}
 
-<!--
 <nav>
-  {% if page.title != "Index" %}
-    Back to index.</br>
-  {% endif %}
-  Drop me a line!
+<a href="mailto:drop.me@a.line">drop.me@a.line</a>
+</br>
+paolo<span class="hidden">&nbsp;</span>
+&nbsp;<span class="hidden">&nbsp;</span>
+brasolin<span class="hidden">&nbsp;</span>
+&nbsp;<span class="hidden">&nbsp;</span>
+gmail<span class="hidden">&nbsp;</span>
+&nbsp;<span class="hidden">&nbsp;</span>
+com
 </nav>
--->

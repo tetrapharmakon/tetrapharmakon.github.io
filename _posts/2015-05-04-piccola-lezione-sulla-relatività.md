@@ -1,36 +1,20 @@
 ---
 title: Piccola lezione sulla relatività
-tags: headless draft
----
-
-
-Una introduzione alla relatività con prerequisiti quasi nulli, suddivisa in parti digeribili.
-È una bozza e mancano varie cose, alcune segnalate.
-
-
+tags: draft
+macros: |
   \def\x{\mathbf{x}}
   \def\o{\mathbf{o}}
   \def\M{\mathbf{M}}
   \def\d{\Delta}
-\def\mat#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
-\def\vec#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
-\def\sys#1{\left\{\begin{aligned}#1\end{aligned}\right.}
+  \def\mat#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
+  \def\vec#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
+  \def\sys#1{\left\{\begin{aligned}#1\end{aligned}\right.}
+---
 
 
-
-
-
-
-
-
-
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-
-
-
-
+Una introduzione con prerequisiti quasi nulli, suddivisa in parti digeribili.
+Embrionale.
+Mi importa del taglio alternativo.
 
 
 # Le discipline
@@ -281,7 +265,7 @@ La teoria che svilupperemo ora sarà un modello giocattolo con due sole dimensio
 Le caratteristiche qualitative più stupefacenti della teoria generale sopravvivono alla semplificazione, ma i calcoli sono molto più semplici.
 
 
-Concretamente dunque un evento osservato da un sistema di riferimento $S$ sarà univocamente determinato da due *coordinate* che denoteremo come la tradizione comanda: $t$ ed $x$.
+Concretamente dunque un evento osservato da un sistema di riferimento `$S$` sarà univocamente determinato da due *coordinate* che denoteremo come la tradizione comanda: `$t$` ed `$x$`.
 Con degli apici indicheremo i punti di vista di altri osservatori quando ne avremo bisogno.
 
 
@@ -318,32 +302,38 @@ Faremo leva su ciò non solo per capire che forma abbiano, ma anche per individu
 
 
 Un moto rettilineo ed uniforme è descritto da una relazione lineare tra spazio e tempo.
-Ad esempio in $S'$ scriveremmo la legge
+Ad esempio in `$S'$` scriveremmo la legge
 
+``` tex
 $$ x'=x'_0+v't' $$
+```
 
-La più generale trasformazione di coordinate possibile da $S'$ ad $S$ è una coppia di funzioni $t'(x,t)$ ed $x'(x,t)$ che esprimono le coordinate in $S'$ di un qualsiasi evento nei termini delle coordinate che esso ha in $S$.
-Inserendole nella legge di $S'$ otteniamo una legge in $S$, poiché le variabili esplicite sono ora $t$ ed $x$:
+La più generale trasformazione di coordinate possibile da `$S'$` ad `$S$` è una coppia di funzioni `$t'(x,t)$` ed `$x'(x,t)$` che esprimono le coordinate in `$S'$` di un qualsiasi evento nei termini delle coordinate che esso ha in `$S$`.
+Inserendole nella legge di `$S'$` otteniamo una legge in `$S$`, poiché le variabili esplicite sono ora `$t$` ed `$x$`:
 
+``` tex
 $$x'(x,t)=x'_0+v't'(x,t)$$
+```
 
 Grazie alla Prima Legge sappiamo che anche questa relazione deve essere lineare.
 Da ciò deduciamo una rozza caratterizzazione delle trasformazioni ammissibili: infatti la linearità della legge del moto è equivalente alla linearità di entrambi i lati dell'equazione, e quindi di entrambe le funzioni che caratterizzano la trasformazione.
-Concretamente, se usiamo lettere greche per denotare delle costanti dipendenti solo dalla scelta di $S$ ed $S'$, la forma più generale ammissibile per la trasformazione è
+Concretamente, se usiamo lettere greche per denotare delle costanti dipendenti solo dalla scelta di `$S$` ed `$S'$`, la forma più generale ammissibile per la trasformazione è
 
+``` tex
 $$\sys{
 t' &= \tau   + \gamma t + \varepsilon x \\
 x' &= \sigma + \alpha t + \delta x	
 }$$
-
+```
 
 
 
 ### La struttura gruppale
 
 
-Definendo un vettore $T$ ed una matrice $M$ legati alla trasformazione possiamo scrivere in modo molto più elegante il cambio di coordinate, ora incapsulate in dei vettori:
+Definendo un vettore `$T$` ed una matrice `$M$` legati alla trasformazione possiamo scrivere in modo molto più elegante il cambio di coordinate, ora incapsulate in dei vettori:
 
+``` tex
 $$
 T = \vec{\tau}{\sigma}
 \qquad
@@ -351,10 +341,12 @@ M = \mat{\gamma}{\varepsilon}{\alpha}{\delta}
 \qquad
 \x' = T+M\x
 $$
+```
 
 Così facendo abbiamo reso evidente la struttura di gruppo.
-Infatti, se $(T,M)$ è la trasformazione da $S$ ad $S'$ e $(T',M')$ una trasformazione da $S'$ ad $S''$, possiamo calcolarne la composizione:
+Infatti, se `$(T,M)$` è la trasformazione da `$S$` ad `$S'$` e `$(T',M')$` una trasformazione da `$S'$` ad `$S''$`, possiamo calcolarne la composizione:
 
+``` tex
 $$\begin{align}
 \x' &= T + M\x \\
 \x''
@@ -362,20 +354,25 @@ $$\begin{align}
 &= T'+M'(T+M\x) \\
 &= (T'+M'T)+(M'M)\x
 \end{align}$$
+```
 
-e quindi la trasformazione da $S$ ad $S''$ è
+e quindi la trasformazione da `$S$` ad `$S''$` è
 
+``` tex
 $$
 (T',M')\circ(T,M)
 =
 (T'+M'T,M'M)
 $$
+```
 
 Abbiamo trovato esplicitamente l'operazione di prodotto del gruppo di trasformazioni.
-Non è difficile rendersi conto che l'identità del gruppo è $(\mathbf{0},\mathbb{1})$.
+Non è difficile rendersi conto che l'identità del gruppo è `$(\mathbf{0},\mathbb{1})$`.
 Inoltre, notiamo che si può spezzare qualsiasi trasformazione in due più semplici:
 
+``` tex
 $$ (T,M) = (T,\mathbb{1})\circ(\mathbf{0},M) $$
+```
 
 Ciò permette di semplificarne lo studio frammentandolo.
 
@@ -388,24 +385,29 @@ Ciò permette di semplificarne lo studio frammentandolo.
 È possibile ricostruire tre famiglie di trasformazioni qualitativamente distinte.
 Le prime due però sono irrilevanti ai fini delle conclusioni che ci interessa trarre, quindi le nominiamo ora per completezza ma su di esse non ci soffermiamo.
 
-La trasformazione $(T,\mathbb{1})$ agisce come
+La trasformazione `$(T,\mathbb{1})$` agisce come
 
+``` tex
 $$
 \x' = T+\mathbb{1}\x = T+\x
 $$
+```
 
-Essa corrisponde ad una traslazione di $\tau$ nella direzione del tempo e di $\sigma$ nella direzione dello spazio.
+Essa corrisponde ad una traslazione di `$\tau$` nella direzione del tempo e di `$\sigma$` nella direzione dello spazio.
 È facile verificare che la Prima Legge non vincola in alcun modo la scelta dei due parametri.
 Trasformazioni di questo tipo mettono in comunicazione osservatori con sistemi di riferimento identici eccetto che per la scelta dell'origine.
 
-La trasformazione $(\mathbf{0},M)$ agisce come
+La trasformazione `$(\mathbf{0},M)$` agisce come
 
+``` tex
 $$
 \x' = \mathbf{0}+M\x = M\x
 $$
+```
 
-Quattro possibili scelte di $M$ che rispettano la Prima Legge sono
+Quattro possibili scelte di `$M$` che rispettano la Prima Legge sono
 
+``` tex
 $$
 \mat{1}{0}{0}{1}
 \qquad
@@ -415,6 +417,7 @@ $$
 \qquad
 \mat{-1}{0}{0}{-1}
 $$
+```
 
 Si tratta, nell'ordine, de: l'identità, l'inversione temporale, l'inversione spaziale e l'inversione spaziotemporale.
 Le inversioni mettono in comunicazione osservatori con sistemi di riferimento identici eccetto che per la scelta dell'orientamento degli assi.
@@ -429,35 +432,42 @@ Le inversioni mettono in comunicazione osservatori con sistemi di riferimento id
 Veniamo ora alla terza famiglia, quella realmente interessante.
 Riguardo al fatto che essa esaurisce tutte le trasformazioni rimaste dovrai credermi sulla parola, almeno per ora.
 
-Si tratta di altre trasformazioni della forma $ \x' = M\x $.
+Si tratta di altre trasformazioni della forma `$ \x' = M\x $`.
 Immaginiamo di avere due sistemi identici per orientamento degli assi.
-$S'$ si muova in $S$ con moto uniforme di velocità $v$ partendo dall'origine al tempo zero.
-In $S$ il moto delle due origini è descritto da
+`$S'$` si muova in `$S$` con moto uniforme di velocità `$v$` partendo dall'origine al tempo zero.
+In `$S$` il moto delle due origini è descritto da
 
+``` tex
 $$
 \o_S = \vec{t}{0}
 \qquad
 \o_{S'} = \vec{t}{vt}
 $$
+```
 
-In $S'$ la situazione è reciproca:
+In `$S'$` la situazione è reciproca:
 
+``` tex
 $$
 \o'_S = \vec{t'}{-vt'}
 \qquad
 \o'_{S'} = \vec{t'}{0}
 $$
+```
 
-Conosciamo la descrizione dei due moti in entrambi i sistemi, ed esse devono essere compatibili, per una qualche $\M$, secondo
+Conosciamo la descrizione dei due moti in entrambi i sistemi, ed esse devono essere compatibili, per una qualche `$\M$`, secondo
 
+``` tex
 $$
 \o'_S = \M \o_S
 \qquad
 \o'_{S'} = \M \o_{S'}
 $$
+```
 
 che in coordinate si scrive
 
+``` tex
 $$
 \vec{t'}{0}
 =
@@ -467,16 +477,20 @@ $$
 =
 \vec{\gamma t}{\rho t}
 $$
+```
 
-È facile vedere che ciò implica $\rho=-v\sigma=-v\gamma$ e le matrici sono dunque vincolate ad avere la forma
+È facile vedere che ciò implica `$\rho=-v\sigma=-v\gamma$` e le matrici sono dunque vincolate ad avere la forma
 
+``` tex
 $$
 M = \mat{\gamma}{\varepsilon}{-v\gamma}{\gamma}
 $$
+```
 
-Mi aspetto che valgano proprietà di gruppo, e che quindi la composizione $MM'=M''$ abbia la medesima forma.
+Mi aspetto che valgano proprietà di gruppo, e che quindi la composizione `$MM'=M''$` abbia la medesima forma.
 In particolare, gli elementi lungo la diagonale dovranno essere uguali:
 
+``` tex
 $$
 \mat{\gamma}{\varepsilon}{-v\gamma}{\gamma}
 \mat{\gamma'}{\varepsilon'}{-v'\gamma'}{\gamma'}
@@ -485,72 +499,89 @@ $$
 =
 \mat{\gamma''}{\varepsilon''}{-v''\gamma''}{\gamma''}
 $$
+```
 
 e quindi
 
+``` tex
 $$
 -\varepsilon\gamma'v'=-\varepsilon'\gamma v
 $$
+```
 
-Solo $\varepsilon$, $\gamma$ e $v$ dipendono dalla scelta di $M$.
-Siccome l'uguaglianza deve valere per qualunque scelta, $\varepsilon$ deve dipendere essa esattamente come $\gamma v$.
-Il medesimo ragionamento si può fare per $M'$.
+Solo `$\varepsilon$`, `$\gamma$` e `$v$` dipendono dalla scelta di `$M$`.
+Siccome l'uguaglianza deve valere per qualunque scelta, `$\varepsilon$` deve dipendere essa esattamente come `$\gamma v$`.
+Il medesimo ragionamento si può fare per `$M'$`.
 Da ciò segue che la forma più generale è
 
+``` tex
 $$
 \varepsilon = -\kappa\gamma v
 $$
+```
 
-dove $\kappa$ è una costante universale per tutte le trasformazioni.
+dove `$\kappa$` è una costante universale per tutte le trasformazioni.
 
 **Questo passaggio non era molto chiaro, andrebbe riscritto.**
 
 Riesaminiamo la composizione alla luce di queste nuove informazioni:
 
+``` tex
 $$
 \gamma\gamma'
 \mat{1+\kappa vv'}{-\kappa(v+v')}{-\kappa(v+v')}{1+\kappa vv'}
 =
 \gamma''\mat{1}{-\kappa v''}{-v''}{1}
 $$
+```
 
 ovvero
 
+``` tex
 $$\left\{\begin{align}
 \gamma\gamma'(1+\kappa vv') &= \gamma'' \\
 -\gamma\gamma'(v+v') &= -\gamma''v''
 \end{align}\right.$$
+```
 
 da cui
 
+``` tex
 $$
 v'' = \frac{v+v'}{1+\kappa vv'}
 $$
+```
 
-Consideriamo ora il caso particolare in cui $M'$ sia l'inversa di $M$, e quindi $M''=\mathbb{1}$.
-Certamente $\gamma''=1\neq 0$ e quindi affinché $-\gamma''v''=0$ è necessario che $v''=0$, ovvero $v'=-v$.
+Consideriamo ora il caso particolare in cui `$M'$` sia l'inversa di `$M$`, e quindi `$M''=\mathbb{1}$`.
+Certamente `$\gamma''=1\neq 0$` e quindi affinché `$-\gamma''v''=0$` è necessario che `$v''=0$`, ovvero `$v'=-v$`.
 La prima equazione dell'ultimo sistema si riduce dunque a
 
+``` tex
 $$
 \gamma\gamma'=\frac{1}{1-\kappa v^2}
 $$
+```
 
 Poi per una considerazione di simmetria **che è semplice ma non ho ancora capito come dire in modo semplice** otteniamo
 
+``` tex
 $$
 \gamma = \frac{1}{\sqrt{1-\kappa v^2}}
 $$
+```
 
 Tiriamo ora le somme.
-La trasformazione da $S$ ad un sistema $S'$ che sia in moto relativo rispetto al primo con velocità $v$ si chiama *boost* ed è data da
+La trasformazione da `$S$` ad un sistema `$S'$` che sia in moto relativo rispetto al primo con velocità `$v$` si chiama *boost* ed è data da
 
+``` tex
 $$
 \Lambda=\mat{\gamma}{-v\kappa\gamma}{-v\gamma}{\gamma}
 \qquad
 \gamma = \frac{1}{\sqrt{1-\kappa v^2}}
 $$
+```
 
-L'unico aspetto che non abbiamo ancora affrontato è la scelta di $\kappa$.
+L'unico aspetto che non abbiamo ancora affrontato è la scelta di `$\kappa$`.
 Lo posticiperemo fino all'ultimo per minimizzare le ripetizioni nei calcoli.
 Inoltre, si tratta del colpo di scena.
 
@@ -570,20 +601,22 @@ Avremo bisogno di parlare molto di eventi.
 Per evitare ripetizioni e noiose circonlocuzioni definiamo alcune parole nuove.
 Data una qualsiasi coppia di eventi osservati dal medesimo sistema di riferimento
 
+``` tex
 $$
 \x_1 = \vec{t_1}{x_1}
 \qquad
 \x_2 = \vec{t_2}{x_2}
 $$
+```
 
 diremo che essi sono:
 
-* separati dalla *durata* $(t_2-t_1)$;
-* *sincronici* se $(t_2-t_1)=0$;
-* *diacronici* se $(t_2-t_1)\neq0$;
-* separati dalla *lunghezza* $(x_2-x_1)$;
-* *sintopici* se $(x_2-x_1)=0$;
-* *diatopici* se $(x_2-x_1)\neq0$.
+* separati dalla *durata* `$(t_2-t_1)$`;
+* *sincronici* se `$(t_2-t_1)=0$`;
+* *diacronici* se `$(t_2-t_1)\neq0$`;
+* separati dalla *lunghezza* `$(x_2-x_1)$`;
+* *sintopici* se `$(x_2-x_1)=0$`;
+* *diatopici* se `$(x_2-x_1)\neq0$`.
 
 
 
@@ -603,28 +636,32 @@ diremo che essi sono:
 
 # Misure
 
-Da qui in avanti useremo in modo ricorrente due sistemi di riferimento $S$ ed $S'$, il secondo in moto rispetto al primo a velocità $v$, le cui coordinate sono quindi legate da
+Da qui in avanti useremo in modo ricorrente due sistemi di riferimento `$S$` ed `$S'$`, il secondo in moto rispetto al primo a velocità `$v$`, le cui coordinate sono quindi legate da
 
+``` tex
 $$ \x' = \Lambda \x $$
-
+```
 
 
 
 ## Orologi in moto
 
-Immaginiamo di essere in $S$ ed osservare un orologio in moto solidale con $S'$.
-Siano $\x'_1$ ed $\x'_2$ gli eventi corrispondenti a due ticchettii: essi sono diacronici e sintopici.
+Immaginiamo di essere in `$S$` ed osservare un orologio in moto solidale con `$S'$`.
+Siano `$\x'_1$` ed `$\x'_2$` gli eventi corrispondenti a due ticchettii: essi sono diacronici e sintopici.
 Il cambio di coordinate è
 
+``` tex
 $$
 \vec{\d t'}{0}
 =
 \vec{ \gamma   \d t - \kappa \gamma v \d x}
     {-\gamma v \d t +        \gamma   \d x}
 $$
+```
 
 Eseguiamo alcune manipolazioni sulla parte spaziale, poi su quella temporale e poi ancora sulla prima:
 
+``` tex
 $$\begin{align*}
 \gamma \d x
  &= \gamma v \d t \\ \\
@@ -636,14 +673,16 @@ $$\begin{align*}
 \d x
  &= \gamma v \d t'
 \end{align*}$$
+```
 
 Abbiamo dunque stabilito che
 
+``` tex
 $$\sys{
  \d t &= \gamma   \d t' \\
  \d x &= \gamma v \d t'
 }$$
-
+```
 
 
 
@@ -655,19 +694,22 @@ $$\sys{
 ## Metri in moto
 
 
-Immaginiamo di essere in $S$ ed osservare un metro in moto solidale con $S'$.
-Siano $\x'_1$ ed $\x'_2$ gli eventi corrispondenti ai suoi estremi: essi sono sincronici e diatopici.
+Immaginiamo di essere in `$S$` ed osservare un metro in moto solidale con `$S'$`.
+Siano `$\x'_1$` ed `$\x'_2$` gli eventi corrispondenti ai suoi estremi: essi sono sincronici e diatopici.
 Il cambio di coordinate è
 
+``` tex
 $$
 \vec{0}{\d x'}
 =
 \vec{ \gamma   \d t - \kappa \gamma v \d x}
     {-\gamma v \d t +        \gamma   \d x}
 $$
+```
 
 Eseguiamo alcune manipolazioni sulla parte temporale, poi su quella spaziale e poi ancora sulla prima:
 
+``` tex
 $$\begin{align*}
 \gamma \d t
  &= \kappa \gamma v \d x \\ \\
@@ -679,15 +721,18 @@ $$\begin{align*}
 (t_2-t_1)
  &= \beta (x'_2-x'_1)
 \end{align*}$$
+```
 
 Semplificando le espressioni possiamo stabilire che
 
+``` tex
 $$
 \left\{\begin{align}
   (t_2-t_1) &= \frac{\beta}{\gamma c}(x'_2-x'_1) \\
   (x_2-x_1) &= \frac{1}{\gamma}(x'_2-x'_1)
 \end{align}\right.
 $$
+```
 
 
 
@@ -739,8 +784,7 @@ $$
 
 
 
-
-<div style="display:none;">
+{% include begin-hidden %}
 
 ## Moti relativi
 
@@ -894,4 +938,6 @@ $$
 f = f'\gamma\left(1-\frac{v}{u'}\right)
 $$
 
-</div>
+
+
+{% include end-hidden %}

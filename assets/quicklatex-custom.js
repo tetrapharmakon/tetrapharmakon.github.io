@@ -4,13 +4,11 @@
                + '\\usepackage{amssymb}\n'
                + $('#preamble').data('packages')
                + $('#preamble').data('macros');
-  console.log(preamble);
-  return false;
-  $('.quicklatex-code').each(function(){
+  $('.language-tex:not(#preamble code)').parent().parent().each(function(){
     var code = $(this).text();
       if(code) {
         var qlQuery = 'formula=' + encodeURIComponent(code)
-                    + '&fsize='  + '19px'
+                    + '&fsize='  + '20px'
                     + '&fcolor=' + '000000'
                     + '&out='    + '2';
 
@@ -45,7 +43,7 @@
               var imgh   = regs[5];
               var errmsg = regs[6];                               
               if(status==='0') {
-                tag.replaceWith('<figure style="text-align:center;"><img src="'+imgurl+'" ' + 'width="'+imgw+'" '
+                tag.replaceWith('<figure><img src="'+imgurl+'" ' + 'width="'+imgw+'" '
                                + 'height="'+imgh+'"/></figure>');
               } else {
                 console.log("Server Returns Error Message:"+errmsg);

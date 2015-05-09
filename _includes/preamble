@@ -1,3 +1,9 @@
+{% if page.packages %}
+  {% assign haspreamble = true %}
+{% elsif page.macros %}
+  {% assign haspreamble = true %}
+{% endif %}
+{% if haspreamble %}
 <div id="preamble"
      data-packages="{{page.packages}}"
      data-macros="{{page.macros}}">
@@ -11,3 +17,4 @@
 % -----------------------------  END  PREAMBLE  ----------------------------- %
 {% endhighlight %}
 </div>
+{% endif %}
