@@ -13,7 +13,7 @@ title: Index
 
 ## Epistolæ
 
-<dl>
+<dl id="epistolae">
   {% for post in site.posts %}
   {% if post.tags contains 'draft' %}{% assign draftclass = ' class="draft"' %}{% endif %}
   <dt{{draftclass}}>

@@ -1,53 +1,111 @@
+/* --------------------------------------------------------------- TYPEFACES */
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Oswald:300|Merriweather:400italic,400,300,700);
+
+/* --------------------------------------------------------------- NORMALIZE */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+
+/* ----------------------------------------------------- SYNTAX HIGHLIGHTING */
 @import url(highlight.css);
 
+/* ------------------------------------------------------- RESPONSIVE LAYOUT */
+
+/*
+  Small screens: interpolate font size and viewport width
+                 between 16px@400px and 20px@800px
+*/
 html {
-  font: 16px/2rem "Merriweather";
-  text-align: justify;
-
-  /*background-image:
-    repeating-linear-gradient(0deg,transparent,transparent 15px,#CCC 15px,#CCC 16px),
-    repeating-linear-gradient(-90deg,transparent,transparent 15px,#CCC 15px,#CCC 16px);
-  background-size: 16px 16px;*/
-
+  font-size: calc(12px + (100vw / 100));
 }
-
 body {
   margin: 2rem;
 }
-
-@media (min-width: 48rem) {
+/*
+  Big screens: fixed font size
+*/
+@media (min-width: 800px) {
+  html {
+    font-size: 20px;
+  }
   body { 
-    max-width: 44rem;
-    margin: 6rem auto;
+    max-width: 36rem;
+    margin: auto;
   }
 }
 
+/* -------------------------------------------------------------- INSTA GRID */
+.gridded {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent, 
+      transparent calc(1rem - 1px),
+      lightgrey   calc(1rem - 1px),
+      lightgrey        1rem
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      transparent,
+      transparent calc(1rem - 1px),
+      lightgrey   calc(1rem - 1px),
+      lightgrey        1rem
+    );
+  background-size: 1rem 1rem;
+}
 
-h1, h2, h3 {
-  font-family: "Oswald";
+/* -------------------------------------------------------------------- BODY */
+body {
+  font: 1rem/2rem Merriweather, serif;
+  text-align: justify;
+}
+
+/* ---------------------------------------------------------------- HEADINGS */
+h1, h2, h3/*, h4, h5, h6*/ {
+  font-family: Oswald, sans-serif;
   font-weight: 300;
-}
-
-h1 {
-  text-align: center;
   margin: 6rem 0 3rem 0;
 }
 
-h2 {
-  margin: 6rem 0 3rem 0;
+h1 { font-size: 3rem; line-height: 3rem; }
+h2 { font-size: 2rem; line-height: 2rem; }
+h3 { font-size: 1rem; line-height: 1rem; }
+
+/* -------------------------------------------------------------------- CODE */
+
+
+code {
+  font: 1.2rem Inconsolata, monospace;
 }
 
-h3 {
-  margin: 4rem 0 2rem 0;
+pre, pre code {
+  font: 0.9rem/1rem Inconsolata, monospace;
 }
+
+/*pre {
+  width: 40rem;
+  margin: 2rem auto;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 a {
   color: #000;
-  /*text-decoration: underline;*/
 }
+
+
+
+
 
 
 ul, ol {
@@ -59,13 +117,9 @@ li ul, li ol {
   margin: 0 2rem;
 }
 
+
 dl dd {
   margin-left: 1rem;
-}
-
-dt small {
-  float:right;
-  font-weight: 300;
 }
 
 dd p {
@@ -82,6 +136,35 @@ dd + dt {
 
 
 
+
+#epistolae .draft * {
+  font-weight: lighter!important;
+  color: dimgrey!important;
+}
+
+#epistolae dt a {
+  float: left;
+}
+
+#epistolae dt small {
+  font-weight: lighter;
+  float: right;
+}
+
+#epistolae dd {
+  clear: both;
+}
+
+#epistolae dt+dd {
+  margin-bottom: 2rem;
+}
+
+#epistolae dd+dt {
+  margin-top: 2rem;
+}
+
+
+
 hr {
   margin: 6rem;
   border: 0;
@@ -93,20 +176,33 @@ hr {
 }
 
 
-pre, code{
-  font: 1rem/1rem "Inconsolata";
+.hidden {
+  display:none;
 }
 
-pre {
-  width: 40rem;
-  margin: 2rem auto;
-}
 
-.credits{
+
+
+
+
+footer {
   text-align: center;
+}
+
+#credits{
+  font-size: small;
   margin-top: -5rem;
   margin-bottom: 5rem;
 }
+
+address {
+  margin: 6rem;
+}
+
+
+
+/*
+
 
 figure {
   width: 44rem;
@@ -118,15 +214,27 @@ figure img {
   margin: auto;
 }
 
-.hidden {
-  display:none;
-}
-
-.draft * {
-  color: grey!important;
-}
 
 footer nav {
   text-align: center;
 }
 
+
+
+
+
+
+#wu {
+  overflow: visible;
+  display: block;
+  margin: auto;
+}
+
+.wu path {
+  fill: black;
+  stroke: grey;
+  stroke-width: 1px;
+}
+
+
+*/

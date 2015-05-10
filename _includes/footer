@@ -1,21 +1,12 @@
 <hr>
 
 {% if page.tags contains 'quicklatex' %}
-<div class="credits">
-  <small>
-    This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.
-  </small>
+<div id="credits">
+  This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.
 </div>
 {% else %}{% endif %}
 
-<nav>
-<a href="mailto:drop.me@a.line">drop.me@a.line</a>
-</br>
-paolo<span class="hidden">&nbsp;</span>
-&nbsp;<span class="hidden">&nbsp;</span>
-brasolin<span class="hidden">&nbsp;</span>
-&nbsp;<span class="hidden">&nbsp;</span>
-gmail<span class="hidden">&nbsp;</span>
-&nbsp;<span class="hidden">&nbsp;</span>
-com
-</nav>
+<address>
+  Drop me a line.<br>
+  <a href="mailto:{{site.author.email}}">{{site.author.email}}</a>
+</address>

@@ -1,6 +1,7 @@
 ---
 title: Elementary properties of simplicial gaskets
 tags: mathjax
+lang: en
 ---
 
 
