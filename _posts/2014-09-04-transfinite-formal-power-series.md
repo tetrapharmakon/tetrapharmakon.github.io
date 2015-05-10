@@ -1,6 +1,7 @@
 ---
 title: Transfinite formal power series
 tags: mathjax
+lang: it
 ---
 
 

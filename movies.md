@@ -8,6 +8,7 @@ title: Movies
 Future eons
 -----------
 
+* Man in the Wilderness (1971)
 * The shawshank redemption (1994)
 * Casablanca (1942)
 * Raging Bull (1980)

@@ -1,6 +1,7 @@
 ---
 title: Enumerare associazioni
 tags: mathjax
+lang: it
 ---
 
 

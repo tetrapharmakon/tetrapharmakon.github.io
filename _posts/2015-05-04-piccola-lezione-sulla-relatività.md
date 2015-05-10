@@ -1,6 +1,7 @@
 ---
 title: Piccola lezione sulla relatività
 tags: draft
+lang: it
 macros: |
   \def\x{\mathbf{x}}
   \def\o{\mathbf{o}}

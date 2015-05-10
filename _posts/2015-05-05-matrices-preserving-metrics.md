@@ -1,6 +1,7 @@
 ---
 title: Matrices preserving metrics
 tags: draft mathjax
+lang: en
 macros: |
   \def\nn{M}
   \def\pp{A}%\aleph

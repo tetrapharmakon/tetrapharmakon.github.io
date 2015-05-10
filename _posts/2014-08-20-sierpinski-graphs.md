@@ -1,6 +1,7 @@
 ---
 title: Sierpiński graphs
 tags: mathjax
+lang: en
 ---
 
 

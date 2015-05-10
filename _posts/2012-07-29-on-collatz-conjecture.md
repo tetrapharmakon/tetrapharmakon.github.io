@@ -1,6 +1,7 @@
 ---
 title: On Collatz conjecture
 tags: mathjax
+lang: en
 ---
 
 

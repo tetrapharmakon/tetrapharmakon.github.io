@@ -1,6 +1,7 @@
 ---
 title: Monads in Haskell
 tags: draft
+lang: en
 packages: |
   \usepackage[all]{xy}
 macros: |
