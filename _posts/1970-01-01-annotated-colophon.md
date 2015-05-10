@@ -1,6 +1,6 @@
 ---
 title: Annotated colophon
-tags: draft
+tags: draft quicklatex
 ---
 
 

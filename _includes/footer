@@ -1,9 +1,9 @@
 <hr>
 
 {% if page.tags contains 'quicklatex' %}
-<div id="credits">
+<p id="credits">
   This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.
-</div>
+</p>
 {% else %}{% endif %}
 
 <address>

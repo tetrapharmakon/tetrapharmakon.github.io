@@ -1,31 +1,19 @@
-# Custom
+# Information
 title:               paolobrasolin.github.io
 author:
   name:              Paolo Brasolin
   url:               https://plus.google.com/+PaoloBrasolin
   email:             paolo.brasolin@gmail.com
 
-# Filtering Content
-# show_drafts: null
-# limit_posts: 0
-# future:      true
-# unpublished: false
-
 # Conversion
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "strikethrough", "smart"]
 
-# Serving
-#baseurl: http://paolobrasolin.github.io/
-
-# Backwards-compatibility
-relative_permalinks: true
-
-# Outputting
+# Output
 permalink: /epistolae/:title/
 
-# Defaults
+# Layout
 defaults:
   -
     scope:

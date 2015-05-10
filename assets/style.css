@@ -28,6 +28,10 @@ body {
   }
 }
 
+header, main, footer {
+  margin: 6rem 0;
+}
+
 /* ------------------------------------------------------------- COMMODITIES */
 /* Insta-grid */
 .gridded {
@@ -130,7 +134,7 @@ dd + dt { margin-top:    1rem; }
 
 /* ------------------------------------------------------------- FANCY RULER */
 hr {
-  margin: 6rem;
+  margin: 1rem;
   border: 0;
   height: 1px;
   background-image: -webkit-linear-gradient(left,
@@ -144,20 +148,17 @@ hr {
 }
 
 /* ------------------------------------------------------------------ FOOTER */
-footer {
+address {
+  display: block;
+  margin: 6rem 0;
   text-align: center;
 }
 
 #credits{
-  font-size: small;
-  margin-top: -5rem;
-  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 0.6rem;
+  margin: -1rem 0 0 0; /* This is a bit evil */
 }
-
-address {
-  margin: 6rem 0;
-}
-
 
 /* ----------------------------------------------------------------- FIGURES */
 /*
