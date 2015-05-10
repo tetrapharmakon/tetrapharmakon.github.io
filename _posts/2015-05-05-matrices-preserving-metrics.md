@@ -13,8 +13,8 @@ macros: |
   \def\c#1{\tilde{#1}}
   \def\i#1{#1^{-1}}
   \def\t#1{#1^{T}}
-  \def\mat#1#2#3#4{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
-  \def\vec#1#2{\begin{pmatrix}#1\\#2\end{pmatrix}}
+  \def\mat#1#2#3#4{\begin{pmatrix}#1& #2\\ #3& #4\end{pmatrix}}
+  \def\vec#1#2{\begin{pmatrix}#1\\ #2\end{pmatrix}}
   \def\eqs#1{\begin{aligned}#1\end{aligned}}
   \def\sys#1{\left\{\eqs{#1}\right.}
   \def\metric{\eta}
