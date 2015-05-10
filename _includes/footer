@@ -7,6 +7,10 @@
 {% else %}{% endif %}
 
 <address>
-  Drop me a line.<br>
-  <a href="mailto:{{site.author.email}}">{{site.author.email}}</a>
+  {% case page.lang %}
+    {% when "fr" %} Écris-moi un mot.
+    {% when "it" %} Scrivimi due righe.
+    {% else      %} Drop me a line.
+  {% endcase %}
+  <br><a href="mailto:{{site.author.email}}">{{site.author.email}}</a>
 </address>

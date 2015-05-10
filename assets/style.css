@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------- TYPEFACES */
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Oswald:300|Merriweather:400italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Oswald:300|Merriweather:300,400,400italic,700);
 
 /* --------------------------------------------------------------- NORMALIZE */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
@@ -8,20 +8,16 @@
 @import url(highlight.css);
 
 /* ------------------------------------------------------- RESPONSIVE LAYOUT */
-
-/*
-  Small screens: interpolate font size and viewport width
-                 between 16px@400px and 20px@800px
-*/
+/* Small screens: interpolate font size and viewport width
+                  between 16px@400px and 20px@800px */
 html {
   font-size: calc(12px + (100vw / 100));
 }
 body {
   margin: 2rem;
 }
-/*
-  Big screens: fixed font size
-*/
+
+/* Big screens: centered column, fixed font size */
 @media (min-width: 800px) {
   html {
     font-size: 20px;
@@ -32,7 +28,8 @@ body {
   }
 }
 
-/* -------------------------------------------------------------- INSTA GRID */
+/* ------------------------------------------------------------- COMMODITIES */
+/* Insta-grid */
 .gridded {
   background-image:
     repeating-linear-gradient(
@@ -52,10 +49,18 @@ body {
   background-size: 1rem 1rem;
 }
 
+.hidden {
+  display: none;
+}
+
 /* -------------------------------------------------------------------- BODY */
 body {
   font: 1rem/2rem Merriweather, serif;
   text-align: justify;
+}
+
+p {
+  margin: 2rem auto;
 }
 
 /* ---------------------------------------------------------------- HEADINGS */
@@ -70,8 +75,6 @@ h2 { font-size: 2rem; line-height: 2rem; }
 h3 { font-size: 1rem; line-height: 1rem; }
 
 /* -------------------------------------------------------------------- CODE */
-
-
 code {
   font: 1.2rem Inconsolata, monospace;
 }
@@ -80,33 +83,17 @@ pre, pre code {
   font: 0.9rem/1rem Inconsolata, monospace;
 }
 
-/*pre {
-  width: 40rem;
+pre {
   margin: 2rem auto;
-}*/
+  /*width: 40rem;*/
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------------------------------------------- LINKS */
 a {
   color: #000;
 }
 
-
-
-
-
+/* ------------------------------------------------------------------- LISTS */
 
 ul, ol {
   list-style-position: inside;
@@ -117,7 +104,6 @@ li ul, li ol {
   margin: 0 2rem;
 }
 
-
 dl dd {
   margin-left: 1rem;
 }
@@ -126,65 +112,38 @@ dd p {
   margin: 0;
 }
 
-dt + dd {
-  margin-bottom:1rem
-}
+dt + dd { margin-bottom: 1rem; }
+dd + dt { margin-top:    1rem; }
 
-dd + dt {
-  margin-top:1rem
-}
-
-
-
-
+/* --------------------------------------------------------------- EPISTOLAE */
 #epistolae .draft * {
   font-weight: lighter!important;
   color: dimgrey!important;
 }
 
-#epistolae dt a {
-  float: left;
-}
+#epistolae dt a     { float: left; }
+#epistolae dt small { float: right; font-weight: lighter; }
+#epistolae dd       { clear: both; }
 
-#epistolae dt small {
-  font-weight: lighter;
-  float: right;
-}
+#epistolae dt+dd { margin-bottom: 2rem; }
+#epistolae dd+dt { margin-top:    2rem; }
 
-#epistolae dd {
-  clear: both;
-}
-
-#epistolae dt+dd {
-  margin-bottom: 2rem;
-}
-
-#epistolae dd+dt {
-  margin-top: 2rem;
-}
-
-
-
+/* ------------------------------------------------------------- FANCY RULER */
 hr {
   margin: 6rem;
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -webkit-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
-
-.hidden {
-  display:none;
-}
-
-
-
-
-
-
+/* ------------------------------------------------------------------ FOOTER */
 footer {
   text-align: center;
 }
@@ -196,14 +155,12 @@ footer {
 }
 
 address {
-  margin: 6rem;
+  margin: 6rem 0;
 }
 
 
-
+/* ----------------------------------------------------------------- FIGURES */
 /*
-
-
 figure {
   width: 44rem;
   margin: 2rem auto;
@@ -213,17 +170,10 @@ figure img {
   display: block;
   margin: auto;
 }
+*/
 
-
-footer nav {
-  text-align: center;
-}
-
-
-
-
-
-
+/* ---------------------------------------------------------------------- WU */
+/*
 #wu {
   overflow: visible;
   display: block;
@@ -235,6 +185,6 @@ footer nav {
   stroke: grey;
   stroke-width: 1px;
 }
-
-
 */
+
+/* --------------------------------------------------------------------- EOF */
