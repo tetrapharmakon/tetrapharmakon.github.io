@@ -10,45 +10,45 @@ Then I got carried away.
 
 
 The string had to be independent of the screen size.
-In fact, I was interested in reproducing [similar][similarity] tilings on different devices, so the only informations I needed were the relative sizes of the tiles along with their positions.
+In fact, I was interested in reproducing [similar][similarity] tilings at fullscreen on different devices, so the only informations I needed were the relative sizes of the tiles along with their positions.
 
 [similarity]: http://en.wikipedia.org/wiki/Similarity_(geometry)
 
-The trivial option to make a list of quadruples like `(positionX, positionY, sizeX, sizeY)` was out of the question: the result is not human-readable nor editable, and I needed to do that a lot.
+Using a list of quadruples containg relative sizes and positions of each tile was out of the question: the result is not human-readable nor human-editable, and I needed to do that a lot.
 It's also clearly gross.
 
 So... what do we do?
 
-The turning point is to think of a cut screen instead of glued tiles.
-That is, a partitioning instead of a tiling.
-We can now make the crucial observation that if there are at least two tiles then the screen has a cut transversing it completely.
-This means the screen - hence every partition - is the gluing of at least two partitions: we can describe them recursively.
+The turning point is to think of a cut screen instead of glued tiles - that is, a partitioning instead of a tiling.
+Then it's natural to observe that if there are at least two tiles then the screen has at least a cut transversing it completely in a direction.
+Therefore the screen - hence every partition - is the gluing of at least two parallel slices, that are themselves partitions: we can describe them recursively.
 
-At this point it costs no effort to solve the problem in `N` dimensions instead of just `2`.
-Let's put our observation into symbols using some bastardized [EBNF][ebnf] notation to describe the basic grammatical structure the string must have:
+At this point it costs no further effort to solve the problem in `N` dimensions instead of just `2`.
+To put words into symbols we can use some bastardized [EBNF][ebnf] notation to describe the basic grammatical structure the string must have:
+
+
+[ebnf]:       http://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form
 
 ``` text
 piece   <- whole | sliced
 sliced  <- 1-slice{1-slice} | ... | N-slice{N-slice}
 ```
 
-where `whole` would be a letter from our alphabet of viewports.
+where `whole` is a letter from our alphabet of viewports.
 
 We still have to decide how to denote slices.
-Since the only difference between them is the direction of the cut and we need to separate them from parallel adjacent ones, a practical solution would be to define an alphabet of `N` marks and define
+Since the only difference between them is the direction of the cut and we need to separate them from parallel adjacent ones, a practical solution would be to define an alphabet of `N` marks and decide
 
 ``` text
-1-slice <- space{1-mark}
+1-slice <- {1-mark}piece
  ...
-N-slice <- space{N-mark}
+N-slice <- {N-mark}piece
 ```
 
-The circle closed.
-But why did we allow repetition of the marks?
-To denote relative dimensions!
-That's not the optimal solution in terms of brevity, but i find the result quite neat.
+We allow repetition of the marks to give slices different weights and account for relative dimensions.
+That's not the optimal solution in terms of brevity, but the result is quite neat.
 
-Let's explore the bidimensional case to understand how this all works.
+Let's make a bidimensional example.
 We fix the necessary literal notation:
 
 ``` text
@@ -57,11 +57,10 @@ whole  <- A | B | C | ... | Y | Z
 2-mark <- ;
 ```
 
-I'll let you play around with the basic examples.
-Now we jump to a complex string and compare it with the corresponding screen and the same data written in a dumb way:
+Here is a complex string, the corresponding screen and the same data written with quadruples:
 
 ``` text
-A;;;B;,,C;D,E,;,F,;G;,,H;;;;;I,J,K,L,M;N,O,;,;,
+,,;;;A;B,,;,;C;,D,E,F;G,;;;;;H;,I,J,K,L,;M;,N,O
 
 AAAAAAAAAAAAAAACCCCCCCCCCFFFFFHHHHHHHHHH
 AAAAAAAAAAAAAAACCCCCCCCCCFFFFFHHHHHHHHHH
@@ -81,24 +80,50 @@ BBBBBBBBBBBBBBBGGGGGGGGGGGGGGGIIJJKKLLNO
 (G,16,7,15,9),(H,31,1,10,10),(I,31,11,2,2),
 (J,33,11,2,2),(K,35,11,2,2),(L,37,11,2,2),
 (M,39,11,2,1),(N,39,12,1,1),(O,40,12,1,1)}
-
-
-A;;;B;,,C;D,E,;,F,;G;,,H;;;;;I,J,K,L,M;N,O,;,;,
-
-
-#;;;#;,,#;#,#,;,#,;#;,,#;;;;;#,#,#,#,#;#,#,;,;,
 ```
 
 Pretty self-explanatory.
-You'll also find the transposition between screen and string is really straightforward.
+You'll also find the transposition between screen and string, and viceversa, is really straightforward.
+
+Enriching the alphabet of `whole` with an underscore one could also get creative and give a finite recursive presentation of some fractals.
 
 
+``` text
+Cantor set.
 
-...
+  C = ,C,_,C
 
+Cantor dust.
 
+  D = ;,D,_,D
+      ;,_,_,_
+      ;,D,_,D
 
+Sierpiński carpet.
 
+  S = ;,S,S,S
+      ;,S,_,S
+      ;,S,S,S
 
+Now, let
+3-mark <- .
 
-[ebnf]:       http://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form
+Menger sponge.
+
+  M = .;,M,M,M
+       ;,M,_,M
+       ;,M,M,M
+      .;,M,_,M
+       ;,_,_,_
+       ;,M,_,M
+      .;,M,M,M
+       ;,M,_,M
+       ;,M,M,M
+
+Jerusalem cube (a version).
+
+  J = ..;;,,J,.;J;_._,,J;.,J,,,_,J.
+      _,,J,.;_;J._,,J;;.;.J..._.J;;
+      ;_;.J..._.J..;;,,J,._.;J;_,,J
+      ;._.,J,,,_,J,,J,._.;_;J,,J;;
+```
