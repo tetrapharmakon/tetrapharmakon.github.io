@@ -57,6 +57,10 @@ header, main, footer {
   display: none;
 }
 
+.centered {
+  text-align: center;
+}
+
 /* -------------------------------------------------------------------- BODY */
 body {
   font: 1rem/2rem Merriweather, serif;

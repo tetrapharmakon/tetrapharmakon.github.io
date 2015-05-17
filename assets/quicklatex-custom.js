@@ -43,7 +43,7 @@
               var imgh   = regs[5];
               var errmsg = regs[6];                               
               if(status==='0') {
-                tag.replaceWith('<figure><img src="'+imgurl+'" ' + 'width="'+imgw+'" '
+                tag.replaceWith('<figure class="centered"><img src="'+imgurl+'" ' + 'width="'+imgw+'" '
                                + 'height="'+imgh+'"/></figure>');
               } else {
                 console.log("Server Returns Error Message:"+errmsg);

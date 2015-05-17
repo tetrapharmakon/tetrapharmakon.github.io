@@ -1,6 +1,6 @@
 ---
 title: Grammar of rational layouts
-tags: draft
+tags: 
 lang: en
 ---
 
