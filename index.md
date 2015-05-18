@@ -17,3 +17,13 @@ title: Index
   {% assign draftclass = '' %}
   {% endfor %}
 </dl>
+
+
+
+###### Lemma dell'orca Madonna
+
+Enunciate.
+
+{% include begin-proof %}
+pruf
+{% include end-proof %}
