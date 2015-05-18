@@ -3,13 +3,6 @@ title: Index
 ---
 
 
-<!-- ## Diaria
-
-<ul>
-  <li><a href="{{ site.baseurl }}books">Books</a></li>
-  <li><a href="{{ site.baseurl }}movies">Movies</a></li>
-</ul> -->
-
 
 ## Epistolæ
 
