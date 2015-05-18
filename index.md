@@ -20,10 +20,6 @@ title: Index
 
 
 
-###### Lemma dell'orca Madonna
+###### Lemma of glebstglabst
 
-Enunciate.
-
-{% include begin-proof %}
-pruf
-{% include end-proof %}
+Enunciate. Enunciate. Enunciate.
