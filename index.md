@@ -21,5 +21,4 @@ title: Index
 
 
 ###### Lemma of glebstglabst
-
 Enunciate. Enunciate. Enunciate.
