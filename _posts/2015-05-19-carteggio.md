@@ -5,7 +5,7 @@ lang: it
 ---
 
 **X**: 
-(link)[http://www.lescienze.it/news/2015/05/16/news/discussione_fisici_filosofi_filosofia_morta_viva-2611425/].
+[link](http://www.lescienze.it/news/2015/05/16/news/discussione_fisici_filosofi_filosofia_morta_viva-2611425/).
 
 **tetrapharmakon**: 
 parte della risposta che ti darei di persona l'ho scritta li': la filosofia ha palesemente fallito, perche' non ha notato che il mondo e' terribile e simmetrico, non ci vuole ma esige esegeti (perdona la sciocca figura di suono). In questa dicotomia (bibliotecari coatti di un Universo che ci respinge) rimaniamo stritolati. Qualcuno per fortuna a volte si solleva e con l'arte, le lettere o il maneggio di una katana produce piccole gemme. 
