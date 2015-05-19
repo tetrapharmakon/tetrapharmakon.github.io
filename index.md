@@ -2,9 +2,15 @@
 title: 主页
 ---
 
+## Stuff nobody cares about
 
+[...]
 
-## Scraps (in both senses)
+## Meaty Ideas
+
+[...]
+
+## Scraps
 
 <dl id="epistolae">
   {% for post in site.posts %}
