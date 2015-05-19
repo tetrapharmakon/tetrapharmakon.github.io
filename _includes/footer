@@ -8,9 +8,8 @@
 
 <address>
   {% case page.lang %}
-    {% when "fr" %} Écris-moi un mot.
-    {% when "it" %} Scrivimi due righe.
-    {% else      %} Drop me a line.
+    {% when "it" %} Importunami.
+    {% else      %} Disturb me.
   {% endcase %}
   <br><a href="mailto:{{site.author.email}}">{{site.author.email}}</a>
 </address>

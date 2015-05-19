@@ -1,10 +1,16 @@
 ---
-title: Index
+title: 主页
 ---
 
+## Stuff nobody cares about
 
+[...]
 
-## Epistolæ
+## Meaty Ideas
+
+[...]
+
+## Scraps
 
 <dl id="epistolae">
   {% for post in site.posts %}
@@ -16,9 +22,13 @@ title: Index
   <dd{{draftclass}}>{{ post.excerpt }}</dd>
   {% assign draftclass = '' %}
   {% endfor %}
+<<<<<<< HEAD
 </dl>
 
 
 
 ###### Lemma of glebstglabst
 Enunciate. Enunciate. Enunciate.
+=======
+</dl>
+>>>>>>> b86448c40bbc807b6436371a95605129a8c19559
