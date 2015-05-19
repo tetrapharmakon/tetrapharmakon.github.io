@@ -9,8 +9,7 @@ lang: it
 
 **tetrapharmakon**: 
 parte della risposta che ti darei di persona l'ho scritta l&igrave;: la filosofia ha palesemente fallito, perch&eacute; non ha notato che il mondo &egrave; terribile e simmetrico, non ci vuole ma esige esegeti (perdona la sciocca figura di suono). In questa dicotomia (bibliotecari coatti di un Universo che ci respinge) rimaniamo stritolati. Qualcuno per fortuna a volte si solleva e con l'arte, le lettere o il maneggio di una katana produce piccole gemme. 
-
-Questa metafisica la trovo pi&ugrave; elegante del nichilismo (perch&eacute; non annulla il mondo), ma allo stesso tempo meno mielosa del pensiero riprovevole che esista un'entelechia. L'ha sposata Borges, l'hanno presentita molte persone perdendo la vista. Probabilmente il cervello dice cose che noi non possiamo capire, a un cieco.
+&nbsp; Questa metafisica la trovo pi&ugrave; elegante del nichilismo (perch&eacute; non annulla il mondo), ma allo stesso tempo meno mielosa del pensiero riprovevole che esista un'entelechia. L'ha sposata Borges, l'hanno presentita molte persone perdendo la vista. Probabilmente il cervello dice cose che noi non possiamo capire, a un cieco.
 In ci&ograve; la matematica per me &egrave; stata una salvezza, perch&eacute; dedicarmi al sacerdozio di un culto che si ostina a rifiutarmi mi ha insegnato cose sui moventi dell'animo, molto pi&ugrave; della filosofia o dell'etica. 
 Oggi sono verboso.
 
