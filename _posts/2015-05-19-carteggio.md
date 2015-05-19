@@ -34,7 +34,7 @@ L'estetica &egrave; una categoria di giudizio scientifica, la metafisica un ramo
 
 **tetrapharmakon**: 
 forse dimentico qualcosa, ma.
-Se vuoi faccio un emendamento comunque: magari la filosofia non ha fallito, ma scopa proprio male
+<br> &nbsp; Se vuoi faccio un emendamento comunque: magari la filosofia non ha fallito, ma scopa proprio male
 Sophia &egrave; una a cui piace il fisting, chi l'ha capito l'ha fatta venire come una fontana, gli altri hanno optato per un timido onanismo.
 
 **tetrapharmakon**: 
@@ -53,8 +53,8 @@ Per lo pi&ugrave; citavo Borges rispondendo (Tlon, Uqbar, Orbis Tertius). Ora pe
 <br> &nbsp; Federigo Enriques, che ebbe un carteggio molto acceso con Gentile, era invece di quella scuola per cui la matematica, "infezione benigna del pensiero filosofico", &egrave; il complemento naturale degli studi umanistici di un individuo. Il complemento: non il palliativo, non la sostituzione, ma l'avente pari diritto ontologico.
 <br> &nbsp; Gentile ha vinto, riformando la scuola ed edificandola su un putrido neoidealismo; il prezzo lo pagano tutti gli studenti o anche gli adulti che oggi mi dicono "io la matematica non la capisco: non l'ho mai amata tanto, non vedo come una soluzione sia nel suo assoluto corretta e l'unica da dover raggiungere.
 <br> &nbsp; Insomma, l'uomo ha cosí tante sfacciettature, come puó indugiare su una sola?"
-A queste persone io dico:
-Esiste una dimensione creativa, mistica, nella scienza. Perché esiste una dimensione artistica, direi sessuale, nella matematica, che i perbenisti non lasciano trapassare nei manuali liceali "ad usum delphini", epurati da qualsiasi traccia di arte, sangue e frammenti di cervella esplose da un colpo di revolver.
+<br> &nbsp; A queste persone io dico:
+<br> &nbsp; Esiste una dimensione creativa, mistica, nella scienza. Perché esiste una dimensione artistica, direi sessuale, nella matematica, che i perbenisti non lasciano trapassare nei manuali liceali "ad usum delphini", epurati da qualsiasi traccia di arte, sangue e frammenti di cervella esplose da un colpo di revolver.
 <br> &nbsp; La matematica per me è l'isola serena in cui la smania del mondo col suo sudore e le sue rivolte, i fumi del suo alcool e le strida scimmiesche smettono di toccarmi; è la strada che mi permette di leggere criticamente la Qabbalah, i testi gnostici, il Tripitaka, Sepúlveda, Einstein e il Necronomicon allo stesso tempo, dandomi la possibilità di parlare dell'unica convinzione del me adolescente che non mi ha mai abbandonato: il fatto che tutte le discipline umane (quindi non solo la scienza, e le varie parti della matematica) siano unite da un unico filo rosso: lettere, arti, politica, scienza, religione, filosofia.
 <br> &nbsp; E io non sono un un caso a parte: ho amici che leggono Heidegger, i testi gnostici e la Torah "perch&eacute; gli va", che suonano il piano, che amano l'arte e le lettere, che partecipano (e intervengono pure!) agli After Talks, e che magari ci provano con l'organizzatrice dopo il dibattito.
 <br> &nbsp; Viceversa, ogni volta che ho conosciuto un filosofo, ho fatto fatica a fargli capire persino che esistono infiniti numeri primi; &egrave; una competenza che non posso aspettarmi da lui, anzi spesso ricusa persino la possibilita' di farsi una cultura scientifica, "che tanto &egrave; roba che non capisco" e "io sono fiero di non capirla la matematica". 
