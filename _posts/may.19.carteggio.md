@@ -9,8 +9,8 @@ http://www.lescienze.it/news/2015/05/16/news/discussione_fisici_filosofi_filosof
 
 **tetrapharmakon**: 
 parte della risposta che ti darei di persona l'ho scritta li': la filosofia ha palesemente fallito, perche' non ha notato che il mondo e' terribile e simmetrico, non ci vuole ma esige esegeti (perdona la sciocca figura di suono). In questa dicotomia (bibliotecari coatti di un Universo che ci respinge) rimaniamo stritolati. Qualcuno per fortuna a volte si solleva e con l'arte, le lettere o il maneggio di una katana produce piccole gemme. 
-Questa metafisica la trovo piu' elegante del nichilismo (perche' non annulla il mondo), ma allo stesso tempo meno mielosa del pensiero riprovevole che esista un'entelechia. L'ha sposata Borges, l'hanno presentita molte persone perdendo la vista. Probabilmente il cervello dice cose che noi non possiamo capire, a un cieco.
-In cio' la matematica per me e' stata una salvezza, perche' dedicarmi al sacerdozio di un culto che si ostina a rifiutarmi mi ha insegnato cose sui moventi dell'animo, molto piu' della filosofia o dell'etica. 
+Questa metafisica la trovo pi&ugrave; elegante del nichilismo (perche' non annulla il mondo), ma allo stesso tempo meno mielosa del pensiero riprovevole che esista un'entelechia. L'ha sposata Borges, l'hanno presentita molte persone perdendo la vista. Probabilmente il cervello dice cose che noi non possiamo capire, a un cieco.
+In cio' la matematica per me e' stata una salvezza, perche' dedicarmi al sacerdozio di un culto che si ostina a rifiutarmi mi ha insegnato cose sui moventi dell'animo, molto pi&ugrave; della filosofia o dell'etica. 
 Oggi sono verboso.
 
 **X**: 
@@ -48,7 +48,7 @@ Ma perché riconduci tutto a uno. Un'etica e una morale, l'etica e la morale.  S
 non sono nè una filosofa nè una matematica nè una storica
 
 **tetrapharmakon**: 
-Per lo piu' citavo Borges rispondendo (Tlon, Uqbar, Orbis Tertius). Ora pero' ti rispondo seriamente, o almeno ci provo.
+Per lo pi&ugrave; citavo Borges rispondendo (Tlon, Uqbar, Orbis Tertius). Ora pero' ti rispondo seriamente, o almeno ci provo.
 Si puo' parlare del "fallimento" della filosofia, o della parte di filosofia che viene insegnata e studiata qui in Italia, nel momento in cui la poca lungimiranza gentiliana, di quell'abominevole cancro del pensiero occidentale che sono stati i seguaci di Hegel, hanno cominciato a promanare le loro ideologie malsane che davano alla scienza il ruolo di ancella minore della Storia, Unica Maestra. "Gli ingegni minuti", li chiamava Vico gli scienziati, e quel vomitevole aborto acefalo di Croce gli ha fatto eco: "qui incipit numerare, incipit errare!"
 Federigo Enriques, che ebbe un carteggio molto acceso con Gentile, era invece di quella scuola per cui la matematica, "infezione benigna del pensiero filosofico", e' il complemento naturale degli studi umanistici di un individuo. Il complemento: non il palliativo, non la sostituzione, ma l'avente pari diritto ontologico.
 Gentile ha vinto, riformando la scuola ed edificandola su un putrido neoidealismo; il prezzo lo pagano tutti gli studenti o anche gli adulti che oggi mi dicono "io la matematica non la capisco: non l'ho mai amata tanto, non vedo come una soluzione sia nel suo assoluto corretta e l'unica da dover raggiungere.
@@ -68,5 +68,5 @@ Paul Erdos visse più di ottant'anni, facendo la vita del clochard e facendo cos
 Quando il figlio primogenito di David Hilbert venne portato in manicomio sotto i suoi occhi, Hilbert continuò la lezione che stava tenendo ai suoi allievi; e quando gli comunicarono che uno studente molto brillante aveva abbandonato la matematica per fare lo scrittore Hilbert proruppe in una frase molto famosa: "Molto meglio che faccia lo scrittore: non aveva abbastanza fantasia per fare il matematico".
 Einstein e Russell erano dichiaratamente poligami, o comunque hanno avuto per lungo tempo relazioni aperte quanto e come le flapper o le poete surrealiste. Parliamo poi del suicidio di Turing, oppure del fatto che Ted Kaczynsky fosse un matematico (anche piuttosto promettente).
 Quando a Grigorij Perel'man venne offerto un milione di dollari per la soluzione di uno dei "problemi del millennio", alcuni tra i problemi di matematica più difficili ancora insoluti, lui rifiutò e disse che la commissione che voleva premiarlo era "incapace di giudicare il suo lavoro" e che "il denaro, oggi, porta solo guerra e invidia". Vive in una casa popolare di Mosca, da recluso.
-Malattia, follia, sesso, amore, morte, droga e stati mentali alterati sono la faccia umana della Matematica. Indissolubilmente legata all'arte, alle lettere, alla psichiatria, al dolore fisico e mentale, alla parte piu' atra e ventrale del nostro spirito.
+Malattia, follia, sesso, amore, morte, droga e stati mentali alterati sono la faccia umana della Matematica. Indissolubilmente legata all'arte, alle lettere, alla psichiatria, al dolore fisico e mentale, alla parte pi&ugrave; atra e ventrale del nostro spirito.
 Ora sai che se l'anno prossimo parlo io, non ce n'e' uno che va a casa intero.
