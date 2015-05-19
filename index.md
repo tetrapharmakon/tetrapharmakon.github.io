@@ -22,13 +22,3 @@ title: 主页
   <dd{{draftclass}}>{{ post.excerpt }}</dd>
   {% assign draftclass = '' %}
   {% endfor %}
-<<<<<<< HEAD
-</dl>
-
-
-
-###### Lemma of glebstglabst
-Enunciate. Enunciate. Enunciate.
-=======
-</dl>
->>>>>>> b86448c40bbc807b6436371a95605129a8c19559
