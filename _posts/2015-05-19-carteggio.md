@@ -45,7 +45,7 @@ mi sorprende
 Ma perché riconduci tutto a uno. Un'etica e una morale, l'etica e la morale.  Sull'estetica non sono per nulla d'accordo, e lo sai. La metafisica così' detta è proprio da scienziati, mentre io la considero preziosa fonte di indagine. Il punto è che, nella mia piccolissima esperienza, non ho mai sentito il bisogno di porre scienza e filosofia sullo stesso piano, e se mai dovessi farlo, considererei tutto filosofia, e le discipline suoi rami. Tuttavia ritengo che fare filosofia sia saper pensare e porsi buone domande, e di conseguenza primariamente indagine su etica e morale. Il valore arbitrario non è poi così arbitrario nel linguaggio, ma il linguaggio è pensiero e il pensiero è filosofia. Sia chiaro, questo vale per me.
 
 **X**: 
-non sono nè una filosofa nè una matematica nè una storica
+non sono n&eacute; una filosofa n&eacute; una matematica n&eacute; una storica
 
 **tetrapharmakon**: 
 Per lo pi&ugrave; citavo Borges rispondendo (Tlon, Uqbar, Orbis Tertius). Ora per&ograve; ti rispondo seriamente, o almeno ci provo.
