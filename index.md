@@ -4,7 +4,7 @@ title: Index
 
 
 
-## Epistolæ
+## Scraps (in both senses)
 
 <dl id="epistolae">
   {% for post in site.posts %}
@@ -17,9 +17,3 @@ title: Index
   {% assign draftclass = '' %}
   {% endfor %}
 </dl>
-
-
-
-###### Lemma of glebstglabst
-
-Enunciate. Enunciate. Enunciate.
