@@ -2,7 +2,7 @@
 title: 主页
 ---
 
-## Meaty Ideas
+# Meaty Ideas
 
 [...]
 
