@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------- TYPEFACES */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Patua+One:300|Neuton:300,400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Patua+One|Neuton:300,400,400italic,700);
 
 /* --------------------------------------------------------------- NORMALIZE */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
@@ -74,7 +74,7 @@ p {
 /* ---------------------------------------------------------------- HEADINGS */
 h1, h2, h3/*, h4, h5, h6*/ {
   font-family: Patua One, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 6rem 0 3rem 0;
 }
 
