@@ -63,7 +63,7 @@ header, main, footer {
 
 /* -------------------------------------------------------------------- BODY */
 body {
-  font: 2rem/4rem Neuton, serif;
+  font: 1.5rem/2rem Neuton, serif;
   text-align: justify;
 }
 
