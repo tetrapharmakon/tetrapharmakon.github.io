@@ -1,6 +1,9 @@
 ---
-title: 主页
+title: The Dancing Jesus Home Page
+tags: notitle
 ---
+
+<img src="header.gif" style="width:100%;margin-top:-3em;">
 
 # Meaty Ideas
 
