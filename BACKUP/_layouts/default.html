@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html{% if page.lang %} lang="{{page.lang}}"{% endif %}>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="{{site.author.name}}">
+    <title>{{page.title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"
+          href="{{site.baseurl}}/assets/favicon.png">
+    <link rel="stylesheet" type="text/css"
+          href="{{site.baseurl}}/assets/style.css"/>
+
+    {% unless page.tags contains 'static' %}
+    {% include javascript %}
+    {% endunless %}
+  </head>
+
+  <body>
+    {% unless page.tags contains 'headless' %}
+    <header>{% include header %}</header>
+    {% endunless %}
+
+    {% unless page.tags contains 'mainless' %}
+    <main>{% include main %}</main>
+    {% endunless %}
+
+    {% unless page.tags contains 'footless' %}
+    <footer>{% include footer %}</footer>
+    {% endunless %}
+  </body>
+
+</html>

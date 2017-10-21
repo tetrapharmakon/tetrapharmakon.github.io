@@ -1,0 +1,15 @@
+<hr>
+
+{% if page.tags contains 'quicklatex' %}
+<p id="credits">
+  This page uses <a href="http://quicklatex.com/">QuickLaTeX</a>.
+</p>
+{% else %}{% endif %}
+
+<address>
+  {% case page.lang %}
+    {% when "it" %} Importunami.
+    {% else      %} Disturb me.
+  {% endcase %}
+  <br><a href="mailto:{{site.author.email}}">{{site.author.email}}</a>
+</address>

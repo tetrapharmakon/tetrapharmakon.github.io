@@ -1,0 +1,13 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin nav-gradient($colour, $stop) {
+    background: $colour;
+    background: -webkit-linear-gradient(   top, rgba($colour,0), rgba($colour,1) $stop);
+    background:    -moz-linear-gradient(   top, rgba($colour,0), rgba($colour,1) $stop);
+    background:      -o-linear-gradient(   top, rgba($colour,0), rgba($colour,1) $stop);
+    background:         linear-gradient(to top, rgba($colour,0), rgba($colour,1) $stop);
+}

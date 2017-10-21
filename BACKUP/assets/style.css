@@ -1,0 +1,195 @@
+/* --------------------------------------------------------------- TYPEFACES */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Patua+One|Neuton:300,400,400italic,700);
+
+/* --------------------------------------------------------------- NORMALIZE */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+
+/* ----------------------------------------------------- SYNTAX HIGHLIGHTING */
+@import url(highlight.css);
+
+/* ------------------------------------------------------- RESPONSIVE LAYOUT */
+/* Small screens: interpolate font size and viewport width
+                  between 16px@400px and 20px@800px */
+html {
+  font-size: calc(12px + (100vw / 100));
+}
+body {
+  margin: 2rem;
+}
+
+/* Big screens: centered column, fixed font size */
+@media (min-width: 800px) {
+  html {
+    font-size: 20px;
+  }
+  body { 
+    max-width: 36rem;
+    margin: auto;
+  }
+}
+
+header, main, footer {
+  margin: 6rem 0;
+}
+
+/* ------------------------------------------------------------- COMMODITIES */
+/* Insta-grid */
+.gridded {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent, 
+      transparent calc(1rem - 1px),
+      lightgrey   calc(1rem - 1px),
+      lightgrey        1rem
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      transparent,
+      transparent calc(1rem - 1px),
+      lightgrey   calc(1rem - 1px),
+      lightgrey        1rem
+    );
+  background-size: 1rem 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------- BODY */
+body {
+  font: 1.1rem/1.5rem Neuton, serif;
+  text-align: justify;
+}
+
+p {
+  margin: 2rem auto;
+}
+
+/* ---------------------------------------------------------------- HEADINGS */
+h1, h2, h3/*, h4, h5, h6*/ {
+  font-family: Patua One, sans-serif;
+  font-weight: 400;
+  margin: 6rem 0 3rem 0;
+}
+
+h1 { font-size: 3rem; line-height: 3rem; }
+h2 { font-size: 2rem; line-height: 2rem; }
+h3 { font-size: 1rem; line-height: 1rem; }
+
+/* -------------------------------------------------------------------- CODE */
+code {
+  font: 1.2rem Ubuntu Mono, monospace;
+}
+
+pre, pre code {
+  font: 0.9rem/1rem Ubuntu Mono, monospace;
+}
+
+pre {
+  margin: 2rem auto;
+  /*width: 40rem;*/
+}
+
+/* ------------------------------------------------------------------- LINKS */
+a {
+  color: #000;
+}
+
+/* ------------------------------------------------------------------- LISTS */
+
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
+}
+
+li ul, li ol {
+  margin: 0 2rem;
+}
+
+dl dd {
+  margin-left: 1rem;
+}
+
+dd p {
+  margin: 0;
+}
+
+dt + dd { margin-bottom: 1rem; }
+dd + dt { margin-top:    1rem; }
+
+/* --------------------------------------------------------------- EPISTOLAE */
+#epistolae .draft * {
+  font-weight: lighter!important;
+  color: dimgrey!important;
+}
+
+#epistolae dt a     { float: left; }
+#epistolae dt small { float: right; font-weight: lighter; }
+#epistolae dd       { clear: both; }
+
+#epistolae dt+dd { margin-bottom: 2rem; }
+#epistolae dd+dt { margin-top:    2rem; }
+
+/* ------------------------------------------------------------- FANCY RULER */
+hr {
+  margin: 1rem;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left,
+                              rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+/* ------------------------------------------------------------------ FOOTER */
+address {
+  display: block;
+  margin: 6rem 0;
+  text-align: center;
+}
+
+#credits{
+  text-align: center;
+  font-size: 0.6rem;
+  margin: -1rem 0 0 0; /* This is a bit evil */
+}
+
+/* ----------------------------------------------------------------- FIGURES */
+/*
+figure {
+  width: 44rem;
+  margin: 2rem auto;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+}
+*/
+
+/* ---------------------------------------------------------------------- WU */
+/*
+#wu {
+  overflow: visible;
+  display: block;
+  margin: auto;
+}
+
+.wu path {
+  fill: black;
+  stroke: grey;
+  stroke-width: 1px;
+}
+*/
+
+/* --------------------------------------------------------------------- EOF */

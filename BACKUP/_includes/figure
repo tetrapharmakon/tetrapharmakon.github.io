@@ -1,0 +1,4 @@
+<figure class="{{ include.class }}">
+  <img src="{{ include.source }}"/>
+  <figcaption>{{ include.caption }}</figcaption>
+</figure>

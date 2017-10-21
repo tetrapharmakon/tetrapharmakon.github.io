@@ -1,0 +1,80 @@
+.highlight .hll { color: purple; }
+.highlight      { background: #fafafa; }
+
+/* Error                       */ .highlight .err { color: red; }
+
+/* Comment                     */ .highlight .c   ,
+/* Comment.Single              */ .highlight .c1  ,
+/* Comment.Multiline           */ .highlight .cm  ,
+/* Comment.Preproc             */ .highlight .cp  ,
+/* Comment.Special             */ .highlight .cs  { color: grey; }
+
+/* Generic                     */ .highlight .g   ,
+/* Generic.Deleted             */ .highlight .gd  ,
+/* Generic.Emph                */ .highlight .ge  ,
+/* Generic.Error               */ .highlight .gr  ,
+/* Generic.Heading             */ .highlight .gh  ,
+/* Generic.Inserted            */ .highlight .gi  ,
+/* Generic.Output              */ .highlight .go  ,
+/* Generic.Prompt              */ .highlight .gp  ,
+/* Generic.Strong              */ .highlight .gs  ,
+/* Generic.Subheading          */ .highlight .gu  ,
+/* Generic.Traceback           */ .highlight .gt  { color: blue; }
+
+/* Keyword                     */ .highlight .k   ,
+/* Keyword.Constant            */ .highlight .kc  ,
+/* Keyword.Declaration         */ .highlight .kd  ,
+/* Keyword.Namespace           */ .highlight .kn  ,
+/* Keyword.Pseudo              */ .highlight .kp  ,
+/* Keyword.Reserved            */ .highlight .kr  ,
+/* Keyword.Type                */ .highlight .kt  { font-weight: bold; }
+
+/* Literal                     */ .highlight .l   ,
+/* Literal.Date                */ .highlight .ld  ,
+/* Literal.Number              */ .highlight .m   ,
+/* Literal.Number.Float        */ .highlight .mf  ,
+/* Literal.Number.Hex          */ .highlight .mh  ,
+/* Literal.Number.Integer      */ .highlight .mi  ,
+/* Literal.Number.Integer.Long */ .highlight .il  ,
+/* Literal.Number.Oct          */ .highlight .mo  ,
+/* Literal.String              */ .highlight .s   ,
+/* Literal.String.Double       */ .highlight .s2  ,
+/* Literal.String.Backtick     */ .highlight .sb  ,
+/* Literal.String.Char         */ .highlight .sc  ,
+/* Literal.String.Doc          */ .highlight .sd  ,
+/* Literal.String.Escape       */ .highlight .se  ,
+/* Literal.String.Heredoc      */ .highlight .sh  ,
+/* Literal.String.Interpol     */ .highlight .si  ,
+/* Literal.String.Single       */ .highlight .s1  ,
+/* Literal.String.Regex        */ .highlight .sr  ,
+/* Literal.String.Symbol       */ .highlight .ss  ,
+/* Literal.String.Other        */ .highlight .sx  { font-style: italic; }
+
+/* Name.Builtin.Pseudo         */ .highlight .bp  ,
+/* Name                        */ .highlight .n   ,
+/* Name.Attribute              */ .highlight .na  ,
+/* Name.Builtin                */ .highlight .nb  ,
+/* Name.Class                  */ .highlight .nc  ,
+/* Name.Decorator              */ .highlight .nd  ,
+/* Name.Exception              */ .highlight .ne  ,
+/* Name.Function               */ .highlight .nf  ,
+/* Name.Entity                 */ .highlight .ni  ,
+/* Name.Label                  */ .highlight .nl  ,
+/* Name.Namespace              */ .highlight .nn  ,
+/* Name.Constant               */ .highlight .no  ,
+/* Name.Tag                    */ .highlight .nt  ,
+/* Name.Variable               */ .highlight .nv  ,
+/* Name.Other                  */ .highlight .nx  ,
+/* Name.Property               */ .highlight .py  ,
+/* Name.Variable.Class         */ .highlight .vc  ,
+/* Name.Variable.Global        */ .highlight .vg  ,
+/* Name.Variable.Instance      */ .highlight .vi  {  }
+
+/* Operator                    */ .highlight .o   ,
+/* Operator.Word               */ .highlight .ow  {  }
+
+/* Other                       */ .highlight .x   { color: yellow; }
+
+/* Punctuation                 */ .highlight .p   { color: grey; }
+
+/* Text.Whitespace             */ .highlight .w   { text-decoration: underline; }
