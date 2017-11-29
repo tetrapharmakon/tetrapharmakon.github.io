@@ -1,22 +1,22 @@
 # tetrapharmakon.github.io
 
-## Is it building?
+## Local setup
 
-[![Build Status](https://travis-ci.org/tetrapharmakon/tetrapharmakon.github.io.svg?branch=jekyll)](https://travis-ci.org/tetrapharmakon/tetrapharmakon.github.io)
+Assuming you have installed [RVM](https://rvm.io/), the environment will created when you check into the project dir.
+
+```sh
+git clone -b source https://github.com/tetrapharmakon/tetrapharmakon.github.io.git
+cd tetrapharmakon.github.io
+# install required Ruby version if RVM asks you to do so
+gem install bundler --no-ri --no-rdoc
+bundle install --jobs $(expr $(sysctl -n hw.ncpu) - 1)
+```
+
+Note: the weird options for `gem` skip docs installation, while the weird options for `bundle` parallelize the installation on all your CPU cores (minus one to avoid deadlocks).
 
 ## Working locally
 
-First you set up the work environment:
-
-```sh
-sudo apt-get install ruby ruby-devel
-sudo gem install jekyll bundler
-git clone -b jekyll https://github.com/tetrapharmakon/tetrapharmakon.github.io.git
-cd tetrapharmakon.github.io
-bundle install
-```
-
-Then you edit stuff after enabling a realtime preview on [localhost:4000](http://localhost:4000):
+To edit stuff with a live preview on [localhost:4000](http://localhost:4000):
 
 ```sh
 cd tetrapharmakon.github.io
@@ -24,5 +24,7 @@ bundle exec jekyll serve
 ```
 
 After the deed is done, just add, commit and push. 
+
+## Folder structure
 
 The folder `_data` contains `profile` and `friends`; the folders `_stuff` and `_projects` contain all the rest.
