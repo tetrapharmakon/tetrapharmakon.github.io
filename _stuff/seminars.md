@@ -19,7 +19,7 @@ The scope of these lectures is to breach in Riehl-Verity's theory of $\infty$-co
 
 we embark in the study of RV theory:
 
-  - Riehl, Emily, and Dominic Verity. "Infinity category theory from scratch." arXiv preprint arXiv:1608.05314 (2016).
+  - Riehl, Emily, and Dominic Verity. "Infinity category theory from scratch." arXiv preprint arXiv:1608.05314 (2016). [refcards here](stuff/cosmoi.pdf)
   - Riehl, Emily, and Dominic Verity. "The 2-category theory of quasi-categories." Advances in Mathematics 280 (2015): 549-642.
   - Riehl, Emily, and Dominic Verity. "Homotopy coherent adjunctions and the formal theory of monads." Advances in Mathematics 286 (2016): 802-888.
   - Riehl, Emily, and Dominic Verity. "Completeness results for quasi-categories of algebras, homotopy limits, and related general constructions." arXiv preprint arXiv:1401.6247 (2014).
