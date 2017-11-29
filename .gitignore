@@ -6,3 +6,9 @@
 *.zip
 *.gz
 *.bz
+
+# Jekyll.gitignore files
+
+_site/
+.sass-cache/
+.jekyll-metadata
