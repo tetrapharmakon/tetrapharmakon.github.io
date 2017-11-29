@@ -1,6 +1,6 @@
 # tetrapharmakon.github.io
 
-## Local setup
+## First setup
 
 Assuming you have installed [RVM](https://rvm.io/), the environment will created when you check into the project dir.
 
