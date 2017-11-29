@@ -2,7 +2,7 @@
 
 ## First setup
 
-Assuming you have installed [RVM](https://rvm.io/), the environment will created when you check into the project dir.
+Assuming you have installed [RVM](https://rvm.io/), the environment will be created when you check into the project dir.
 
 ```sh
 git clone -b source https://github.com/tetrapharmakon/tetrapharmakon.github.io.git
