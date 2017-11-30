@@ -5,6 +5,7 @@
 Assuming you have installed [RVM](https://rvm.io/), the environment will be created when you check into the project dir.
 
 ```sh
+sudo apt-get install nodejs # hopefully we'll remove this someday
 git clone -b source https://github.com/tetrapharmakon/tetrapharmakon.github.io.git
 cd tetrapharmakon.github.io
 # install required Ruby version if RVM asks you to do so
