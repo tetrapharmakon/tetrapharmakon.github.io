@@ -2,7 +2,6 @@ GEM
   remote: http://rubygems.org/
   specs:
     colorator (1.1.0)
-    execjs (2.7.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
     jekyll (3.2.1)
@@ -49,7 +48,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  execjs (~> 2.7.0)
   jekyll (~> 3.2.1)
   jekyll-hyphenate_filter (~> 0.0.2)
 

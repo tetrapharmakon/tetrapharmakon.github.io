@@ -15,7 +15,6 @@ favicon: assets/favicon.png
 css:
     - https://fonts.googleapis.com/css?family=Merriweather|Oswald
     - css/main.css
-    - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css
 
 js:
     early:
