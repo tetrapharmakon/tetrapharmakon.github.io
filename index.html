@@ -7,7 +7,7 @@ layout: default
         <h1 class="name">{{ site.data.profile.name }}</h1>
         <div class="motto">{{ site.data.profile.motto }}</div>
         <div class="avatar"></div>
-        <p class="bio">{{ site.data.profile.bio | hyphenate }}</p>
+        <p class="bio">{{ site.data.profile.bio }}</p>
     </div>
     <nav>
         <a href="#about-me" class="subNavBtn active">About me</a>
@@ -42,7 +42,7 @@ layout: default
                 {% endif %}
                 </time>
             </dt>
-            <dd>{{ thing.content | hyphenate }}</dd>
+            <dd>{{ thing.content }}</dd>
         {% endfor %}
     </dl>
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
@@ -73,7 +73,7 @@ layout: default
             <dt id="{{ t.slug }}">
                 <a href="#{{ t.slug }}">{{ t.title }}</a>
             </dt>
-            <dd>{{ t.content | hyphenate }}</dd>
+            <dd>{{ t.content }}</dd>
         {% endfor %}
     </dl>
 </section>

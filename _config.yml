@@ -37,10 +37,3 @@ sass:
   style: compressed
 
 exclude: [vendor, BACKUP, script, Gemfile, Gemfile.lock, .gitignore, assets/footer.png]
-
-#hyphenate_filter:
-#  language: en_uk
-#  left: 4
-#  right: 3
-#  hyphen: "Z"
-
