@@ -56,10 +56,10 @@ Also, it is not clear how to retrieve the expected results "formally"
 Let's decategorify this property to monoids: we're looking for a monoid
 $M$ such that every sequence (every net, to be more precise, but let's
 pretend that countable sequences are enough) of elements
-$\{x_i\}_{i\in\mathbb{N}}$ has a well-defined product.
+$\{x_i\mid i\in\mathbb{N}\}$ has a well-defined product.
 
 Let's assume that $M$ has a topology: we're asking that *every* sequence
-$\{x_i\}_{i\in\mathbb{N}}$ is such that
+$\{x_i\mid i\in\mathbb{N}\}$ is such that
 $\lim_{k\to \infty}\prod_{i=1}^k x_i$ exists in $M$. I suspect that this
 entails that $M$ has trivial (=initial) topology, because if you
 consider $M = \{1,e\}$ and the jumping sequence $x_{2i}=1, x_{2i+1}=e$
