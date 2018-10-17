@@ -30,8 +30,11 @@ keywords: nope
 description: nope
 
 collections:
-  stuff:
-  projects:
+  conf:
+  dida:
+  misc:
+  papers:
+  refcards:
 
 sass:
   style: compressed
