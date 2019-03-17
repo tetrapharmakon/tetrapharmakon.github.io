@@ -13,14 +13,14 @@ layout: default
         <a href="#about-me" class="subNavBtn active">About me</a>
         <a href="#stuff-i-do" class="subNavBtn">Stuff</a>
         <a href="#contacts" class="subNavBtn">Contacts</a>
-        <a href="#friends" class="subNavBtn">Friends</a>
+        <!-- <a href="#friends" class="subNavBtn">Friends</a> -->
         <a href="#other" class="subNavBtn">wip</a>
     </nav>
 </header>
 
 
 <section id="stuff-i-do">
-    <h2>Stuff</h2>
+    <!-- <h2>Stuff</h2> -->
     <h3>Papers</h3>
     {% assign papers = site.papers | stuff_sort | reverse %}
     <dl class="accordion">
@@ -159,7 +159,7 @@ layout: default
     ✉: loregianf@math.muni.cz
 </section>
 
-<section id="friends">
+<!-- <section id="friends">
     <h2>Friends</h2>
     {% for friend in site.data.friends %}
         <p><a href="{{ friend.url }}">{{ friend.name }}:</a> {{ friend.description }}</p>
@@ -178,7 +178,7 @@ layout: default
             <dd>{{ t.content }}</dd>
         {% endfor %}
     </dl>
-</section>
+</section> -->
 <footer>
 <p>Crafted by Paw</p>
 </footer>
