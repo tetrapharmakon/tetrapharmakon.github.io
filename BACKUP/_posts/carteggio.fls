@@ -1,0 +1,6 @@
+PWD /home/fouche/tetrapharmakon.github.io/BACKUP/_posts
+INPUT /home/fouche/texlive/texmf.cnf
+INPUT /home/fouche/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /home/fouche/texlive/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT carteggio.tex
+OUTPUT carteggio.log

@@ -4,12 +4,4 @@ dateto: Jan 2015
 title: Hearts and Towers in stable $\infty$-categories
 ---
 
-[This](https://arxiv.org/abs/1501.04658) is the second joint work with [D. Fiorenza][l-Fiorenza], about $t$-structures in stable $\infty$-categories, which shows that in the $\infty$-categorical setting semiorthogonal decompositions on a stable $\infty$-category $\mathcal{C}$ arise decomposing morphisms in the <i>Postnikov tower</i> induced by a chain of $t$-structures, regarded (thanks to our previous [work][l-work]) as multiple factorization systems on $\mathcal{C}$.
-
-&nbsp; A slightly unexpected result is that $t$-structures having stable classes, i.e. such 
-that both classes are stable $\infty$-subcategories of $\mathcal{C}$, are precisely the 
-<i>fixed points</i> for the natural action of $\mathbb Z$ on the set of $t$-structures, given 
-by the shift endofunctor.
-
-[l-Fiorenza]: http://www1.mat.uniroma1.it/~fiorenza/
-[l-work]: http://arxiv.org/abs/1408.7003
+[[PDF]](https://arxiv.org/abs/1501.04658) and [REF](...) We exploit the equivalence between $t$-structures and normal torsion theories on a stable $\infty$-category to show how a few classical topics in the theory of triangulated categories, i.e., the characterization of bounded $t$-structures in terms of their hearts, their associated cohomology functors, semiorthogonal decompositions, and the theory of tiltings, as well as the more recent notion of Bridgeland's slicings, are all particular instances of a single construction, namely, the tower of a morphism associated with a $J$-slicing of a stable $\infty$-category $\mathcal{C}$, where $J$ is a totally ordered set equipped with a monotone $\mathbb{Z}$-action.
