@@ -39,4 +39,4 @@ collections:
 sass:
   style: compressed
 
-exclude: [vendor, BACKUP, script, Gemfile, Gemfile.lock, .gitignore, assets/footer2.png]
+exclude: [vendor, BACKUP, script, Gemfile, Gemfile.lock, .gitignore]
