@@ -2,9 +2,9 @@ html {
 	box-sizing: border-box;
 	color: $body-colour;
 	background-color: $background-colour;
-	background-image: url('../assets/footer2.png');
-	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-image: url('../assets/footer2-faded.png');
+	background-repeat: repeat-y;
+	background-position: center top;
 	background-size: auto 100vh;
 	hyphens: auto;
 }
