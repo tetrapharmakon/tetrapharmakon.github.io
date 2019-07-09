@@ -6,4 +6,4 @@ title: Maltsiniotis
 subtitle:
 ---
 
-Journées en l'honneur de Georges Maltsiniotis
+Attended the _Journées en l'honneur de Georges Maltsiniotis_ held in Paris VII.

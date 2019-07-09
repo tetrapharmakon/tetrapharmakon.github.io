@@ -6,4 +6,4 @@ title: catday in Turin
 subtitle:
 ---
 
-attendee at [categorical day in Turin](https://sites.google.com/view/catdayturin/home?authuser=0)
+Attended the [categorical day in Turin](https://sites.google.com/view/catdayturin/home?authuser=0)

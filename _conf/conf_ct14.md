@@ -6,4 +6,4 @@ title: CT2014
 subtitle:
 ---
 
-2014 edition of the _Category theory_ conference.
+Attended the 2014 edition of the _Category theory_ conference.
