@@ -6,5 +6,4 @@ title: t-structures in stable $\infty$-categories
 subtitle:
 ---
 
-[[PDF]](stuff/main.pdf) This is the thesis collecting the three works below.
-
+[[PDF]](stuff/main.pdf) • This is my PhD thesis.
