@@ -5,4 +5,4 @@ url:
 title: ¢øsmøs
 ---
 
-[[html](cosmos/index.html)] A running seminar on category theory, at CMUC.
+[[html](coimbra-cosmos/index.html)] A running seminar on category theory, at CMUC.
