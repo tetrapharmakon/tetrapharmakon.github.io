@@ -6,6 +6,6 @@ title: ItaCa 2019
 subtitle:
 ---
 
-[[html](http://www.mat.unimi.it/users/itaca/)] bla
+[[html](http://www.mat.unimi.it/users/itaca/)] The ItaCa website.
 
-[[html](/itaca/index.html)] ble
+[[html](/itaca/index.html)] The same website, but done in Hakyll.

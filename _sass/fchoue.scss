@@ -17,9 +17,9 @@ html {
 }
 
 body {
-	font-family: 'Merriweather', serif;
-	font-size: 16px;
-	line-height: 1.6;
+	font-family: 'Noto Serif', serif;
+	font-size: 14px;
+	line-height: 1.5;
 	max-width: 35em;
 	margin: auto;
 	color: #28293e;
@@ -161,7 +161,7 @@ footer {
 	height: 220px;
 	margin: auto;
 	@include border-radius(100px);
-	background: url(../assets/avatar2.jpg) no-repeat;
+	background: url(../assets/rome_me.jpeg) no-repeat;
 	background-repeat: no-repeat;
 	background-position: center 30%;
 	background-size: 220px auto;
