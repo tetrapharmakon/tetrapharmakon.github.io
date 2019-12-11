@@ -27,13 +27,9 @@ layout: default
 			<time>
 				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
 				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %}
-				{{ thing.datefrom | date: '%b' }} - {% endif %}
-				{{ thing.dateto | date: '%b %Y' }}
-				{% else %}
-				{{ thing.datefrom | date: '%b %Y' }}
-				– {{ thing.dateto | date: '%b %Y' }}
-				{% endif %}
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
 			</time>
 		</dt>
 		<dd>{{ thing.content }}</dd>
@@ -48,13 +44,9 @@ layout: default
 			<time>
 				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
 				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %}
-				{{ thing.datefrom | date: '%b' }} - {% endif %}
-				{{ thing.dateto | date: '%b %Y' }}
-				{% else %}
-				{{ thing.datefrom | date: '%b %Y' }}
-				– {{ thing.dateto | date: '%b %Y' }}
-				{% endif %}
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
 			</time>
 		</dt>
 		<dd>{{ thing.content }}</dd>
@@ -69,13 +61,9 @@ layout: default
 			<time>
 				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
 				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %}
-				{{ thing.datefrom | date: '%b' }} - {% endif %}
-				{{ thing.dateto | date: '%b %Y' }}
-				{% else %}
-				{{ thing.datefrom | date: '%b %Y' }}
-				– {{ thing.dateto | date: '%b %Y' }}
-				{% endif %}
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
 			</time>
 		</dt>
 		<dd>{{ thing.content }}</dd>
@@ -90,13 +78,9 @@ layout: default
 			<time>
 				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
 				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %}
-				{{ thing.datefrom | date: '%b' }} - {% endif %}
-				{{ thing.dateto | date: '%b %Y' }}
-				{% else %}
-				{{ thing.datefrom | date: '%b %Y' }}
-				– {{ thing.dateto | date: '%b %Y' }}
-				{% endif %}
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
 			</time>
 		</dt>
 		<dd>{{ thing.content }}</dd>
@@ -111,13 +95,9 @@ layout: default
 			<time>
 				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
 				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %}
-				{{ thing.datefrom | date: '%b' }} - {% endif %}
-				{{ thing.dateto | date: '%b %Y' }}
-				{% else %}
-				{{ thing.datefrom | date: '%b %Y' }}
-				– {{ thing.dateto | date: '%b %Y' }}
-				{% endif %}
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
 			</time>
 		</dt>
 		<dd>{{ thing.content }}</dd>
@@ -129,9 +109,16 @@ layout: default
 	<h2>Contacts</h2>
 	<h5>Fosco G. Loregian</h5>
 	<p>
-		Apartado 3008<br />
-		<i>EC Santa Cruz</i><br />
-		3001 - 501 Coimbra PT<br />
+		Akadeemia tee 15/2,<br />
+		12618 Tallinn, Estonia 🇪🇪<br />
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.2081128331106!2d24.65804216790915!3d59.39797639293507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39ee76f4b627b504!2sBuilding%20of%20Cybernetics!5e0!3m2!1sit!2sit!4v1576080303160!5m2!1sit!2sit"
+			width="400"
+			height="200"
+			frameborder="0"
+			style="border:0;"
+			allowfullscreen=""
+		></iframe>
 	</p>
 	<p>
 		mail: <a href="mailto:fosco.loregian@gmail.com">[name].[surname]@gmail.com</a><br />

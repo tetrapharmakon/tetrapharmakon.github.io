@@ -67,7 +67,7 @@ h1 {
 	line-height: 1.2;
 }
 h2 {
-	font-size: 3.6rem;
+	font-size: 2rem;
 	line-height: 1.25;
 }
 h3 {
@@ -136,14 +136,14 @@ footer {
 
 .name {
 	border-bottom: solid $accent-colour 5px;
-	margin: 0.6em;
-	width: auto;
+	margin: 0em;
+	// width: auto;
 }
 
 .motto {
-	width: 100%;
+	width: 90%;
 	text-align: center;
-	margin-top: -2em;
+	margin-top: 2em;
 }
 
 @media (min-width: 35rem) {
@@ -160,11 +160,11 @@ footer {
 	width: 220px;
 	height: 220px;
 	margin: auto;
-	@include border-radius(100px);
+	@include border-radius(120px);
 	background: url(../assets/rome_me.jpeg) no-repeat;
 	background-repeat: no-repeat;
 	background-position: center 30%;
-	background-size: 220px auto;
+	background-size: 200px auto;
 }
 
 .bio {
