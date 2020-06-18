@@ -2,7 +2,7 @@
 datefrom: Sep 2017
 dateto: Sep 2017
 url: 
-title: British Topology Meeting
+title: SPEAKER - British Topology Meeting
 subtitle:
 ---
 

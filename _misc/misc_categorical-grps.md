@@ -2,7 +2,7 @@
 datefrom: Jun 2013
 dateto: Jun 2013
 url: 
-title: Categorical Groups 
+title: NOTES - Categorical Groups 
 subtitle: 
 ---
 

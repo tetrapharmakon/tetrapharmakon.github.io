@@ -2,7 +2,7 @@
 datefrom: May 2015
 dateto: May 2015
 url: 
-title: catday in Turin
+title: PARTICIPANT - Categorical day in Turin
 subtitle:
 ---
 

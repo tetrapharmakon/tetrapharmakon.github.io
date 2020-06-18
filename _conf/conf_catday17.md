@@ -2,7 +2,7 @@
 datefrom: May 2017
 dateto: May 2017
 url: 
-title: catday in Turin
+title: SPEAKER - Categorical day in Turin
 subtitle:
 ---
 

@@ -1,7 +1,7 @@
 ---
 datefrom: Jan 2011
 dateto: Jul 2011
-title: Jacobian Mathematicians
+title: SEMINARS - Jacobian Mathematicians
 ---
 
 Our name is a pun between <a href="http://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant">Jacobian</a> and <a href="http://en.wikipedia.org/wiki/Jacobin">Jacobins</a>; it is intended to be some kind of <i>open window</i> towards the scientific attitude to knowledge. We talk about Maths, also developing its interconnection with culture and Philosophy. 

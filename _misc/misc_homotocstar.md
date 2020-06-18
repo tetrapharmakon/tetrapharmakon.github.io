@@ -2,7 +2,7 @@
 datefrom: Dec 2012
 dateto: Dec 2012
 url:
-title: Homotopical Algebra for $\mathrm{C}^\ast$-algebras
+title: NOTES - Homotopical Algebra for $\mathrm{C}^\ast$-algebras
 subtitle: 
 ---
 

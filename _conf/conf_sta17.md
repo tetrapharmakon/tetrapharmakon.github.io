@@ -2,7 +2,7 @@
 datefrom: Sep 2017
 dateto: Sep 2017
 url: 
-title: Some trends in Algebra
+title: SPEAKER - Some trends in Algebra
 subtitle:
 ---
 

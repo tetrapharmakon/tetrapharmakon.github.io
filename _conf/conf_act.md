@@ -2,7 +2,7 @@
 datefrom: Mar 2019
 dateto: Jul 2019
 url: 
-title: Applied Category Theory
+title: PARTICIPANT - Applied CT 2019
 subtitle:
 ---
 

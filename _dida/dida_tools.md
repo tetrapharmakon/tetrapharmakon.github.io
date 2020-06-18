@@ -2,7 +2,7 @@
 datefrom: Jan 2014
 dateto: Jun 2014
 url:
-title: Categorical Tools
+title: SEMINARS - Categorical Tools
 subtitle:
 ---
 

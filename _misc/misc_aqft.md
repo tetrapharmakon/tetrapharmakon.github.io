@@ -1,7 +1,7 @@
 ---
 datefrom: Mar 2013
 dateto: Mar 2013
-title: Categorification on AQFT
+title: NOTES - Categorification on AQFT
 url: stuff/vonneu2.pdf
 ---
 [[PDF]](stuff/vonneu2.pdf) 

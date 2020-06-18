@@ -2,7 +2,7 @@
 datefrom: Jun 2014
 dateto: Jun 2014
 url: 
-title: Category Theory 2014
+title: PARTICIPANT - Category Theory 2014
 subtitle:
 ---
 

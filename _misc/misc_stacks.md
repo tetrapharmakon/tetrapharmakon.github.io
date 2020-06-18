@@ -2,7 +2,7 @@
 datefrom: Apr 2013
 dateto: Apr 2013
 url:
-title: Homotopical interpretation of stack theory
+title: NOTES - Homotopical interpretation of stack theory
 subtitle:
 ---
 
