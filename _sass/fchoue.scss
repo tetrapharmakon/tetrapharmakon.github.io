@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@200|Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 html {
 	box-sizing: border-box;
 	color: $body-colour;
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
 	max-width: 40em;
