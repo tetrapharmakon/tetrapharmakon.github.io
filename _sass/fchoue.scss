@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin|Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@200|Oswald&display=swap');
 html {
 	box-sizing: border-box;
 	color: $body-colour;
@@ -18,8 +18,8 @@ html {
 }
 
 body {
-	font-family: 'Libre Franklin', serif;
-	font-size: 18px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
 	line-height: 1.25;
 	max-width: 37em;
 	margin: auto;
@@ -58,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Fjalla One', serif;
+	font-family: 'Oswald', serif;
 	font-weight: 300;
 	color: #605f73;
 }
