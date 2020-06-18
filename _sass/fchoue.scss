@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin|Fjalla+One&display=swap');
 html {
 	box-sizing: border-box;
 	color: $body-colour;
@@ -17,10 +18,10 @@ html {
 }
 
 body {
-	font-family: 'Noto Serif', serif;
-	font-size: 14px;
-	line-height: 1.5;
-	max-width: 35em;
+	font-family: 'Libre Franklin', serif;
+	font-size: 18px;
+	line-height: 1.25;
+	max-width: 37em;
 	margin: auto;
 	color: #28293e;
 }
@@ -57,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Oswald', serif;
+	font-family: 'Fjalla One', serif;
 	font-weight: 300;
 	color: #605f73;
 }

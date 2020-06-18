@@ -4,4 +4,4 @@ dateto: March 2020
 title: Profunctorial semantics
 ---
 
-[\[pdf\]](stuff/prosem-beamer.pdf) Profunctorial semantics I
+A running seminar on functorial semantics, with an eye on profunctors as an equivalent definition of algebraic theories.

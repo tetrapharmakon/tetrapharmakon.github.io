@@ -6,4 +6,4 @@ title: Exercises in Category theory (IT)
 subtitle:
 ---
 
-[\[PDF\]](stuff/ESERCIZI.pdf) A few exercises in Category Theory. Last version October 2017.
+[\[PDF\]](stuff/ESERCIZI.pdf) A list of exercises in Category Theory. Last version October 2017. No particular order, nor particular care in their structure.

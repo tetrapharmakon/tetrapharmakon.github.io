@@ -10,10 +10,9 @@ layout: default
 		<p class="bio">{{ site.data.profile.bio }}</p>
 	</div>
 	<nav>
-		<a href="#about-me" class="subNavBtn active">About me</a>
+		<a href="#about-me" class="subNavBtn active">About</a>
 		<a href="#stuff-i-do" class="subNavBtn">Stuff</a>
 		<a href="#contacts" class="subNavBtn">Contacts</a>
-		<!-- <a href="#other" class="subNavBtn">OJ</a> -->
 	</nav>
 </header>
 
@@ -103,6 +102,23 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
+	<h3>Typography</h3>
+	<!-- {% assign typog = site.typog | stuff_sort | reverse %} -->
+	<dl class="accordion">
+		{% for thing in typog %}
+		<dt id="{{ thing.slug }}">
+			<a href="#{{ thing.slug }}">{{ thing.title }}</a>
+			<time>
+				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
+				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
+			</time>
+		</dt>
+		<dd>{{ thing.content }}</dd>
+		{% endfor %}
+	</dl>
 </section>
 
 <section id="contacts">
@@ -121,14 +137,9 @@ layout: default
 		></iframe>
 	</p>
 	<p>
-		mail: <a href="mailto:fosco.loregian@gmail.com">[name].[surname]@gmail.com</a><br />
+		mail: <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a><br />
 		mail: <a href="mailto:fouche@yoneda.ninja">fouche@yoneda.ninja</a><br />
-		skype: [name].[surname]<br />
+		skype: fosco.loregian<br />
 		github: tetrapharmakon<br />
 	</p>
 </section>
-
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
-<footer>
-	<p>Crafted by Paw</p>
-</footer>

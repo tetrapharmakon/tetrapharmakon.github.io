@@ -1,1 +1,0 @@
-rsync -crvz --rsh='ssh -p22222' _site/* loregianf@yoda.math.muni.cz:/home/externs/loregianf/public_html/
