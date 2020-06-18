@@ -1,2 +1,0 @@
-latexmk -xelatex logo.tex
-latexmk -pdf main.tex
