@@ -5,4 +5,4 @@ url:
 title: COURSE - Introduction to category theory @taltech
 ---
 
-A course on category theory held in [Taltech](https://tallcats.github.io); there will be [notes](https://tallcats.github.io/CourseCategoryTheory.html).
+A course on category theory held in [Taltech](https://compose.ioc.ee); there will be [notes](https://tallcats.github.io/CourseCategoryTheory.html).
