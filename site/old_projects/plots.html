@@ -1,0 +1,77 @@
+<p>A small category is a monoid with more than one object.</p>
+
+<p>Now, if we do Abstract Algebra <em>à la Bourbaki</em>, monoids appear as rather
+highly-structured objects: they are unital, associative, total magmas
+(<em>total</em>, opposed to partial, means the operation is everywhere
+defined).</p>
+
+<p>What happens when you try to understand what is a “partial magma with
+more than one object”?</p>
+
+<p>In a few words, you get these things called <em>plots</em> studied in
+Tringali’s “<a href="https://arxiv.org/abs/1311.3524">Plots and Their 
+Applications - Part I: Foundations</a>” where
+your composition is not defined for each pair of consecutive arrows, and
+even if it’s defined it is possibly non-associative. Finally, you don’t
+have identities everywhere. Salvatore is a good friend of mine, and I’ve
+been pleased to slightly collaborate to his visionary project. I
+definitely fell in love with it.</p>
+
+<p>Even if it’s difficult to believe so, even in such a poorly behaved
+setting one is able to find interesting results, and the theory
+established so far is everything but an empty academic exercise.</p>
+
+<p>In (what we would like to call) <em>plot theory</em> you can define
+<em>isomorphisms</em> (yes, <em>without</em> having identities), and notice that
+“being an isomorphism” and “admitting an inverse” are <em>different</em>
+notions in the world of plots: the two notions collapse in category
+theory (a category is an associative plot, where the composition is
+defined and every object has a unit, in the same vein a monoid is an
+“extremely smooth partial magma”). You can then define <em>isoids</em>, i.e.
+plots where every arrow is an isomorphism.</p>
+
+<p>Salvatore is even able to define morphisms of plots (<em>p</em>unctors),
+natural transformations (<em>trimmings</em>, if I remember well the name I
+helped him to chose to continue the sartorial inspiration), adjoints,
+limits, and a chain of free-forgetful adjunctions which connects the
+category (it <em>is</em> a category!) $\mathbf{Plt}$ of plots to the category of
+associative plots, semi-categories [the obvious forgetful has two
+adjoints, left and right, giving two different completions], and
+categories.</p>
+
+<p>Salvo to-do list:</p>
+
+<ul>
+  <li>
+    <p>What’s a $n$-dimensional version of these guys?</p>
+  </li>
+  <li>
+    <p>How can one define classical category theoretic notions (Kan
+extensions, adjunctions between punctors and their monads [do we
+obtain…<em>magmads</em>?], representables…are they still the same or not?)
+in the setting of plots?</p>
+  </li>
+  <li>
+    <p>What is the localization of a plot with respect to a family of
+arrows, given that we lack associativity and unitality?</p>
+  </li>
+  <li>
+    <p>How about a “simplicial” <span style="font-variant:small-caps;">pov</span>? Is there a
+<a href="http://ncatlab.org/nlab/show/geometric+shape+for+higher+structures">shape</a>
+giving $\mathbf{Plt}$ as a full subcategory of a category of
+presheaves, in the same way
+$\mathbf{Cat}\subset [\Delta^\text{op}, \mathbf{Sets}]$ and
+semi-categories arise as suitable <em>semi</em>simplicial sets
+(“degeneracies give identities”)?</p>
+  </li>
+  <li>
+    <p>What about enrichment (whatever this means, in this context)? Can we
+do “formal” plot theory?</p>
+  </li>
+</ul>
+
+<p>Functional analysis and symplectic geometry provide “natural factories”
+(read Examples <strong>10</strong>-<strong>14</strong> of Salvatore’s paper) of examples for such
+structures. As a toy example, one of our two unitization functors
+applied to the category of symplectic relations gives precisely the
+Woodward-Wehrheim category.</p>
