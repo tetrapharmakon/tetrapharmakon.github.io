@@ -39,4 +39,19 @@ collections:
 sass:
   style: compressed
 
-exclude: [vendor, BACKUP, script, Gemfile, Gemfile.lock, .gitignore]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - old_projects
+  - plugins
+  - data
+  # collections folders
+  - conf
+  - dida
+  - misc
+  - papers
+  - refcards
+  # olde stuffe
+  - itaca
+  - old_projects
