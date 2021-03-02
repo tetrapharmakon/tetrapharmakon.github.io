@@ -45,13 +45,6 @@ exclude:
   - .gitignore
   - old_projects
   - plugins
-  - data
-  # collections folders
-  - conf
-  - dida
-  - misc
-  - papers
-  - refcards
   # olde stuffe
   - itaca
   - old_projects
