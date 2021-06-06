@@ -35,6 +35,7 @@ collections:
   misc:
   papers:
   refcards:
+  pre:
 
 sass:
   style: compressed
