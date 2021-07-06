@@ -1,9 +1,9 @@
 ---
-datefrom: Dec 2014
-dateto: Dec 2014
+datefrom: Jul 2021
+dateto: Jul 2021
 url: http://arxiv.org/abs/1501.02503
 title: Coend Calculus
 subtitle:
 ---
 
-[[PDF]](http://arxiv.org/abs/1501.02503) • The book is about to appear in the LNM series of Cambridge University Press. Stay tuned!
+[[PDF]](http://arxiv.org/abs/1501.02503) & [[url](https://www.cambridge.org/core/books/coend-calculus/C662E90767358B336F17B606D19D8C43)] • The book on coend calculus.
