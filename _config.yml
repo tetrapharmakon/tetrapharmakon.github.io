@@ -49,3 +49,4 @@ exclude:
   # olde stuffe
   - itaca
   - old_projects
+  - old_PSSL103

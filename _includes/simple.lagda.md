@@ -1,8 +1,8 @@
-I have recently decided to iron all the kinks of a few proofs left as exercises in Bart Jacobs' book "Categorical logic and type theory", by proving them in agda (and in particular, using [agda-categories]()).
+I have recently decided to iron all the kinks of a few proofs left as exercises in Bart Jacobs' book "Categorical logic and type theory", by proving them in agda (and in particular, using <a href="https://github.com/agda/agda-categories">agda-categories</a>).
 
 The first obligatory step is some boilerplate code: let's keep this to a minimum.
 
-```agda
+{% highlight agda %}
 module simple where
 
 open import Categories.Category.Cartesian.Bundle
@@ -24,12 +24,12 @@ _⋆_ : ∀ {A : Set a} {B : A → Set b} {C : {x : A} → B x → Set c} →
       (∀ {x} (y : B x) → C y) → (g : (x : A) → B x) →
       ((x : A) → C (g x))
 f ⋆ g = λ x → f (g x)
-```
+{% endhighlight %}
 
 and next, the terminal type, and a lemma that says it has only one term (some proofs of uniqueness require extensionality plus this lemma):
 
 
-```agda
+{% highlight agda %}
 data t : Set where
  ⊤ : t
 
@@ -71,7 +71,7 @@ SetC =
   ; ∘-resp-≈ = λ {refl refl → refl}
   -- and a congruence with respect to composition.
   }
-```
+{% endhighlight %}
 
 Everything is quite trivial here; the comments I added clarify how the various records have to be filled. Probably one of the most useful tricks to learn here, is the way in which the last field was filled: I didn't know about the existence of this when I first opened this file, and it really saved me hours.
 
@@ -87,7 +87,7 @@ the identity is the "trivial" pair made by the couple `(id {I} , proj₂)` (the 
 Fortunately, agda needs just a little bit of help to figure everything out.
 
 
-```agda
+{% highlight agda %}
 simple : Category (suc zero) zero zero
 simple =
  record
@@ -113,12 +113,12 @@ simple =
   _∘_ : {A B C : Set × Set} → B ⇒ C → A ⇒ B → A ⇒ C
   _∘_ {i , x} {j , y} {_} (u , f) (v , g) =
    (λ t → u (v t)) , λ t → f (g t , v (proj₂ t))
-```
+{% endhighlight %}
 
 Now, `s(𝔹)` comes equipped with an obvious forgetful functor to 𝔹, projecting on the first component: the object of interest for Jacobs' is the fiber of this functor over a certain `I ∈ 𝔹`. Such a category can be characterised in many ways; the most elegant is: it is a certain Kleisli category.
 
 
-```agda
+{% highlight agda %}
 fiber-of-simple : {I : Set} → Category (suc zero) zero zero
 fiber-of-simple {I} =
  record
@@ -140,14 +140,14 @@ fiber-of-simple {I} =
    _·_ {I} f g (x , i) = f (g(x , i) , i)
    rresp : {A B C : Set} {f h : B × I → C} {g i : A × I → B} → f ≡ h → g ≡ i → (f · g) ≡ (h · i)
    rresp {A} {B} {C} {f} {h} {g} {i} x y = trans (cong (λ t → t · g) x) (cong (_·_ h) y)
-```
+{% endhighlight %}
 
 Now, here's the proof that each fiber of a simple fibration is cartesian.
 
 It is moderately painful, because the record `CartesianCategory` has other records nested inside...
 
 
-```agda
+{% highlight agda %}
 thm : ∀ {I : Set} → CartesianCategory (suc zero) zero zero
 thm {I} =
  record
@@ -175,14 +175,14 @@ thm {I} =
            ; project₂ = refl
            ; unique = λ {refl refl → refl}
            } } } }
-```
+{% endhighlight %}
 
 but with a little help from our friend `λ {refl ... refl → refl}`, we did it!
 
 Mimicking the same argument, just not restricted to the fiber at `I`, one proves that the entire s(𝔹) is a cartesian category.
 
 
-```agda
+{% highlight agda %}
 thm2 : CartesianCategory (suc zero) zero zero
 thm2 = record
  { U = simple
@@ -220,14 +220,14 @@ thm2 = record
       (simple Category.⇒ C) ((proj₁ A × proj₁ B) , (proj₂ A × proj₂ B))
      ⟨_,_⟩ {A0 , A1} {B0 , B1} {C0 , C1} (u , h) (v , k) =
       (λ x → (u x) , (v x)) , λ x → (h x) , (k x)
-```
+{% endhighlight %}
 
 ...the biggest pain was to indent the code in a logical way.
 
 And now for the proof that each fiber of `U : s(𝔹) → 𝔹` is cartesian closed:
 
 
-```agda
+{% highlight agda %}
 thm3 : {I : Set} → CartesianClosed (fiber-of-simple {I})
 thm3 {I} =
  record
@@ -249,6 +249,7 @@ thm3 {I} =
   ; curry-unique = λ {refl → refl}
   }
   where
-  evev : {B A : Category.Obj (fiber-of-simple {I})} → (fiber-of-simple {I} Category.⇒ ((A → B) × A)) B
+  evev : {B A : Category.Obj (fiber-of-simple {I})} →
+   (fiber-of-simple {I} Category.⇒ ((A → B) × A)) B
   evev ((f , a) , i) = f a
-```
+{% endhighlight %}
