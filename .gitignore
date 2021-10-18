@@ -11,9 +11,9 @@
 _site/
 .sass-cache/
 .jekyll-metadata
-_includes/html/*
-!_includes/html/simple.html
-!_includes/html/Agda.css
+# _includes/html/*
+# !_includes/html/simple.html
+# !_includes/html/Agda.css
 
 #### Ruby.gitignore files ######################################################
 
