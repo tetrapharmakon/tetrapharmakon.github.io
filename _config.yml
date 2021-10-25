@@ -44,7 +44,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .gitignore
-  - old_projects
   - plugins
   # olde stuffe
   - itaca

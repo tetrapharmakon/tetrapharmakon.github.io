@@ -221,7 +221,7 @@ dd {
 
 /* Aspects. */
 .Agda .Comment       { color: #B22222 }
-.Agda .Background    {}
+// .Agda .Background    {}
 .Agda .Markup        { color: #000000 }
 .Agda .Keyword       { color: #CD6600 }
 .Agda .String        { color: #B22222 }
@@ -229,7 +229,7 @@ dd {
 .Agda .Symbol        { color: #404040 }
 .Agda .PrimitiveType { color: #0000CD }
 .Agda .Pragma        { color: black   }
-.Agda .Operator      {}
+// .Agda .Operator      {}
 .Agda .Hole          { background: #B4EEB4 }
 
 /* NameKinds. */
@@ -246,7 +246,7 @@ dd {
 .Agda .Record                 { color: #0000CD }
 
 /* OtherAspects. */
-.Agda .DottedPattern        {}
+// .Agda .DottedPattern        {}
 .Agda .UnsolvedMeta         { color: black; background: yellow         }
 .Agda .UnsolvedConstraint   { color: black; background: yellow         }
 .Agda .TerminationProblem   { color: black; background: #FFA07A        }
