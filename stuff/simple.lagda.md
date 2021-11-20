@@ -1,5 +1,8 @@
 # Fibrations in agda
 
+(Note: this is a literate agda file: [src](stuff/simple.lagda.md))
+
+
 I have recently decided to iron all the kinks of a few proofs left as exercises in Bart Jacobs' book _Categorical logic and type theory_, by proving them in agda (and in particular, using <a href="https://github.com/agda/agda-categories">agda-categories</a>).
 
 The first obligatory step is some boilerplate code: let's keep this to a minimum.
