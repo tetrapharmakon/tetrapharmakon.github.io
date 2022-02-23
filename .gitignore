@@ -7,7 +7,7 @@
 *.bz
 
 #### Jekyll.gitignore files ####################################################
-
+_includes
 _site/
 .sass-cache/
 .jekyll-metadata
