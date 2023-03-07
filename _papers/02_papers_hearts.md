@@ -9,12 +9,12 @@ title: Hearts and Towers in stable $\infty$-categories
   doi       = {10.1007/s40062-019-00237-0},
   url       = {https://doi.org/10.1007/s40062-019-00237-0},
   year      = {2019},
-  month     = may,
+  month     = {May},
   publisher = {Springer Science and Business Media {LLC}},
   volume    = {14},
   number    = {4},
   pages     = {993--1042},
-  author    = {Domenico Fiorenza and Fosco Loregian and Giovanni Luca Marchetti},
+  author    = {D. Fiorenza and F. Loregian and G.L. Marchetti},
   title     = {Hearts and towers in stable $\infty$-categories},
   journal   = {Journal of Homotopy and Related Structures}
 }
