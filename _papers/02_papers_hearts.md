@@ -4,4 +4,18 @@ dateto: Jan 2015
 title: Hearts and Towers in stable $\infty$-categories
 ---
 
-[[PDF]](https://arxiv.org/abs/1501.04658) and [REF](https://link.springer.com/article/10.1007/s40062-019-00237-0) • We exploit the equivalence between $t$-structures and normal torsion theories on a stable $\infty$-category to show how a few classical topics in the theory of triangulated categories, i.e., the characterization of bounded $t$-structures in terms of their hearts, their associated cohomology functors, semiorthogonal decompositions, and the theory of tiltings, as well as the more recent notion of Bridgeland's slicings, are all particular instances of a single construction, namely, the tower of a morphism associated with a $J$-slicing of a stable $\infty$-category $\mathcal{C}$, where $J$ is a totally ordered set equipped with a monotone $\mathbb{Z}$-action.
+```bibtex
+@article{Fiorenza2019,
+  doi       = {10.1007/s40062-019-00237-0},
+  url       = {https://doi.org/10.1007/s40062-019-00237-0},
+  year      = {2019},
+  month     = may,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume    = {14},
+  number    = {4},
+  pages     = {993--1042},
+  author    = {Domenico Fiorenza and Fosco Loregian and Giovanni Luca Marchetti},
+  title     = {Hearts and towers in stable $\infty$-categories},
+  journal   = {Journal of Homotopy and Related Structures}
+}
+```
