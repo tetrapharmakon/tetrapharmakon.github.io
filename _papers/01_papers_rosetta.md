@@ -5,7 +5,7 @@ title: $t$-structures are normal torsion theories
 ---
 ```
 @Article{Fiorenza2016,
-	author={Fiorenza, Domenico and Loregi{\`a}n, Fosco},
+	author={Fiorenza, D. and Loregian, F.},
  title={t-Structures are Normal Torsion Theories},
 	journal={Applied Categorical Structures},
 	year={2016},
