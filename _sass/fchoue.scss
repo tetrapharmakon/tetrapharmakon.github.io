@@ -261,4 +261,9 @@ dd {
 .Agda a[href]:hover { background-color: #B4EEB4 }
 .Agda [href].hover-highlight { background-color: #B4EEB4; }
 
-$mono-family: Consolas, monospace;
+$Monospace: Fira Code, monospace;
+
+code {
+	font-family: $Monospace;
+	font-size: 0.8em;
+  }
