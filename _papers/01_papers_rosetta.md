@@ -3,7 +3,7 @@ datefrom: Aug 2014
 dateto: Aug 2014
 title: $t$-structures are normal torsion theories
 ---
-```bibtex
+```tex
 @Article{Fiorenza2016,
   author  = {Fiorenza, D. and Loregian, F.},
   title   = {t-Structures are Normal Torsion Theories},
