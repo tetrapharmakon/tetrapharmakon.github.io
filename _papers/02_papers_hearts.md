@@ -4,7 +4,7 @@ dateto: Jan 2015
 title: Hearts and Towers in stable $\infty$-categories
 ---
 
-```tex
+```bibtex
 @article{Fiorenza2019,
   doi       = {10.1007/s40062-019-00237-0},
   url       = {https://doi.org/10.1007/s40062-019-00237-0},

@@ -6,7 +6,7 @@ title: t-structures in stable $\infty$-categories
 subtitle:
 ---
 
-```tex
+```bibtex
 @phdthesis{loregian2016tstructures,
   title    = {t-structures on stable (infinity,1)-categories},
   year     = {2016},
@@ -19,7 +19,7 @@ subtitle:
 
 or (better)
 
-```tex
+```bibtex
 @misc{10.48550/arxiv.2005.14295,
   doi       = {10.48550/ARXIV.2005.14295},
   url       = {https://arxiv.org/abs/2005.14295},

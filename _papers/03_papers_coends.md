@@ -6,7 +6,7 @@ title: Coend Calculus
 subtitle:
 ---
 
-```tex
+```bibtex
 @book{Loregian2021,
   doi       = {10.1017/9781108778657},
   url       = {https://doi.org/10.1017/9781108778657},

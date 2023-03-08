@@ -5,7 +5,7 @@ title: Triangulated factorization systems and t-structures
 url: https://arxiv.org/abs/1705.08565
 ---
 
-```tex
+```bibtex
 @article{loregian_virili_2020219,
   title    = {Triangulated factorization systems and t-structures},
   journal  = {Journal of Algebra},

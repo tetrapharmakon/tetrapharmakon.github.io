@@ -5,7 +5,7 @@ title: Homotopical algebra is not concrete
 url: https://arxiv.org/abs/1704.00303
 ---
 
-```tex
+```bibtex
 @article{concreteness2018,
   author  = {Di Liberti, I. and Loregian, F.},
   title   = {Homotopical algebra is not concrete},
