@@ -16,6 +16,5 @@ url: https://arxiv.org/abs/1705.08565
   doi      = {https://doi.org/10.1016/j.jalgebra.2019.12.021},
   url      = {https://www.sciencedirect.com/science/article/pii/S0021869320300296},
   author   = {F. Loregian and S. Virili},
-  keywords = {factorization system, normal torsion theory, triangulated category, t-structure},
 }
 ```

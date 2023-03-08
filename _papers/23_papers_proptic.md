@@ -16,8 +16,6 @@ url: https://arxiv.org/abs/2001.07488
                Milewski, B. and
                Pillmore, E. and
                Román, M.},
-  keywords  = {Programming Languages (cs.PL), Category Theory (math.CT),
-               D.3.1, 18C50},
   title     = {Profunctor Optics, a Categorical Update},
   publisher = {arXiv},
   year      = {2020},

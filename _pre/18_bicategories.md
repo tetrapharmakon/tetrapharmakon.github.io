@@ -13,8 +13,6 @@ url: https://arxiv.org/abs/2303.03865
                Laretto, A. and
                Loregian, F. and
                Luneia, S.},
-  keywords  = {Category Theory (math.CT),
-               Formal Languages and Automata Theory (cs.FL)},
   title     = {Bicategories of automata, automata in bicategories},
   publisher = {arXiv},
   year      = {2023},

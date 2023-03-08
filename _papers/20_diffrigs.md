@@ -9,8 +9,6 @@ title: Differential 2-rigs
   doi       = {10.48550/ARXIV.2103.00938},
   url       = {https://arxiv.org/abs/2103.00938},
   author    = {Loregian, F. and Trimble, T.},
-  keywords  = {Category Theory (math.CT),
-               18D99, 18D25, 16Y60, 13N15, 13N99},
   title     = {Differential 2-rigs},
   publisher = {arXiv},
   year      = {2021},

@@ -25,8 +25,5 @@ subtitle:
   month      = {jan},
   articleno  = {57},
   numpages   = {28},
-  keywords   = {Lawvere theory, syntax,
-                categories of partial maps,
-                semantics, variety theorem}
 }
 ```

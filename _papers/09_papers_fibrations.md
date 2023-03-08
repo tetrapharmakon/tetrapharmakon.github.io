@@ -17,6 +17,5 @@ issn     = {0723-0869},
 doi      = {https://doi.org/10.1016/j.exmath.2019.02.004},
 url      = {https://www.sciencedirect.com/science/article/pii/S0723086918300872},
 author   = {F. Loregian and E. Riehl},
-keywords = {Grothendieck fibration, Two-sided fibration, Profunctor},
 }
 ```
