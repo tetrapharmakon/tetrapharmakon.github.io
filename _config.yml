@@ -23,6 +23,7 @@ js:
         - js/jquery.scrollme.min.js
         - js/stickUp.min.js
         - js/fchoue.js
+        - js/bibtex-copy-button.js
 
 markdown: kramdown
 
