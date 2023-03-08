@@ -7,7 +7,7 @@ subtitle:
 ---
 
 ```bibtex
-﻿@article{Loregian2022,
+@article{Loregian2022,
   author  = {Loregian, F. and de Oliveira Santos, E.},
   title   = {Coends of Higher Arity},
   journal = {Applied Categorical Structures},

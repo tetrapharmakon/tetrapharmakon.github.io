@@ -17,7 +17,9 @@ title: Fibrational linguistics I and II
   copyright = {Creative Commons Attribution 4.0 International}
 }
 ```
+
 and
+
 ```bibtex
 @misc{arxiv.2207.06765,
   doi       = {10.48550/ARXIV.2207.06765},
