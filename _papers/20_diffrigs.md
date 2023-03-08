@@ -4,4 +4,17 @@ dateto: March 2022
 title: Differential 2-rigs
 ---
 
-[2103.00938](https://arxiv.org/abs/2103.00938) • ArXiv contains an abridged version accepted for [ACT2022](https://msp.cis.strath.ac.uk/act2022/).
+```bibtex
+@misc{arxiv.2103.00938,
+  doi       = {10.48550/ARXIV.2103.00938},
+  url       = {https://arxiv.org/abs/2103.00938},
+  author    = {Loregian, F. and Trimble, T.},
+  keywords  = {Category Theory (math.CT),
+               18D99, 18D25, 16Y60, 13N15, 13N99},
+  title     = {Differential 2-rigs},
+  publisher = {arXiv},
+  year      = {2021},
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+
+```

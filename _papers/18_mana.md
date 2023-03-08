@@ -12,7 +12,7 @@ title: Nets with Mana - A Framework for Chemical Reaction Modelling
   publisher = {Springer International Publishing},
   pages     = {185--202},
   author    = {F. Genovese and F. Loregian and D. Palombi},
-  title     = {Nets with Mana: A Framework for~Chemical Reaction Modelling},
+  title     = {Nets with Mana: a framework for chemical reaction modelling},
   booktitle = {Graph Transformation}
 }
 ```

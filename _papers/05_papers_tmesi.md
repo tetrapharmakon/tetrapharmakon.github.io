@@ -11,7 +11,9 @@ subtitle:
   title    = {t-structures on stable (infinity,1)-categories},
   year     = {2016},
   school   = {SISSA},
-  keywords = {category theory, higher category theory, factorization system, torsion theory, homological algebra, higher algebra},
+  keywords = {category theory, higher category theory,
+              factorization system, torsion theory,
+              homological algebra, higher algebra},
   url      = {http://urania.sissa.it/xmlui/handle/1963/35202},
   author   = {F. Loregian}
 }
@@ -24,7 +26,9 @@ or (better)
   doi       = {10.48550/ARXIV.2005.14295},
   url       = {https://arxiv.org/abs/2005.14295},
   author    = {Loregian, F.},
-  keywords  = {Category Theory (math.CT), Algebraic Topology (math.AT), FOS: Mathematics, FOS: Mathematics, 18E30 18E35 18E30 18E35 18A40},
+  keywords  = {Category Theory (math.CT),
+               Algebraic Topology (math.AT),
+               18E30 18E35 18E30 18E35 18A40},
   title     = {t-structures on stable infinity-categories},
   publisher = {arXiv},
   year      = {2020},
