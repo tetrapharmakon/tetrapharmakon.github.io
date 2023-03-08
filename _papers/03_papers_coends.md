@@ -6,4 +6,14 @@ title: Coend Calculus
 subtitle:
 ---
 
-[[PDF]](http://arxiv.org/abs/1501.02503) & [[url](https://www.cambridge.org/core/books/coend-calculus/C662E90767358B336F17B606D19D8C43)] • The book on coend calculus.
+```tex
+@book{Loregian2021,
+  doi       = {10.1017/9781108778657},
+  url       = {https://doi.org/10.1017/9781108778657},
+  year      = {2021},
+  month     = jun,
+  publisher = {Cambridge University Press},
+  author    = {F. Loregian},
+  title     = {(Co)end Calculus}
+}
+```

@@ -5,4 +5,19 @@ title: Homotopical algebra is not concrete
 url: https://arxiv.org/abs/1704.00303
 ---
 
-[1704.00303](https://arxiv.org/abs/1704.00303) and [REF](https://link.springer.com/article/10.1007/s40062-018-0197-3) • We generalize Freyd's well-known result that "homotopy is not concrete" offering a general method to show that under certain assumptions on a model category $\mathcal{M}$, its homotopy category ho($\mathcal{M}$) cannot be concrete with respect to the universe where $\mathcal{M}$ is assumed to be locally small. This result is part of an attempt to understand more deeply the relation between (some parts of) set theory and (some parts of) abstract homotopy theory.
+```tex
+@article{concreteness2018,
+  author  = {Di Liberti, I. and Loregian, F.},
+  title   = {Homotopical algebra is not concrete},
+  journal = {Journal of Homotopy and Related Structures},
+  year    = {2018},
+  month   = {Sep},
+  day     = {01},
+  volume  = {13},
+  number  = {3},
+  pages   = {673-687},
+  issn    = {1512-2891},
+  doi     = {10.1007/s40062-018-0197-3},
+  url     = {https://doi.org/10.1007/s40062-018-0197-3}
+}
+```
