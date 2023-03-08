@@ -4,4 +4,15 @@ dateto: January 2021
 title: Nets with Mana - A Framework for Chemical Reaction Modelling
 ---
 
-[2101.06234](https://arxiv.org/abs/2101.06234) and ICGT2021 • We use categorical methods to define a new flavor of Petri nets which could be useful in modelling chemical reactions.
+```bibtex
+@incollection{Genovese2021,
+  doi       = {10.1007/978-3-030-78946-6_10},
+  url       = {https://doi.org/10.1007/978-3-030-78946-6_10},
+  year      = {2021},
+  publisher = {Springer International Publishing},
+  pages     = {185--202},
+  author    = {F. Genovese and F. Loregian and D. Palombi},
+  title     = {Nets with Mana: A Framework for~Chemical Reaction Modelling},
+  booktitle = {Graph Transformation}
+}
+```

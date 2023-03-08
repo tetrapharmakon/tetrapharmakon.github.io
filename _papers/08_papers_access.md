@@ -5,6 +5,7 @@ title: Accessibility and presentability in 2-categories
 url: https://arxiv.org/abs/1804.08710
 ---
 
+```bibtex
 @article{accpres2023107155,
   title   = {Accessibility and presentability in 2-categories},
   journal = {Journal of Pure and Applied Algebra},
@@ -17,3 +18,4 @@ url: https://arxiv.org/abs/1804.08710
   url     = {https://www.sciencedirect.com/science/article/pii/S0022404922001517},
   author  = {I. {D}i Liberti and F. Loregian},
 }
+```
