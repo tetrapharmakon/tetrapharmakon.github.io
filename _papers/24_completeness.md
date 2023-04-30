@@ -4,6 +4,7 @@ dateto: Mar 2023
 title: Completeness for categories of generalized automata
 url: https://arxiv.org/abs/2303.03867
 ---
+Accepted for [CALCO2023](https://www.coalg.org/calco-mfps-2023/calco/accepted/)
 
 ```bibtex
 @misc{arxiv.2303.03867,
