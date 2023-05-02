@@ -8,7 +8,11 @@ url: https://arxiv.org/abs/2305.00272
 ```bibtex
 @misc{boccali2023semibicategory,
       title={The semibicategory of Moore automata},
-      author={Guido Boccali and Bojana Femić and Andrea Laretto and Fosco Loregian and Stefano Luneia},
+      author={Boccali, G. and
+              Femić, B. and
+              Laretto, A. and
+              Loregian, F. and
+              Luneia, S.},
       year={2023},
       eprint={2305.00272},
       archivePrefix={arXiv},
