@@ -4,6 +4,7 @@ dateto: Mar 2023
 title: Bicategories of automata, automata in bicategories
 url: https://arxiv.org/abs/2303.03865
 ---
+Accepted for ACT 2023.
 
 ```bibtex
 @misc{arxiv.2303.03865,
