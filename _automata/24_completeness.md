@@ -2,6 +2,7 @@
 datefrom: Mar 2023
 dateto: Mar 2023
 title: Completeness for categories of generalized automata
+status: 🟩
 url: https://arxiv.org/abs/2303.03867
 ---
 Accepted for [CALCO2023](https://www.coalg.org/calco-mfps-2023/calco/accepted/).

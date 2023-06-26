@@ -34,7 +34,14 @@ collections:
   conf:
   dida:
   misc:
-  papers:
+  # -
+  automata:
+  coends:
+  homotopy:
+  miscpaper:
+  petri:
+  twocat:
+  # -
   refcards:
   pre:
 
