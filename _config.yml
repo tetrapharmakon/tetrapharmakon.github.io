@@ -12,10 +12,6 @@ github_username:  jekyll
 
 favicon: assets/favicon.png
 
-css:
-    - https://fonts.googleapis.com/css?family=Merriweather|Oswald
-    - css/main.css
-
 js:
     early:
     late:
