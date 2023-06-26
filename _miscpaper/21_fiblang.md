@@ -1,6 +1,7 @@
 ---
 datefrom: January 2022
 dateto: January 2022
+status: 🟩
 title: Fibrational linguistics I and II
 ---
 

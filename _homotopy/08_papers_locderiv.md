@@ -1,6 +1,7 @@
 ---
 datefrom: Feb 2018
 dateto: Feb 2018
+status: 🟥
 title: Localization theory for derivators
 url: https://arxiv.org/abs/1802.08193
 ---

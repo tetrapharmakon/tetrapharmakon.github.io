@@ -1,6 +1,7 @@
 ---
 datefrom: May 2023
 dateto: May 2023
+status: 🟥
 title: The semibicategory of Moore automata
 url: https://arxiv.org/abs/2305.00272
 ---

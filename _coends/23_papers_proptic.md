@@ -1,6 +1,7 @@
 ---
 datefrom: Jan 2020
 dateto: Jan 2020
+status: 🟩
 title: Profunctor optics, a categorical update
 url: https://arxiv.org/abs/2001.07488
 ---

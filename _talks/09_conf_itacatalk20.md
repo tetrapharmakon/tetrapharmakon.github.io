@@ -1,8 +1,8 @@
 ---
 datefrom: Dec 2020
 dateto: Dec 2020
-url:
-title: SPEAKER - ItaCa Fest I
+status: 🎤
+title: ItaCa Fest I
 subtitle:
 ---
 

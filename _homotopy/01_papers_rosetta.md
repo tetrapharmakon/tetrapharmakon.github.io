@@ -1,6 +1,7 @@
 ---
 datefrom: Aug 2014
 dateto: Aug 2014
+status: 🟩
 title: $t$-structures are normal torsion theories
 ---
 ```bibtex

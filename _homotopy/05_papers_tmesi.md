@@ -1,6 +1,7 @@
 ---
 datefrom: Jun 2016
 dateto: Jun 2016
+status: 🟩
 url:
 title: t-structures in stable $\infty$-categories
 subtitle:

@@ -1,6 +1,7 @@
 ---
 datefrom: Apr 2018
 dateto: Apr 2018
+status: 🟩
 title: Accessibility and presentability in 2-categories
 url: https://arxiv.org/abs/1804.08710
 ---

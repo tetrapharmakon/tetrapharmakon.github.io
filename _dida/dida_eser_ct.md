@@ -1,6 +1,7 @@
 ---
 datefrom: Jun 2017
 dateto: Jun 2017
+status: 🪴
 url:
 title: Exercises in Category theory (IT)
 subtitle:

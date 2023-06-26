@@ -1,6 +1,7 @@
 ---
 datefrom: December 2020
 dateto: December 2020
+status: 🟥
 title: Functorial Erkennen
 ---
 

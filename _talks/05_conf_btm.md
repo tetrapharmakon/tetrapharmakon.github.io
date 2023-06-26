@@ -1,8 +1,8 @@
 ---
 datefrom: Sep 2017
 dateto: Sep 2017
-url: 
-title: SPEAKER - British Topology Meeting
+status: 🎤
+title: British Topology Meeting
 subtitle:
 ---
 

@@ -2,6 +2,7 @@
 datefrom: Jul 2021
 dateto: Jul 2021
 url: http://arxiv.org/abs/1501.02503
+status: 🟩
 title: Coend Calculus
 subtitle:
 ---

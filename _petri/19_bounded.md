@@ -1,6 +1,7 @@
 ---
 datefrom: January 2021
 dateto: January 2021
+status: 🟩
 title: A Categorical Semantics for Bounded Petri Nets
 ---
 

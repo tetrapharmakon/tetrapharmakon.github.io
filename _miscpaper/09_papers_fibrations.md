@@ -1,6 +1,7 @@
 ---
 datefrom: Jun 2018
 dateto: Jun 2018
+status: 🟩
 title: Categorical notions of fibration
 url: https://arxiv.org/abs/1806.06129
 ---

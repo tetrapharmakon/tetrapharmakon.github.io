@@ -1,8 +1,8 @@
 ---
 datefrom: May 2017
 dateto: May 2017
-url: 
-title: SPEAKER - Categorical day in Turin
+status: 🎤
+title: Categorical day in Turin
 subtitle:
 ---
 

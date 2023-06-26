@@ -31,7 +31,8 @@ keywords: nope
 description: nope
 
 collections:
-  conf:
+  talks:
+  organized:
   dida:
   misc:
   # -
@@ -43,7 +44,6 @@ collections:
   twocat:
   # -
   refcards:
-  pre:
 
 sass:
   style: compressed

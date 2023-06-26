@@ -2,6 +2,7 @@
 datefrom: Nov 2020
 dateto: Nov 2020
 url: https://doi.org/10.1145/3434338
+status: 🟩
 title: Functorial semantics for partial theories
 subtitle:
 ---

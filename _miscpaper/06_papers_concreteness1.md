@@ -1,6 +1,7 @@
 ---
 datefrom: Apr 2017
 dateto: Apr 2017
+status: 🟩
 title: Homotopical algebra is not concrete
 url: https://arxiv.org/abs/1704.00303
 ---

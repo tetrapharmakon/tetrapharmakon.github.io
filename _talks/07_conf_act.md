@@ -1,8 +1,8 @@
 ---
 datefrom: Mar 2019
 dateto: Jul 2019
-url: 
-title: PARTICIPANT - Applied CT 2019
+status: 📣
+title: Applied CT 2019
 subtitle:
 ---
 

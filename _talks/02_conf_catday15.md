@@ -1,8 +1,8 @@
 ---
 datefrom: May 2015
 dateto: May 2015
-url: 
-title: PARTICIPANT - Categorical day in Turin
+status: 📣
+title: Categorical day in Turin
 subtitle:
 ---
 

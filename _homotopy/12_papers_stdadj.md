@@ -1,6 +1,7 @@
 ---
 datefrom: Feb 2019
 dateto: Feb 2019
+status: 🟩
 title: A standard theorem on adjunctions in two variables
 url: https://arxiv.org/abs/1902.06074
 ---

@@ -1,8 +1,8 @@
 ---
 datefrom: Dec 2019
 dateto: Dec 2019
-url:
-title: SPEAKER - ItaCa 2019
+status: 🎤
+title: ItaCa 2019
 subtitle:
 ---
 

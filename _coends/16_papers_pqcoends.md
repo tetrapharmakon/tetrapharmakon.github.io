@@ -2,6 +2,7 @@
 datefrom: Nov 2020
 dateto: Nov 2020
 url: https://arxiv.org/abs/2011.13881
+status: 🟩
 title: Coends of higher arity
 subtitle:
 ---

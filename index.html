@@ -18,7 +18,7 @@ layout: default
 
 <section id="stuff-i-do">
 	<h3>Publications</h3>
-	<h6>Homotopy theory</h6>
+	<h4>Homotopy theory</h4>
 	{% assign papers_ht = site.homotopy | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_ht %}
@@ -35,7 +35,7 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<h6>2-categories</h6>
+	<h4>2-categories</h4>
 		{% assign papers_two = site.twocat | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_two %}
@@ -52,7 +52,7 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<h6>Coend calculus</h6>
+	<h4>Coend calculus</h4>
 		{% assign papers_coend = site.coends | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_coend %}
@@ -69,7 +69,7 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<h6>Petri nets</h6>
+	<h4>Petri nets</h4>
 		{% assign papers = site.petri | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers %}
@@ -86,7 +86,7 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<h6>Automata theory</h6>
+	<h4>Automata theory</h4>
 		{% assign papers = site.automata | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers %}
@@ -103,7 +103,7 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<h6>Miscellaneous works</h6>
+	<h4>Miscellaneous works</h4>
 	{% assign papers_misc = site.miscpaper | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_misc %}
@@ -121,7 +121,7 @@ layout: default
 		{% endfor %}
 	</dl>
 	<!--  -->
-	<h3>Preprints</h3>
+	<!-- <h3>Preprints</h3>
 	{% assign pre = site.pre | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in pre %}
@@ -137,7 +137,7 @@ layout: default
 		</dt>
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
-	</dl>
+	</dl> -->
 	<h3>Teaching</h3>
 	{% assign dida = site.dida | stuff_sort | reverse %}
 	<dl class="accordion">
@@ -156,9 +156,27 @@ layout: default
 		{% endfor %}
 	</dl>
 	<h3>Conferences</h3>
-	{% assign conf = site.conf | stuff_sort | reverse %}
+	<h4>As speaker</h4>
+	{% assign conf_talk = site.talks | stuff_sort | reverse %}
 	<dl class="accordion">
-		{% for thing in conf %}
+		{% for thing in conf_talk %}
+		<dt id="{{ thing.slug }}">
+			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
+			<time>
+				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
+				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
+				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
+				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
+				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
+			</time>
+		</dt>
+		<dd>{{ thing.content }}</dd>
+		{% endfor %}
+	</dl>
+	<h4>Organized</h4>
+	{% assign conf_org = site.organized | stuff_sort | reverse %}
+	<dl class="accordion">
+		{% for thing in conf_org %}
 		<dt id="{{ thing.slug }}">
 			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
 			<time>

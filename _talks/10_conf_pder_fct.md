@@ -1,8 +1,8 @@
 ---
 datefrom: Nov 2021
 dateto: Nov 2021
-url:
-title: SPEAKER - A formal category theory of derivators
+status: 🎤
+title: A formal category theory of derivators
 subtitle:
 ---
 
