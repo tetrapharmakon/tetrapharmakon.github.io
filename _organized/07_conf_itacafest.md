@@ -2,7 +2,7 @@
 datefrom: Jun 2020
 dateto: Jun 2020
 status: 🛠️
-title: ORGANISER - ItaCa Fest I
+title: ItaCa Fest I
 subtitle:
 ---
 

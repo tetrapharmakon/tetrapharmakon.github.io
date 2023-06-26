@@ -18,6 +18,7 @@ layout: default
 
 <section id="stuff-i-do">
 	<h3>Publications</h3>
+	The research I have done so far, grouped by topic. Green squares = they have been published; red squares = still awaiting publication.
 	<h4>Homotopy theory</h4>
 	{% assign papers_ht = site.homotopy | stuff_sort | reverse %}
 	<dl class="accordion">
@@ -120,25 +121,8 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<!--  -->
-	<!-- <h3>Preprints</h3>
-	{% assign pre = site.pre | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in pre %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
-		{% endfor %}
-	</dl> -->
 	<h3>Teaching</h3>
+	My teaching experience so far.
 	{% assign dida = site.dida | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in dida %}
@@ -191,6 +175,7 @@ layout: default
 		{% endfor %}
 	</dl>
 	<h3>Reference Cards</h3>
+	The idea of having "reference cards" comes from <a href="https://www.math.unipd.it/~maurizio/RefCards.html">here</a>.
 	{% assign refcards = site.refcards | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in refcards %}
@@ -207,7 +192,7 @@ layout: default
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
 	</dl>
-	<h3>Miscellaneous</h3>
+	<!-- <h3>Miscellaneous</h3>
 	{% assign misc = site.misc | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in misc %}
@@ -223,7 +208,7 @@ layout: default
 		</dt>
 		<dd>{{ thing.content }}</dd>
 		{% endfor %}
-	</dl>
+	</dl> -->
 </section>
 
 <section id="contacts">
