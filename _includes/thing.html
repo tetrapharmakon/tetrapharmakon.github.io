@@ -1,0 +1,19 @@
+{% assign fromYear = thing.datefrom | date: '%Y' %}
+{% assign fromMonth = thing.datefrom | date: '%b' %}
+{% assign toYear = thing.dateto | date: '%Y' %}
+{% assign toMonth = thing.dateto | date: '%b' %}
+
+{% capture formattedDateRange %}
+    {% if fromYear != toYear %}
+        <time datetime="{{ thing.datefrom | date: '%Y-%m' }}">{{ fromMonth }} {{ fromYear }}</time> &ndash;
+    {% elsif fromMonth != toMonth %}
+        <time datetime="{{ thing.datefrom | date: '%Y-%m' }}">{{ fromMonth }}</time> &ndash;
+    {% endif %}
+    <time datetime="{{ thing.dateto | date: '%Y-%m' }}">{{ toMonth }} {{ toYear }}</time>
+{% endcapture %}
+
+<dt id="{{ thing.slug }}">
+    <a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
+    <span class="daterange">{{ formattedDateRange }}</span>
+</dt>
+<dd>{{ thing.content }}</dd>

@@ -26,9 +26,11 @@ layout: compress
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 
-        {% for sheet in site.css %}
-            <link rel="stylesheet" href="{{sheet}}"/>
-        {% endfor %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?display=swap&family=Lato|Oswald|Noto+Color+Emoji"/>
+
+        <link rel="stylesheet" href="css/main.css"/>
 
         {% for script in site.js.early %}
             <script type="text/javascript" src="{{script}}"/></script>
