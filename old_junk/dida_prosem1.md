@@ -1,7 +1,7 @@
 ---
 datefrom: March 2020
 dateto: March 2020
-status: 🪴
+status: 🌱
 title: Profunctorial semantics
 ---
 

@@ -1,7 +1,7 @@
 ---
 datefrom: May 2021
 dateto: May 2021
-status: 🟩
+status: ✅
 title: Escrows are optics
 ---
 

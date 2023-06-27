@@ -2,7 +2,7 @@
 datefrom: Sep 2017
 dateto: Apr 2018
 url:
-status: 🪴
+status: 🌱
 title: Homotopy Type Theory
 ---
 

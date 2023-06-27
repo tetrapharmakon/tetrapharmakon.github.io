@@ -1,7 +1,7 @@
 ---
 datefrom: May 2017
 dateto: May 2017
-status: 🟩
+status: ✅
 title: Triangulated factorization systems and t-structures
 url: https://arxiv.org/abs/1705.08565
 ---

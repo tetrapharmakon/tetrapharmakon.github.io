@@ -1,7 +1,7 @@
 ---
 datefrom: January 2021
 dateto: January 2021
-status: 🟩
+status: ✅
 title: Nets with Mana - A Framework for Chemical Reaction Modelling
 ---
 

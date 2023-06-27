@@ -1,6 +1,6 @@
 ---
 datefrom: April 2021
-status: 🪴
+status: 🌱
 dateto: April 2021
 title: Functorial semantics
 ---

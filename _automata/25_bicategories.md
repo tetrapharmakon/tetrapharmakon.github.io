@@ -1,7 +1,7 @@
 ---
 datefrom: Mar 2023
 dateto: Mar 2023
-status: 🟩
+status: ✅
 title: Bicategories of automata, automata in bicategories
 url: https://arxiv.org/abs/2303.03865
 ---

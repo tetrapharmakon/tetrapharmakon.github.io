@@ -2,7 +2,7 @@
 datefrom: Jan 2014
 dateto: Jun 2014
 url:
-status: 🪴
+status: 🌱
 title: Categorical Tools
 subtitle:
 ---

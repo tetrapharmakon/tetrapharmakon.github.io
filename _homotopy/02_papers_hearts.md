@@ -1,7 +1,7 @@
 ---
 datefrom: Jan 2015
 dateto: Jan 2015
-status: 🟩
+status: ✅
 title: Hearts and Towers in stable $\infty$-categories
 ---
 
