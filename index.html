@@ -23,102 +23,42 @@ layout: default
 	{% assign papers_ht = site.homotopy | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_ht %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h4>2-categories</h4>
 		{% assign papers_two = site.twocat | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_two %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h4>Coend calculus</h4>
 		{% assign papers_coend = site.coends | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_coend %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h4>Petri nets</h4>
 		{% assign papers = site.petri | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h4>Automata theory</h4>
 		{% assign papers = site.automata | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h4>Miscellaneous works</h4>
 	{% assign papers_misc = site.miscpaper | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in papers_misc %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h3>Teaching</h3>
@@ -126,17 +66,7 @@ layout: default
 	{% assign dida = site.dida | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in dida %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h3>Conferences</h3>
@@ -144,34 +74,14 @@ layout: default
 	{% assign conf_talk = site.talks | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in conf_talk %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h4>Organized</h4>
 	{% assign conf_org = site.organized | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in conf_org %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<h3>Reference Cards</h3>
@@ -179,34 +89,14 @@ layout: default
 	{% assign refcards = site.refcards | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in refcards %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl>
 	<!-- <h3>Miscellaneous</h3>
 	{% assign misc = site.misc | stuff_sort | reverse %}
 	<dl class="accordion">
 		{% for thing in misc %}
-		<dt id="{{ thing.slug }}">
-			<a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
-			<time>
-				{% assign dateFromYear = thing.datefrom | date: '%Y' %} {% assign dateToYear = thing.dateto | date: '%Y'
-				%} {% assign dateFromMonth = thing.datefrom | date: '%m' %} {% assign dateToMonth = thing.dateto | date:
-				'%m' %} {% if dateFromYear == dateToYear %} {% if dateFromMonth != dateToMonth %} {{ thing.datefrom |
-				date: '%b' }} - {% endif %} {{ thing.dateto | date: '%b %Y' }} {% else %} {{ thing.datefrom | date: '%b
-				%Y' }} – {{ thing.dateto | date: '%b %Y' }} {% endif %}
-			</time>
-		</dt>
-		<dd>{{ thing.content }}</dd>
+			{% include thing.html content=thing %}
 		{% endfor %}
 	</dl> -->
 </section>
