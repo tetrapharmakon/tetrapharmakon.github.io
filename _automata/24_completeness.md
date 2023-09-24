@@ -9,14 +9,16 @@ Published in [CALCO2023](https://www.coalg.org/calco-mfps-2023/calco/).
 
 ```bibtex
 @InProceedings{boccali_et_al:LIPIcs.CALCO.2023.20,
-  author =	{Boccali, G. and 
-             Laretto, A. and 
-             Loregian, F. and 
-             Luneia, S.},
+  author = {Boccali, G. and 
+            Laretto, A. and 
+            Loregian, F. and 
+            Luneia, S.},
   title =	{{Completeness for Categories of Generalized Automata}},
-  booktitle =	{10th Conference on Algebra and Coalgebra in Computer Science (CALCO 2023)},
+  booktitle =	{10th Conference on Algebra and Coalgebra 
+                 in Computer Science (CALCO 2023)},
   pages =	{20:1--20:14},
-  series =	{Leibniz International Proceedings in Informatics (LIPIcs)},
+  series =	{Leibniz International Proceedings in 
+             Informatics (LIPIcs)},
   ISBN =	{978-3-95977-287-7},
   ISSN =	{1868-8969},
   year =	{2023},
