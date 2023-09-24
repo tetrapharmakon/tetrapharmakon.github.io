@@ -13,7 +13,7 @@ Published in [CALCO2023](https://www.coalg.org/calco-mfps-2023/calco/).
             Laretto, A. and 
             Loregian, F. and 
             Luneia, S.},
-  title =	{{Completeness for Categories of Generalized Automata}},
+  title =	{Completeness for categories of generalized automata},
   booktitle =	{10th Conference on Algebra and Coalgebra 
                  in Computer Science (CALCO 2023)},
   pages =	{20:1--20:14},
