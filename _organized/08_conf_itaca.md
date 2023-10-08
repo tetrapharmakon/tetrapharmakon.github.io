@@ -6,4 +6,4 @@ title: ItaCa 2019
 subtitle:
 ---
 
-[[html](http://www.mat.unimi.it/users/itaca/)] The ItaCa website.
+[[html](http://www.mat.unimi.it/users/itaca/)] The first ItaCa in-person meeting, in Milan.
