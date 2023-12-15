@@ -8,16 +8,18 @@ url: https://arxiv.org/abs/2303.03865
 Accepted for ACT 2023.
 
 ```bibtex
-@misc{arxiv.2303.03865,
-  doi       = {10.48550/ARXIV.2303.03865},
-  url       = {https://arxiv.org/abs/2303.03865},
-  author    = {Boccali, G. and
-               Laretto, A. and
-               Loregian, F. and
-               Luneia, S.},
-  title     = {Bicategories of automata, automata in bicategories},
-  publisher = {arXiv},
+@Inproceedings{EPTCS397.1,
+  author    = {Boccali, G. and Laretto, A. and Loregian, F. and Luneia, S.},
   year      = {2023},
-  copyright = {Creative Commons Attribution 4.0 International}
+  title     = {Bicategories of Automata, Automata in Bicategories},
+  editor    = {Staton, Sam and Vasilakopoulou, Christina},
+  booktitle = {{\rm Proceedings of the Sixth International Conference on}
+               Applied Category Theory 2023,
+               {\rm University of Maryland, 31 July - 4 August 2023}},
+  series    = {Electronic Proceedings in Theoretical Computer Science},
+  volume    = {397},
+  publisher = {Open Publishing Association},
+  pages     = {1-19},
+  doi       = {10.4204/EPTCS.397.1},
 }
 ```
