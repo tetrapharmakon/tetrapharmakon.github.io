@@ -15,9 +15,9 @@ Published in [ACT2023](https://cgi.cse.unsw.edu.au/~eptcs/paper.cgi?ACT2023.1)
   year      = {2023},
   title     = {Bicategories of Automata, Automata in Bicategories},
   editor    = {Staton, Sam and Vasilakopoulou, Christina},
-  booktitle = {{\rm Proceedings of the Sixth International Conference on}
+  booktitle = {Proceedings of the Sixth International Conference on
                Applied Category Theory 2023,
-               {\rm University of Maryland, 31 July - 4 August 2023}},
+               University of Maryland, 31 July - 4 August 2023},
   series    = {Electronic Proceedings in Theoretical Computer Science},
   volume    = {397},
   publisher = {Open Publishing Association},
