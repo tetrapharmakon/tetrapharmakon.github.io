@@ -5,7 +5,9 @@ status: ✅
 title: Bicategories of automata, automata in bicategories
 url: https://arxiv.org/abs/2303.03865
 ---
-Accepted for ACT 2023.
+
+Published in [ACT2023](https://cgi.cse.unsw.edu.au/~eptcs/paper.cgi?ACT2023.1)
+
 
 ```bibtex
 @Inproceedings{EPTCS397.1,
