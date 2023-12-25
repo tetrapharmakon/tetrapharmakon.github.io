@@ -6,14 +6,17 @@ title: Differential 2-rigs
 ---
 
 ```bibtex
-@misc{arxiv.2103.00938,
-  doi       = {10.48550/ARXIV.2103.00938},
-  url       = {https://arxiv.org/abs/2103.00938},
-  author    = {Loregian, F. and Trimble, T.},
-  title     = {Differential 2-rigs},
-  publisher = {arXiv},
-  year      = {2021},
-  copyright = {Creative Commons Attribution 4.0 International}
+@article{Loregian2023,
+  title = {Differential 2-rigs},
+  volume = {380},
+  ISSN = {2075-2180},
+  url = {http://dx.doi.org/10.4204/EPTCS.380.10},
+  DOI = {10.4204/eptcs.380.10},
+  journal = {Electronic Proceedings in Theoretical Computer Science},
+  publisher = {Open Publishing Association},
+  author = {Loregian,  Fosco and Trimble,  Todd},
+  year = {2023},
+  month = aug,
+  pages = {159–182}
 }
-
 ```
