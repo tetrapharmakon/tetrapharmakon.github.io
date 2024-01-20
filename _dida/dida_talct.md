@@ -1,9 +1,9 @@
 ---
-datefrom: Jan 2022
-dateto: Jun 2022
+datefrom: Jan 2024
+dateto: Jun 2024
 url:
 status: 🎓
-title: Introduction to category theory @taltech
+title: Introduction to category theory ITI9200
 ---
 
-A [course on category theory](https://compose.ioc.ee/CourseCategoryTheory.html) held in [Taltech](https://compose.ioc.ee).
+See [here](CourseCategoryTheory.html)
