@@ -44,3 +44,7 @@ body {
   p {
     padding: 0px;
   }
+
+  .img-container {
+    text-align: center;
+  }

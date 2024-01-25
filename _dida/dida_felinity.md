@@ -7,4 +7,4 @@ title: FELINYTY
 
 FELINYTY: **F**ormal **E**ducation in **L**iterature, **I**nformatics, and **N**aturall**Y**-**T**hemed **Y**arns is a reading course on Formal Category Theory. 
 
-Soon available. 
+More info available [here](felinity.html)
