@@ -1,7 +1,7 @@
 ---
 datefrom: Aug 2024
 dateto: Aug 2024
-title: Fibrations of algebra
+title: Fibrations of algebras
 status: 🟥
 url: https://arxiv.org/abs/2408.16581
 ---
