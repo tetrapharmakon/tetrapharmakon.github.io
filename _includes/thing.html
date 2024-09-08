@@ -13,7 +13,11 @@
 {% endcapture %}
 
 <dt id="{{ thing.slug }}">
-    <a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}</a>
+    <a href="#{{ thing.slug }}">{{ thing.status }} {{ thing.title }}
+        {% if thing.subtitle %}
+         ({{ thing.subtitle }})
+        {% endif %}
+    </a>
     <span class="daterange">{{ formattedDateRange }}</span>
 </dt>
 <dd>{{ thing.content }}</dd>
