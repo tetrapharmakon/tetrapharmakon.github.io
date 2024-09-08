@@ -6,6 +6,10 @@ gem "minima", "~> 2.5"
 gem "webrick", "~> 1.7"
 gem "github-pages", "~> 227", group: :jekyll_plugins
 
+
+gem "activesupport", ">= 6.1.7.5"
+
+
 # Github Pages plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
