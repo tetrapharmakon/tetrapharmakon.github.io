@@ -5,4 +5,4 @@ status: 🎤
 title: Yosegi@ULB
 ---
 
-[\[pdf\]](stuff/fix_slides.pdf) A talk at ULB about an almost finished preprint with I. Di Liberti.
+[\[pdf\]](stuff/unicity.pdf) A talk at ULB about an almost finished preprint with I. Di Liberti.
