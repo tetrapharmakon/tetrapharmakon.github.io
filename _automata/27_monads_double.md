@@ -6,10 +6,12 @@ title: Monads and limits in bicategories of circuits
 url: https://arxiv.org/abs/2501.01882
 ---
 
+[📄 PDF](stuff/Monads-and-limits-in-bicategories-of-circuit.pdf)
+
 ```bibtex
 @misc{loregian2025monadslimits,
       title={Monads and limits in bicategories of circuits}, 
-      author={Fosco Loregian},
+      author={Loregian, F.},
       year={2025},
       eprint={2501.01882},
       archivePrefix={arXiv},
