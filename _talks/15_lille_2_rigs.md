@@ -1,6 +1,5 @@
 ---
 datefrom: Dic 2024
-dateto: Dic 2024
 status: 🎤
 title: 2-(commutative algebra)
 subtitle: Lille
