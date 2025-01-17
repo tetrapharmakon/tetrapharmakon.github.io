@@ -48,3 +48,16 @@ body {
   .img-container {
     text-align: center;
   }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
