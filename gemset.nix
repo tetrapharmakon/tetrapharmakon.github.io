@@ -8,7 +8,7 @@
       sha256 = "1b23ihfqlv7cr5lk2nl3zk68b0mgckf6sl2vn0yi56xva9aq00bg";
       type = "gem";
     };
-    version = "6.0.6.1";
+    version = ">= 6.1.7.5";
   };
   addressable = {
     dependencies = ["public_suffix"];
