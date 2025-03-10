@@ -4,121 +4,84 @@ layout: default
 
 <header id="about-me">
 	<div class="card">
-		<h2 class="name">{{ site.data.profile.name }}</h2>
-		<div class="motto">{{ site.data.profile.motto }}</div>
-		<div class="avatar"></div>
-		<p class="bio">{{ site.data.profile.bio }}</p>
-	</div>
-	<nav>
-		<a href="#about-me" class="subNavBtn active">About</a>
-		<a href="#stuff-i-do" class="subNavBtn">Stuff</a>
-		<a href="#contacts" class="subNavBtn">Contacts</a>
-	</nav>
+  <div class="card-image">
+    <img src="../assets/snelli-me.jpg" alt="Your Picture">
+  </div>
+  <div class="card-content">
+    <h2 class="name">{{ site.data.profile.name }}</h2>
+    <div class="motto">{{ site.data.profile.motto }}</div>
+    <p class="bio">{{ site.data.profile.bio }}</p>
+  </div>
+</div>
+
+
 </header>
 
-<section id="stuff-i-do">
-	<h3>Publications</h3>
-	The research I have done so far, grouped by topic.
-	<h4>Homotopy theory</h4>
-	{% assign papers_ht = site.homotopy | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in papers_ht %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h4>2-categories</h4>
-		{% assign papers_two = site.twocat | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in papers_two %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h4>Coend calculus</h4>
-		{% assign papers_coend = site.coends | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in papers_coend %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h4>Petri nets</h4>
-		{% assign papers = site.petri | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in papers %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h4>Automata theory</h4>
-		{% assign papers = site.automata | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in papers %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h4>Miscellaneous works</h4>
-	{% assign papers_misc = site.miscpaper | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in papers_misc %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h3>Teaching</h3>
-	My teaching experience so far.
-	{% assign dida = site.dida | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in dida %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h3>Conferences</h3>
-	<h4>As speaker</h4>
-	{% assign conf_talk = site.talks | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in conf_talk %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h4>Organized</h4>
-	{% assign conf_org = site.organized | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in conf_org %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<h3>Reference Cards</h3>
-	The idea of having "reference cards" comes from <a href="https://www.math.unipd.it/~maurizio/RefCards.html">here</a>.
-	{% assign refcards = site.refcards | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in refcards %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl>
-	<!-- <h3>Miscellaneous</h3>
-	{% assign misc = site.misc | stuff_sort | reverse %}
-	<dl class="accordion">
-		{% for thing in misc %}
-			{% include thing.html content=thing %}
-		{% endfor %}
-	</dl> -->
-</section>
+<nav>
+	<a href="#about-me" class="subNavBtn active">About</a>
+	<a href="#stuff-i-do" class="subNavBtn">Stuff</a>
+	<a href="#contacts" class="subNavBtn">Contacts</a>
+</nav>
 
-<section id="contacts">
-	<h2>Contacts</h2>
-	<h5>Fosco G. Loregian</h5>
-	<p>
-		Akadeemia tee 21B,<br />
-		12618 Tallinn, Estonia 🇪🇪<br />
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4062.2081128331106!2d24.65804216790915!3d59.39797639293507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39ee76f4b627b504!2sBuilding%20of%20Cybernetics!5e0!3m2!1sit!2sit!4v1576080303160!5m2!1sit!2sit"
-			width="400"
-			height="200"
-			frameborder="0"
-			style="border:0;"
-			allowfullscreen=""
-		></iframe>
-	</p>
-	<p>
-		mail: <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a><br />
-		skype: fosco.loregian<br/>
-		github: tetrapharmakon<br/>
-	</p>
-</section>
+<div class="publications-container">
+	{% assign pubs = site.data.pub | sort: 'year' | reverse %}
+	
+	{% for pub in pubs %}
+	<div class="publication">
+			<h3 class="pub-title">{{ pub.title }}</h3>
+			<p class="pub-authors">{{ pub.authors }}</p>
+			<p class="pub-venue">
+					<span class="venue-name">{{ pub.venue }}</span>, 
+					<span class="pub-year">{{ pub.year }}</span>
+			</p>
+			
+			<div class="pub-links">
+					{% if pub.doi %}
+					<a href="https://doi.org/{{ pub.doi }}" class="pub-link doi-link" target="_blank">DOI</a>
+					{% endif %}
+					
+					{% if pub.url %}
+					<a href="{{ pub.url }}" class="pub-link paper-link" target="_blank">Paper</a>
+					{% endif %}
+			</div>
+			
+			{% if pub.tags %}
+			<div class="pub-tags">
+					{% for tag in pub.tags %}
+					<span class="tag">{{ tag }}</span>
+					{% endfor %}
+			</div>
+			{% endif %}
+	</div>
+	{% endfor %}
+</div>
+
+<footer>
+	<section id="contacts">
+			<div class="contact-container">
+					<div class="contact-map">
+						<iframe 
+						src="https://maps.google.com/maps?q=Akadeemia+tee+21B,+Tallinn,+Estonia&hl=en&output=embed" 
+						width="400" 
+						height="250" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy">
+				</iframe>
+				
+					</div>
+					<div class="contact-info">
+							<h2>Contacts</h2>
+							<h5>Fosco G. Loregian</h5>
+							<ul>
+									<li><strong>📍 Address:</strong> Akadeemia tee 21B, 12618 Tallinn, Estonia 🇪🇪</li>
+									<li><strong>📧 Email:</strong> <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
+									<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
+									</li>
+									<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon" target="_blank">tetrapharmakon</a></li>
+							</ul>
+					</div>
+			</div>
+	</section>
+</footer>
+
