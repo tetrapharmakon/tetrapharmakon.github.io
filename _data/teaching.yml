@@ -1,0 +1,54 @@
+teaching_activities:
+
+  - title: "ITI9200 - Introduction to Category Theory"
+    description: 'A course on basic category theory; at the <a href="https://tetrapharmakon.github.io/CourseCategoryTheory.html">course webpage</a> you find a diary of the lectures and study material.'
+    date: "Jan 2020 – May 2023"
+
+  - title: "Award for Researcher of the Year 2021"
+    date: "2021"
+
+  - title: "Organiser of ItaCa Fest"
+    description: "An online webinar aimed to gather the community of ItaCa."
+    date: "2020 – now"
+
+  - title: "Appointee for Adjoint school 2019"
+    description: "A webinar and online applied Category Theory reading course. The project name is Traversal optics and profunctors. Led to the development of arXiv:2001.07488."
+    date: "Mar 2019 – Jun 2019"
+
+  - title: "PSSL 103 - Brno"
+    description: "I have been one of the organizers of 103rd Peripathetic Seminar on Sheaves and Logic."
+    date: "April 2018"
+
+  - title: "Elements of Finite Mathematics"
+    description: "Techniques of counting, probability, discrete and continuous random variables."
+    date: "Autumn 2016"
+
+  - title: "Appointee for Kan Extension Seminar I"
+    description: "A webinar and online Category Theory reading course."
+    date: "Jan 2014 – Jul 2014"
+
+supervision_of_students:
+  - title: "Supervisor and advisor"
+    student: "G. Boccali"
+    description: "Project: On 2-categorical aspects of automata theory"
+
+  - title: "Supervisor and coadvisor"
+    student: "A. Laretto"
+    description: "Project: Dinaturality and type theory."
+
+  - title: "Mentor for the SIGPLAN-M"
+    student: "A. Laretto"
+    description: 'The SIGPLAN Long-Term Mentoring Committee (<a href="https://www.sigplan.org/LongTermMentoring/">SIGPLAN-M</a>) organizes an international long-term mentoring program for programming languages researchers.'
+
+  - title: "Supervisor for M.Sc. internship at TalTech"
+    student: "T. Massacrier"
+    description: "Project: From combinatorial species to general differential 2-rigs"
+
+  - title: "Supervisor and coadvisor M.Sc. in Mathematics"
+    student: "G. Sorgente"
+    description: "Thesis: Formal theory of promonads"
+
+  - title: "Supervisor and coadvisor B.Sc. in Mathematics"
+    student: "G. Ronchi"
+    description: "Thesis: Adjoint Functors"
+    link: "https://amslaurea.unibo.it"

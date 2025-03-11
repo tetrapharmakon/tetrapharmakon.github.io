@@ -60,13 +60,43 @@ layout: default
 
 
 <div class="teaching-container" id="teaching">
-	<h3>Teaching</h3>
-	... rebuilding
+	<h2>📖 Teaching & Organizational Activities</h2>
+	{% for item in site.data.teaching.teaching_activities %}
+	<div class="teaching-item">
+					<div class="teaching-header">
+									<h4 class="teaching-title">{{ item.title }}</h4>
+									{% if item.date %}
+									<span class="teaching-date">| {{ item.date }}</span>
+									{% endif %}
+					</div>
+					{% if item.description %}
+					<p class="teaching-desc">{{ item.description }}</p>
+					{% endif %}
+	</div>
+	{% endfor %}
+
+	<h2>🎓 Supervision of Students</h2>
+	{% for item in site.data.teaching.supervision_of_students %}
+	<div class="supervision-item">
+					<div class="supervision-header">
+									<h4 class="supervision-title">{{ item.title }}</h4>
+									{% if item.date %}
+									<span class="supervision-date">| {{ item.date }}</span>
+									{% endif %}
+					</div>
+					<p class="supervision-student"><em>Student: {{ item.student }}</em></p>
+					{% if item.description %}
+					<p class="supervision-desc">{{ item.description }}</p>
+					{% endif %}
+	</div>
+	{% endfor %}
 </div>
+
 <div class="magia-container" id="magia">
 	<h3>Magia</h3>
 	... rebuilding
 </div>
+
 <footer>
 	<section id="contacts">
 			<div class="contact-container">

@@ -1,20 +1,20 @@
 /* Main website styling with refined aesthetics */
 :root {
-  --primary-color: #4a5568;        /* Slate gray */
-  --secondary-color: #1a202c;      /* Dark slate */
-  --accent-color: #718096;         /* Medium gray */
-  --highlight-color: #805ad5;      /* Soft purple */
-  --background-color: #f7f7f7;     /* Light gray */
-  --card-bg-color: #ffffff;        /* White */
-  --text-color: #2d3748;           /* Dark gray */
-  --light-text: #718096;           /* Medium gray */
-  --border-radius: 3px;
-  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --card-hover-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  --container-width: 900px;
-  --header-height: 60px;
-  --font-heading: 'Georgia', serif;
-  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --primary-color: #2A2E35;        /* Charcoal Gray */
+  --secondary-color: #161A1D;      /* Deep Black-Gray */
+  --accent-color: #5A7D9A;         /* Desaturated Blue */
+  --highlight-color: #E63946;      /* Vibrant Red */
+  --background-color: #F4F4F4;     /* Soft Off-White */
+  --card-bg-color: #ffffff;        /* Pure White */
+  --text-color: #1E1E1E;           /* High Contrast Black */
+  --light-text: #5A7D9A;           /* Soft Blue-Grey */
+  --border-radius: 6px;            /* Slightly rounded for modern feel */
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  --container-width: 960px;        /* Slightly wider for a spacious layout */
+  --header-height: 64px;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 /* Base styling */
@@ -491,34 +491,63 @@ footer {
   }
 }
 
-.teaching-container, .magia-container {
-  width: 80%; /* Keeps content readable */
-  max-width: 800px; /* Prevents excessive width */
-  margin: 40px auto; /* Centers the div and adds spacing */
+.teaching-container {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
-  border-radius: 12px; /* Soft rounded edges */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  background: white; /* Clean background */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
 }
 
-.teaching-container:hover, .magia-container:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+.teaching-item, .supervision-item {
+  /* border-left: 4px solid var(--highlight-color); */
+  padding: 8px 12px; /* Reduced padding */
+  margin-bottom: 10px; /* Less gap between items */
+  background: var(--background-color);
+  border-radius: var(--border-radius);
 }
 
-.teaching-container h3, .magia-container h3 {
-  font-size: 24px; /* Larger headings */
-  font-family: "Poppins", sans-serif; /* Clean, modern font */
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center; /* Centers headings */
+.teaching-header, .supervision-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.teaching-title, .supervision-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.teaching-date, .supervision-date {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  margin-left: 10px;
+}
+
+.teaching-desc, .supervision-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.4;
+  /* margin-top: 3px; Reduced space */
+  padding-left: 5px; /* Slight indentation */
+  /* border-left: 3px solid var(--accent-color); Subtle left accent */
+}
+
+.supervision-student {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
 
 .teaching-container {
-  border-left: 5px solid #007bff; /* Blue accent for Teaching */
+  border-left: 5px solid var(--accent-color); /* Desaturated Blue */
 }
 
 .magia-container {
-  border-left: 5px solid #ff6600; /* Orange accent for Magia */
+  border-left: 5px solid var(--highlight-color); /* Vibrant Red */
 }
