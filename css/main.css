@@ -187,10 +187,6 @@ a:hover {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 }
 
-.card:hover {
-  /* transform: translateY(-2px);
-  box-shadow: var(--card-hover-shadow); */
-}
 .card-content {
   flex: 1; /* Makes content take half of the space */
   padding: 20px;
