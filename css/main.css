@@ -544,10 +544,18 @@ footer {
 }
 
 
-.teaching-container {
+.teaching-container, .magia-container {
   border-left: 5px solid var(--accent-color); /* Desaturated Blue */
 }
 
+/* .magia-container {
+  border-left: 5px solid var(--highlight-color); } */
+/* 
 .magia-container {
-  border-left: 5px solid var(--highlight-color); /* Vibrant Red */
-}
+  clear: both; 
+  padding: 15px;
+  background: var(--card-bg-color);
+  border-left: 4px solid var(--highlight-color);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+} */
