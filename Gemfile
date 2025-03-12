@@ -4,7 +4,7 @@ source "https://rubygems.org"
 # Gems dependencies to be installed
 gem "minima", "~> 2.5"
 gem "webrick", "~> 1.8"
-gem "github-pages", "~> 227", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Github Pages plugins
 group :jekyll_plugins do
