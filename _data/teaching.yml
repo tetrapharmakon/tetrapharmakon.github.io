@@ -1,30 +1,31 @@
 teaching_activities:
 
-  - title: "ITI9200 - Introduction to Category Theory"
-    description: 'A course on basic category theory; at the <a href="https://tetrapharmakon.github.io/CourseCategoryTheory.html">course webpage</a> you find a diary of the lectures and study material.'
-    date: "Jan 2020 – May 2023"
+  - title: "ITI9200 - Introduction to Category Theory | <a href='https://tetrapharmakon.github.io/CourseCategoryTheory.html'>🌐</a>"
+    date: "2020 – 2025"
+  - title: "Organiser of ItaCa Fest | <a href='https://www.ioc.ee/~amar/pssl110/'>🌐</a>"
+    date: "2020 – 2025"
+
+  - title: "Organizer of PSSL110 | <a href='https://www.ioc.ee/~amar/pssl110/'>🌐</a>"
+    date: "May 2025"
 
   - title: "Award for Researcher of the Year 2021"
     date: "2021"
 
-  - title: "Organiser of ItaCa Fest"
-    description: "An online webinar aimed to gather the community of ItaCa."
-    date: "2020 – now"
 
   - title: "Appointee for Adjoint school 2019"
-    description: "A webinar and online applied Category Theory reading course. The project name is Traversal optics and profunctors. Led to the development of arXiv:2001.07488."
+    # description: "A webinar and online applied Category Theory reading course. The project name is Traversal optics and profunctors. Led to the development of arXiv:2001.07488."
     date: "Mar 2019 – Jun 2019"
 
   - title: "PSSL 103 - Brno"
-    description: "I have been one of the organizers of 103rd Peripathetic Seminar on Sheaves and Logic."
+    # description: "The 103rd Peripathetic Seminar on Sheaves and Logic took place in Brno."
     date: "April 2018"
 
   - title: "Elements of Finite Mathematics"
     description: "Techniques of counting, probability, discrete and continuous random variables."
     date: "Autumn 2016"
 
-  - title: "Appointee for Kan Extension Seminar I"
-    description: "A webinar and online Category Theory reading course."
+  - title: "Kan Extension Seminar I | <a href='https://math.jhu.edu/~eriehl/kan/'>🌐</a>"
+    # description: "A webinar and online Category Theory reading course."
     date: "Jan 2014 – Jul 2014"
 
 supervision_of_students:
@@ -34,7 +35,7 @@ supervision_of_students:
 
   - title: "Supervisor and coadvisor"
     student: "A. Laretto"
-    description: "Project: Dinaturality and type theory."
+    description: "Project: Dinaturality and type theory"
 
   - title: "Mentor for the SIGPLAN-M"
     student: "A. Laretto"

@@ -57,6 +57,40 @@ layout: default
 	</div>
 	{% endfor %}
 </div>
+<!-- preprints -->
+<!-- <div class="publications-container">
+{% assign pres = site.data.preprints | sort: 'year' | reverse %}
+	
+{% for pub in pres %}
+<div class="publication">
+		<h3 class="pub-title">{{ pub.title }}</h3>
+		<p class="pub-authors">{{ pub.authors }}</p>
+		<p class="pub-venue">
+				<span class="venue-name">{{ pub.venue }}</span>, 
+				<span class="pub-year">{{ pub.year }}</span>
+		</p>
+		
+		<div class="pub-links">
+				{% if pub.doi %}
+				<a href="https://doi.org/{{ pub.doi }}" class="pub-link doi-link" target="_blank">DOI</a>
+				{% endif %}
+				
+				{% if pub.url %}
+				<a href="{{ pub.url }}" class="pub-link paper-link" target="_blank">Paper</a>
+				{% endif %}
+		</div>
+		
+		{% if pub.tags %}
+		<div class="pub-tags">
+				{% for tag in pub.tags %}
+				<span class="tag">{{ tag }}</span>
+				{% endfor %}
+		</div>
+		{% endif %}
+</div>
+{% endfor %}
+</div>
+</div> -->
 
 
 <div class="teaching-container" id="teaching">
