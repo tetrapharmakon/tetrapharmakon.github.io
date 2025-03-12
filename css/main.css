@@ -488,7 +488,8 @@ footer {
 }
 
 .teaching-container {
-  max-width: 900px;
+  /* max-width: 900px; */
+  max-width: 70%;
   margin: 40px auto;
   padding: 20px;
   background: var(--card-bg-color);
