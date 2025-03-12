@@ -1,0 +1,185 @@
+- title: Adjoint functor theorems for lax-idempotent pseudomonads
+  authors: "N. Arkor, I. Di Liberti, \u2014"
+  venue: Theory and Applications of Categories
+  year: 2024
+  url: http://www.tac.mta.ca/tac/volumes/41/20/41-20.pdf
+  volume: '41'
+  number: '20'
+  pages: 667--685
+  month: '06'
+- title: Automata and coalgebras in categories of species
+  authors: Fosco Loregian
+  venue: Coalgebraic Methods in Computer Science
+  year: 2024
+  doi: 10.1007/978-3-031-66438-0_4
+  url: http://dx.doi.org/10.1007/978-3-031-66438-0_4
+  pages: "65\u201392"
+- title: Bicategories of automata, automata in bicategories
+  authors: "G. Boccali, A. Laretto, \u2014, S. Luneia"
+  venue: Proceedings of the 6th International Conference on Applied Category Theory
+    2023
+  year: 2023
+  doi: 10.4204/EPTCS.397.1
+  url: https://doi.org/10.4204/EPTCS.397.1
+  volume: '397'
+  pages: 1-19
+- title: Completeness for categories of generalized automata
+  authors: "G. Boccali, A. Laretto, \u2014, S. Luneia"
+  venue: 10th Conference on Algebra and Coalgebra in Computer Science (CALCO 2023)
+  year: 2023
+  doi: 10.4230/LIPIcs.CALCO.2023.20
+  url: https://drops.dagstuhl.de/opus/volltexte/2023/18817
+  volume: '270'
+  pages: 20:1--20:14
+- title: Differential 2-rigs
+  authors: "\u2014, T. Trimble"
+  venue: Electronic Proceedings in Theoretical Computer Science
+  year: 2023
+  doi: 10.4204/eptcs.380.10
+  url: http://dx.doi.org/10.4204/EPTCS.380.10
+  volume: '380'
+  pages: "159\u2013182"
+  month: August
+- title: 'Fibrational linguistics (fiblang): language acquisition'
+  authors: "F. Genovese, \u2014, C. Puca"
+  venue: Electronic Proceedings in Theoretical Computer Science
+  year: 2023
+  doi: 10.4204/eptcs.380.13
+  url: http://dx.doi.org/10.4204/EPTCS.380.13
+  volume: '380'
+  pages: "224\u2013236"
+  month: August
+- title: Accessibility and presentability in 2-categories
+  authors: "I. Di Liberti, \u2014"
+  venue: Journal of Pure and Applied Algebra
+  year: 2023
+  doi: 10.1016/j.jpaa.2022.107155
+  url: https://www.sciencedirect.com/science/article/pii/S0022404922001517
+  volume: '227'
+  number: '1'
+  pages: '107155'
+- title: A categorical semantics for bounded Petri nets
+  authors: "F. Genovese, \u2014, D. Palombi"
+  venue: Electronic Proceedings in Theoretical Computer Science
+  year: 2022
+  doi: 10.4204/eptcs.372.5
+  url: https://doi.org/10.4204/eptcs.372.5
+  volume: '372'
+  pages: 59--71
+  month: November
+- title: Coends of higher arity
+  authors: "\u2014, E. Oliveira Santos"
+  venue: Applied Categorical Structures
+  year: 2022
+  doi: 10.1007/s10485-021-09653-x
+  url: https://doi.org/10.1007/s10485-021-09653-x
+  volume: '30'
+  number: '1'
+  pages: 173-221
+  month: Feb
+- title: Escrows are optics
+  authors: "F. Genovese, \u2014, D. Palombi"
+  venue: The Journal of Financial Technology
+  year: 2021
+  url: https://arxiv.org/abs/2105.10028
+- title: A categorical semantics for hierarchical Petri nets
+  authors: "F. Genovese, \u2014, D. Palombi"
+  venue: Electronic Proceedings in Theoretical Computer Science
+  year: 2021
+  doi: 10.4204/eptcs.350.4
+  url: https://doi.org/10.4204/eptcs.350.4
+  volume: '350'
+  pages: 51--68
+  month: December
+- title: 'Nets with mana: a framework for chemical reaction modelling'
+  authors: "F. Genovese, \u2014, D. Palombi"
+  venue: Graph Transformation
+  year: 2021
+  doi: 10.1007/978-3-030-78946-6_10
+  url: https://doi.org/10.1007/978-3-030-78946-6_10
+  pages: 185--202
+- title: Functorial semantics for partial theories
+  authors: "I. Di Liberti, \u2014, C. Nester, P. Soboci\u0144ski"
+  venue: Proc. ACM Program. Lang.
+  year: 2021
+  doi: 10.1145/3434338
+  url: https://doi.org/10.1145/3434338
+  volume: '5'
+  number: POPL
+  month: jan
+- title: (Co)end calculus
+  authors: "\u2014"
+  venue: Cambridge University Press
+  year: 2021
+  doi: 10.1017/9781108778657
+  url: https://doi.org/10.1017/9781108778657
+  month: June
+- title: Profunctor optics, a categorical update
+  authors: "B. Clarke, D. Elkins, J. Gibbons, \u2014, B. Milewski, E. Pillmore, M.\
+    \ Rom\xE1n"
+  venue: arXiv
+  year: 2020
+  doi: 10.32408/compositionality-6-1
+  url: https://arxiv.org/abs/2001.07488
+- title: Triangulated factorization systems and t-structures
+  authors: "\u2014, S. Virili"
+  venue: Journal of Algebra
+  year: 2020
+  doi: 10.1016/j.jalgebra.2019.12.021
+  url: https://www.sciencedirect.com/science/article/pii/S0021869320300296
+  volume: '550'
+  pages: 219-241
+- title: Categorical notions of fibration
+  authors: "\u2014, E. Riehl"
+  venue: Expositiones Mathematicae
+  year: 2020
+  doi: 10.1016/j.exmath.2019.02.004
+  url: https://www.sciencedirect.com/science/article/pii/S0723086918300872
+  volume: '38'
+  number: '4'
+  pages: 496-514
+- title: Hearts and towers in stable $\infty$-categories
+  authors: "D. Fiorenza, \u2014, G.L. Marchetti"
+  venue: Journal of Homotopy and Related Structures
+  year: 2019
+  doi: 10.1007/s40062-019-00237-0
+  url: https://doi.org/10.1007/s40062-019-00237-0
+  volume: '14'
+  number: '4'
+  pages: 993--1042
+  month: May
+- title: A standard theorem on adjunctions in two variables
+  authors: "\u2014"
+  venue: Preprints of the MPIM
+  year: 2018
+  url: https://archive.mpim-bonn.mpg.de/id/eprint/2036/1/preprint_2018_67.pdf
+  number: '67'
+  month: dec
+- title: A Fubini rule for $\infty$-coends
+  authors: "\u2014"
+  venue: Preprints of the MPIM
+  year: 2018
+  url: https://archive.mpim-bonn.mpg.de/id/eprint/1230/1/preprint_2018_68.pdf
+  number: '68'
+  month: dec
+- title: Homotopical algebra is not concrete
+  authors: "I. Di Liberti, \u2014"
+  venue: Journal of Homotopy and Related Structures
+  year: 2018
+  doi: 10.1007/s40062-018-0197-3
+  url: https://doi.org/10.1007/s40062-018-0197-3
+  volume: '13'
+  number: '3'
+  pages: 673-687
+  month: Sep
+- title: t-structures are normal torsion theories
+  authors: "D. Fiorenza, \u2014"
+  venue: Applied Categorical Structures
+  year: 2016
+  doi: 10.1007/s10485-015-9393-z
+  url: https://doi.org/10.1007/s10485-015-9393-z
+  volume: '24'
+  number: '2'
+  pages: 181-208
+  month: Apr
+

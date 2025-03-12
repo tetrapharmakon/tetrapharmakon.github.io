@@ -1,0 +1,15 @@
+- title: "Paper Title 1"
+  authors: "Your Name, Co-author Name, Another Author"
+  venue: "Journal of Important Research"
+  year: 2023
+  doi: "10.1234/example.123"
+  url: "https://example.com/paper1"
+  tags: ["machine learning", "computer vision"]
+
+- title: "Paper Title 2"
+  authors: "Your Name, Different Co-author"
+  venue: "Conference on Interesting Topics"
+  year: 2022
+  doi: "10.1234/example.456"
+  url: "https://example.com/paper2"
+  tags: ["natural language processing"]

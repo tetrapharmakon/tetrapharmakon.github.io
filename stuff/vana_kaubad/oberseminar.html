@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MPI-Oberseminar</title>
+<meta name="author" content="(Fosco Loregian)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>MPI-Oberseminar</h2><h3>Fosco Loregian</h3><h5><a href="mailto:flore@mpim-bonn.mpg.de">flore@mpim-bonn.mpg.de</a></h5>
+</section>
+
+<section>
+<section id="slide-org46f9e83">
+<h2 id="org46f9e83">I do <font color="yellow">formal category theory</font></h2>
+<ul>
+<li>A kind of 2-dimensional category theory</li>
+<li>finds categorical patterns <font color="white">inside</font> category theory</li>
+
+</ul>
+
+</section>
+<section id="slide-org14d2baa">
+<h3 id="org14d2baa"></h3>
+<blockquote nil>
+<p>
+«The purpose of category theory is to try to <font color="white">describe certain
+general aspects of the structure of mathematics</font>. Since category theory is
+also part of mathematics, this categorical type of description should apply to
+it as well as to other parts of mathematics.
+</p>
+
+<p>
+[O]ne should attempt to identify those properties that enable one to do the
+"<font color="white">structural parts of category theory</font>".» &#x2013;
+[<font color="pink">Gra74</font>]
+</p>
+</blockquote>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org9f82dde">
+<h2 id="org9f82dde">Euclid theorem</h2>
+<p>
+<font color="yellow"> FCT : CT = CT : MATH</font>
+</p>
+
+<p>
+(and perhaps \(\text{FCT} = \frac{\text{CT}^2}{\text{MATH}}\))
+</p>
+
+<ul>
+<li>CT = Mathematics of Mathematics</li>
+<li><font color="white">FCT = category theory of category theory</font>.</li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7910614">
+<h2 id="org7910614">Commandments</h2>
+<aside class="notes">
+<p>
+Like all respectable religions, formal category theory comes equipped with commandments.
+</p>
+
+</aside>
+
+<ol>
+<li>Thou shalt not look inside objects of \(\cal K\)</li>
+<li>Thou shalt define properties <font color="yellow">internally</font>
+<ol>
+<li>via Kan extensions/lifts</li>
+<li>via weighted/pseudo-limits</li>
+
+</ol></li>
+<li><font color="yellow">category theory</font> \(=\) corollaries of the Yoneda lemma
+[<font color="pink">SW78</font>]</li>
+<li><font color="yellow">algebra</font> \(=\) theory of monads and their algebras [<font color="pink">BK89</font>]</li>
+
+</ol>
+
+</section>
+<section id="slide-org0686eb5">
+<h3 id="org0686eb5">We shall take commandment 3 very seriously&hellip;</h3>
+<blockquote nil>
+<p>
+<font color="orange">Yoneda structure</font> on \(\mathcal{K}\): 
+</p>
+</blockquote>
+
+<ol>
+<li>a class  of 0-cells \(\mathcal{K}_s\) of "small" objects</li>
+<li><p>
+a class of 1-cells \(y_A : A \to \boldsymbol{P}\! A\), one for each small \(A\)
+</p>
+<ul>
+<li>Each \((y_A, f : A \to B)\) determines a <font color="yellow">left extension</font></li>
+
+</ul>
+<p>
+\[\text{Lan}_fy_A : B \to \boldsymbol{P}\! A\]
+</p>
+<ul>
+<li>Each \(y_A\) is <font color="yellow">fully faithful and dense</font> (an "arity");</li>
+<li>The correspondence \(A\mapsto \boldsymbol{P}\! A\) is a</li>
+
+</ul>
+<p>
+<font color="yellow">pseudofunctor</font> \(\mathcal{K}_s^\text{coop} \to \mathcal{K}\).
+</p></li>
+
+</ol>
+
+</section>
+<section id="slide-org6081c1c">
+<h3 id="org6081c1c">&hellip; But there are other choices</h3>
+<blockquote nil>
+<p>
+<font color="orange">Proarrow equipment</font> on \(\mathcal K\): 
+</p>
+</blockquote>
+
+<p>
+a locally fully faithful 2-functor \(\iota : \mathcal{K} \to
+\overline{\mathcal{K}}\)
+</p>
+
+<ul>
+<li>it is the <font color="yellow">identity on objects</font></li>
+<li>for each \(f\in \mathcal{K}(A,B)\), \(\iota(f)\) has a <font color="yellow">left adjoint</font>
+\(\iota_! f\) in \(\overline{\mathcal{K}}(A,B)\).</li>
+
+</ul>
+
+
+</section>
+<section id="slide-org78e901a">
+<h3 id="org78e901a">An equipment is</h3>
+<ul>
+<li>Modeled on the embedding of categories in the bicategory of
+<font color="yellow">profunctors</font> (bimodules? distributors?)</li>
+<li>an old idea, settled in [<font color="pink">Woo82</font>, <font color="pink">Woo85</font>]
+with obscure notation; nobody developed it</li>
+<li>a mysterious structure: axioms were later extended to <font color="yellow">six</font>
+in [<font color="pink">RW88</font>]: do we really need them all? <font color="white">
+  Why?</font></li>
+
+</ul>
+
+<p>
+Today, it's way better to employ <font color="yellow"> (hyper)virtual double
+categories</font> and <font color="yellow"> virtual equipments</font>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf73d4bf">
+<h2 id="orgf73d4bf">Mid-term goals</h2>
+<ol>
+<li><font color="white">Relate</font> these two apparently disconnected paradigms</li>
+<li>Find <font color="white">applications</font> to category theory:
+<ul>
+<li>Done in <font color="pink">arXiv1804.08710</font>; def. of a
+<font color="yellow">locally presentable object</font> in a 2-category w/ a YS;
+unifies all instances of such.</li>
+<li><font color="pink">Work in progress</font>: the formal theory of
+<font color="yellow">Isbell duality</font>;</li>
+<li><font color="pink">Work in progress</font>: unified approach to
+<font color="yellow">syntax-semantics dualities</font> through Yoneda structures;</li>
+<li><font color="pink">Work in progress</font>: find Yoneda structures on the
+2-category of <font color="yellow">(pre)derivators</font>.</li>
+
+</ul></li>
+
+</ol>
+
+
+</section>
+<section id="slide-org554787b">
+<h3 id="org554787b">Strategy for Goal 1</h3>
+<ul>
+<li>Study <font color="yellow">good</font> categories: \(\mathcal{K}\) is co/complete,
+cartesian closed and strongly enriched over <b>CAT</b>;</li>
+<li>Study <font color="yellow">good</font> Yoneda structures where \(\boldsymbol{P}\) is
+representable: such \(\boldsymbol{P}\) all have left adjoints
+\(\boldsymbol{P}^!\);</li>
+<li>Treat \(\boldsymbol{P}\) as a <font color="yellow">relative pseudomonad</font> (like a
+monad, but not an endofunctor):
+<ul>
+<li>the Yoneda embedding is a unit \(\eta_A : A \to \boldsymbol{P}\! A\);</li>
+<li>there is a skew-multiplication \(\mu_A : \boldsymbol{P}\! A \to \text{Lan}_J
+    \boldsymbol{P} (\boldsymbol{P}\! A)\).</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org5c7d47d">
+<h3 id="org5c7d47d">Strategy for Goal 1</h3>
+<blockquote nil>
+<p>
+The relative pseudomonad <b>P</b> = [ _ °, <b>Set</b> ] has a Kleisli bicategory Kl(<b>P</b>)
+which is a proarrow equipment. &#x2013; [<font color="pink">FGHW16</font>]
+</p>
+</blockquote>
+
+<p>
+This is a particular instance of
+</p>
+
+<blockquote nil>
+<p>
+The relative pseudomonad <b>P</b> of a Yoneda structure has a Kleisli
+<font color="yellow">virtual double category</font>.
+</p>
+
+<ul>
+<li>If <b>P</b> is good, Kl(<b>P</b>) is a virtual equipment</li>
+<li>If <b>P</b> is very good, Kl(<b>P</b>) is an equipment</li>
+
+</ul>
+</blockquote>
+
+</section>
+</section>
+<section>
+<section id="slide-org6163dc8">
+<h2 id="org6163dc8">Thanks!</h2>
+<div class="outline-text-2" id="text-org6163dc8">
+</div>
+</section>
+<section id="slide-org5e54a79">
+<h3 id="org5e54a79">References</h3>
+<ul>
+<li>[BK89] R. Blackwell, G.M. Kelly, and A.J. Power. "<font color="white">
+  Two-dimensional monad theory.</font>" <i>Journal of pure and applied algebra 59.1</i>
+(1989): 1-41.</li>
+<li>[FGWH16] Fiore, M., et al., "<font color="white"> Relative pseudomonads</font>" <i>Selecta Mathematica</i>
+24.3 (2018): 2791-2830.</li>
+<li>[Gra74] Gray, J.W., <i><font color="white"> Formal category theory: adjointness for
+  2-categories</font></i>. Vol. 391. Springer, 2006.</li>
+
+</ul>
+
+</section>
+<section id="slide-org986ae01">
+<h3 id="org986ae01">References</h3>
+<ul>
+<li>[RW88] Rosebrugh, R., and R.J. Wood., "<font color="white"> Proarrows and
+  cofibrations.</font>" <i>Journal of Pure and Applied Algebra 53.3</i> (1988): 271-296.</li>
+<li>[SW78] Street, R., and Walters, R,. "<font color="white"> Yoneda structures on
+  2-categories.</font>" <i>Journal of Algebra 50.2</i> (1978): 350-379.</li>
+<li>[Woo82] Wood, R.J., "<font color="white"> Abstract pro arrows I.</font>" <i>Cahiers de
+topologie et géometrie différentielle categoriques 23.3</i> (1982): 279-290.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
