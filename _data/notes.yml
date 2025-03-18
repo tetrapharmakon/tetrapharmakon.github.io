@@ -1,69 +1,92 @@
 - title: "Bicategorical Automata – TallCats Talk"
   url: "stuff/beamers/bicat-automata-tallcats-talk.pdf"
+  description: "description here"
 
 - title: "Chu Reading Group Talk (Part 1)"
   url: "stuff/beamers/chu-reading-group-talk.pdf"
+  description: "description here"
 
 - title: "Chu Reading Group Talk (Part 2)"
   url: "stuff/beamers/chu-reading-group-talk-2.pdf"
+  description: "description here"
 
 - title: "Cohesive toposes in Rome"
   url: "stuff/beamers/cohesive_rome.pdf"
+  description: "description here"
 
 - title: "CT24 Slides"
   url: "stuff/beamers/CT24_slides_handout.pdf"
+  description: "description here"
 
 - title: "Differential 2-Rigs – TallCats Talk"
   url: "stuff/beamers/diff-2-rigs-tallcats-talk.pdf"
+  description: "description here"
 
 - title: "Fibrations of Algebras"
   url: "stuff/beamers/fibalgebras-handout.pdf"
+  description: "description here"
 
 - title: "FibLang – TallCats Talk"
   url: "stuff/beamers/fiblang-tallcats-talk.pdf"
+  description: "description here"
 
 - title: "Fibrations of Algebra – Udine"
   url: "stuff/beamers/foa-udine-handout.pdf"
+  description: "description here"
 
 - title: "Partial Lawvere theories Talk – Torino"
   url: "stuff/beamers/funsempar-talk-torino.pdf"
+  description: "description here"
 
 
 - title: "Coend calculus – ItaCa19 Talk"
   url: "stuff/beamers/itaca19-milano-talk.pdf"
+  description: "description here"
 
 - title: "Higher Arity Coends – ItaCa20 Talk"
   url: "stuff/beamers/higher-arity-coends-handout.pdf"
+  description: "description here"
 
 - title: "ItaCa23 – Torino Talk"
   url: "stuff/beamers/itaca23-torino-talk.pdf"
+  description: "description here"
 
 - title: "ItaCa24 – Padova Talk"
   url: "stuff/beamers/ItaCa24-padova-talk.pdf"
+  description: "description here"
 
 - title: "Fibrations of Algebras – Ferrara"
   url: "stuff/beamers/main-FE-handout.pdf"
+  description: "description here"
 
 - title: "Talk differential 2-rigs – Lille"
   url: "stuff/beamers/main-lille-handout.pdf"
+  description: "description here"
 
 - title: "AILA Talk – Udine"
   url: "stuff/beamers/main-UD-handout.pdf"
+  description: "description here"
 
 - title: "ProSem Beamer"
   url: "stuff/beamers/prosem-beamer.pdf"
+  description: "description here"
 
 - title: "Refcard: Kan Extensions"
   url: "stuff/beamers/REFCARDS_kan.pdf"
+  description: "description here"
 
 - title: "Refcard: Monoidal Derivators"
   url: "stuff/beamers/REFCARDS_monoidal_derivators.pdf"
+  description: "description here"
 
 - title: "Tanguy Beamer"
   url: "stuff/beamers/tanguy_beamer.pdf"
+  description: "description here"
 
 - title: "Unicity Talk – Brussels"
   url: "stuff/beamers/unicity-talk-brussels.pdf"
+  description: "description here"
 
 - title: "Walters Tribute Talk"
   url: "stuff/beamers/walters-tribute-talk.pdf"
+  description: "description here"

@@ -132,15 +132,20 @@ layout: default
 </div> -->
 <div class="notes-container" id="notes">
 	<h3>📝 Notes, Drafts, Talks</h3>
-	<ul class="notes-list">
+	<div class="notes-grid">
 					{% for note in site.data.notes %}
-					<li class="note-item">
-									<a href="{{ note.url }}" class="note-link" target="_blank">
-													📄 {{ note.title }}
-									</a>
-					</li>
+					<div class="note-card">
+									<h4 class="note-title">
+													<a href="{{ note.url }}" class="note-link" target="_blank">
+																	📄 {{ note.title }}
+													</a>
+									</h4>
+									{% if note.description %}
+									<p class="note-description">{{ note.description }}</p>
+									{% endif %}
+					</div>
 					{% endfor %}
-	</ul>
+	</div>
 </div>
 
 
