@@ -486,6 +486,37 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+.notes-container {
+  border-left: 5px solid var(--highlight-color); /* Accent color */
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+  background: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+}
+
+.notes-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.notes-list li {
+  margin: 8px 0;
+}
+
+.note-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.note-link:hover {
+  color: var(--highlight-color);
+}
+
 
 .teaching-container {
   /* max-width: 900px; */

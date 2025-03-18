@@ -130,6 +130,21 @@ layout: default
 	<h3>Magia</h3>
 	... rebuilding
 </div> -->
+<div class="notes-container" id="notes">
+	<h3>📝 Notes, Drafts, Talks</h3>
+	<ul class="notes-list">
+					{% for note in site.data.notes %}
+					<li class="note-item">
+									<a href="/path/to/pdf/folder/{{ note.url }}" class="note-link" target="_blank">
+													📄 {{ note.title }}
+									</a>
+									<!-- <span class="note-meta">{{ note.url }}</span> -->
+					</li>
+					{% endfor %}
+	</ul>
+</div>
+
+
 
 <footer>
 	<section id="contacts">
