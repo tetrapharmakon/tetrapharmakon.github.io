@@ -135,10 +135,9 @@ layout: default
 	<ul class="notes-list">
 					{% for note in site.data.notes %}
 					<li class="note-item">
-									<a href="/path/to/pdf/folder/{{ note.url }}" class="note-link" target="_blank">
+									<a href="{{ note.url }}" class="note-link" target="_blank">
 													📄 {{ note.title }}
 									</a>
-									<!-- <span class="note-meta">{{ note.url }}</span> -->
 					</li>
 					{% endfor %}
 	</ul>
