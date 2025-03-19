@@ -22,7 +22,7 @@ layout: default
 	<a href="#stuff-i-do" class="subNavBtn">Stuff</a>
 	<a href="#contacts" class="subNavBtn">Contacts</a>
 	<a href="#teaching" class="subNavBtn">Teaching</a>
-	<!-- <a href="#magia" class="subNavBtn">Magia</a> -->
+	<a href="#notes" class="subNavBtn">Notes</a>
 </nav>
 
 <div class="publications-container" id="stuff-i-do">
@@ -148,7 +148,23 @@ layout: default
 	</div>
 </div>
 
-
+<div class="notes-container" id="notes">
+	<h3>Magia Mathematica</h3>
+	<div class="notes-grid">
+					{% for thing in site.data.magia %}
+					<div class="note-card">
+									<h4 class="note-title">
+													<a href="{{ thing.url }}" class="note-link" target="_blank">
+																	📄 {{ thing.title }}
+													</a>
+									</h4>
+									{% if thing.description %}
+									<p class="note-description">{{ thing.description }}</p>
+									{% endif %}
+					</div>
+					{% endfor %}
+	</div>
+</div>
 
 <footer>
 	<section id="contacts">
