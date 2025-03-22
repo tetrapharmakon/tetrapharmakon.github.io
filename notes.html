@@ -2,32 +2,51 @@
 layout: default
 ---
 
-<header id="about-me">
-	<div class="card">
-  <div class="card-image">
-    <img src="../assets/snelli-me.jpg" alt="Your Picture">
-  </div>
-  <div class="card-content">
-    <h2 class="name">{{ site.data.profile.name }}</h2>
-    <div class="motto">{{ site.data.profile.motto }}</div>
-    <p class="bio">{{ site.data.profile.bio }}</p>
-  </div>
-</div>
-
-
-</header>
-
 <nav>
-	<a href="#about-me" class="subNavBtn active">About</a>
+	<a href="index.html" class="subNavBtn active">About</a>
 	<a href="stuff-i-do.html" class="subNavBtn">Stuff</a>
 	<a href="#contacts" class="subNavBtn">Contacts</a>
 	<a href="teaching.html" class="subNavBtn">Teaching</a>
-	<a href="notes.html" class="subNavBtn">Notes</a>
+	Notes
 </nav>
 
 
 
+<div class="notes-container" id="notes">
+	<h3>📝 Notes, Drafts, Talks</h3>
+	<div class="notes-grid">
+					{% for note in site.data.notes %}
+					<div class="note-card">
+									<h4 class="note-title">
+													<a href="{{ note.url }}" class="note-link" target="_blank">
+																	📄 {{ note.title }}
+													</a>
+									</h4>
+									{% if note.description %}
+									<p class="note-description">{{ note.description }}</p>
+									{% endif %}
+					</div>
+					{% endfor %}
+	</div>
+</div>
 
+<div class="notes-container" id="notes">
+	<h3>Magia Mathematica</h3>
+	<div class="notes-grid">
+					{% for thing in site.data.magia %}
+					<div class="note-card">
+									<h4 class="note-title">
+													<a href="{{ thing.url }}" class="note-link" target="_blank">
+																	📄 {{ thing.title }}
+													</a>
+									</h4>
+									{% if thing.description %}
+									<p class="note-description">{{ thing.description }}</p>
+									{% endif %}
+					</div>
+					{% endfor %}
+	</div>
+</div>
 
 <footer>
 	<section id="contacts">

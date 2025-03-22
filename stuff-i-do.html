@@ -2,32 +2,47 @@
 layout: default
 ---
 
-<header id="about-me">
-	<div class="card">
-  <div class="card-image">
-    <img src="../assets/snelli-me.jpg" alt="Your Picture">
-  </div>
-  <div class="card-content">
-    <h2 class="name">{{ site.data.profile.name }}</h2>
-    <div class="motto">{{ site.data.profile.motto }}</div>
-    <p class="bio">{{ site.data.profile.bio }}</p>
-  </div>
-</div>
-
-
-</header>
-
 <nav>
-	<a href="#about-me" class="subNavBtn active">About</a>
-	<a href="stuff-i-do.html" class="subNavBtn">Stuff</a>
+	<a href="index.html" class="subNavBtn active">About</a>
+	Stuff
 	<a href="#contacts" class="subNavBtn">Contacts</a>
 	<a href="teaching.html" class="subNavBtn">Teaching</a>
 	<a href="notes.html" class="subNavBtn">Notes</a>
 </nav>
 
-
-
-
+<div class="publications-container" id="stuff-i-do">
+ <p>My work. Mostly category theory.</p>
+	{% assign pubs = site.data.pub | sort: 'year' | reverse %}
+	
+	{% for pub in pubs %}
+	<div class="publication">
+			<h3 class="pub-title">{{ pub.title }}</h3>
+			<p class="pub-authors">{{ pub.authors }}</p>
+			<p class="pub-venue">
+					<span class="venue-name">{{ pub.venue }}</span>, 
+					<span class="pub-year">{{ pub.year }}</span>
+			</p>
+			
+			<div class="pub-links">
+					{% if pub.doi %}
+					<a href="https://doi.org/{{ pub.doi }}" class="pub-link doi-link" target="_blank">DOI</a>
+					{% endif %}
+					
+					{% if pub.url %}
+					<a href="{{ pub.url }}" class="pub-link paper-link" target="_blank">Paper</a>
+					{% endif %}
+			</div>
+			
+			{% if pub.tags %}
+			<div class="pub-tags">
+					{% for tag in pub.tags %}
+					<span class="tag">{{ tag }}</span>
+					{% endfor %}
+			</div>
+			{% endif %}
+	</div>
+	{% endfor %}
+</div>
 
 <footer>
 	<section id="contacts">
