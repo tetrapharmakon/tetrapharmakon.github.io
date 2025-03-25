@@ -1,5 +1,11 @@
 /* Main website styling with refined aesthetics */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 :root {
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Open Sans", sans-serif;
   --primary-color: #2A2E35;        /* Charcoal Gray */
   --secondary-color: #161A1D;      /* Deep Black-Gray */
   --accent-color: #5A7D9A;         /* Desaturated Blue */
@@ -13,8 +19,8 @@
   --card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
   --container-width: 960px;        /* Slightly wider for a spacious layout */
   --header-height: 64px;
-  --font-heading: "Poppins", sans-serif;
-  --font-body: "Inter", sans-serif;
+  /* --font-heading: "Montserrat", sans-serif; /* Change this for different headings */
+  /* --font-body: "Lora", serif; Change this for different body text */ 
 }
 
 /* Base styling */
@@ -609,4 +615,110 @@ footer {
 
 .teaching-container, .magia-container {
   border-left: 5px solid var(--accent-color); /* Desaturated Blue */
+}
+
+.cv-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.cv-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.cv-header h1 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.cv-header p {
+  font-size: 1rem;
+  color: var(--light-text);
+}
+
+.cv-section {
+  margin-top: 30px;
+}
+
+.cv-section h2 {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  border-left: 5px solid var(--highlight-color);
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.cv-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid var(--accent-color);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cv-details {
+  flex-grow: 1;
+}
+
+.cv-dates {
+  background-color: var(--light-gray);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.cv-institution {
+  font-style: italic;
+  color: var(--text-muted); /* A lighter color to distinguish it */
+  margin-top: 2px;
+  font-size: 0.95em;
+}
+
+.cv-item h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.cv-item span {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+.cv-description {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Contact & Social Links */
+.cv-contact {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cv-contact a {
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cv-contact a:hover {
+  color: var(--highlight-color);
 }

@@ -7,43 +7,49 @@ personal_info:
   tagline: "Category theory and everything about it."
 
 current_position:
-  - title: "Researcher"
+  - title: "permanent Research Fellow"
     institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
     location: "Castrum Danorum, EE"
-    date: "Aug 2023 – now"
+    from: "Sep 2023"
     description: "Research, teaching, organization of seminars."
 
+past_positions:
   - title: "Freelance Consultant"
     institution: "PlantingSpace"
     location: "Remote"
-    date: "Jan 2022 – now"
-    description: "Research in categorical probability theory and its implementations."
+    from: "Jan 2022"
+    to: "Nov 2024"
 
-past_positions:
+    description: "Research in categorical probability theory and its implementations."
   - title: "Postdoctoral Fellow"
     institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
     location: "Castrum Danorum, EE"
-    date: "Jan 2020 – Aug 2023"
+    from: "Jan 2020"
+    to: "Aug 2023"
 
   - title: "Postdoctoral Fellow"
     institution: "Centro de Matemática da Universidade de Coimbra"
     location: "Aeminium, PT"
-    date: "Jul 2019 – Dec 2019"
+    from: "Jul 2019"
+    to: "Dec 2019"
 
   - title: "Postdoctoral Fellow"
     institution: "Max-Planck-Institut für Mathematik"
     location: "Bonna, D"
-    date: "Sep 2018 – Feb 2019"
+    from: "Sep 2018"
+    to: "Feb 2019"
 
   - title: "Postdoctoral Fellow"
     institution: "Masarykova univerzita"
     location: "Bruna, CZ"
-    date: "Mar 2017 – Apr 2018"
+    from: "Mar 2017"
+    to: "Apr 2018"
 
   - title: "Postdoctoral Fellow"
     institution: "University of Western Ontario"
     location: "Lunden, CA"
-    date: "Sep 2016 – Nov 2016"
+    from: "Sep 2016"
+    to: "Nov 2016"
 
 education:
   - degree: "Ph.D. in Mathematics"
@@ -120,5 +126,5 @@ other_activities:
 
 skills:
   - "Bookbinding and map drawing, related to my love for Mathematics."
-  - "Fluent in TeX and document processing."
-  - "Passionate about natural and artificial languages: Esperanto, Estonian, Norwegian."
+  # - "Fluent in TeX and document processing."
+  # - "Passionate about natural and artificial languages: Esperanto, Estonian, Norwegian."

@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+<nav>
+	<a href="index.html" class="subNavBtn active">About</a>
+	<a href="stuff-i-do.html" class="subNavBtn">Stuff</a>
+	<a href="#contacts" class="subNavBtn">Contacts</a>
+	<a href="teaching.html" class="subNavBtn">Teaching</a>
+	<a href="notes.html" class="subNavBtn">Notes</a>
+</nav>
+
+<div class="cv-container">
+	<h1>{{ site.data.cv.personal_info.name }}</h1>
+	<p class="tagline">{{ site.data.cv.personal_info.tagline }}</p>
+	<!-- 
+	<p class="contact">
+					📧 <a href="mailto:{{ site.data.cv.personal_info.email }}">{{ site.data.cv.personal_info.email }}</a> | 
+					🌍 <a href="{{ site.data.cv.personal_info.website }}" target="_blank">Website</a> | 
+					🖥 <a href="{{ site.data.cv.personal_info.github }}" target="_blank">GitHub</a>
+	</p> -->
+
+	<h2>Current Position</h2>
+	{% for position in site.data.cv.current_position %}
+	<div class="cv-item">
+		<div class="cv-details">
+						<h3 class="cv-title">{{ position.title }}</h3>
+						<p class="cv-institution">{{ position.institution }}</p>
+		</div>
+		<div class="cv-dates">
+						<span class="cv-date-from">{{ position.from }}</span> – 
+						<span class="cv-date-to">now</span>
+		</div>
+</div>
+	{% endfor %}
+
+	<h2>Past Positions</h2>
+	{% for position in site.data.cv.past_positions %}
+	<div class="cv-item">
+					<div class="cv-details">
+									<h3 class="cv-title">{{ position.title }}</h3>
+									<p class="cv-institution">{{ position.institution }}</p>
+					</div>
+					<div class="cv-dates">
+									<span class="cv-date-from">{{ position.from }}</span> – 
+									<span class="cv-date-to">{{ position.to }}</span>
+					</div>
+	</div>
+	{% endfor %}
+
+	<h2>Education</h2>
+	{% for edu in site.data.cv.education %}
+	<div class="cv-section">
+					<h3>{{ edu.degree }}</h3>
+					<p><strong>{{ edu.institution }}</strong> – {{ edu.location }} ({{ edu.date }})</p>
+					<p>{{ edu.note }}</p>
+	</div>
+	{% endfor %}
+<!-- 
+	<h2>Teaching</h2>
+	{% for course in site.data.cv.teaching %}
+	<div class="cv-section">
+					<h3>{{ course.title }}</h3>
+					<p>{{ course.description }}</p>
+					<p><em>{{ course.location }} – {{ course.date }}</em></p>
+	</div>
+	{% endfor %} -->
+	
+	<!-- <h2>Skills</h2>
+	<ul>
+					{% for skill in site.data.cv.skills %}
+					<li>{{ skill }}</li>
+					{% endfor %}
+	</ul> -->
+</div>
+
+
+<footer>
+	<section id="contacts">
+			<div class="contact-container">
+					<div class="contact-map">
+						<iframe 
+						src="https://maps.google.com/maps?q=Akadeemia+tee+21B,+Tallinn,+Estonia&hl=en&output=embed" 
+						width="400" 
+						height="250" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy">
+				</iframe>
+				
+					</div>
+					<div class="contact-info">
+							<h2>Contacts</h2>
+							<h5>Fosco G. Loregian</h5>
+							<ul>
+									<li><strong>📍 Address:</strong> Akadeemia tee 21B, 12618 Tallinn, Estonia 🇪🇪</li>
+									<li><strong>📧 Email:</strong> <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
+									<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
+									</li>
+									<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon" target="_blank">tetrapharmakon</a></li>
+							</ul>
+					</div>
+			</div>
+	</section>
+</footer>
+

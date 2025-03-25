@@ -1,149 +1,171 @@
 - title: "Bicategorical Automata"
   url: "stuff/beamers/bicat-automata-tallcats-talk.pdf"
   description: "Bicategories of automata, automata in bicategories"
+  type: "talk"
 
 - title: "Chu Reading Group Talk (Part 1)"
   url: "stuff/beamers/chu-reading-group-talk.pdf"
   description: "a hint of Chu"
+  type: "note"
 
 - title: "Chu Reading Group Talk (Part 2)"
   url: "stuff/beamers/chu-reading-group-talk-2.pdf"
   description: "The couniversal property of the Chu construction"
+  type: "note"
 
 - title: "Cohesive toposes in Rome"
   url: "stuff/beamers/cohesive_rome.pdf"
   description: "A talk @Sapy on Lawvere's axiomatic cohesion."
+  type: "talk"
 
 - title: "CT24 Slides"
   url: "stuff/beamers/CT24_slides_handout.pdf"
   description: "Bicategories for automata theory"
+  type: "talk"
 
 - title: "Differential 2-Rigs"
   url: "stuff/beamers/diff-2-rigs-tallcats-talk.pdf"
   description: "Differential 2-rigs"
+  type: "talk"
 
 - title: "ItaCa22 – Pisa Talk"
   url: "stuff/beamers/fibalgebras-handout.pdf"
   description: "A few remarks on the fibration of algebras"
+  type: "talk"
 
 - title: "FibLang – TallCats Talk"
   url: "stuff/beamers/fiblang-tallcats-talk.pdf"
   description: "Fibrational linguistics"
+  type: "note"
 
 - title: "Fibrations of Algebra – Udine"
   url: "stuff/beamers/foa-udine-handout.pdf"
   description: "On the Fibration of Algebras (ad usum AILA)"
+  type: "talk"
 
 - title: "Fibrations of Algebras – Ferrara"
   url: "stuff/beamers/main-FE-handout.pdf"
   description: "On the Fibration of Algebras (ad usum Hopf algebraists)"
+  type: "talk"
 
 - title: "Partial Lawvere theories Talk – Torino"
   url: "stuff/beamers/funsempar-talk-torino.pdf"
   description: "Functorial semantics for partial theories"
+  type: "talk"
 
 - title: "Coend calculus – ItaCa19 Talk"
   url: "stuff/beamers/itaca19-milano-talk.pdf"
   description: "The art of $\\int$"
+  type: "talk"
 
 - title: "Higher Arity Coends – ItaCa20 Talk"
   url: "stuff/beamers/higher-arity-coends-handout.pdf"
   description: "Coends of higher arity"
+  type: "talk"
 
 - title: "ItaCa23 – Torino Talk"
   url: "stuff/beamers/itaca23-torino-talk.pdf"
   description: "A Tale of Bicategories, with a hint of British prog"
+  type: "talk"
 
 - title: "ItaCa24 – Padova Talk"
   url: "stuff/beamers/ItaCa24-padova-talk.pdf"
   description: "Teoria degli automi differenziali"
+  type: "talk"
 
 - title: "Talk differential 2-rigs – Lille"
   url: "stuff/beamers/main-lille-handout.pdf"
   description: "2-(commutative algebra) in a nutshell"
+  type: "talk"
 
 - title: "ProSem Beamer"
   url: "stuff/beamers/prosem-beamer.pdf"
   description: "Profunctorial Semantics I"
+  type: "note"
 
 - title: "Reference card"
   url: "stuff/beamers/REFCARDS_kan.pdf"
   description: "Kan Extensions"
+  type: "dida"
 
 - title: "Reference card"
   url: "stuff/beamers/REFCARDS_monoidal_derivators.pdf"
   description: "Monoidal Derivators"
+  type: "dida"
 
 - title: "Tanguy Beamer"
   url: "stuff/beamers/tanguy_beamer.pdf"
   description: "From combinatorial species to general differential 2-rigs"
+  type: "note"
 
 - title: "Unicity Talk – Brussels"
   url: "stuff/beamers/unicity-talk-brussels.pdf"
   description: "On the unicity of the formal theory of categories"
+  type: "talk"
 
 - title: "Walters Tribute Talk"
   url: "stuff/beamers/walters-tribute-talk.pdf"
   description: "Street-Walters-Yoneda structures"
+  type: "talk"
 
 #=====
 
-- title: "Cognitive Geometry & Galois Cohomology"
+- title: "CoG-GoC"
   url: "/stuff/phd/cog-goc.pdf"
-  # description: "An exploration of cognition through the lens of geometry and cohomology."
+  description: "Categories of Geometry / Geometry of Categories."
+  type: "dida"
 
-- title: "Grothendieck Pursuite – SISSA Talk"
+- title: "Grothendieck's pursuite des catégories test"
   url: "/stuff/phd/grothendieck-pursuite-sissa-talk.pdf"
-  # description: "A lecture on Grothendieck's work and its influence on modern mathematics."
-
-- title: "Hearts and towers"
-  url: "/stuff/phd/hearts.pdf"
-  # description: "An abstract discussion on categorical hearts and stability conditions."
-
-- title: "Higher Structures"
-  url: "/stuff/phd/higher.pdf"
-  # description: "Notes on higher categorical structures and homotopy theory."
-
+  description: "A lecture on Grothendieck's Pursuing stacks origin."
+  type: "dida"
+  
 - title: "Homotopy of C*-Algebras"
   url: "/stuff/phd/homotopy-of-c-stars.pdf"
   # description: "A study of the homotopical properties of C*-algebras."
-
-- title: "Model Theory & Beamer"
-  url: "/stuff/phd/model_beam.pdf"
-  # description: "Slides on model categories and category-theoretic approaches."
+  type: "note"
 
 - title: "Moerdijk on Dendroidal Sets"
   url: "/stuff/phd/moerdijk_dendroidal.pdf"
   # description: "Notes on Moerdijk’s work on dendroidal structures."
+  type: "note"
 
-- title: "PhD Thesis (Main)"
+- title: "PhD Thesis"
   url: "/stuff/phd/phd-thesis-main.pdf"
   # description: "The full dissertation on advanced categorical methods."
+  type: "note"
 
 - title: "Stacks Talk – SISSA"
   url: "/stuff/phd/stacks-talk-sissa.pdf"
   # description: "An introduction to algebraic stacks and moduli problems."
+  type: "talk"
 
 - title: "Tools I"
   url: "/stuff/phd/tools1.pdf"
   # description: "Toolbag and methods for category theory."
+  type: "dida"
 
 - title: "Tools II"
   url: "/stuff/phd/tools2.pdf"
   # description: "Toolbag and methods for category theory."
+  type: "dida"
 
 - title: "Tools III"
   url: "/stuff/phd/tools3.pdf"
   # description: "Advanced tools and techniques in higher category theory."
+  type: "dida"
 
 - title: "Von Neumann Algebras – SISSA"
   url: "/stuff/phd/vonneuman-algebras-sissa.pdf"
   # description: "Lecture notes on von Neumann algebras and operator algebras."
+  type: "note"
 
 - title: "Von Neumann Algebras – Text"
   url: "/stuff/phd/vonneuman-algebras-text-sissa.pdf"
   # description: "Textbook-style notes on the structure of von Neumann algebras."
+  type: "note"
 
 # - title: "Where It All Began"
 #   url: "/stuff/phd/where-all-began.pdf"
   # description: "A retrospective on the origins of a research journey."
+  # type: "talk"

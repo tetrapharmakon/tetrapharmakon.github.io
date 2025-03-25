@@ -13,67 +13,70 @@ layout: default
 
 
 <div class="notes-container" id="notes">
-	<h3>📝 Notes, Drafts, Talks</h3>
+	<h3>Notes, Drafts, Talks</h3>
 	<div class="notes-grid">
-					{% for note in site.data.notes %}
-					<div class="note-card">
-									<h4 class="note-title">
-													<a href="{{ note.url }}" class="note-link" target="_blank">
-																	📄 {{ note.title }}
-													</a>
-									</h4>
-									{% if note.description %}
-									<p class="note-description">{{ note.description }}</p>
-									{% endif %}
-					</div>
-					{% endfor %}
+		{% for note in site.data.notes %}
+		<div class="note-card">
+			<h4 class="note-title">
+				{% if note.type == "talk" %}
+				🎤
+				{% elsif note.type == "note" %}
+				📝
+				{% elsif note.type == "dida" %}
+				📚
+				{% endif %}
+				<a href="{{ note.url }}" class="note-link" target="_blank">
+					{{ note.title }}
+				</a>
+			</h4>
+			{% if note.description %}
+			<p class="note-description">{{ note.description }}</p>
+			{% endif %}
+		</div>
+		{% endfor %}
 	</div>
 </div>
 
 <div class="notes-container" id="notes">
 	<h3>Magia Mathematica</h3>
 	<div class="notes-grid">
-					{% for thing in site.data.magia %}
-					<div class="note-card">
-									<h4 class="note-title">
-													<a href="{{ thing.url }}" class="note-link" target="_blank">
-																	📄 {{ thing.title }}
-													</a>
-									</h4>
-									{% if thing.description %}
-									<p class="note-description">{{ thing.description }}</p>
-									{% endif %}
-					</div>
-					{% endfor %}
+		{% for thing in site.data.magia %}
+		<div class="note-card">
+			<h4 class="note-title">
+				<a href="{{ thing.url }}" class="note-link" target="_blank">
+					📄 {{ thing.title }}
+				</a>
+			</h4>
+			{% if thing.description %}
+			<p class="note-description">{{ thing.description }}</p>
+			{% endif %}
+		</div>
+		{% endfor %}
 	</div>
 </div>
 
 <footer>
 	<section id="contacts">
-			<div class="contact-container">
-					<div class="contact-map">
-						<iframe 
-						src="https://maps.google.com/maps?q=Akadeemia+tee+21B,+Tallinn,+Estonia&hl=en&output=embed" 
-						width="400" 
-						height="250" 
-						style="border:0;" 
-						allowfullscreen="" 
-						loading="lazy">
+		<div class="contact-container">
+			<div class="contact-map">
+				<iframe src="https://maps.google.com/maps?q=Akadeemia+tee+21B,+Tallinn,+Estonia&hl=en&output=embed"
+					width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
 				</iframe>
-				
-					</div>
-					<div class="contact-info">
-							<h2>Contacts</h2>
-							<h5>Fosco G. Loregian</h5>
-							<ul>
-									<li><strong>📍 Address:</strong> Akadeemia tee 21B, 12618 Tallinn, Estonia 🇪🇪</li>
-									<li><strong>📧 Email:</strong> <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
-									<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
-									</li>
-									<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon" target="_blank">tetrapharmakon</a></li>
-							</ul>
-					</div>
+
 			</div>
+			<div class="contact-info">
+				<h2>Contacts</h2>
+				<h5>Fosco G. Loregian</h5>
+				<ul>
+					<li><strong>📍 Address:</strong> Akadeemia tee 21B, 12618 Tallinn, Estonia 🇪🇪</li>
+					<li><strong>📧 Email:</strong> <a
+							href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
+					<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
+					</li>
+					<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon"
+							target="_blank">tetrapharmakon</a></li>
+				</ul>
+			</div>
+		</div>
 	</section>
 </footer>
-
