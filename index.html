@@ -19,152 +19,15 @@ layout: default
 
 <nav>
 	<a href="#about-me" class="subNavBtn active">About</a>
-	<a href="#stuff-i-do" class="subNavBtn">Stuff</a>
+	<a href="stuff-i-do.html" class="subNavBtn">Stuff</a>
 	<a href="#contacts" class="subNavBtn">Contacts</a>
-	<a href="#teaching" class="subNavBtn">Teaching</a>
-	<a href="#notes" class="subNavBtn">Notes</a>
+	<a href="teaching.html" class="subNavBtn">Teaching</a>
+	<a href="notes.html" class="subNavBtn">Notes</a>
 </nav>
 
-<div class="publications-container" id="stuff-i-do">
-	{% assign pubs = site.data.pub | sort: 'year' | reverse %}
-	
-	{% for pub in pubs %}
-	<div class="publication">
-			<h3 class="pub-title">{{ pub.title }}</h3>
-			<p class="pub-authors">{{ pub.authors }}</p>
-			<p class="pub-venue">
-					<span class="venue-name">{{ pub.venue }}</span>, 
-					<span class="pub-year">{{ pub.year }}</span>
-			</p>
-			
-			<div class="pub-links">
-					{% if pub.doi %}
-					<a href="https://doi.org/{{ pub.doi }}" class="pub-link doi-link" target="_blank">DOI</a>
-					{% endif %}
-					
-					{% if pub.url %}
-					<a href="{{ pub.url }}" class="pub-link paper-link" target="_blank">Paper</a>
-					{% endif %}
-			</div>
-			
-			{% if pub.tags %}
-			<div class="pub-tags">
-					{% for tag in pub.tags %}
-					<span class="tag">{{ tag }}</span>
-					{% endfor %}
-			</div>
-			{% endif %}
-	</div>
-	{% endfor %}
-</div>
-<!-- preprints -->
-<!-- <div class="publications-container">
-{% assign pres = site.data.preprints | sort: 'year' | reverse %}
-	
-{% for pub in pres %}
-<div class="publication">
-		<h3 class="pub-title">{{ pub.title }}</h3>
-		<p class="pub-authors">{{ pub.authors }}</p>
-		<p class="pub-venue">
-				<span class="venue-name">{{ pub.venue }}</span>, 
-				<span class="pub-year">{{ pub.year }}</span>
-		</p>
-		
-		<div class="pub-links">
-				{% if pub.doi %}
-				<a href="https://doi.org/{{ pub.doi }}" class="pub-link doi-link" target="_blank">DOI</a>
-				{% endif %}
-				
-				{% if pub.url %}
-				<a href="{{ pub.url }}" class="pub-link paper-link" target="_blank">Paper</a>
-				{% endif %}
-		</div>
-		
-		{% if pub.tags %}
-		<div class="pub-tags">
-				{% for tag in pub.tags %}
-				<span class="tag">{{ tag }}</span>
-				{% endfor %}
-		</div>
-		{% endif %}
-</div>
-{% endfor %}
-</div>
-</div> -->
 
 
-<div class="teaching-container" id="teaching">
-	<h2>📖 Teaching & Organizational Activities</h2>
-	{% for item in site.data.teaching.teaching_activities %}
-	<div class="teaching-item">
-					<div class="teaching-header">
-									<h4 class="teaching-title">{{ item.title }}</h4>
-									{% if item.date %}
-									<span class="teaching-date">| {{ item.date }}</span>
-									{% endif %}
-					</div>
-					{% if item.description %}
-					<p class="teaching-desc">{{ item.description }}</p>
-					{% endif %}
-	</div>
-	{% endfor %}
 
-	<h2>🎓 Supervision of Students</h2>
-	{% for item in site.data.teaching.supervision_of_students %}
-	<div class="supervision-item">
-					<div class="supervision-header">
-									<h4 class="supervision-title">{{ item.title }}</h4>
-									{% if item.date %}
-									<span class="supervision-date">| {{ item.date }}</span>
-									{% endif %}
-					</div>
-					<p class="supervision-student"><em>Student: {{ item.student }}</em></p>
-					{% if item.description %}
-					<p class="supervision-desc">{{ item.description }}</p>
-					{% endif %}
-	</div>
-	{% endfor %}
-</div>
-
-<!-- <div class="magia-container" id="magia">
-	<h3>Magia</h3>
-	... rebuilding
-</div> -->
-<div class="notes-container" id="notes">
-	<h3>📝 Notes, Drafts, Talks</h3>
-	<div class="notes-grid">
-					{% for note in site.data.notes %}
-					<div class="note-card">
-									<h4 class="note-title">
-													<a href="{{ note.url }}" class="note-link" target="_blank">
-																	📄 {{ note.title }}
-													</a>
-									</h4>
-									{% if note.description %}
-									<p class="note-description">{{ note.description }}</p>
-									{% endif %}
-					</div>
-					{% endfor %}
-	</div>
-</div>
-
-<div class="notes-container" id="notes">
-	<h3>Magia Mathematica</h3>
-	<div class="notes-grid">
-					{% for thing in site.data.magia %}
-					<div class="note-card">
-									<h4 class="note-title">
-													<a href="{{ thing.url }}" class="note-link" target="_blank">
-																	📄 {{ thing.title }}
-													</a>
-									</h4>
-									{% if thing.description %}
-									<p class="note-description">{{ thing.description }}</p>
-									{% endif %}
-					</div>
-					{% endfor %}
-	</div>
-</div>
 
 <footer>
 	<section id="contacts">

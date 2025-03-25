@@ -60,8 +60,9 @@
   pages: '107155'
 - title: A categorical semantics for bounded Petri nets
   authors: "F. Genovese, \u2014, D. Palombi"
-  venue: Electronic Proceedings in Theoretical Computer Science
-  year: 2022
+  venue: Proceedings of the 6th International Conference on Applied Category Theory
+    2021
+  year: 2021
   doi: 10.4204/eptcs.372.5
   url: https://doi.org/10.4204/eptcs.372.5
   volume: '372'
@@ -93,7 +94,7 @@
   month: December
 - title: 'Nets with mana: a framework for chemical reaction modelling'
   authors: "F. Genovese, \u2014, D. Palombi"
-  venue: Graph Transformation
+  venue: International Conference on Graph Transformation 2021
   year: 2021
   doi: 10.1007/978-3-030-78946-6_10
   url: https://doi.org/10.1007/978-3-030-78946-6_10
