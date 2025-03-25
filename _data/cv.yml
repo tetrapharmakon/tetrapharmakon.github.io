@@ -1,0 +1,124 @@
+personal_info:
+  name: "Fosco Loregian"
+  email: "fosco.loregian@gmail.com"
+  website: "https://tetrapharmakon.github.io"
+  github: "https://github.com/tetrapharmakon"
+  location: "Akadeemia tee 21B, Estonia"
+  tagline: "Category theory and everything about it."
+
+current_position:
+  - title: "Researcher"
+    institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
+    location: "Castrum Danorum, EE"
+    date: "Aug 2023 – now"
+    description: "Research, teaching, organization of seminars."
+
+  - title: "Freelance Consultant"
+    institution: "PlantingSpace"
+    location: "Remote"
+    date: "Jan 2022 – now"
+    description: "Research in categorical probability theory and its implementations."
+
+past_positions:
+  - title: "Postdoctoral Fellow"
+    institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
+    location: "Castrum Danorum, EE"
+    date: "Jan 2020 – Aug 2023"
+
+  - title: "Postdoctoral Fellow"
+    institution: "Centro de Matemática da Universidade de Coimbra"
+    location: "Aeminium, PT"
+    date: "Jul 2019 – Dec 2019"
+
+  - title: "Postdoctoral Fellow"
+    institution: "Max-Planck-Institut für Mathematik"
+    location: "Bonna, D"
+    date: "Sep 2018 – Feb 2019"
+
+  - title: "Postdoctoral Fellow"
+    institution: "Masarykova univerzita"
+    location: "Bruna, CZ"
+    date: "Mar 2017 – Apr 2018"
+
+  - title: "Postdoctoral Fellow"
+    institution: "University of Western Ontario"
+    location: "Lunden, CA"
+    date: "Sep 2016 – Nov 2016"
+
+education:
+  - degree: "Ph.D. in Mathematics"
+    institution: "Scuola Internazionale Superiore di Studi Avanzati"
+    location: "Tergeste, IT"
+    date: "Oct 2012 – Jun 2016"
+    note: "Technically 'Ph.D. in Geometry', but that’s probably derogatory towards true geometers."
+
+  - degree: "M.Sc. in Mathematics"
+    institution: "Università degli studi di Padova"
+    location: "Pàdoa, IT"
+    date: "Oct 2010 – Jul 2012"
+
+  - degree: "B.Sc. in Mathematics"
+    institution: "Università degli studi di Padova"
+    location: "Pàdoa, IT"
+    date: "Jan 2008 – Jun 2010"
+
+teaching:
+  - title: "ITI9200 - Introduction to Category Theory"
+    description: "A course on basic category theory; the course webpage includes lecture notes and materials."
+    location: "Castrum Danorum, EE"
+    date: "2020 – now (Spring term)"
+
+  - title: "Elements of Finite Mathematics"
+    description: "Techniques of counting, probability, discrete and continuous random variables."
+    location: "Lunden, CA"
+    date: "1st term 2016"
+
+event_organization:
+  - title: "Organiser of ItaCa 2024"
+    description: "The annual meeting of the community of ItaCa."
+    location: "Pàdoa, IT"
+    date: "Dec 2024"
+
+  - title: "Organiser of ItaCa 2023"
+    description: "The annual meeting of the community of ItaCa."
+    location: "Turin, IT"
+    date: "Dec 2023"
+
+  - title: "Organiser of ItaCa Fest"
+    description: "An online webinar aimed to gather the community of ItaCa."
+    location: "Online"
+    date: "2020 – now"
+
+  - title: "PSSL 103 - Brno"
+    description: "One of the organizers of the 103rd Peripathetic Seminar on Sheaves and Logic."
+    location: "Bruna, CZ"
+    date: "Apr 2018"
+
+supervision:
+  - title: "Ph.D. students"
+    description: "Co-supervising A. Laretto (former SIGPLAN LT mentee) with N. Veltri."
+
+  - title: "Mentor for SIGPLAN-M"
+    description: "Mentoring A. Laretto in formalization in Agda of various category theory results."
+
+  - title: "B.Sc. and M.Sc. Supervision"
+    students:
+      - "G. Ronchi (Adjoint functors)"
+      - "G. Sorgente (Formal theory of promonads)"
+      - "T. Massacrier (From combinatorial species to general differential 2-rigs)"
+
+other_activities:
+  - title: "Adjoint School 2019"
+    description: "Webinar and online applied Category Theory reading course. Led to arXiv:2001.07488."
+    location: "Online"
+    date: "Mar 2019 – Jun 2019"
+
+  - title: "Kan Extension Seminar I"
+    description: "Webinar and online Category Theory reading course, guided by E. Riehl."
+    location: "Online"
+    date: "Jan 2014 – Jul 2014"
+
+skills:
+  - "Bookbinding and map drawing, related to my love for Mathematics."
+  - "Fluent in TeX and document processing."
+  - "Passionate about natural and artificial languages: Esperanto, Estonian, Norwegian."
