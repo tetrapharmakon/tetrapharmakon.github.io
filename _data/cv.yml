@@ -55,24 +55,27 @@ education:
   - degree: "Ph.D. in Mathematics"
     institution: "Scuola Internazionale Superiore di Studi Avanzati"
     location: "Tergeste, IT"
-    date: "Oct 2012 – Jun 2016"
+    from: "Oct 2012"
+    to: "Jun 2016"
     note: "Technically 'Ph.D. in Geometry', but that’s probably derogatory towards true geometers."
 
   - degree: "M.Sc. in Mathematics"
     institution: "Università degli studi di Padova"
     location: "Pàdoa, IT"
-    date: "Oct 2010 – Jul 2012"
+    from: "Oct 2010"
+    to: "Jul 2012"
 
   - degree: "B.Sc. in Mathematics"
     institution: "Università degli studi di Padova"
     location: "Pàdoa, IT"
-    date: "Jan 2008 – Jun 2010"
+    from: "Jan 2008"
+    to: "Jun 2010"
 
 teaching:
   - title: "ITI9200 - Introduction to Category Theory"
     description: "A course on basic category theory; the course webpage includes lecture notes and materials."
     location: "Castrum Danorum, EE"
-    date: "2020 – now (Spring term)"
+    from: "spring semester"
 
   - title: "Elements of Finite Mathematics"
     description: "Techniques of counting, probability, discrete and continuous random variables."

@@ -681,7 +681,7 @@ footer {
   white-space: nowrap;
 }
 .cv-institution {
-  font-style: italic;
+  /* font-style: italic; */
   color: var(--text-muted); /* A lighter color to distinguish it */
   margin-top: 2px;
   font-size: 0.95em;
