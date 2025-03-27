@@ -4,7 +4,7 @@ layout: default
 
 <nav>
 	<a href="index.html" class="subNavBtn active">About</a>
-	<a href="stuff-i-do.html" class="subNavBtn">Stuff</a>
+	<a href="stuff-i-do.html" class="subNavBtn">Math</a>
 	<a href="#contacts" class="subNavBtn">Contacts</a>
 	<a href="teaching.html" class="subNavBtn">Teaching</a>
 	<a href="notes.html" class="subNavBtn">Notes</a>
@@ -39,7 +39,7 @@ layout: default
 	<div class="cv-item">
 					<div class="cv-details">
 									<h3 class="cv-title">{{ position.title }}</h3>
-									<p class="cv-institution">{{ position.institution }}</p>
+									<p class="cv-institution">{{ position.institution }} | <b>{{ position.location }}</b></p>
 					</div>
 					<div class="cv-dates">
 									<span class="cv-date-from">{{ position.from }}</span> – 
@@ -49,12 +49,17 @@ layout: default
 	{% endfor %}
 
 	<h2>Education</h2>
-	{% for edu in site.data.cv.education %}
-	<div class="cv-section">
-					<h3>{{ edu.degree }}</h3>
-					<p><strong>{{ edu.institution }}</strong> – {{ edu.location }} ({{ edu.date }})</p>
-					<p>{{ edu.note }}</p>
-	</div>
+	{% for item in site.data.cv.education %}
+	<div class="cv-item">
+		<div class="cv-details">
+						<h3 class="cv-title">{{ item.degree }}</h3>
+						<p class="cv-institution">{{ item.institution }} | <b>{{ item.location }}</b></p>
+		</div>
+		<div class="cv-dates">
+						<span class="cv-date-from">{{ item.from }}</span> – 
+						<span class="cv-date-to">{{ item.to }}</span>
+		</div>
+</div>
 	{% endfor %}
 <!-- 
 	<h2>Teaching</h2>
@@ -93,7 +98,7 @@ layout: default
 							<h2>Contacts</h2>
 							<h5>Fosco G. Loregian</h5>
 							<ul>
-									<li><strong>📍 Address:</strong> Akadeemia tee 21B, 12618 Tallinn, Estonia 🇪🇪</li>
+									<li><strong>📍 Address:</strong> Akadeemia tee 21B | 12618 Tallinn | Estonia 🇪🇪</li>
 									<li><strong>📧 Email:</strong> <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
 									<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
 									</li>
