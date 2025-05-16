@@ -1,44 +1,60 @@
+- title: Directed First-Order Logic
+  authors: "A. Laretto, —, N. Veltri"
+  year: 2025
+  url: https://arxiv.org/abs/2504.11225
+  venue: "arXiv:2504.11225"
+- title: "Monads and limits in bicategories of circuits"
+  authors: "—"
+  year: 2025
+  url: https://arxiv.org/abs/2501.01882
+  venue: "arXiv:2501.01882"
 - title: Fibrations of algebras
-  authors: "Danel Ahman, Greta Coraglia, Davide Castelnovo, ---, Nelson Martins-Ferreira,\
-    \ \xDClo Reimaa"
+  authors: "D. Ahman, G. Coraglia, D. Castelnovo, —, N. Martins-Ferreira,¨U. Reimaa"
   year: 2024
   url: https://arxiv.org/abs/2408.16581
+  venue: "arXiv:2408.16581"
 - title: Directed equality with dinaturality
-  authors: "Andrea Laretto, ---, Niccol\xF2 Veltri"
+  authors: "Andrea Laretto, —, N. Veltri"
   year: 2024
   url: https://arxiv.org/abs/2409.10237
+  venue: "arXiv:2409.10237"
 - title: Rosen's no-go theorem for regular categories
-  authors: F. Loregian
+  authors: —
   year: 2021
+  venue: "arXiv:2012.11648"
+  url: https://arxiv.org/abs/2012.11648
 - title: Categorical Ontology I - Existence
-  authors: Dario Dentamaro, Fosco Loregian
+  authors: D. Dentamaro, —
   year: 2020
   url: http://philsci-archive.pitt.edu/17136/
+  venue: philsci-archive.edu
   month: May
   tags:
   - ontology
-  - category theory
-  - metaontology
-  - topos theory
   - Tl\"on
   - Uqbar
   - Orbis Tertius
 - title: Functorial Erkennen
-  authors: Dario Dentamaro, Fosco Loregian
+  authors: D. Dentamaro, —
   year: 2020
   url: http://philsci-archive.pitt.edu/18519/
+  venue: philsci-archive.edu
   month: December
   tags:
   - profunctor
   - science
   - hermeneutics
 - title: On the unicity of formal category theories
-  authors: I. Liberti, F. Loregian
+  authors: Ivan Di Liberti, —
   year: 2019
+  venue: "arXiv:1901.01594"
+  url: "https://arxiv.org/abs/1901.01594"
 - title: Localization theory for derivators
-  authors: F. Loregian
+  authors: —
   year: 2018
+  url: "https://arxiv.org/abs/1802.08193"
+  venue: "arXiv:1802.08193"
 - title: Recollements in stable $\infty$-categories
-  authors: D. Fiorenza, F. Loregian
+  authors: D. Fiorenza, —
   year: 2016
 

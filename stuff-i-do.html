@@ -27,7 +27,7 @@ layout: default
    </h3>
 			<p class="pub-authors">{{ pub.authors }}</p>
 			<p class="pub-venue">
-					<span class="venue-name">{{ pub.venue }}</span>, 
+					<span class="venue-name">{{ pub.venue }}</span> | 
 					<span class="pub-year">{{ pub.year }}</span>
 			</p>
 			
@@ -44,6 +44,43 @@ layout: default
 			{% endif %}
 	</div>
 	{% endfor %}
+</div>
+
+
+<div class="publications-container" id="prep-i-do">
+{% assign preprints = site.data.preprints | sort: 'year' | reverse %}
+	
+{% for preprint in preprints %}
+<div class="preprint">
+		<h3 class="pub-title">{{ preprint.title }} | 🔗
+			{% if preprint.doi %}
+			<a href="https://doi.org/{{ preprint.doi }}" class="pub-link doi-link" target="_blank">DOI</a>
+			{% endif %}
+			
+			{% if preprint.url %}
+			<a href="{{ preprint.url }}" class="pub-link paper-link" target="_blank">Paper</a>
+			{% endif %}
+		</h3>
+		<p class="pub-authors">{{ preprint.authors }}</p>
+		<p class="pub-venue">
+				<span class="venue-name">{{ preprint.venue }}</span> | 
+				<span class="pub-year">{{ preprint.year }}</span>
+		</p>
+		
+		<div class="pub-links">
+
+		</div>
+		
+		{% if preprint.tags %}
+		<div class="pub-tags">
+				{% for tag in preprint.tags %}
+				<span class="tag">{{ tag }}</span>
+				{% endfor %}
+		</div>
+		{% endif %}
+</div>
+{% endfor %}
+</div>
 </div>
 
 <footer>
