@@ -122,47 +122,42 @@
   
 - title: "Homotopy of C*-Algebras"
   url: "/stuff/phd/homotopy-of-c-stars.pdf"
-  # description: "A study of the homotopical properties of C*-algebras."
+  description: "A study of the homotopical properties of C*-algebras."
   type: "note"
 
 - title: "Moerdijk on Dendroidal Sets"
   url: "/stuff/phd/moerdijk_dendroidal.pdf"
-  # description: "Notes on Moerdijk’s work on dendroidal structures."
+  description: "Notes on Moerdijk’s work on dendroidal structures."
   type: "note"
 
 - title: "PhD Thesis"
   url: "/stuff/phd/phd-thesis-main.pdf"
-  # description: "The full dissertation on advanced categorical methods."
+  description: "My thesis, courtesy of D. Fiorenza, and a bit less, of SISSA."
   type: "note"
 
 - title: "Stacks Talk – SISSA"
   url: "/stuff/phd/stacks-talk-sissa.pdf"
-  # description: "An introduction to algebraic stacks and moduli problems."
+  description: "«A stack is just a 2-sheaf, what's the problem?»."
   type: "talk"
 
 - title: "Tools I"
   url: "/stuff/phd/tools1.pdf"
-  # description: "Toolbag and methods for category theory."
+  description: "A toolkit for CT | Chapter 1."
   type: "dida"
 
 - title: "Tools II"
   url: "/stuff/phd/tools2.pdf"
-  # description: "Toolbag and methods for category theory."
+  description: "A toolkit for CT | Chapter 2."
   type: "dida"
 
 - title: "Tools III"
   url: "/stuff/phd/tools3.pdf"
-  # description: "Advanced tools and techniques in higher category theory."
+  description: "A toolkit for CT | Chapter 3."
   type: "dida"
 
 - title: "Von Neumann Algebras – SISSA"
   url: "/stuff/phd/vonneuman-algebras-sissa.pdf"
-  # description: "Lecture notes on von Neumann algebras and operator algebras."
-  type: "note"
-
-- title: "Von Neumann Algebras – Text"
-  url: "/stuff/phd/vonneuman-algebras-text-sissa.pdf"
-  # description: "Textbook-style notes on the structure of von Neumann algebras."
+  description: "Let's put «algebra» in «operator algebra»."
   type: "note"
 
 # - title: "Where It All Began"

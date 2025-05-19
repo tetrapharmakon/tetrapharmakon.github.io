@@ -327,25 +327,25 @@ footer {
 .publication {
   background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: var(--card-shadow);
+  padding: 20px;
+  margin-bottom: 15px;
+  /* box-shadow: var(--card-shadow); */
   border-left: 2px solid var(--highlight-color);
-  transition: transform 0.2s, box-shadow 0.2s;
+  /* transition: transform 0.2s, box-shadow 0.2s; */
 }
 .preprint {
   background-color: var(--card-shadow);
   border-radius: var(--border-radius);
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: var(--card-shadow);
+  padding: 20px;
+  margin-bottom: 15px;
+  /* box-shadow: var(--card-shadow); */
   border-left: 2px solid var(--highlight-color);
-  transition: transform 0.2s, box-shadow 0.2s;
+  /* transition: transform 0.2s, box-shadow 0.2s; */
 }
-.publication:hover {
+/* .publication:hover {
   transform: translateY(-2px);
   box-shadow: var(--card-hover-shadow);
-}
+} */
 
 .pub-title {
   font-family: var(--font-heading);
@@ -533,8 +533,9 @@ footer {
 
 .note-title {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-family: var(--font-heading);
+  /* font-size: 1.1rem; */
+  /* font-weight: bold; */
 }
 
 .note-description {
@@ -558,7 +559,7 @@ footer {
 .note-link {
   text-decoration: none;
   color: var(--primary-color);
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color 0.3s ease-in-out;
 }
 
@@ -594,7 +595,7 @@ footer {
 .teaching-title, .supervision-title {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: var(--primary-color);
   margin: 0;
 }
