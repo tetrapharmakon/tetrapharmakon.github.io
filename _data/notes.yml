@@ -108,6 +108,10 @@
   description: "Street-Walters-Yoneda structures"
   type: "talk"
 
+- title: "Differential 2-rigs and automata"
+  url: "stuff/beamers/bologna-may25.pdf"
+  description: "https://seminari.dm.unibo.it/mat/serials/34"
+  type: "talk"
 #=====
 
 - title: "CoG-GoC"
