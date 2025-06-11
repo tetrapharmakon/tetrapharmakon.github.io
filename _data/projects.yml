@@ -1,0 +1,143 @@
+- title: "The Theory of Combinatorial Species"
+  description: # "Explore formal combinatorial structures and their use in generating functions and category theory."
+  type: 📚 Bachelor thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 3
+
+- title: "Coalgebraic Techniques"
+  description: # "An introduction to coalgebra as a dual to algebra, with applications in state-based systems."
+  type: 📚 Bachelor thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 2
+
+- title: "Factorization Systems in Algebra and Geometry"
+  description: # "Study morphism factorizations like (E, M)-systems and their applications in category theory and algebraic geometry."
+  type: 📚 Bachelor thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 2
+
+- title: "Linear and Set-Theoretic Operads"
+  description: # "Understand operads in the context of algebraic structures and their linear or combinatorial variants."
+  type: 📚 Bachelor thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 3
+
+- title: "Yoneda Structures"
+  description: # "Study generalized Yoneda lemmas and their role in enriched category theory."
+  type: 📚 Bachelor thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 4
+
+- title: "The Theory of Relative Monads"
+  description: # "Investigate monads generalized to functors between different categories and their theoretical implications."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 3
+
+- title: "Coend Calculus in Indexed Category Theory"
+  description: # "Delve into coends and ends as integral expressions, especially in the context of indexed categories."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 3
+
+- title: "Grothendieck Derivators"
+  description: # "Explore an enhancement of derived categories that retains more homotopical data."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 3
+
+- title: "Bisimulation and Homotopy Theory"
+  description: # "A challenging exploration of how bisimulations in theoretical computer science relate to homotopy-theoretic concepts."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 5
+
+- title: "The Theory of Model 2-Categories"
+  description: # "Hard problem: develop or study models of higher category theory where 2-cells are involved in homotopical structures."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 5
+
+- title: "Monoidal Topology"
+  description: # "Investigate how monoidal categories can structure topological constructs, including locales and sheaves."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 2
+
+- title: "Contravariant Monads and Their Applications"
+  description: # "Study dual notions of monads and how contravariant structures appear in programming and logic."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 4
+
+- title: "The Fibration of Wedges and Cowedges"
+  description: # "Hard problem: explore advanced concepts related to dual limits and their fibrational behaviors."
+  type: 🎓 Master thesis
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 4
+
+- title: "2-Categories of Automata"
+  description: # "Research automata theory using 2-categorical semantics, incorporating states, transitions, and higher morphisms."
+  type: 🧬 PhD project
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 5
+
+- title: "Fibrations Associated to Parametric Functors"
+  description: # "Study fibrational structures that arise from parametric polymorphism and their categorical modeling."
+  type: 🧬 PhD project
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 4
+
+- title: "Derivations on a Category"
+  description: # "Investigate the notion of derivations in categories, generalizing the idea of differential operators."
+  type: 🧬 PhD project
+  references: 
+    - "bla"
+    - "bla"
+    - "bla"
+  difficulty: 5

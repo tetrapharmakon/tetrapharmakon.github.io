@@ -2,15 +2,80 @@
 layout: default
 ---
 
-<div class="simple-padding">
-<h1>Titolo</h1>
-<h2>Subtitolo</h2>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      padding: 8rem;
+    }
+    .project {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .project-description {
+      font-size: 1rem;
+      color: #333;
+    }
+    .project-type {
+  color: #999;
+  font-weight: normal;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+.project-references {
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+}
+.project-references ul {
+  padding-left: 1.2rem;
+  margin: 0.3rem 0;
+}
+  </style>
+</head>
+<body>
 
-$a=b$
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dictum ipsum. Aliquam erat volutpat. Duis lacinia semper orci et porttitor. Sed venenatis ex non ultricies feugiat. In consectetur sollicitudin ornare. Praesent dignissim rutrum ultricies. Maecenas eleifend elementum dui, eu semper nisi sodales gravida. Etiam blandit vitae felis a venenatis. Fusce vestibulum, est sit amet volutpat blandit, diam ex mollis lorem, vitae lobortis nunc orci vel velit. Aenean gravida enim sit amet purus congue faucibus. Integer gravida nulla a luctus convallis.
-
-Morbi dictum sapien non tempus luctus. Nunc sit amet fermentum mi. In egestas, elit et iaculis mattis, orci nulla dignissim mauris, at pretium mi erat vitae tortor. Proin efficitur nisl nec elit efficitur, sit amet hendrerit lectus aliquam. Phasellus ut hendrerit ante. Mauris quis enim pharetra, maximus nisi eu, dictum ante. Nulla facilisi. Phasellus non ante eget sem imperdiet semper non in orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis elit ut dui vestibulum pretium. Duis leo metus, ullamcorper at ligula sit amet, viverra tincidunt purus. Nam imperdiet sit amet libero venenatis ullamcorper. Duis nec turpis non orci iaculis iaculis.
-
-Suspendisse in nunc convallis, tempor ante ac, pharetra neque. Sed faucibus nisl vel convallis eleifend. Sed rhoncus lacinia purus, ut auctor velit vestibulum a. Cras mattis justo sit amet eros condimentum vehicula. Praesent in aliquam lacus, sit amet aliquam ex. Etiam pharetra quis mauris quis pulvinar. Duis sed sem vestibulum arcu mattis laoreet. Etiam eget purus et justo sodales lacinia. Proin condimentum semper nibh.
-
+  <h1>Thesis Projects</h1>
+<p>
+  This page lists potential thesis projects for students interested in working with me as their advisor. I receive an ever-increasing number of requests for thesis supervision, especially by fellow Italians (doing category theory in Italy is frustrating...), so I've created this page to present a curated selection of topics we can work together. 
+</p>
+<p>
+  Each project is briefly described and marked with its suitable level — 🎓 Bachelor's, 📚 Master's, or 🧬 PhD (this is the research I am myself conducting <em>right now</em>: this means essentially that whatever you end up doing in that direction has a high chance of becoming a publication) —along with a list of references for what catches your eye.
+</p>
+  {% for project in site.data.projects %}
+    <div class="project">
+      <div class="project-title">{{ project.title }} |
+      <span class="project-type">{{ project.type }} 
+      {% assign level = project.difficulty | default: 0 %}
+      {% for i in (1..level) %}★{% endfor %}{% assign remaining = 5 | minus: level %}{% for i in (1..remaining) %}☆{% endfor %}</span>
 </div>
+<div class="project-difficulty">
+  <p></p>
+</div>
+      <div class="project-description">{{ project.description }}</div>
+      {% if project.references %}
+      <div class="project-references">
+        <strong>Further Reading:</strong>
+        <ul>
+          {% for ref in project.references %}
+            <li>{{ ref }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    </div>
+  {% endfor %}
+
+</body>
+</html>
