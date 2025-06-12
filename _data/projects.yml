@@ -23,6 +23,7 @@
     - §5.5 of Borceux, Francis. Handbook of categorical algebra. Basic category theory. Vol. 1. Cambridge University Press, 1994.
     - Bousfield, Aldridge K. "Constructions of factorization systems in categories." Journal of Pure and Applied Algebra 9.2-3 (1977); 207-220.
     - <a href="https://ncatlab.org/joyalscatlab/published/Factorisation+systems">Joyal's nLab page</a> on factorization systems.
+    - Farjoun, Emmanuel. Cellular spaces, null spaces and homotopy localization. No. 1622. Springer Science & Business Media, 1995.
     - <a href="https://ncatlab.org/joyalscatlab/published/Weak+factorisation+systems">Joyal's nLab page</a> on weak factorization systems.
     - Rosebrugh, Robert, and Richard J. Wood. "Distributive laws and factorization." Journal of Pure and Applied Algebra 175.1-3 (2002); 327-353.
     - Cassidy, Charles, Michel Hébert, and Gregory Maxwell Kelly. "Reflective subcategories, localizations and factorizationa systems." Journal of the Australian Mathematical Society 38.3 (1985); 287-329.
@@ -120,7 +121,14 @@
     - "bla"
     - "bla"
   difficulty: 4
-
+- title: "Shape theory via profunctors"
+  description: # A contravariant monad is exactly like a monad, besides the fact that it's a contravariant functor.
+  type: 🎓 Master thesis
+  references: 
+    - Cordier, J-M., and Timothy Porter. Shape theory. categorical methods of approximation. Courier Corporation, 2008.
+    - Mardesic, Sibe, and Jack Segal. Shape theory. Vol. 19821. North-Holland, Amsterdam, 1982.
+    - Dydak, Jerzy, and Jack Segal. Shape theory. An introduction. Vol. 688. Springer, 2006.
+  difficulty: 3
 - title: "The Fibration of Wedges and Cowedges"
   description: # "Hard problem: explore advanced concepts related to dual limits and their fibrational behaviors."
   type: 🎓 Master thesis
