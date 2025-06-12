@@ -83,37 +83,40 @@
   difficulty: 3
 
 - title: "Bisimulation and Homotopy Theory"
-  description: # "A challenging exploration of how bisimulations in theoretical computer science relate to homotopy-theoretic concepts."
+  description: I have thought for a bit of time that "bisimulation" in logic and CS is a relation on transition systems / automata that resembles a lot a notion of homotopy equivalence in abstract homotopy theory. This project aims at exploring this connection, and possibly developing a theory of bisimulation in the style of homotopy theory. I consider this a difficult project to tackle, especially for a Master's thesis, as it's very open-ended and requires a lot of background reading.
   type: 🎓 Master thesis
   references: 
-    - "bla"
-    - "bla"
-    - "bla"
+    - Hirschhorn, Philip S. Model categories and their localizations. No. 99. American Mathematical Soc., 2003.
+    - Sangiorgi, Davide, and Jan Rutten, eds. "Advanced topics in bisimulation and coinduction". Vol. 52. Cambridge University Press, 2011.
+    - Hovey, Mark. Model categories. No. 63. American Mathematical Soc., 2007.
+    - Jacobs, B. P. F. "A bialgebraic review of regular expressions, deterministic automata and languages." (2005).
+    - Haghverdi, Esfandiar, Paulo Tabuada, and George Pappas. "Bisimulation relations for dynamical and control systems." Electronic Notes in Theoretical Computer Science 69 (2003); 120-136.
   difficulty: 5
 
 - title: "The Theory of Model 2-Categories"
-  description: # "Hard problem: develop or study models of higher category theory where 2-cells are involved in homotopical structures."
+  description: Some 2-categories have the property that each hom-category $\mathbf{Hom}(X,Y)$ is a model category, and composition $\_\circ\_ \colon \mathbf{Hom}(Y,Z) \times \mathbf{Hom}(X,Y) \to \mathbf{Hom}(X,Z)$ is a left Quillen bifunctor. Examples are abundant and draw from diverse branches of mathematics. What is the general theory of such categories?
   type: 🎓 Master thesis
   references: 
-    - "bla"
-    - "bla"
-    - "bla"
+    - Berger, Clemens, and Ieke Moerdijk. "On the homotopy theory of enriched categories." Quarterly Journal of Mathematics 64.3 (2013); 805-846.
+    - Rosický, Jirí. "On combinatorial model categories." Applied Categorical Structures 17 (2009); 303-316.
+    - Loregian, Fosco. "Automata and coalgebras in categories of species." International Workshop on Coalgebraic Methods in Computer Science. Springer Nature Switzerland, 2024.
   difficulty: 5
 
 - title: "Monoidal Topology"
-  description: # "Investigate how monoidal categories can structure topological constructs, including locales and sheaves."
+  description: Monoidal topology applies techniques of categorical algebra to general topology and order theory. It starts from a (now old) result of Barr characterizing (all!) topological spaces as algebras for a certain monad; monoidal topology regards this result as a particular instance of the fact that "all" metric, topological and order-theoretic structures can be seen as enriched categories.
   type: 🎓 Master thesis
   references: 
-    - "bla"
-    - "bla"
-    - "bla"
+    - Clementino, M. M., Colebunders, E., Hofmann, D., Lowen, R., Lucyshyn-Wright, R., Seal, G. J., & Tholen, W. (2014). Monoidal Topology.
+    - Vandeven, T. (2023). Monoidal Topology on Linear Bicategories (Master dissertation, Université d'Ottawa/University of Ottawa).
+    - Clementino, Maria Manuel, Eva Colebunders, and Walter Tholen. "Lax algebras as spaces." Monoidal topology (2014); 375-466.
+    - Solovyov, S.A. Characterization of a category for monoidal topology. Algebra Univers. 74, 389–410 (2015). https://doi.org/10.1007/s00012-015-0352-1
   difficulty: 2
 
 - title: "Contravariant Monads and Their Applications"
-  description: # "Study dual notions of monads and how contravariant structures appear in programming and logic."
+  description: A contravariant monad is exactly like a monad, besides the fact that it's a contravariant functor.
   type: 🎓 Master thesis
   references: 
-    - "bla"
+    - Guitart, René, "Monades involutives complémentées", Cahiers de topologie et géométrie différentielle catégoriques, tome 16, no 1 (1975), p. 17-101
     - "bla"
     - "bla"
   difficulty: 4

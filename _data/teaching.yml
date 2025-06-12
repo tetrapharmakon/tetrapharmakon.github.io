@@ -1,6 +1,9 @@
 teaching_activities:
-
-  - title: "ITI9200 - Sissejuhatus kategooriateooriasse | <a href='https://tetrapharmakon.github.io/CourseCategoryTheory.html'>🌐</a>"
+# projects_4_students
+  - title: "Thesis Projects | <a href='./projects_4_students.html'>🌐</a>"
+    date: "ongoing"
+    description: "A list of projects that students can work on with me."
+  - title: "ITI9200 - Sissejuhatus kategooriateooriasse | <a href='./CourseCategoryTheory.html'>🌐</a>"
     date: "Spring semester"
     description: "An introductory course to category theory."
   - title: "Organiser of ItaCa Fest | <a href='https://progetto-itaca.github.io/fests/fest25.html'>🌐</a>"
