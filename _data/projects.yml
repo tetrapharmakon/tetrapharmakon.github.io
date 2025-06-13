@@ -84,7 +84,7 @@
   difficulty: 3
 
 - title: "Bisimulation and Homotopy Theory"
-  description: I have thought for a bit of time that "bisimulation" in logic and CS is a relation on transition systems / automata that resembles a lot a notion of homotopy equivalence in abstract homotopy theory. This project aims at exploring this connection, and possibly developing a theory of bisimulation in the style of homotopy theory. I consider this a difficult project to tackle, especially for a Master's thesis, as it's very open-ended and requires a lot of background reading.
+  description: I have thought for quite a bit of time already that "bisimulation" in logic and CS is a relation on transition systems / automata that resembles a lot a notion of homotopy equivalence in abstract homotopy theory. This project aims at exploring this connection, and possibly developing a theory of bisimulation in the style of homotopy theory. I consider this a difficult project to tackle, especially for a Master's thesis, as it's very open-ended and requires a lot of background reading.
   type: 🎓 Master thesis
   references: 
     - Hirschhorn, Philip S. Model categories and their localizations. No. 99. American Mathematical Soc., 2003.
