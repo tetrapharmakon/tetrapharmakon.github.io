@@ -57,7 +57,7 @@ It is unfortunate that much of Italian academia perpetuates the narrow and misgu
 This list is meant to counter that narrative. Instead, I'd like to convey the idea that no matter where you come from, and what Mathematics you care about, category theory is useful for that. Yes, for <em>that</em> as well. And for <em>that</em> too. Here you'll find a selection of diverse topics in category theory that I believe are worth exploring, and that I would be happy to supervise. It can also be taken as a list of references for self-study. 
 </p>
 <p>
-  Each project is briefly described and marked with its suitable level — 🎓 Bachelor's, 📚 Master's, or 🧬 PhD (this is the research I am myself conducting <em>right now</em>: this means essentially that whatever you end up doing in that direction has a high chance of becoming a publication) —along with a list of references for what catches your eye.
+  Each project is briefly described and marked with its suitable level — 📚 Bachelor's, 🎓 Master's, or 🧬 PhD (this is the research I am myself conducting <em>right now</em>: this means essentially that whatever you end up doing in that direction has a high chance of becoming a publication) —along with a list of references for what catches your eye.
 </p>
   {% for project in site.data.projects %}
     <div class="project">
