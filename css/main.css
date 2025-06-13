@@ -461,7 +461,7 @@ footer {
   }
 }
 
-/* Dark mode support - more refined palette */
+/* Dark mode support - more refined palette
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1a202c;
@@ -471,9 +471,9 @@ footer {
     --primary-color: #e2e8f0;
     --highlight-color: #9f7aea;
     --accent-color: #4a5568;
-  }
+  } */
   
-  .publication {
+  /* .publication {
     border-left: 2px solid var(--highlight-color);
   }
   
@@ -503,7 +503,7 @@ footer {
   h1, h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-}
+} */
 .notes-container {
   max-width: 70%;
   margin: 40px auto;
