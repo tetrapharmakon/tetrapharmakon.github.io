@@ -51,7 +51,7 @@ layout: default
   This page presents a curated selection of potential thesis projects for students interested in working with me as their advisor. I continue to receive an increasing number of requests for supervision — particularly from fellow Italians — often driven by a shared frustration: doing category theory in Italy can be disheartening.
 </p>
 <p>
-It is unfortunate that much of Italian academia perpetuates the narrow and misguided belief that category theory is merely a tool of algebraic geometry or homological algebra. This reductive view not only stifles the field's richness but misleads students and researchers alike. I find this perspective deeply troubling — not just intellectually, but ethically — and I strongly oppose the mindset that sustains it.
+It is unfortunate that much of Italian academia perpetuates the narrow and misguided belief that category theory is merely a tool of algebraic geometry or homological algebra — or worse, ignores the language of category theory altogether. This reductive view misled students and researchers alike across the years; it is a deeply troubling perspective — not just intellectually, but ethically — and I strongly oppose the mindset that sustains it.
 </p>
 <p>
 This list is meant to counter that narrative. Instead, I'd like to convey the idea that no matter where you come from, and what Mathematics you care about, category theory is useful for that. Yes, for <em>that</em> as well. And for <em>that</em> too. Here you'll find a selection of diverse topics in category theory that I believe are worth exploring, and that I would be happy to supervise. It can also be taken as a list of references for self-study. 

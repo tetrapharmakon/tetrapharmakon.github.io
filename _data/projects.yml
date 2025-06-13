@@ -122,7 +122,7 @@
     - "bla"
   difficulty: 4
 - title: "Shape theory via profunctors"
-  description: # A contravariant monad is exactly like a monad, besides the fact that it's a contravariant functor.
+  description: Shape theory is the homotopy theory of pathological spaces, that defines homotopy-invariants like cohomology and homotopy groups for spaces which are not CW complexes. Surprisingly, shape theory is encoded in a branch of 2-category theory. This project would survey on both the algebraic topology and the categorical side of shape theory, and provide a survey of the current state of the art. Such a manuscript would be immensely valuable for the community (and easily publishable), as the current literature is scarce, scattered and sometimes inaccessible.
   type: 🎓 Master thesis
   references: 
     - Cordier, J-M., and Timothy Porter. Shape theory. categorical methods of approximation. Courier Corporation, 2008.
