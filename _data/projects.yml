@@ -130,31 +130,26 @@
     - Dydak, Jerzy, and Jack Segal. <em>Shape theory</em>. An introduction. Vol. 688. Springer, 2006.
   difficulty: 3
 - title: The Fibration of Wedges and Cowedges
-  description: # "Hard problem: explore advanced concepts related to dual limits and their fibrational behaviors."
+  description: The project started as a spinoff of what my PhD student <a href="https://iwilare.com/">Andrea Laretto</a> has been doing for the last few years; coend calculus turns out to be a promising way to give a semantics for quantifiers of directed type theory. What is the fibrational side of this story? One can cook up a certain bifibration (the "fibration of wedges" of the title), and study its categorical properties. This is somewhat of a hard problem. A prospective goal would be to taxonomize the properties of this fibration, and to provide semantic backup for the syntax developed by Andrea.
   type: 🎓 Master thesis
   references: 
-    - "bla"
-    - "bla"
-    - "bla"
+    - <em>Directed First-Order Logic</em>, <a href="https://iwilare.com/directed-first-order-logic.pdf">click</a>.
+    - <em>Directed Equality with Dinaturality</em>, <a href="https://iwilare.com/directed-equality-with-dinaturality.pdf">click</a>.
+  difficulty: 4
+
+- title: Fibrations Associated to Parametric Functors
+  description: Every functor $F\colon \mathcal{A}\times \mathcal{X}\to\mathcal{X}$ defines a fibered category "of algebras" $\mathcal A\ltimes_F \mathcal X$ over $\mathcal{A}$, where all $F_A$-algebra structures are considered coherently and compatibly. Such situations should be thought of as generalized instances of semidirect products, hence the notation. Representation theory provides a rich source of examples, as well as categorical logic, topology, geometry. I have plenty of side projects that can be developed in this direction.
+  type: 🧬 PhD project
+  references: 
+    - TBA
   difficulty: 4
 
 - title: 2-Categories of Automata
   description: # "Research automata theory using 2-categorical semantics, incorporating states, transitions, and higher morphisms."
   type: 🧬 PhD project
   references: 
-    - "bla"
-    - "bla"
-    - "bla"
+    - TBA
   difficulty: 5
-
-- title: Fibrations Associated to Parametric Functors
-  description: # "Study fibrational structures that arise from parametric polymorphism and their categorical modeling."
-  type: 🧬 PhD project
-  references: 
-    - "bla"
-    - "bla"
-    - "bla"
-  difficulty: 4
 
 - title: Derivations on a Category
   description: # "Investigate the notion of derivations in categories, generalizing the idea of differential operators."
