@@ -67,7 +67,7 @@
 
 - title: Coend Calculus in Indexed Category Theory
   description: It should be possible to develop <a href="">coend calculus</a> inside the language of indexed category theory. To my knowledge, no one attempted to do this; partly, I believe because this is an exercise in style, but having at our disposal coend calculi for other flavours of formal category theory, I find it a worthy project. What makes this project a bit different from the others is that the question is rather open-ended; the student will have to figure out in what sense the general claim is true. 
-  type: 🎓 Master thesis
+  type: 🎓🧬 Master/PhD thesis
   references: 
     - Pare, Robert, et al. <em>Indexed categories and their applications</em>. Vol. 661. Springer, 2006.
     - Johnstone, Peter T., et al. <em>V-indexed categories.</em> Indexed categories and their applications. Springer Berlin Heidelberg, 1978.
@@ -85,7 +85,7 @@
 
 - title: Bisimulation and Homotopy Theory
   description: I have thought for quite a bit of time already that "bisimulation" in logic and CS is a relation on transition systems / automata that resembles a lot a notion of homotopy equivalence in abstract homotopy theory. This project aims at exploring this connection, and possibly developing a theory of bisimulation in the style of homotopy theory. I consider this a difficult project to tackle, especially for a Master's thesis, as it's very open-ended and requires a lot of background reading.
-  type: 🎓 Master thesis
+  type: 🎓🧬 Master/PhD thesis
   references: 
     - Hirschhorn, Philip S. <em>Model categories and their localizations</em>. No. 99. American Mathematical Soc., 2003.
     - Sangiorgi, Davide, and Jan Rutten, eds. <em>Advanced topics in bisimulation and coinduction</em>. Vol. 52. Cambridge University Press, 2011.
@@ -96,7 +96,7 @@
 
 - title: The Theory of Model 2-Categories
   description: Some 2-categories have the property that each hom-category $\mathbf{Hom}(X,Y)$ is a model category, and composition $\_\circ\_ \colon \mathbf{Hom}(Y,Z) \times \mathbf{Hom}(X,Y) \to \mathbf{Hom}(X,Z)$ is a left Quillen bifunctor. Examples are abundant and draw from diverse branches of mathematics. What is the general theory of such categories?
-  type: 🎓 Master thesis
+  type: 🎓🧬 Master/PhD thesis
   references: 
     - Berger, Clemens, and Ieke Moerdijk. <em>On the homotopy theory of enriched categories.</em> Quarterly Journal of Mathematics 64.3 (2013); 805-846.
     - Rosický, Jirí. <em>On combinatorial model categories.</em> Applied Categorical Structures 17 (2009); 303-316.
@@ -115,7 +115,7 @@
 
 - title: Contravariant Monads and Their Applications
   description: A contravariant monad is exactly like a monad, besides the fact that it's a contravariant functor.
-  type: 🎓 Master thesis
+  type: 🎓🧬 Master/PhD thesis
   references: 
     - Guitart, René, <em>Monades involutives complémentées</em>, Cahiers de topologie et géométrie différentielle catégoriques, tome 16, no 1 (1975), p. 17-101
     - https://gallica.bnf.fr/ark:/12148/bpt6k64180124/f155.item
@@ -131,7 +131,7 @@
   difficulty: 3
 - title: The Fibration of Wedges and Cowedges
   description: The project started as a spinoff of what my PhD student <a href="https://iwilare.com/">Andrea Laretto</a> has been doing for the last few years; coend calculus turns out to be a promising way to give a semantics for quantifiers of directed type theory. What is the fibrational side of this story? One can cook up a certain bifibration (the "fibration of wedges" of the title), and study its categorical properties. This is somewhat of a hard problem. A prospective goal would be to taxonomize the properties of this fibration, and to provide semantic backup for the syntax developed by Andrea.
-  type: 🎓 Master thesis
+  type: 🎓🧬 Master/PhD thesis
   references: 
     - <em>Directed First-Order Logic</em>, <a href="https://iwilare.com/directed-first-order-logic.pdf">click</a>.
     - <em>Directed Equality with Dinaturality</em>, <a href="https://iwilare.com/directed-equality-with-dinaturality.pdf">click</a>.
