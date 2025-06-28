@@ -145,17 +145,18 @@
   difficulty: 4
 
 - title: 2-Categories of Automata
-  description: # "Research automata theory using 2-categorical semantics, incorporating states, transitions, and higher morphisms."
+  description: Since the end of the '70s people in the category theory community explored connections between formal language theory and formal category theory. The kind of structure in which processes naturally organize is a natural instance of a monoidal bicategory in the sense of Gordon-Power-Street's famous Memoir <em>Coherence of Tricategories</em>.
   type: 🧬 PhD project
   references: 
-    - TBA
+    - Gordon, Robert, Anthony John Power, and Ross Street. <em>Coherence for tricategories</em>. Vol. 558. American Mathematical Soc., 1995.
+    - https://arxiv.org/abs/2501.01882
+    - https://arxiv.org/abs/2401.04242
   difficulty: 5
 
 - title: Derivations on a Category
-  description: # "Investigate the notion of derivations in categories, generalizing the idea of differential operators."
+  description: What is a category equipped with an endofunctor that is "linear and Leibniz"? The answer will shock you.
   type: 🧬 PhD project
   references: 
-    - "bla"
-    - "bla"
-    - "bla"
+    - https://arxiv.org/abs/2103.00938
+    - https://arxiv.org/abs/2401.04242
   difficulty: 5
