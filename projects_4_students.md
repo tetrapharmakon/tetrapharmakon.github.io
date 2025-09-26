@@ -72,7 +72,7 @@ This list is meant to counter the narrative. Instead, I'd like to convey the ide
       <div class="project-description">{{ project.description }}</div>
       {% if project.references %}
       <div class="project-references">
-        <strong>Further Reading:</strong>
+        <strong>Further Readings:</strong>
         <ul>
           {% for ref in project.references %}
             <li>{{ ref }}</li>
