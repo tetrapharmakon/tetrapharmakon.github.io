@@ -112,6 +112,11 @@
   url: "stuff/beamers/bologna-may25.pdf"
   description: "https://seminari.dm.unibo.it/mat/serials/34"
   type: "talk"
+
+- title: "Two-dimensional transducers"
+  url: "stuff/beamers/topos-colloq-handout.pdf"
+  description: "https://seminari.dm.unibo.it/mat/serials/34"
+  type: "talk"
 #=====
 
 - title: "CoG-GoC"
