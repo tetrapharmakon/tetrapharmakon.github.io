@@ -147,10 +147,11 @@
   difficulty: 4
 
 - title: 2-Categories of Automata
-  description: Since the end of the '70s people in the category theory community explored connections between formal language theory and formal category theory. The kind of structure in which processes naturally organize is a natural instance of a monoidal bicategory in the sense of Gordon-Power-Street's famous Memoir <em>Coherence of Tricategories</em>.
+  description: "Since the end of the '70s people in the category theory community explored connections between formal language theory and formal category theory. The kind of structure in which processes naturally organize is a natural instance of a monoidal bicategory in the sense of Gordon-Power-Street's famous Memoir <em>Coherence of Tricategories</em>, and moreover it's a bicategory 'of Kleisli type' for some sort of free cocompletion monad. So, ditch the pretext of formal language theory and ask yourself: what is the general theory of such bicategories?"
   type: 🧬 PhD project
   references: 
     - Gordon, Robert, Anthony John Power, and Ross Street. <em>Coherence for tricategories</em>. Vol. 558. American Mathematical Soc., 1995.
+    - Paré, Robert. <em>Mealy morphisms of enriched categories.</em> Applied Categorical Structures 20.3 (2012): 251-273.
     - https://arxiv.org/abs/2501.01882
     - https://arxiv.org/abs/2401.04242
   difficulty: 5
