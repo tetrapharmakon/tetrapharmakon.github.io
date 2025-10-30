@@ -58,7 +58,7 @@
   difficulty: 4
 
 - title: The Theory of Relative Monads
-  description: A relative monad is something that behaves exactly like a monad, besides the fact that it is not an endofunctor.
+  description: A relative monad is something that behaves exactly like a monad, besides the fact that it is not an endofunctor. 
   type: 🎓 Master thesis
   references: 
     - Altenkirch, Thosten, James Chapman, and Tarmo Uustalu. <em>Monads need not be endofunctors.</em> Logical methods in computer science 11 (2015).
@@ -116,12 +116,12 @@
   difficulty: 2
 
 - title: Contravariant Monads and Their Applications
-  description: A contravariant monad is exactly like a monad, besides the fact that it's a contravariant functor.
+  description: A contravariant monad is exactly like a monad, besides the fact that it's a contravariant functor. All facts about monads <em>should</em> export to contramonads.
   type: 🎓🧬 Master/PhD thesis
   references: 
     - Guitart, René, <em>Monades involutives complémentées</em>, Cahiers de topologie et géométrie différentielle catégoriques, tome 16, no 1 (1975), p. 17-101
-    - https://gallica.bnf.fr/ark:/12148/bpt6k64180124/f155.item
-    - https://mathoverflow.net/questions/313283/p-set-is-a-contravariant-co-lax-idempotent-monad-whose-multiplication
+    - Guitart, René, [Comptes rendus hebdomadaires des séances de l'Académie des sciences, <em>Construction des monades involutives</em>. <a href="https://gallica.bnf.fr/ark:/12148/bpt6k64180124/f155.item">click</a>
+    - Mathoverflow, 'P is a contravariant co/lax idempotent monad, whose multiplication is determined by the unit' <a href="https://mathoverflow.net/questions/313283/p-set-is-a-contravariant-co-lax-idempotent-monad-whose-multiplication">click</a>
   difficulty: 4
 - title: Shape theory via profunctors
   description: Shape theory is the homotopy theory of pathological spaces, that defines homotopy-invariants like cohomology and homotopy groups for spaces which are not CW complexes. Surprisingly, shape theory is encoded in a branch of 2-category theory. This project would survey on both the algebraic topology and the categorical side of shape theory, and provide a survey of the current state of the art. Such a manuscript would be immensely valuable for the community (and easily publishable), as the current literature is scarce, scattered and sometimes inaccessible.
