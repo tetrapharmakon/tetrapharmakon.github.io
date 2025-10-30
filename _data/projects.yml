@@ -151,15 +151,15 @@
   type: 🧬 PhD project
   references: 
     - Gordon, Robert, Anthony John Power, and Ross Street. <em>Coherence for tricategories</em>. Vol. 558. American Mathematical Soc., 1995.
-    - Paré, Robert. <em>Mealy morphisms of enriched categories.</em> Applied Categorical Structures 20.3 (2012): 251-273.
-    - https://arxiv.org/abs/2501.01882
-    - https://arxiv.org/abs/2401.04242
+    - Paré, Robert. <em>Mealy morphisms of enriched categories.</em> Applied Categorical Structures 20.3 (2012); pp 251-273.
+    - ——. "Monads and limits in bicategories of circuits." arXiv preprint arXiv:2501.01882 (2025). (<a href="https://arxiv.org/abs/2501.01882">click</a>)
+    - ——. <em>Automata and coalgebras in categories of species.</em> International Workshop on Coalgebraic Methods in Computer Science. Springer Nature Switzerland, 2024. (<a href="https://arxiv.org/abs/2401.04242">click</a>)
   difficulty: 5
 
 - title: Derivations on a Category
   description: What is a category equipped with an endofunctor that is "linear and Leibniz"? The answer will shock you.
   type: 🧬 PhD project
   references: 
-    - https://arxiv.org/abs/2103.00938
-    - https://arxiv.org/abs/2401.04242
+    - ——, and Todd Trimble. <em>Differential 2-rigs.</em> arXiv preprint arXiv:2103.00938 (2021). (<a href="https://arxiv.org/abs/2103.00938">click</a>)
+    - ——. <em>Automata and coalgebras in categories of species.</em> International Workshop on Coalgebraic Methods in Computer Science. Springer Nature Switzerland, 2024. (<a href="https://arxiv.org/abs/2401.04242">click</a>)
   difficulty: 5
