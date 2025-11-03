@@ -73,7 +73,7 @@
   references: 
     - Pare, Robert, et al. <em>Indexed categories and their applications</em>. Vol. 661. Springer, 2006.
     - Johnstone, Peter T., et al. <em>V-indexed categories.</em> Indexed categories and their applications. Springer Berlin Heidelberg, 1978.
-    - https://arxiv.org/abs/2302.06515
+    - Lee, S. "Indexed profunctors over 2-categories" <a href="https://arxiv.org/abs/2302.06515">arXiv:2302.06515</a>.
   difficulty: 3
 
 - title: Grothendieck Derivators
@@ -120,7 +120,7 @@
   type: 🎓🧬 Master/PhD thesis
   references: 
     - Guitart, René, <em>Monades involutives complémentées</em>, Cahiers de topologie et géométrie différentielle catégoriques, tome 16, no 1 (1975), p. 17-101
-    - Guitart, René, [Comptes rendus hebdomadaires des séances de l'Académie des sciences, <em>Construction des monades involutives</em>. <a href="https://gallica.bnf.fr/ark:/12148/bpt6k64180124/f155.item">click</a>
+    - Guitart, René, [Comptes rendus hebdomadaires des séances de l'Académie des sciences], <em>Construction des monades involutives</em>. <a href="https://gallica.bnf.fr/ark:/12148/bpt6k64180124/f155.item">click</a>
     - Mathoverflow, 'P is a contravariant co/lax idempotent monad, whose multiplication is determined by the unit' <a href="https://mathoverflow.net/questions/313283/p-set-is-a-contravariant-co-lax-idempotent-monad-whose-multiplication">click</a>
   difficulty: 4
 - title: Shape theory via profunctors
@@ -143,7 +143,8 @@
   description: Every functor $F\colon \mathcal{A}\times \mathcal{X}\to\mathcal{X}$ defines a fibered category "of algebras" $\mathcal A\ltimes_F \mathcal X$ over $\mathcal{A}$, where all $F_A$-algebra structures are considered coherently and compatibly. Such situations should be thought of as generalized instances of semidirect products, hence the notation. Representation theory provides a rich source of examples, as well as categorical logic, topology, geometry. I have plenty of side projects that can be developed in this direction.
   type: 🧬 PhD project
   references: 
-    - TBA
+    - Soichiro Fujii; "A 2-Categorical Study of Graded and Indexed Monads". <a href="https://arxiv.org/abs/1904.08083">arXiv:1904.08083</a>.
+    - Danel Ahman, Greta Coraglia, Davide Castelnovo, ——, Nelson Martins-Ferreira, Ülo Reimaa; "Fibrations of Algebras", <a href="https://arxiv.org/abs/2408.16581">arXiv:2408.16581</a>.
   difficulty: 4
 
 - title: 2-Categories of Automata
@@ -155,6 +156,15 @@
     - ——. "Monads and limits in bicategories of circuits." arXiv preprint arXiv:2501.01882 (2025). (<a href="https://arxiv.org/abs/2501.01882">click</a>)
     - ——. <em>Automata and coalgebras in categories of species.</em> International Workshop on Coalgebraic Methods in Computer Science. Springer Nature Switzerland, 2024. (<a href="https://arxiv.org/abs/2401.04242">click</a>)
   difficulty: 5
+
+- title: Interpolation functors
+  description: Interpolation theory is a fragment of Banach space theory that has to do with the category of pullback-and-pushout squares of function spaces. An interpolation functor is a functor $F\colon \mathcal C \to \mathbf{Ban}$ such that for every $(X_0,X_1)$ pair of Banach spaces one has $X_0 \cap X_1 \subseteq F(X_0,X_1) \subseteq X_0 + X_1$.
+  type: 🧬 PhD project
+  references: 
+    - "Kaijser, Sten, and Joan Wick Pelletier. <em>A categorical framework for interpolation theory</em>. In 'Category Theory: Applications to Algebra, Logic and Topology' Proceedings of the International Conference Held at Gummersbach, July 6–10, 1981. Berlin, Heidelberg."
+    - Kaijser, Sten G. Interpolation functors and duality. Vol. 1208. Springer, 2006.
+    - Brudnyi, Yu A., and N. Ya Krugljak. Interpolation functors and interpolation spaces. Vol. 47. Elsevier, 1991.
+  difficulty: 4
 
 - title: Derivations on a Category
   description: What is a category equipped with an endofunctor that is "linear and Leibniz"? The answer will shock you.
