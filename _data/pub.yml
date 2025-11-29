@@ -8,6 +8,18 @@
   number: '20'
   pages: 667--685
   month: '06'
+- title: Automata and coalgebras in categories of species (journal version)
+  authors: Fosco Loregian
+  venue: Mathematical Structures in Computer Science
+  year: 2025
+  doi: 10.1017/S0960129525100364
+  url: http://dx.doi.org/10.1017/S0960129525100364
+  pages: "65\u201392"
+- title: First-Order Directed Type Theory via Dinaturality
+  authors: "A. Laretto, \u2014, N. Veltri"
+  venue: POPL2026
+  year: 2026
+  url: stuff/popl26-final447.pdf
 - title: Automata and coalgebras in categories of species
   authors: Fosco Loregian
   venue: Coalgebraic Methods in Computer Science
@@ -17,8 +29,7 @@
   pages: "65\u201392"
 - title: Bicategories of automata, automata in bicategories
   authors: "G. Boccali, A. Laretto, \u2014, S. Luneia"
-  venue: Proceedings of the 6th International Conference on Applied Category Theory
-    2023
+  venue: ACT2023
   year: 2023
   doi: 10.4204/EPTCS.397.1
   url: https://doi.org/10.4204/EPTCS.397.1
@@ -61,8 +72,7 @@
   pages: '107155'
 - title: A categorical semantics for bounded Petri nets
   authors: "F. Genovese, \u2014, D. Palombi"
-  venue: Proceedings of the 6th International Conference on Applied Category Theory
-    2021
+  venue: ACT2021
   year: 2021
   doi: 10.4204/eptcs.372.5
   url: https://doi.org/10.4204/eptcs.372.5
