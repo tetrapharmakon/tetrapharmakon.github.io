@@ -1,0 +1,186 @@
+/* Color Palette */
+:root {
+  --primary-color: #1E3A8A;
+  --secondary-color: #14B8A6;
+  --background-color: #F3F4F6;
+  --text-color: #374151;
+  --accent-color: #F59E0B;
+  --border-color: #E5E7EB;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* List Styling */
+ul {
+  padding-left: 2.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+.schedule-table {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+
+.references-table {
+  width: 100%;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-container, .map-container {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Google Maps */
+iframe {
+  max-width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2rem 0;
+}
+
+/* Captions */
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.caption img {
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+  
+  .schedule-table {
+    width: 100%;
+  }
+  
+  iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  iframe {
+    height: 250px;
+  }
+}

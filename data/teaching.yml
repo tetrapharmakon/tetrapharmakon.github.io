@@ -1,0 +1,56 @@
+teaching_activities:
+# projects_4_students
+  - title: "Thesis Projects | <a href='./projects_4_students.html'>🌐</a>"
+    date: "ongoing"
+    description: "A list of projects that students can work on with me."
+  - title: "ITI9200 - Sissejuhatus kategooriateooriasse | <a href='./CourseCategoryTheory.html'>🌐</a>"
+    date: "Spring semester"
+    description: "An introductory course to category theory."
+  - title: "Organiser of ItaCa Fest | <a href='https://progetto-itaca.github.io/fests/fest25.html'>🌐</a>"
+    date: "2020 – 2025"
+    description: "The <a href='https://progetto-itaca.github.io/'>association of <b>Ita</b>lian <b>Ca</b>tegory theorists</a> organizes recurring online seminars and other events."
+
+  - title: "Organizer of PSSL110 | <a href='https://www.ioc.ee/~amar/pssl110/'>🌐</a>"
+    date: "May 2025"
+    description: "The 110th <a href='https://ncatlab.org/nlab/show/Peripatetic+Seminar+on+Sheaves+and+Logic'>Peripathetic Seminar on Sheaves and Logic</a> will be held in Tallinn in May 2025."
+
+  - title: "Award for Researcher of the Year 2021 | <a href='https://taltech.ee/en/book-honour'>🌐</a>"
+    date: "2021"
+    description: "Awarded for distinguished research achievements."
+
+  - title: "PSSL 103 - Brno | <a href='https://ncatlab.org/nlab/files/SchedulePSSL103.pdf'>🌐</a>"
+    description: "The 103rd Peripathetic Seminar on Sheaves and Logic took place in Brno."
+    date: "April 2018"
+
+  - title: "Elements of Finite Mathematics (at <ahref='https://www.uwo.ca/'>🌐 UWO</a>)"
+    description: "Techniques of counting, probability, discrete and continuous random variables."
+    date: "Autumn 2016"
+
+  - title: "Kan Extension Seminar I | <a href='https://math.jhu.edu/~eriehl/kan/'>🌐</a>"
+    description: "An online Category Theory reading course, supervised by Emily Riehl."
+    date: "Jan 2014 – Jul 2014"
+
+supervision_of_students:
+  - title: "Supervisor and advisor"
+    student: "G. Boccali (starting 2025)"
+    description: "Project: On 2-categorical aspects of automata theory"
+
+  - title: "Supervisor and coadvisor"
+    student: "A. Laretto (started 2023)"
+    description: "Project: Dinaturality and type theory"
+
+  - title: "Mentor for the SIGPLAN-M"
+    student: "A. Laretto"
+    description: 'The SIGPLAN Long-Term Mentoring Committee (<a href="https://www.sigplan.org/LongTermMentoring/">SIGPLAN-M</a>) organizes an international long-term mentoring program for programming languages researchers.'
+
+  - title: "Supervisor for M.Sc. internship at TalTech"
+    student: "T. Massacrier"
+    description: "Project: From combinatorial species to general differential 2-rigs"
+
+  - title: "Supervisor and coadvisor M.Sc. in Mathematics"
+    student: "G. Sorgente"
+    description: "Thesis: Formal theory of promonads"
+
+  - title: "Supervisor and coadvisor B.Sc. in Mathematics"
+    student: "G. Ronchi"
+    description: "Thesis: Adjoint Functors"

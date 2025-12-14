@@ -1,0 +1,379 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="author" content=""> <title>Fibrations in agda</title> <link rel='alternate' type='application/atom+xml' title='Atom feed for http://localhost:4000' href='/atom.xml'> <link rel="icon" type="image/png" href="assets/favicon.png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" /> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link rel="stylesheet" href="https://fonts.googleapis.com/css?display=swap&family=Lato|Oswald|Noto+Color+Emoji"/> <link rel="stylesheet" href="css/main.css"/> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous" /> <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/contrib/auto-render.min.js" integrity="sha384-cXpztMJlr2xFXyDSIfRWYSMVCXZ9HeGXvzyKTYrn03rsMAlOtIQVzjty5ULbaP8L" crossorigin="anonymous"></script> <script> document.addEventListener("DOMContentLoaded", function() { renderMathInElement( document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "\\[", right: "\\]", display: true}, {left: "$", right: "$", display: false}, {left: "\\(", right: "\\)", display: false} ] } ); }); </script> </head> <body> <h1 id="fibrations-in-agda">Fibrations in agda</h1> <p>(Note: this is a literate agda file: <a href="stuff/simple.lagda.md">src</a>)</p> <p>I have recently decided to iron all the kinks of a few proofs left as exercises in Bart Jacobs’ book <em>Categorical logic and type theory</em>, by proving them in agda (and in particular, using <a href="https://github.com/agda/agda-categories">agda-categories</a>).</p> <p>The first obligatory step is some boilerplate code: let’s keep this to a minimum.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module simple {I : Set} where
+
+open import Categories.Category
+open import Categories.Category.Cartesian.Bundle
+open import Categories.Category.CartesianClosed.Canonical
+open import Categories.Category.Core
+open import Data.Product
+open import Function using (const)
+open import Level
+open import Relation.Binary.Core using (Rel)
+open import Relation.Binary.PropositionalEquality
+open Relation.Binary.PropositionalEquality.≡-Reasoning
+open import Categories.Functor
+open import Categories.Functor.Bifunctor
+open import Categories.Comonad
+open import Categories.Category.Construction.CoEilenbergMoore
+open import Categories.NaturalTransformation as NT using (ntHelper)
+open import Categories.NaturalTransformation.NaturalIsomorphism hiding (refl; sym; trans)
+import Categories.Category.Equivalence as E
+
+private
+  variable
+    a b c : Level
+
+-- I have to redefine function composition. A rename or this will do:
+_⋆_ : ∀ {A : Set a} {B : A → Set b} {C : {x : A} → B x → Set c} →
+      (∀ {x} (y : B x) → C y) → (g : (x : A) → B x) →
+      ((x : A) → C (g x))
+f ⋆ g = λ x → f (g x)
+</code></pre></div></div> <p>and next, the terminal type, and a lemma that says it has only one term (some proofs of uniqueness require extensionality plus this lemma):</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data t : Set where
+ ⊤ : t
+
+!-unique-lemma : ∀ (x : t) → ⊤ ≡ x
+!-unique-lemma ⊤ = refl
+
+postulate
+ -- we need to postulate extensionality...
+ extensionality : ∀ {A B : Set} {f g : A → B} →
+  (∀ (x : A) → f x ≡ g x) → f ≡ g
+
+-- and a proof that the category of Sets is indeed a category.
+SetC : Category (suc zero) zero zero
+-- a category depends on three levels:
+-- 1. where the objects live,
+-- 2. where the hom-set(oid)s live,
+-- 3. and where the category lives.
+SetC =
+ record
+  { Obj = Set
+  -- the class of objects
+  ; _⇒_ = λ x y → x → y
+  -- the relation defining the hom-setoids.
+  ; _≈_ = _≡_
+  -- def of equality in the homs
+  ; id = λ x → x
+  -- the identity function
+  ; _∘_ = λ f g a → f (g a)
+  -- category composition
+  ; assoc = refl
+  ; sym-assoc = refl
+  -- two proofs of associativity: this makes (C^op)^op
+  -- syntactically equal to C, which is nice
+  ; identityˡ = refl
+  ; identityʳ = refl
+  ; identity² = refl
+  -- proofs that id . f = f = f . id and id . id = id
+  ; equiv = record { refl = refl ; sym = sym ; trans = trans }
+  -- proof that _≈_ is an equivalence relation...
+  ; ∘-resp-≈ = λ {refl refl → refl}
+  -- and a congruence with respect to composition.
+  }
+</code></pre></div></div> <p>Everything is quite trivial here; the comments I added clarify how the various records have to be filled. Probably one of the most useful tricks to learn here, is the way in which the last field was filled: I didn’t know about the existence of this when I first opened this file, and it really saved me hours.</p> <p>Now, one of the first interesting examples in Jacobs’ book is that of a <em>simple fibration</em> over a category 𝔹 with finite products (let’s say, all finite limits, and for fibration-theory purposes, even a <em>canonical</em> choice thereof).</p> <p>Given such a category 𝔹, the category s(𝔹) is defined having</p> <ol> <li>objects the pairs <code class="language-plaintext highlighter-rouge">(I , X)</code> of objects in 𝔹;</li> <li>morphisms <code class="language-plaintext highlighter-rouge">(I , X) → (J , Y)</code> are pairs of morphisms <code class="language-plaintext highlighter-rouge">u : I → J</code> and <code class="language-plaintext highlighter-rouge">f : I × X → Y</code>.</li> </ol> <p>The identity is the “trivial” pair made by the couple <code class="language-plaintext highlighter-rouge">(id {I} , proj₂)</code> (the projection on the second factor). The composition of <code class="language-plaintext highlighter-rouge">(u , f)</code> and <code class="language-plaintext highlighter-rouge">(v , g)</code> is defined as <code class="language-plaintext highlighter-rouge">(v ∘ u , g ∘ ⟨ u ∘ proj₁ , f ⟩)</code>, and all the other choices are either forced by this, or straightforward (for example, <code class="language-plaintext highlighter-rouge">_≈_</code> is just <code class="language-plaintext highlighter-rouge">_≡_</code>).</p> <p>Fortunately, agda needs just a little bit of help to figure everything out.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>simple : Category (suc zero) zero zero
+simple =
+ record
+  -- structure
+  { Obj = Set × Set
+  ; _⇒_ = _⇒_
+  ; _≈_ = _≡_
+  ; id = (λ z → z) , proj₁
+  ; _∘_ = _∘_
+  -- properties
+  ; assoc = refl
+  ; sym-assoc = refl
+  ; identityˡ = refl
+  ; identityʳ = refl
+  ; identity² = refl
+  -- whew, they're all trivial!
+  ; equiv = record { refl = refl ; sym = sym ; trans = trans }
+  ; ∘-resp-≈ = λ {refl refl → refl}
+  }
+  where
+  _⇒_ : Rel (Set × Set) zero
+  (i , x) ⇒ (j , y) = (i → j) × (x × i → y)
+  _∘_ : {A B C : Set × Set} → B ⇒ C → A ⇒ B → A ⇒ C
+  _∘_ {i , x} {j , y} {_} (u , f) (v , g) =
+   (λ t → u (v t)) , λ t → f (g t , v (proj₂ t))
+</code></pre></div></div> <p>Now, <code class="language-plaintext highlighter-rouge">s(𝔹)</code> comes equipped with an obvious forgetful functor to 𝔹, projecting on the first component: the object of interest for Jacobs’ is the fiber of this functor over a certain <code class="language-plaintext highlighter-rouge">I ∈ 𝔹</code>. Such a category can be characterised in many ways; the most elegant is: it is a certain Kleisli category.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fiber-of-simple : {I : Set} → Category (suc zero) zero zero
+fiber-of-simple {I} =
+ record
+  { Obj = Set
+  ; _⇒_ = λ X Y → X × I → Y
+  ; _≈_ = _≡_
+  ; id = proj₁
+  ; _∘_ = _·_ -- this is the Kleisli composition
+  ; assoc = refl
+  ; sym-assoc = refl
+  ; identityˡ = refl
+  ; identityʳ = refl
+  ; identity² = refl
+  ; equiv = record { refl = refl ; sym = sym ; trans = trans }
+  ; ∘-resp-≈ = rresp
+  }
+  where
+   _·_ : {I : Set} {A B C : Set} → (B × I → C) → (A × I → B) → A × I → C
+   _·_ {I} f g (x , i) = f (g(x , i) , i)
+   rresp : {A B C : Set} {f h : B × I → C} {g i : A × I → B} →
+    f ≡ h → g ≡ i → (f · g) ≡ (h · i)
+   rresp {A} {B} {C} {f} {h} {g} {i} x y =
+    trans (cong (λ t → t · g) x) (cong (_·_ h) y)
+</code></pre></div></div> <p>The proof that reindexing functors exist:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reindex : {I J : Set} →
+ (u : I → J) →
+ Functor (fiber-of-simple {J}) (fiber-of-simple {I})
+reindex {I} {J} u = record
+  { F₀ = F0
+  ; F₁ = F1
+  ; identity = refl
+  ; homomorphism = refl
+  ; F-resp-≈ = λ {refl → refl}
+  }
+  where
+  open Category (fiber-of-simple {J})
+  F0 : Obj → Set
+  F0 X = X × J
+  F1 : {A B : Obj} →
+   (fiber-of-simple {J}) Categories.Category.[ A , B ] →
+   (fiber-of-simple {I}) Categories.Category.[ F0 A , F0 B ]
+  F1 {A} {B} u ((a , j) , i) = u (a , j) , j
+</code></pre></div></div> <p>Now, here’s the proof that each fiber of a simple fibration is cartesian.</p> <p>It is moderately painful, because the record <code class="language-plaintext highlighter-rouge">CartesianCategory</code> has other records nested inside…</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fib-of-simple-cartesian : ∀ {I : Set} →
+ CartesianCategory (suc zero) zero zero
+fib-of-simple-cartesian {I} =
+ record
+  { U = fiber-of-simple {I}
+  ; cartesian =
+    record
+     { terminal =
+       record { ⊤ = t
+           ; ⊤-is-terminal =
+             record
+              { ! = const ⊤
+              ; !-unique =
+                λ f → extensionality (λ x → !-unique-lemma (f x))
+              }
+           }
+     ; products =
+       record
+        { product = λ {A} {B} →
+          record
+           { A×B = A × B
+           ; π₁ = λ x → proj₁ (proj₁ x)
+           ; π₂ = λ x → proj₂ (proj₁ x)
+           ; ⟨_,_⟩ = λ f g t → f t , g t
+           ; project₁ = refl
+           ; project₂ = refl
+           ; unique = λ {refl refl → refl}
+           } } } }
+</code></pre></div></div> <p>but with a little help from our friend <code class="language-plaintext highlighter-rouge">λ {refl ... refl → refl}</code>, we did it!</p> <p>Mimicking the same argument, just not restricted to the fiber at <code class="language-plaintext highlighter-rouge">I</code>, one proves that the entire s(𝔹) is a cartesian category.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>simple-cartesian : CartesianCategory (suc zero) zero zero
+simple-cartesian = record
+ { U = simple
+ ; cartesian = record
+   { terminal = record
+    { ⊤ = t , t
+    ; ⊤-is-terminal =
+      record { ! = const ⊤ , const ⊤
+             ; !-unique = bang-uniq
+             } }
+   ; products = record { product = λ {A} {B} → record
+    { A×B = (proj₁ A × proj₁ B) , (proj₂ A × proj₂ B)
+    ; π₁ = proj₁ , λ x → proj₁ (proj₁ x)
+    ; π₂ = proj₂ , (λ x → proj₂ (proj₁ x))
+    ; ⟨_,_⟩ = ⟨_,_⟩
+    ; project₁ = refl
+    ; project₂ = refl
+    ; unique = λ {refl refl → refl}
+    } } } }
+    where
+     open Category simple
+     bang-uniq :
+      {A : Obj}
+      -------------------------
+      (f : A ⇒ (t , t)) →
+      --------------------------------------
+      (simple Category.≈ (const ⊤ , const ⊤)) f
+     bang-uniq {I , X} (u , k) =
+      cong₂ Data.Product._,_
+       (extensionality (λ x → !-unique-lemma (u x)))
+       (extensionality (λ x → !-unique-lemma (k x)))
+     ⟨_,_⟩ :
+      {A B C : Set × Set} →
+      C ⇒ A →
+      C ⇒ B →
+      C ⇒ ((proj₁ A × proj₁ B) , (proj₂ A × proj₂ B))
+     ⟨_,_⟩ {A0 , A1} {B0 , B1} {C0 , C1} (u , h) (v , k) =
+      (λ x → (u x) , (v x)) , λ x → (h x) , (k x)
+</code></pre></div></div> <p>…the biggest pain was to indent the code in a logical way.</p> <p>And now for the proof that each fiber of <code class="language-plaintext highlighter-rouge">U : s(𝔹) → 𝔹</code> is cartesian closed:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fib-of-simple-ccc : {I : Set} → CartesianClosed (fiber-of-simple {I})
+fib-of-simple-ccc {I} =
+ record
+  { ⊤ = t
+  ; _×_ = _×_
+  ; ! = λ x → ⊤
+  ; π₁ = proj₁ ⋆ proj₁
+  ; π₂ = proj₂ ⋆ proj₁
+  ; ⟨_,_⟩ = λ f g ci → (f ci) , (g ci)
+  ; !-unique = λ f → extensionality λ x → !-unique-lemma (f x)
+  ; π₁-comp = refl
+  ; π₂-comp = refl
+  ; ⟨,⟩-unique = λ {refl refl → refl}
+  ; _^_ = λ A B → B → A
+  ; eval = evev
+  ; curry = λ f ci a → f (((proj₁ ci) , a) , (proj₂ ci))
+  ; eval-comp = refl
+  ; curry-resp-≈ = λ {refl → refl}
+  ; curry-unique = λ {refl → refl}
+  }
+  where
+  open Category (fiber-of-simple {I})
+  evev : {B A : Obj} → ((A → B) × A) ⇒ B
+  evev ((f , a) , i) = f a
+</code></pre></div></div> <p>Another interesting exercise is the following: for every category with finite products, the categories <code class="language-plaintext highlighter-rouge">𝔹//I</code> and <code class="language-plaintext highlighter-rouge">𝔹/I</code> admit equivalent presentations as, respectively, the coKleisli and the coEilenberg-Moore categories of the comonad <code class="language-plaintext highlighter-rouge">_ × I</code>.</p> <p>First, let’s summon the <code class="language-plaintext highlighter-rouge">Comonad</code> module:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open import Categories.Comonad
+</code></pre></div></div> <p>and prove that the functor <code class="language-plaintext highlighter-rouge">_ × I</code> is a comonad, providing all the structure.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>─×_ : (I : Set) → Comonad SetC
+─× I =
+ record
+  { F = F {I}
+  ; ε = eps
+  ; δ = comul
+  ; assoc = refl
+  ; sym-assoc = refl
+  ; identityˡ = refl
+  ; identityʳ = refl
+  }
+  where
+  F : {I : Set} → Endofunctor SetC
+  F {I} =
+   record
+    { F₀ = λ A → A × I
+    ; F₁ = λ f x → (f (proj₁ x)) , (proj₂ x)
+    ; identity = refl
+    ; homomorphism = refl
+    ; F-resp-≈ = λ {refl → refl}
+    }
+  eps : NT.NaturalTransformation (F {I}) Categories.Functor.id
+  eps =
+   record
+    { η = λ X x → proj₁ x
+    ; commute = λ f → refl
+    ; sym-commute = λ f → refl }
+  comul : NT.NaturalTransformation (F {I}) ((F {I}) ∘F (F {I}))
+  comul =
+   record
+    { η = λ X x → x , proj₂ x
+    ; commute = λ f → refl
+    ; sym-commute = λ f → refl }
+</code></pre></div></div> <p>Easy as co-pie! Now, where is the <code class="language-plaintext highlighter-rouge">coKleisli</code> module…? Oh, you say you don’t have it yet.</p> <p>[…a few weeks of frantic, painful agda sessions later…]</p> <p>tada!</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open import Categories.Category.Construction.CoKleisli
+
+fiber-of-simple≃CoKleisli─×I : {I : Set} →
+  E.StrongEquivalence (fiber-of-simple {I}) (CoKleisli (─× I))
+fiber-of-simple≃CoKleisli─×I = record
+ { F = F
+ ; G = G
+ ; weak-inverse = winv
+ }
+ where
+ F : {I : Set} → Functor (fiber-of-simple {I}) (CoKleisli (─× I))
+ F = record
+      { F₀ = λ A → A
+      ; F₁ = λ f → f
+      ; identity = refl
+      ; homomorphism = refl
+      ; F-resp-≈ = λ x → x
+      }
+ G : {I : Set} → Functor (CoKleisli (─× I)) (fiber-of-simple {I})
+ G = record
+      { F₀ = λ z → z
+      ; F₁ = λ f → f
+      ; identity = refl
+      ; homomorphism = refl
+      ; F-resp-≈ = λ x → x
+      }
+ winv : {I : Set} → E.WeakInverse (F {I}) G
+ winv = record
+  { F∘G≈id = niHelper (record
+    { η = λ X → proj₁
+    ; η⁻¹ = λ X → proj₁
+    ; commute = λ f → refl
+    ; iso = λ X → record { isoˡ = refl ; isoʳ = refl } })
+  ; G∘F≈id = niHelper (record
+    { η = λ X x → proj₁ x
+    ; η⁻¹ = λ X x → proj₁ x
+    ; commute = λ f → refl
+    ; iso = λ X → record { isoˡ = refl ; isoʳ = refl } })
+  }
+
+</code></pre></div></div> <p>The meat of the proof is in proving that the ordinary slice <code class="language-plaintext highlighter-rouge">𝔹/I</code> is the coEilenberg-Moore category of the <code class="language-plaintext highlighter-rouge">-×I</code> comonad:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open import Categories.Category.Construction.CoEilenbergMoore
+open import Categories.Category.Slice SetC
+
+Slice≃CoEilenbergMoore─×I : {I : Set} →
+  E.StrongEquivalence (Slice I) (CoEilenbergMoore (─× I))
+Slice≃CoEilenbergMoore─×I {I} = record
+  { F = F
+  ; G = G
+  ; weak-inverse = winv
+  }
+  where
+  F : Functor (Slice I) (CoEilenbergMoore (─× I))
+  F = record
+   { F₀ = λ { (sliceobj {Y} arr) →
+     record { A = Y
+            ; coaction = λ z → z , arr z
+            ; commute = refl
+            ; identity = refl } }
+   ; F₁ = λ { (slicearr {h} Δ) → record
+     { arr = λ x → h x
+     ; commute = cong (λ x x₁ → h x₁ , x x₁) Δ  } }
+   ; identity = refl
+   ; homomorphism = refl
+   ; F-resp-≈ = λ { refl → refl }
+   }
+  G : Functor (CoEilenbergMoore (─× I)) (Slice I)
+  G = record
+   { F₀ = λ { record
+     { A = A
+     ; coaction = coaction
+     ; commute = commute
+     ; identity = identity
+     } → sliceobj λ x → proj₂ (coaction x) }
+   ; F₁ = λ { record
+     { arr = arr
+     ; commute = commute
+     } → slicearr {h = arr} (cong (λ x x₁ → proj₂ (x x₁)) commute) }
+   ; identity = refl
+   ; homomorphism = refl
+   ; F-resp-≈ = λ { refl → refl }
+   }
+  winv : E.WeakInverse F G
+  winv = record
+   { F∘G≈id = niHelper (record
+     { η = λ { record
+       { A = A
+       ; coaction = coaction
+       ; commute = commute
+       ; identity = identity
+       } → record { arr = λ a → proj₁ (coaction a)
+                  ; commute = cong (λ x x₁ → coaction (x x₁)) identity } }
+     ; η⁻¹ = λ { record
+       { A = A
+       ; coaction = coaction
+       ; commute = commute
+       ; identity = identity
+       } → record { arr = λ z → z
+                  ; commute =
+                    cong (λ x x₁ → x x₁ , proj₂ (coaction x₁) ) (sym identity) } }
+     ; commute = λ { record
+       { arr = arr
+       ; commute = commute
+       } → cong (λ x x₁ → proj₁ (x x₁)) commute }
+     ; iso = λ { record
+       { A = A
+       ; coaction = coaction
+       ; commute = commute
+       ; identity = identity
+       } → record { isoˡ = identity ; isoʳ = identity } }
+     })
+   ; G∘F≈id = niHelper (record
+     { η = λ arr → slicearr refl
+     ; η⁻¹ = λ obj → slicearr refl
+     ; commute = λ arr → refl
+     ; iso = λ X → record { isoˡ = refl ; isoʳ = refl }
+     })
+   }
+</code></pre></div></div> <script type="text/javascript" src="js/jquery.min.js"/></script> <script type="text/javascript" src="js/jquery.scrollme.min.js"/></script> <script type="text/javascript" src="js/stickUp.min.js"/></script> <script type="text/javascript" src="js/fchoue.js"/></script> <script type="text/javascript" src="js/bibtex-copy-button.js"/></script> </body> </html>
