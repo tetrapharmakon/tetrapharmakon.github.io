@@ -208,6 +208,8 @@ a:hover {
 .card-image img {
   max-width: 30%; /* Ensures image scales properly */
   height: fit-content;
+    display: flex;
+  justify-content: center;
   border-radius: 4px; /* Optional: Rounds the corners of the image */
 }
 /* Grid layouts */
