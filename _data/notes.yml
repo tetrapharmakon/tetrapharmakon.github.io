@@ -127,6 +127,11 @@
   url: "stuff/beamers/yoneda-totta.pdf"
   description: "https://www.youtube.com/watch?v=5bGDQE4jFXY"
   type: "talk"
+
+- title: "The universal property of the effect-behaviour adjunction"
+  url: "stuff/beamers/fosco-itaca-25-milano-handout.pdf"
+  description: "ItaCa 2025 - Milano"
+  type: "talk"
 #=====
 
 - title: "CoG-GoC"
