@@ -117,6 +117,16 @@
   url: "stuff/beamers/topos-colloq-handout.pdf"
   description: "https://www.youtube.com/live/d50BeaWZB9Q?si=Ui6l_8B70nlxigp4"
   type: "talk"
+
+- title: "Semantica funtoriale delle teorie algebriche"
+  url: "stuff/beamers/semantica-funtoriale-totta.pdf"
+  description: "https://www.youtube.com/watch?v=dvx55DiQcqE"
+  type: "talk"
+
+- title: "Bella vita e lemmi altrui di Yoneda, gentiluomo"
+  url: "stuff/beamers/yoneda-totta.pdf"
+  description: "https://www.youtube.com/watch?v=5bGDQE4jFXY"
+  type: "talk"
 #=====
 
 - title: "CoG-GoC"
