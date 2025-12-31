@@ -1,42 +1,49 @@
-title: "ITI9200 - Introduction to Category Theory and its Applications"
+title: "ITI9200 - Introduction to Category Theory"
 course_code: ITI9200
 term: "Spring 2026"
-subtitle: "The course is divided in two tracks: A (math) and B (CS)"
+subtitle: "" #"The course is divided in two tracks: A (math) and B (CS)"
 description: |
-  An introductory course on category theory and its applications. 
-  
-  Usually runs in the second semester (*January* to *May*) of each academic year.
+  An introductory course on <a href="https://ncatlab.org/nlab/show/category+theory">category theory</a> and its applications; runs during the second semester (*January* to *May*) of each academic year.
 
-  Track A is more geared towards Mathematics, track B towards computer science.
+# **Track A** is more geared towards Mathematics, **track B** towards computer science.
 
 schedule:
   - day: "TBA"
     time: "TBA"
     room: "TBA"
-schedule_note: "Start: TBA -- End: TBA"
+schedule_note: "First lecture: TBA / Last lecture: TBA"
 
 instructors:
   - name: "Fosco Loregian"
     url: "http://tetrapharmakon.github.io"
     email: "fosco.loregian@taltech.ee"
-    role: "teacher track A"
+    role: "teacher tA"
   - name: "Andrea Laretto"
     url: "https://iwilare.com/"
     email: "andrea.laretto@taltech.ee"
-    role: "co-teacher track B"
+    role: "co-teacher tB"
 
 contacts:
-  office: "ICT building -- 2nd floor"
+  office: "ICT building @ 2nd floor"
 
 references:
   - author: "Tom Leinster"
     title: "Basic Category Theory"
     link: "https://arxiv.org/abs/1612.09375"
-    note: "Perfect for the real beginner."
+    # note: "Perfect for the real beginner."
   - author: "Emily Riehl"
     title: "Category Theory in Context"
     link: "https://math.jhu.edu/~eriehl/context.pdf"
-    note: "A fresh, detailed guide."
+    # note: "A fresh, detailed guide."
+  - author: "Mike Barr and Charles Wells"
+    title: "Category Theory for Computing Science" 
+    link: "https://www.math.mcgill.ca/triples/Barr-Wells-ctcs.pdf"
+  - author: "Jiří Adámek, Horst Herrlich, George E. Strecker"
+    title: "Abstract and concrete categories: the joy of cats" 
+    link: "http://www.tac.mta.ca/tac/reprints/articles/17/tr17.pdf"
+  - author: "Steve Awodey"
+    title: "Category Theory" 
+    link: "https://www.hlaszny.com/booksAndPapers/buckets/b9_mathematics/CategoryTheory.pdf"
 
 lectures:
   - name: "Track A"
@@ -53,10 +60,14 @@ lectures:
         link: "https://github.com/iwilare/category-theory-course"
 
 exercises:
-  mind: |
-    Through the course
-    - Exercise sheet 1 [PDF](stuff/TBA.pdf) (Deadline: TBA)
   exam: |
+    Through the course (more or less every other week) I will publish a document with 3-4 exercises; you have until the next sheet to solve them. They are part of you final grade.
+    - Sheet 1 [PDF](stuff/TBA.pdf) (Deadline: TBA)
+    - Sheet 2 [PDF](stuff/TBA.pdf) (Deadline: TBA)
+    - Sheet 3 [PDF](stuff/TBA.pdf) (Deadline: TBA)
+    - Sheet 4 [PDF](stuff/TBA.pdf) (Deadline: TBA)
+    - Sheet 5 [PDF](stuff/TBA.pdf) (Deadline: TBA)
+  mind: |
     - TBA
 
 grading: |
@@ -65,7 +76,7 @@ grading: |
   For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like.
 
 urgent: |
-  Any urgent announcements for students will appear here. 
+  Urgent announcements for the class will appear here. 
 
   - ⚠️ the world is about to end
   - ⚠️ 1=2

@@ -38,7 +38,7 @@ h1, h2, h3 {
 
 /* Links */
 a {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
