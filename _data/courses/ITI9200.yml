@@ -1,0 +1,74 @@
+title: "ITI9200 - Introduction to Category Theory and its Applications"
+course_code: ITI9200
+term: "Spring 2026"
+subtitle: "The course is divided in two tracks: A (math) and B (CS)"
+description: |
+  An introductory course on category theory and its applications. 
+  
+  Usually runs in the second semester (*January* to *May*) of each academic year.
+
+  Track A is more geared towards Mathematics, track B towards computer science.
+
+schedule:
+  - day: "TBA"
+    time: "TBA"
+    room: "TBA"
+schedule_note: "Start: TBA -- End: TBA"
+
+instructors:
+  - name: "Fosco Loregian"
+    url: "http://tetrapharmakon.github.io"
+    email: "fosco.loregian@taltech.ee"
+    role: "teacher track A"
+  - name: "Andrea Laretto"
+    url: "https://iwilare.com/"
+    email: "andrea.laretto@taltech.ee"
+    role: "co-teacher track B"
+
+contacts:
+  office: "ICT building -- 2nd floor"
+
+references:
+  - author: "Tom Leinster"
+    title: "Basic Category Theory"
+    link: "https://arxiv.org/abs/1612.09375"
+    note: "Perfect for the real beginner."
+  - author: "Emily Riehl"
+    title: "Category Theory in Context"
+    link: "https://math.jhu.edu/~eriehl/context.pdf"
+    note: "A fresh, detailed guide."
+
+lectures:
+  - name: "Track A"
+    items:
+      - title: "Lecture 0 -- Introductions, introduction, organization"
+        link: "stuff/iti9200/TBA"
+      # - title: "Lecture 1 -- Monoids, posets, categories I"
+      #   link: "stuff/iti9200/TBA"
+      # - title: "Lecture 2 -- Monoids, posets, categories II"
+      #   link: "stuff/iti9200/TBA"
+  - name: "Track B"
+    items:
+      - title: "Notes for the track B course"
+        link: "https://github.com/iwilare/category-theory-course"
+
+exercises:
+  mind: |
+    Through the course
+    - Exercise sheet 1 [PDF](stuff/TBA.pdf) (Deadline: TBA)
+  exam: |
+    - TBA
+
+grading: |
+  The grade will be assigned based on exercise sheets assigned during the course, and a final oral exam. 
+  
+  For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like.
+
+urgent: |
+  Any urgent announcements for students will appear here. 
+
+  - ⚠️ the world is about to end
+  - ⚠️ 1=2
+
+footer_image: "stuff/arch-cat.jpg"
+footer_caption: "Victor Brauner, Arche-chat, 1948 — Herbert F. Johnson Museum of Art."

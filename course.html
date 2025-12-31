@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% assign c = page %}
+    {% if page.course_code and site.data.courses and site.data.courses[page.course_code] %}
+      {% assign c = site.data.courses[page.course_code] %}
+    {% endif %}
+    <title>{{ c.title | default: page.title }}{% if c.course_code %} — {{ c.course_code }}{% endif %}</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/ct-course.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container course-page">
+        <header class="course-header">
+          <h1 id="{{ c.title | default: page.title | slugify }}">{{ c.title | default: page.title }}</h1>
+          {% if c.subtitle %}<p class="subtitle">{{ c.subtitle }}</p>{% endif %}
+          <div class="course-meta">
+            {% if c.course_code %}<span class="code">{{ c.course_code }}</span>{% endif %}
+            {% if c.term %}<span class="term">{{ c.term }}</span>{% endif %}
+          </div>
+        </header>
+
+        <div class="course-grid">
+          <main class="main-col">
+            {% if c.description %}
+              <section class="course-info">
+                <h2>What</h2>
+                {{ c.description | markdownify }}
+              </section>
+            {% else %}
+              <section class="course-info">
+                <h2>What</h2>
+                {{ content }}
+              </section>
+            {% endif %}
+
+            {% if c.schedule %}
+            <section class="schedule">
+              <h2>When / Where</h2>
+              <table class="schedule-table">
+                <tbody>
+                  {% for item in c.schedule %}
+                  <tr>
+                    <td><strong>{{ item.day }}</strong></td>
+                    <td>{{ item.time }}</td>
+                    <td>{{ item.room }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              {% if c.schedule_note %}<p class="note">{{ c.schedule_note }}</p>{% endif %}
+            </section>
+            {% endif %}
+
+            {% if c.lectures %}
+            <section class="lectures">
+              <h2>Lectures' Log</h2>
+              {% for track in c.lectures %}
+                <h3>{{ track.name }}</h3>
+                <ul>
+                  {% for lec in track.items %}
+                    <li>
+                      {{ lec.title }}{% if lec.link %} (<a href="{{ lec.link }}">link</a>){% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endfor %}
+            </section>
+            {% endif %}
+
+            {% if c.exercises %}
+            <section class="exercises">
+              <h2>Exercises</h2>
+              {% if c.exercises.mind %}
+                <h3>Exercises for the mind and body</h3>
+                {{ c.exercises.mind | markdownify }}
+              {% endif %}
+              {% if c.exercises.exam %}
+                <h3>Exercises for the exam</h3>
+                {{ c.exercises.exam | markdownify }}
+              {% endif %}
+            </section>
+            {% endif %}
+
+            {% if c.grading %}
+            <section class="grading">
+              <h2>Grading</h2>
+              {{ c.grading | markdownify }}
+            </section>
+            {% endif %}
+
+            {% if c.references %}
+            <section class="references">
+              <h2>Misc</h2>
+              <table class="references-table">
+                <tbody>
+                {% for r in c.references %}
+                  <tr>
+                    <td>{{ r.author }}</td>
+                    <td>{{ r.title }}</td>
+                    <td>{% if r.link %}<a href="{{ r.link }}">PDF</a>{% endif %}</td>
+                    <td>{{ r.note }}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </section>
+            {% endif %}
+
+          </main>
+
+          <aside class="sidebar">
+            {% if c.instructor_card %}
+            <div class="card-content">
+              <h2 class="name">{{ c.instructor_card.name }}</h2>
+              {% if c.instructor_card.motto %}<div class="motto">{{ c.instructor_card.motto }}</div>{% endif %}
+              {% if c.instructor_card.bio %}<p class="bio">{{ c.instructor_card.bio }}</p>{% endif %}
+            </div>
+            {% endif %}
+
+            {% if c.instructors %}
+            <section class="instructors">
+              <h2>Who</h2>
+              <ul>
+                {% for ins in c.instructors %}
+                  <li>
+                    {% if ins.role %}({{ ins.role }}) {% endif %}
+                    {% if ins.url %}<a href="{{ ins.url }}">{{ ins.name }}</a>{% else %}{{ ins.name }}{% endif %}
+                    {% if ins.email %} (<a href="mailto:{{ ins.email }}">{{ ins.email }}</a>){% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+            {% endif %}
+
+            {% if c.urgent %}
+            <section class="urgent">
+              <h3>Urgent</h3>
+              {{ c.urgent | markdownify }}
+            </section>
+            {% endif %}
+          </aside>
+        </div>
+
+        <footer class="course-footer">
+          {% if page.footer_image %}
+            <div class="caption">
+              <img src="{{ page.footer_image }}" alt="footer image">
+              {% if page.footer_caption %}<p>{{ page.footer_caption }}</p>{% endif %}
+            </div>
+          {% endif %}
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
