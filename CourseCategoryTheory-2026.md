@@ -7,7 +7,7 @@ layout: default
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/assets/css/ct-course.css">
   <style>
-    .course-container { max-width: 900px; margin: 3rem auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .course-container { max-width: 1100px; margin: 3rem auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
     .course-grid { display: grid; grid-template-columns: 1fr 340px; gap: 2rem; }
     .card-content { background:#fff;padding:1rem;border-radius:8px;border:1px solid #e6e6e6; box-shadow: 0 1px 0 rgba(0,0,0,0.03) }
     .sidebar .instructors ul { padding-left: 1rem; }
