@@ -49,7 +49,7 @@ lectures:
   - name: "Track A"
     items:
       - title: "Lecture 0 -- Introductions, introduction, organization"
-        link: "stuff/iti9200/TBA"
+        link: "stuff/iti9200/slides_lecture1.pdf"
       # - title: "Lecture 1 -- Monoids, posets, categories I"
       #   link: "stuff/iti9200/TBA"
       # - title: "Lecture 2 -- Monoids, posets, categories II"
