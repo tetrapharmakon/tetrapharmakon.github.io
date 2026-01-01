@@ -71,15 +71,15 @@ exercises:
     - TBA
 
 grading: |
-  The grade will be assigned based on exercise sheets assigned during the course, and a final oral exam. 
+  The grade will be assigned based on exercise sheets handed through the course, and a final oral exam. No one stops you from using a robot to learn; [embrace the future](https://www.youtube.com/watch?v=-aMvLtBvKAQ). But we are going to have a problem if you come at the whiteboard clueless on how to solve the exercises "you" did.
   
   For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like.
 
 urgent: |
-  Urgent announcements for the class will appear here. 
+  Urgent announcements for the class will appear here. Test:
 
-  - ⚠️ the world is about to end
-  - ⚠️ 1=2
+  - ⚠️ the world is about to end, but we take solace in category theory
+  - ⚠️ it was recently proved that 1=2, so we can go home 'cause math is broken
 
 footer_image: "stuff/arch-cat.jpg"
 footer_caption: "Victor Brauner, Arche-chat, 1948 — Herbert F. Johnson Museum of Art."
