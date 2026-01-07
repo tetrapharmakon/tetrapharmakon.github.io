@@ -1,16 +1,16 @@
 teaching_activities:
 # projects_4_students
-  - title: "Thesis Projects | <a href='./projects_4_students.html'>🌐</a>"
-    date: "ongoing"
-    description: "A list of projects that students can work on with me."
   - title: "ITI9200 - Sissejuhatus kategooriateooriasse | <a href='./CourseCategoryTheory-2026.html'>🌐</a>"
     date: "Spring semester"
     description: "An introductory course to category theory."
+  - title: "Thesis Projects | <a href='./projects_4_students.html'>🌐</a>"
+    date: "ongoing"
+    description: "A list of projects that students can work on with me."
   - title: "Organiser of ItaCa Fest | <a href='https://progetto-itaca.github.io/fests/fest25.html'>🌐</a>"
     date: "2020 – 2025"
     description: "The <a href='https://progetto-itaca.github.io/'>association of <b>Ita</b>lian <b>Ca</b>tegory theorists</a> organizes recurring online seminars and other events."
 
-  - title: "Organizer of PSSL110 | <a href='https://www.ioc.ee/~amar/pssl110/'>🌐</a>"
+  - title: "Organizer of PSSL110 (Tallinn) | <a href='https://www.ioc.ee/~amar/pssl110/'>🌐</a>"
     date: "May 2025"
     description: "The 110th <a href='https://ncatlab.org/nlab/show/Peripatetic+Seminar+on+Sheaves+and+Logic'>Peripathetic Seminar on Sheaves and Logic</a> will be held in Tallinn in May 2025."
 
@@ -18,7 +18,7 @@ teaching_activities:
     date: "2021"
     description: "Awarded for distinguished research achievements."
 
-  - title: "PSSL 103 - Brno | <a href='https://ncatlab.org/nlab/files/SchedulePSSL103.pdf'>🌐</a>"
+  - title: "Organizer of PSSL 103 (Brno) | <a href='https://ncatlab.org/nlab/files/SchedulePSSL103.pdf'>🌐</a>"
     description: "The 103rd Peripathetic Seminar on Sheaves and Logic took place in Brno."
     date: "April 2018"
 
@@ -32,11 +32,11 @@ teaching_activities:
 
 supervision_of_students:
   - title: "Supervisor and advisor"
-    student: "G. Boccali (starting 2025)"
-    description: "Project: On 2-categorical aspects of automata theory"
+    student: "G. Boccali (started September 2025)"
+    description: ""
 
   - title: "Supervisor and coadvisor"
-    student: "A. Laretto (started 2023)"
+    student: "A. Laretto (started November 2022)"
     description: "Project: Dinaturality and type theory"
 
   - title: "Mentor for the SIGPLAN-M"
