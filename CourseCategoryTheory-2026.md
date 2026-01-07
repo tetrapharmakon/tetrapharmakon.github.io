@@ -47,7 +47,6 @@ layout: default
         <section>
           <h2>Lectures' Log</h2>
           {% for track in site.data.courses.ITI9200.lectures %}
-            <h3>{{ track.name }}</h3>
             <ul>
               {% for lec in track.items %}
                 <li>{{ lec.title }}{% if lec.link %} (<a href="{{ lec.link }}">link</a>){% endif %}</li>

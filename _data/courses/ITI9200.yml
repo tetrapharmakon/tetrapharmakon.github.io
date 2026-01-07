@@ -8,10 +8,10 @@ description: |
 # **Track A** is more geared towards Mathematics, **track B** towards computer science.
 
 schedule:
-  - day: "TBA"
-    time: "TBA"
-    room: "TBA"
-schedule_note: "First lecture: TBA / Last lecture: TBA"
+  - day: "Thursday"
+    time: "14.00—15.30 & 16.00—17.30"
+    room: '<a href="https://haldus.taltech.ee/sites/default/files/2019-09/Campus_2019_EST-ENG.pdf">SOC-313</a>'
+schedule_note: "First lecture: <b>February 5</b>, 2026 / Last lecture: <b>May 21</b>, 2026"
 
 instructors:
   - name: "Fosco Loregian"
@@ -48,16 +48,16 @@ references:
 lectures:
   - name: "Track A"
     items:
-      - title: "Lecture 0 -- Introductions, introduction, organization"
+      - title: "Notes for a computer-science friendly version of the course"
+        link: "https://github.com/iwilare/category-theory-course"
+      - title: "0: Introductions, introduction, organization"
         link: "stuff/iti9200/slides_lecture1.pdf"
-      # - title: "Lecture 1 -- Monoids, posets, categories I"
+      # - title: "1: Monoids, posets, categories I"
       #   link: "stuff/iti9200/TBA"
-      # - title: "Lecture 2 -- Monoids, posets, categories II"
+      # - title: "2: Monoids, posets, categories II"
       #   link: "stuff/iti9200/TBA"
   - name: "Track B"
     items:
-      - title: "Notes for the track B course"
-        link: "https://github.com/iwilare/category-theory-course"
 
 exercises:
   exam: |
@@ -71,7 +71,7 @@ exercises:
     - TBA
 
 grading: |
-  The grade will be assigned based on exercise sheets handed through the course, and a final oral exam. No one stops you from using a robot to learn; [embrace the future](https://www.youtube.com/watch?v=-aMvLtBvKAQ). But we are going to have a problem if you come at the whiteboard clueless on how to solve the exercises "you" did.
+  The grade will be assigned based on how well you perform on the exercise sheets handed through the course, and a final oral exam. No one stops you from using a robot to learn; [embrace the future](https://www.youtube.com/watch?v=-aMvLtBvKAQ). But: we are going to have a problem if you come at the whiteboard clueless on how to solve the exercises "you" did.
   
   For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like.
 
