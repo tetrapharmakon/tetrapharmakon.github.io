@@ -3,7 +3,7 @@ course_code: ITI9200
 term: "Spring 2026"
 subtitle: "" #"The course is divided in two tracks: A (math) and B (CS)"
 description: |
-  An introductory course on <a href="https://ncatlab.org/nlab/show/category+theory">category theory</a> and its applications; runs during the second semester (*January* to *May*) of each academic year.
+  An introductory course on <a href="https://ncatlab.org/nlab/show/category+theory">category theory</a> and its applications; runs at <em>Tallinn University of Technology</em> during the second semester (*January* to *May*) of each academic year.
 
 # **Track A** is more geared towards Mathematics, **track B** towards computer science.
 
@@ -88,7 +88,11 @@ exercises:
     - Sheet 4 [PDF](stuff/iti9200/sheet_04.pdf) (Deadline: TBA)
     - Sheet 5 [PDF](stuff/iti9200/sheet_05.pdf) (Deadline: TBA)
   mind: |
-    - TBA
+    - [Spiritual exercises](https://en.wikipedia.org/wiki/Spiritual_Exercises) ([link](https://tetrapharmakon.github.io/stuff/iti9200/conceptual_napkin.pdf)). 
+    
+    <b>Warning</b>: this set of exercises is not meant as part of the course, its content is extremely volatile in some parts, and it is usually addressed to people who already have a decent mathematical exposition. 
+    
+    The chapter may cause serious damage to the unwary and/or unprepared reader (implying such damage has not already been caused by the lectures...).
 
 grading: |
   Your final grade will be determined based on how well you perform on the exercise sheets handed through the course, and a final oral exam. No one stops you from using a robot to learn; [embrace the future](https://www.youtube.com/watch?v=-aMvLtBvKAQ). But: we are going to have a problem if you come at the whiteboard clueless on how to solve the exercises "you" did.
