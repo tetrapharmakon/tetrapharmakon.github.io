@@ -52,10 +52,30 @@ lectures:
         link: "https://github.com/iwilare/category-theory-course"
       - title: "0: Introductions, introduction, organization"
         link: "stuff/iti9200/slides_lecture1.pdf"
-      # - title: "1: Monoids, posets, categories I"
-      #   link: "stuff/iti9200/TBA"
-      # - title: "2: Monoids, posets, categories II"
-      #   link: "stuff/iti9200/TBA"
+      - title: "1: Monoids, posets, categories I"
+        link: "stuff/iti9200/TBA"
+      - title: "2: Monoids, posets, categories II"
+        link: "stuff/iti9200/TBA"
+      - title: "3: Functors and natural transformations I"
+        link: "stuff/iti9200/TBA"
+      - title: "4: Functors and natural transformations II"
+        link: "stuff/iti9200/TBA"
+      - title: "5: Universal properties I"
+        link: "stuff/iti9200/TBA"
+      - title: "6: Universal properties II"
+        link: "stuff/iti9200/TBA"
+      - title: "7: Limits and colimits I"
+        link: "stuff/iti9200/TBA"
+      - title: "8: Limits and colimits II"
+        link: "stuff/iti9200/TBA"
+      - title: "9: Adjunctions I"
+        link: "stuff/iti9200/TBA"
+      - title: "10: Adjunctions II"
+        link: "stuff/iti9200/TBA"
+      - title: "11: Monads I"
+        link: "stuff/iti9200/TBA"
+      - title: "12: Monads II"
+        link: "stuff/iti9200/TBA"
   - name: "Track B"
     items:
 
@@ -71,15 +91,19 @@ exercises:
     - TBA
 
 grading: |
-  The grade will be assigned based on how well you perform on the exercise sheets handed through the course, and a final oral exam. No one stops you from using a robot to learn; [embrace the future](https://www.youtube.com/watch?v=-aMvLtBvKAQ). But: we are going to have a problem if you come at the whiteboard clueless on how to solve the exercises "you" did.
+  Your final grade will be determined based on how well you perform on the exercise sheets handed through the course, and a final oral exam. No one stops you from using a robot to learn; [embrace the future](https://www.youtube.com/watch?v=-aMvLtBvKAQ). But: we are going to have a problem if you come at the whiteboard clueless on how to solve the exercises "you" did.
   
-  For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like.
+  For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like (one year the link was "monads in functional programming" + [supercollider](https://supercollider.github.io/), I dare you to do something cooler than that).
 
 urgent: |
-  Urgent announcements for the class will appear here. Test:
-
-  - ⚠️ the world is about to end, but we take solace in category theory
-  - ⚠️ it was recently proved that 1=2, so we can go home 'cause math is broken
+  Urgent announcements for the class will appear here. For example:
+  - ⚠️ Attendance will be taken telepathically. Please think loudly.
+  - ⚠️ The syllabus has achieved sentience. It knows when you haven't read it.
+  - ⚠️ Homework is due yesterday. Late submissions not allowed.
+  - ⚠️ Yes, this announcement is on the test. No, you won't know which part.
+  - ⚠️ Coffee is not provided. Regret is.
+  - ⚠️ If you find a typo, congratulations—you've unlocked a side quest.
+  - ⚠️ This message will self-destruct after grading.
 
 footer_image: "stuff/arch-cat.jpg"
 footer_caption: "Victor Brauner, Arche-chat, 1948 — Herbert F. Johnson Museum of Art."
