@@ -99,12 +99,42 @@ grading: |
   
   For the final exam, you can choose a topic from a list, and give a (~30 min+questions) presentation about it. It can relate category theory to whatever you like (one year the link was "monads in functional programming" + [supercollider](https://supercollider.github.io/), I dare you to do something cooler than that).
 
-  ⚠️*NEW*⚠️ A list of possible exam topics:
+  ⚠️*NEW*⚠️ A list of possible exam topics: (legend: BCT = Leinster's book; CTCtx = Riehl; CTCS = Barr-Wells; ACC = Adámek-Herrlich-Strecker; CT = Awodey).
 
   - Basic results:
+    - **Free objects as left adjoints, with applications to algebra: free monoids, free groups, free modules.**
+      (BCT: pp 19-20 and 43-50; CTCtx: pp 129-136; CTCS: pp 347-350; ACC: pp 135-139; CT: pp 18-28)
+    - **Cartesian closed categories: products, exponentials, and proofs-as-morphisms.**
+      (BCT: pp. 164–167; CTCtx: pp. 129–131; CTCS: pp. 195–218; ACC: pp. 428–441; CT: pp. 122–146)
+    - **Monads and Kleisli categories: partiality, exceptions, nondeterminism, state, input/output.**
+      (BCT: p. 173; CTCtx: pp. 153–188; CTCS: pp. 372–376; ACC: pp. 316–348; CT: pp. 253–277)
+    - **The Yoneda lemma, with applications to algebraic structures and representation problems.**
+      (BCT: pp. 93–99; CTCtx: pp. 55–61; CTCS: pp. 121–126; ACC: p. 84; CT: pp. 188–193)
+    - **Limits and colimits in algebra: products, coproducts, equalizers, quotients, tensor products, presentations by generators and relations.**
+      (BCT: pp. 107–140; CTCtx: pp. 73–114; CTCS: pp. 153–194, 265–298; ACC: pp. 188–205; CT: pp. 89–118)
+
   - Intermediate/hard results:
-  - A list of papers doing interesting things:
-  
+    - **Monadicity and universal algebra: algebraic categories as categories of algebras for monads.**
+      (CTCtx: pp. 177–188; CTCS: pp. 372–382; ACC: pp. 316–348, 403–406; CT: pp. 253–277)
+    - **Stone duality and classical propositional logic: Boolean algebras, ultrafilters, and Stone spaces.**
+      (ACC: pp. 29,35; CT: pp. 129–140)
+    - **Initial algebras and final coalgebras: datatypes, recursion, streams, automata, and coinduction.**
+      (BCT: pp ...; CTCtx: p. 44; CTCS: section 4.7; ACC: pp. 117-120; CT: section 10.5)
+    - **Freyd's adjoint functor theorem.**
+      (CTCtx: Theorem 4.6,3, what follows and what precedes; ACC: pp. 299--; CT: section 9.8)
+    - **Grothendieck constructions and fibrations: indexed categories, families of structures, and dependent types.**
+      (CTCtx: section 2.4; CTCS: pp. 327–346; ACC: p. 349-380; CT: section 8.4)
+
+  - A list of interesting papers doing interesting things:
+    - F. William Lawvere, "Diagonal Arguments and Cartesian Closed Categories"
+    - Philip Wadler, "Theorems for Free!"
+    - Eugenio Moggi, "Notions of Computation and Monads"
+    - Bart Jacobs, "Bases as coalgebras" [(LINK)](https://arxiv.org/pdf/1309.0844)
+    - RFC Walters, "A note on context-free languages", [(LINK)](stuff/iti9200/papers/walters.pdf)
+    - Marcelo Fiore, Tom Leinster, "Objects of Categories as Complex Numbers" [(LINK)]([(LINK)](https://arxiv.org/pdf/1309.0844)
+    - ..., "..." 
+    - ..., "..." 
+
 
 urgent: |
   Urgent announcements for the class will appear here. For example:
