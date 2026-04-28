@@ -126,14 +126,23 @@ grading: |
       (CTCtx: section 2.4; CTCS: pp. 327–346; ACC: p. 349-380; CT: section 8.4)
 
   - A list of interesting papers doing interesting things:
-    - F. William Lawvere, "Diagonal Arguments and Cartesian Closed Categories"
     - Philip Wadler, "Theorems for Free!"
-    - Eugenio Moggi, "Notions of Computation and Monads"
+    - Eugenio Moggi, "Notions of Computation and Monads" [(LINK)](https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf)
     - Bart Jacobs, "Bases as coalgebras" [(LINK)](https://arxiv.org/pdf/1309.0844)
     - RFC Walters, "A note on context-free languages", [(LINK)](stuff/iti9200/papers/walters.pdf)
     - Marcelo Fiore, Tom Leinster, "Objects of Categories as Complex Numbers" [(LINK)]([(LINK)](https://arxiv.org/pdf/1309.0844)
-    - ..., "..." 
-    - ..., "..." 
+    - Bill Lawvere, "Quantifiers and Sheaves" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1970-quantifiers-and-sheaves.pdf)
+    - Bill Lawvere, "Diagonal Arguments and Cartesian Closed Categories" [(LINK)](http://www.tac.mta.ca/tac/reprints/articles/15/tr15.pdf)
+    - Bill Lawvere, "An elementary theory of the category of sets" [(LINK)](http://www.tac.mta.ca/tac/reprints/articles/11/tr11.pdf)
+    - Bill Lawvere, "Categorical Dynamics" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1978-categorical-dynamics.pdf)
+    - Bill Lawvere, "Categories in continuum physics" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1982-introduction-to-categories-in-continuum-physics.pdf)
+    - Bill Lawvere, "Display of Graphics and Their Applications Exemplified by 2-Categories and the Hegelian <<Taco>>" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1989-display-of-graphics-and-their-applications-exemplifed-by-2-categories-and-the-hegelian-taco.pdf)
+    - Bill Lawvere, "Unity and identity of opposites in calculus and physics" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1996-unity-and-identity-of-opposites-in-calculus-and-physics.pdf)
+    - Bill Lawvere, "Kinship and mathematical categories" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1999-kinship-and-mathematical-categories.pdf)
+    - Bill Lawvere, "Introduction to Toposes, Algebraic Geometry and Logic" [(LINK)](https://lawverearchives.com/wp-content/uploads/2024/12/1971-introduction-to-toposes-algebraic-geometry-and-logic.pdf)
+    - More in general, all that appears in the [Lawvere Archives](https://lawverearchives.com/work/).
+    - the wikipedia page "timeline of category theory and related mathematics" [https://en.wikipedia.org/wiki/Timeline_of_category_theory_and_related_mathematics](https://en.wikipedia.org/wiki/Timeline_of_category_theory_and_related_mathematics)
+    - ...
 
 
 urgent: |
