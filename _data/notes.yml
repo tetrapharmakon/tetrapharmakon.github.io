@@ -3,6 +3,16 @@
   description: "Bicategories of automata, automata in bicategories"
   type: "talk"
 
+- title: "Attestation"
+  url: "stuff/attest26/attestation-talk.pdf"
+  description: ""
+  type: "talk"
+
+- title: "Lyapunov functions"
+  url: "stuff/beamers/tartu_lyapunov.pdf"
+  description: ""
+  type: "talk"
+
 - title: "Chu Reading Group Talk (Part 1)"
   url: "stuff/beamers/chu-reading-group-talk.pdf"
   description: "a hint of Chu"
