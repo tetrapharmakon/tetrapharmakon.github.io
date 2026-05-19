@@ -2,12 +2,13 @@
 source "https://rubygems.org"
 
 # Gems dependencies to be installed
+gem "activesupport", "~> 7.2.3.1"
+gem "jekyll", "~> 4.3"
 gem "minima", "~> 2.5"
-gem "webrick", "~> 1.7"
-gem "github-pages", "~> 227", group: :jekyll_plugins
+gem "webrick", "~> 1.8"
 
-# Github Pages plugins
+# Jekyll plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.17"
 end
 
