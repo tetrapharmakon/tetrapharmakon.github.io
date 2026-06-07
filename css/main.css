@@ -94,6 +94,10 @@ header {
   hyphens: auto;
 }
 
+#about-me h1.name {
+  font-size: 50px;
+}
+
 @media (max-width: 700px) {
   #about-me .card {
     flex-direction: column;
