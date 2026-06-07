@@ -7,19 +7,24 @@ personal_info:
   tagline: "Category theory and everything about it."
 
 current_position:
-  - title: "permanent Research Fellow"
+  - title: "Assistant Professor in Categorical Foundations and Their Applications"
     institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
     location: "Castrum Danorum, EE"
-    from: "Sep 2023"
+    from: "Jun 2026"
     description: "Research, teaching, organization of seminars."
 
 past_positions:
+  - title: "Researcher"
+    institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
+    location: "Castrum Danorum, EE"
+    from: "Sep 2023"
+    to: "May 2026"
+    description: "Research, teaching, organization of seminars."
   - title: "Freelance Consultant"
     institution: "PlantingSpace"
     location: "Remote"
     from: "Jan 2022"
     to: "Nov 2024"
-
     description: "Research in categorical probability theory and its implementations."
   - title: "Postdoctoral Fellow"
     institution: "Tallinna Tehnikaülikooli Küberneetika Instituut"
