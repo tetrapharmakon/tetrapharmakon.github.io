@@ -36,7 +36,6 @@ body {
   margin: 0 auto;
   padding: 20px;
   width: 70%;
-  max-width: 900px; 
 }
 
 /* Header styling */
@@ -166,6 +165,13 @@ nav {
 
 .subNavBtn:hover {
   background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+}
+
+.subNavBtn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--highlight-color);
+  outline-offset: 2px;
 }
 
 .subNavBtn.active {
@@ -608,6 +614,30 @@ html.dark-mode h2 {
 
 html.dark-mode .contact-map iframe {
   filter: invert(90%) hue-rotate(180deg);
+}
+
+@media print {
+  nav, footer, #theme-toggle, .contact-map iframe {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  .container, .publications-container, .notes-container,
+  .teaching-container, .cv-container {
+    max-width: 100%;
+    box-shadow: none;
+    background: white;
+  }
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  .subNavBtn.active {
+    color: black;
+  }
 }
 .notes-container {
   max-width: 70%;
