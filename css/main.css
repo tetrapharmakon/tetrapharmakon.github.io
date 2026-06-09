@@ -1,26 +1,23 @@
-/* Main website styling with refined aesthetics */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+/* Main website styling */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
 
 :root {
   --font-heading: "Oswald", sans-serif;
   --font-body: "Open Sans", sans-serif;
-  --primary-color: #2A2E35;        /* Charcoal Gray */
-  --secondary-color: #161A1D;      /* Deep Black-Gray */
-  --accent-color: #5A7D9A;         /* Desaturated Blue */
-  --highlight-color: #E63946;      /* Vibrant Red */
-  --background-color: #F4F4F4;     /* Soft Off-White */
-  --card-bg-color: #ffffff;        /* Pure White */
-  --text-color: #1E1E1E;           /* High Contrast Black */
-  --light-text: #5A7D9A;           /* Soft Blue-Grey */
-  --border-radius: 6px;            /* Slightly rounded for modern feel */
+  --font-nav: "Poppins", sans-serif;
+  --primary-color: #2A2E35;
+  --secondary-color: #161A1D;
+  --accent-color: #5A7D9A;
+  --highlight-color: #E63946;
+  --background-color: #F4F4F4;
+  --card-bg-color: #ffffff;
+  --text-color: #1E1E1E;
+  --light-text: #5A7D9A;
+  --border-radius: 6px;
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   --card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  --container-width: 960px;        /* Slightly wider for a spacious layout */
+  --container-max-width: 960px;
   --header-height: 64px;
-  /* --font-heading: "Montserrat", sans-serif; /* Change this for different headings */
-  /* --font-body: "Lora", serif; Change this for different body text */ 
 }
 
 /* Base styling */
@@ -36,11 +33,10 @@ body {
 
 /* Container for page content */
 .container {
-  max-width: var(--container-width);
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 20px;
-  width: 70%;
-  max-width: 900px; 
+  width: min(90%, var(--container-max-width));
 }
 
 /* Header styling */
@@ -58,7 +54,6 @@ header {
   gap: 16px;
   width: min(1100px, 96vw);
   max-width: none;
-  /* Small outer padding, no big whitespace */
   padding: 16px;
 }
 
@@ -115,16 +110,13 @@ header {
 
   #about-me .card-content {
     padding: 10px 6px;
-  }
 }
-
-
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--container-width);
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -149,7 +141,7 @@ nav {
   gap: 10px;
   padding: 15px 0;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-nav);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -167,8 +159,8 @@ nav {
 }
 
 .subNavBtn.active {
-  /* background-color: #007bff; Highlight active link */
-  color: #333;
+  color: var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
 }
 
 
@@ -420,21 +412,13 @@ footer {
 }
 
 
-/* Publications styling - refined aesthetics */
+/* Publications styling */
 .publications-container {
-  max-width: 70%;
+  max-width: min(90%, var(--container-max-width));
   margin: 0 auto;
 }
 
-.publication {
-  background-color: var(--card-bg-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  margin-bottom: 15px;
-  /* box-shadow: var(--card-shadow); */
-  border-left: 2px solid var(--highlight-color);
-  /* transition: transform 0.2s, box-shadow 0.2s; */
-}
+.publication,
 .preprint {
   background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
@@ -442,10 +426,6 @@ footer {
   margin-bottom: 15px;
   border-left: 2px solid var(--highlight-color);
 }
-/* .publication:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--card-hover-shadow);
-} */
 
 .pub-title {
   font-family: var(--font-heading);
@@ -536,25 +516,6 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  
-  nav ul {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  nav li {
-    margin: 5px 10px;
-  }
-  
-  .site-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .social-links {
-    margin-top: 15px;
-  }
 }
 
 /* Dark mode support */
@@ -597,7 +558,7 @@ footer {
   }
 }
 .notes-container {
-  max-width: 70%;
+  max-width: min(90%, var(--container-max-width));
   margin: 40px auto;
   padding: 20px;
   background: var(--card-bg-color);
@@ -615,7 +576,7 @@ footer {
 
 .note-card {
   background: var(--card-bg-color);
-  border-left: 5px solid var(--card-shadow);
+  border-left: 5px solid var(--accent-color);
   padding: 15px;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
@@ -630,8 +591,6 @@ footer {
 .note-title {
   margin: 0;
   font-family: var(--font-heading);
-  /* font-size: 1.1rem; */
-  /* font-weight: bold; */
 }
 
 .note-description {
@@ -655,7 +614,6 @@ footer {
 .note-link {
   text-decoration: none;
   color: var(--primary-color);
-  /* font-weight: bold; */
   transition: color 0.3s ease-in-out;
 }
 
@@ -665,8 +623,7 @@ footer {
 
 
 .teaching-container {
-  /* max-width: 900px; */
-  max-width: 70%;
+  max-width: min(90%, var(--container-max-width));
   margin: 40px auto;
   padding: 20px;
   background: var(--card-bg-color);
@@ -675,9 +632,8 @@ footer {
 }
 
 .teaching-item, .supervision-item {
-  /* border-left: 4px solid var(--highlight-color); */
-  padding: 8px 12px; /* Reduced padding */
-  margin-bottom: 10px; /* Less gap between items */
+  padding: 8px 12px;
+  margin-bottom: 10px;
   background: var(--background-color);
   border-radius: var(--border-radius);
 }
@@ -691,7 +647,6 @@ footer {
 .teaching-title, .supervision-title {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  /* font-weight: bold; */
   color: var(--primary-color);
   margin: 0;
 }
@@ -707,9 +662,7 @@ footer {
   font-size: 0.95rem;
   color: var(--text-color);
   line-height: 1.4;
-  /* margin-top: 3px; Reduced space */
-  padding-left: 5px; /* Slight indentation */
-  /* border-left: 3px solid var(--accent-color); Subtle left accent */
+  padding-left: 5px;
 }
 
 .supervision-student {
@@ -719,7 +672,7 @@ footer {
 
 
 .teaching-container, .magia-container {
-  border-left: 5px solid var(--accent-color); /* Desaturated Blue */
+  border-left: 5px solid var(--accent-color);
 }
 
 .cv-container {
@@ -778,7 +731,7 @@ footer {
 }
 
 .cv-dates {
-  background-color: var(--light-gray);
+  background-color: var(--background-color);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9em;
@@ -786,8 +739,7 @@ footer {
   white-space: nowrap;
 }
 .cv-institution {
-  /* font-style: italic; */
-  color: var(--text-muted); /* A lighter color to distinguish it */
+  color: var(--light-text);
   margin-top: 2px;
   font-size: 0.95em;
 }
