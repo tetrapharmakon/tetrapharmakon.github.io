@@ -1,22 +1,21 @@
 /* Main website styling */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 :root {
   --font-heading: "Oswald", sans-serif;
   --font-body: "Open Sans", sans-serif;
-  --font-nav: "Poppins", sans-serif;
-  --primary-color: #2A2E35;
-  --secondary-color: #161A1D;
-  --accent-color: #5A7D9A;
-  --highlight-color: #E63946;
-  --background-color: #F4F4F4;
-  --card-bg-color: #ffffff;
-  --text-color: #1E1E1E;
-  --light-text: #5A7D9A;
-  --border-radius: 6px;
+  --primary-color: #2A2E35;        /* Charcoal Gray */
+  --secondary-color: #161A1D;      /* Deep Black-Gray */
+  --accent-color: #5A7D9A;         /* Desaturated Blue */
+  --highlight-color: #E63946;      /* Vibrant Red */
+  --background-color: #F4F4F4;     /* Soft Off-White */
+  --card-bg-color: #ffffff;        /* Pure White */
+  --text-color: #1E1E1E;           /* High Contrast Black */
+  --light-text: #5A7D9A;           /* Soft Blue-Grey */
+  --border-radius: 6px;            /* Slightly rounded for modern feel */
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   --card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  --container-max-width: 960px;
+  --container-width: 960px;        /* Slightly wider for a spacious layout */
   --header-height: 64px;
 }
 
@@ -33,10 +32,11 @@ body {
 
 /* Container for page content */
 .container {
-  max-width: var(--container-max-width);
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 20px;
-  width: min(90%, var(--container-max-width));
+  width: 70%;
+  max-width: 900px; 
 }
 
 /* Header styling */
@@ -54,6 +54,7 @@ header {
   gap: 16px;
   width: min(1100px, 96vw);
   max-width: none;
+  /* Small outer padding, no big whitespace */
   padding: 16px;
 }
 
@@ -110,13 +111,16 @@ header {
 
   #about-me .card-content {
     padding: 10px 6px;
+  }
 }
+
+
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--container-max-width);
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -141,7 +145,7 @@ nav {
   gap: 10px;
   padding: 15px 0;
   font-size: 20px;
-  font-family: var(--font-nav);
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -159,8 +163,8 @@ nav {
 }
 
 .subNavBtn.active {
-  color: var(--highlight-color);
-  border-bottom: 2px solid var(--highlight-color);
+  /* background-color: #007bff; Highlight active link */
+  color: #333;
 }
 
 
@@ -412,13 +416,19 @@ footer {
 }
 
 
-/* Publications styling */
+/* Publications styling - refined aesthetics */
 .publications-container {
-  max-width: min(90%, var(--container-max-width));
+  max-width: 70%;
   margin: 0 auto;
 }
 
-.publication,
+.publication {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 2px solid var(--highlight-color);
+}
 .preprint {
   background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
@@ -516,6 +526,25 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+  
+  nav ul {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 5px 10px;
+  }
+  
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .social-links {
+    margin-top: 15px;
+  }
 }
 
 /* Dark mode support */
@@ -558,7 +587,7 @@ footer {
   }
 }
 .notes-container {
-  max-width: min(90%, var(--container-max-width));
+  max-width: 70%;
   margin: 40px auto;
   padding: 20px;
   background: var(--card-bg-color);
@@ -576,7 +605,7 @@ footer {
 
 .note-card {
   background: var(--card-bg-color);
-  border-left: 5px solid var(--accent-color);
+  border-left: 5px solid var(--card-shadow);
   padding: 15px;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
@@ -623,7 +652,7 @@ footer {
 
 
 .teaching-container {
-  max-width: min(90%, var(--container-max-width));
+  max-width: 70%;
   margin: 40px auto;
   padding: 20px;
   background: var(--card-bg-color);
@@ -672,7 +701,7 @@ footer {
 
 
 .teaching-container, .magia-container {
-  border-left: 5px solid var(--accent-color);
+  border-left: 5px solid var(--accent-color); /* Desaturated Blue */
 }
 
 .cv-container {
@@ -731,7 +760,7 @@ footer {
 }
 
 .cv-dates {
-  background-color: var(--background-color);
+  background-color: var(--light-gray);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9em;
@@ -739,7 +768,7 @@ footer {
   white-space: nowrap;
 }
 .cv-institution {
-  color: var(--light-text);
+  color: var(--text-muted);
   margin-top: 2px;
   font-size: 0.95em;
 }
