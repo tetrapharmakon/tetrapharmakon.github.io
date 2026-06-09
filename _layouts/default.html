@@ -74,5 +74,23 @@ layout: compress
         {% for script in site.js.late %}
             <script type="text/javascript" src="{{script}}"/></script>
         {% endfor %}
+        <script>
+            (function() {
+                var html = document.documentElement;
+                var stored = localStorage.getItem('theme');
+                if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    html.classList.add('dark-mode');
+                }
+                var btn = document.getElementById('theme-toggle');
+                if (btn) {
+                    btn.textContent = html.classList.contains('dark-mode') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+                    btn.addEventListener('click', function() {
+                        html.classList.toggle('dark-mode');
+                        localStorage.setItem('theme', html.classList.contains('dark-mode') ? 'dark' : 'light');
+                        btn.textContent = html.classList.contains('dark-mode') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+                    });
+                }
+            })();
+        </script>
     </body>
 </html>

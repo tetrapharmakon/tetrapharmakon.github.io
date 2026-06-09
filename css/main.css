@@ -1,5 +1,5 @@
 /* Main website styling */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
 
 :root {
   --font-heading: "Oswald", sans-serif;
@@ -7,7 +7,7 @@
   --primary-color: #2A2E35;        /* Charcoal Gray */
   --secondary-color: #161A1D;      /* Deep Black-Gray */
   --accent-color: #5A7D9A;         /* Desaturated Blue */
-  --highlight-color: #E63946;      /* Vibrant Red */
+  --highlight-color: #0D9488;      /* Teal */
   --background-color: #F4F4F4;     /* Soft Off-White */
   --card-bg-color: #ffffff;        /* Pure White */
   --text-color: #1E1E1E;           /* High Contrast Black */
@@ -88,10 +88,16 @@ header {
 #about-me .bio {
   text-align: justify;
   hyphens: auto;
+  color: #1E1E1E;
 }
 
 #about-me h1.name {
   font-size: 50px;
+  color: #2A2E35;
+}
+
+#about-me .motto {
+  color: #1E1E1E;
 }
 
 @media (max-width: 700px) {
@@ -167,6 +173,15 @@ nav {
   color: #333;
 }
 
+nav button.subNavBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 
 /* Main content area */
 main {
@@ -217,7 +232,11 @@ a {
 }
 
 a:hover {
-  color: #6b46c1;
+  color: #0F766E;
+}
+
+html.dark-mode a:hover {
+  color: #5EEAD4;
 }
 
 /* Link buttons */
@@ -242,7 +261,7 @@ a:hover {
 }
 
 .button.accent:hover {
-  background-color: #6b46c1;
+  background-color: #0F766E;
 }
 
 /* Card layouts for various content types */
@@ -364,7 +383,7 @@ footer {
 }
 
 .contact-info a:hover {
-  color: #6b46c1;
+  color: #0F766E;
 }
 
 /* Responsive adjustments */
@@ -547,44 +566,48 @@ footer {
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #1a202c;
-    --card-bg-color: #2d3748;
-    --text-color: #e2e8f0;
-    --light-text: #a0aec0;
-    --primary-color: #e2e8f0;
-    --highlight-color: #9f7aea;
-    --accent-color: #4a5568;
-  }
+/* Dark mode support (manual toggle via .dark-mode class) */
+html.dark-mode {
+  --background-color: #1a202c;
+  --card-bg-color: #2d3748;
+  --text-color: #e2e8f0;
+  --light-text: #a0aec0;
+  --primary-color: #e2e8f0;
+  --highlight-color: #2DD4BF;
+  --accent-color: #718096;
+}
 
-  .subNavBtn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+html.dark-mode .subNavBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-  .pub-link, .tag {
-    background-color: #4a5568;
-    border-color: #4a5568;
-    color: #e2e8f0;
-  }
+html.dark-mode .subNavBtn.active {
+  color: var(--highlight-color);
+}
 
-  .pub-link:hover {
-    background-color: var(--highlight-color);
-    border-color: var(--highlight-color);
-  }
+html.dark-mode .pub-link,
+html.dark-mode .tag {
+  background-color: #4a5568;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
 
-  footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-  }
+html.dark-mode .pub-link:hover {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+}
 
-  h1, h2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
+html.dark-mode footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-  .contact-map iframe {
-    filter: invert(90%) hue-rotate(180deg);
-  }
+html.dark-mode h1,
+html.dark-mode h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark-mode .contact-map iframe {
+  filter: invert(90%) hue-rotate(180deg);
 }
 .notes-container {
   max-width: 70%;
@@ -605,7 +628,7 @@ footer {
 
 .note-card {
   background: var(--card-bg-color);
-  border-left: 5px solid var(--card-shadow);
+  border-left: 5px solid var(--accent-color);
   padding: 15px;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
