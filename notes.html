@@ -1,16 +1,9 @@
 ---
 layout: default
+nav_active: Notes
 ---
 
-<nav>
-	<a href="index.html" class="subNavBtn active">Home</a>
-	<a href="stuff-i-do.html" class="subNavBtn">Math</a>
-	<a href="#contacts" class="subNavBtn">Contacts</a>
-	<a href="teaching.html" class="subNavBtn">Teaching</a>
-	Notes
-</nav>
-
-
+{% include nav.html %}
 
 <div class="notes-container" id="notes">
 	<h3>Notes, Drafts, Talks</h3>
@@ -55,28 +48,4 @@ layout: default
 	</div>
 </div>
 
-<footer>
-	<section id="contacts">
-		<div class="contact-container">
-			<div class="contact-map">
-				<iframe src="https://maps.google.com/maps?q=Akadeemia+tee+21B,+Tallinn,+Estonia&hl=en&output=embed"
-					width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-				</iframe>
-
-			</div>
-			<div class="contact-info">
-				<h2>Contacts</h2>
-				<h5>Fosco G. Loregian</h5>
-				<ul>
-					<li><strong>📍 Address:</strong> Akadeemia tee 21B | 12618 Tallinn | Estonia 🇪🇪</li>
-					<li><strong>📧 Email:</strong> <a
-							href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
-					<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
-					</li>
-					<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon"
-							target="_blank">tetrapharmakon</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-</footer>
+{% include footer.html %}
