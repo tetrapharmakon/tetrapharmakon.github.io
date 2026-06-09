@@ -13,8 +13,8 @@ title: Thesis Projects — Fosco G. Loregian
     margin-bottom: 20px;
   }
   .project {
-    background: white;
-    border: 1px solid #ddd;
+    background: var(--card-bg-color);
+    border: 1px solid var(--accent-color);
     border-radius: 10px;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -24,13 +24,14 @@ title: Thesis Projects — Fosco G. Loregian
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
   }
   .project-description {
     font-size: 1rem;
-    color: #333;
+    color: var(--text-color);
   }
   .project-type {
-    color: #999;
+    color: var(--light-text);
     font-weight: normal;
     font-size: 0.9em;
     margin-left: 0.5em;
