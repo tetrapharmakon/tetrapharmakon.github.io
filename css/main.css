@@ -46,9 +46,9 @@ body {
 /* Header styling */
 header {
   display: flex;
-  justify-content: center; /* Centers the .card horizontally */
-  align-items: center; /* Centers the .card vertically (if the header has a height) */
-  height: 100vh; /* Optional: Makes the header take up the full viewport height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* About-me header layout: photo left, text right (stack on mobile) */
@@ -144,13 +144,14 @@ header {
 /* Navigation */
 nav {
   display: flex;
-  justify-content: center; /* Centers nav links horizontally */
-  gap: 20px; /* Adds spacing between links */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 15px 0;
-  font-size: 20px; /* Bigger font size */
-  font-family: "Poppins", sans-serif; /* Nicer font (modern & clean) */
-  font-weight: 600; /* Slightly bold */
-  text-transform: uppercase; /* Makes it look more stylish */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .subNavBtn {
@@ -273,11 +274,10 @@ a:hover {
 }
 
 .card-image img {
-  max-width: 30%; /* Ensures image scales properly */
-  height: fit-content;
-    display: flex;
-  justify-content: center;
-  border-radius: 4px; /* Optional: Rounds the corners of the image */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
 }
 /* Grid layouts */
 .grid {
@@ -319,6 +319,7 @@ footer {
 
 .contact-map iframe {
   width: 100%;
+  max-width: 100%;
   height: 250px;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
@@ -372,6 +373,20 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  header {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  nav {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .subNavBtn {
+    padding: 8px 12px;
+  }
+
   .contact-container {
     flex-direction: column;
     text-align: center;
@@ -381,12 +396,26 @@ footer {
     width: 100%;
   }
 
+  .contact-map iframe {
+    height: 200px;
+  }
+
   .contact-info {
     padding: 15px;
   }
 
   .contact-info ul {
     padding: 0;
+  }
+
+  .publications-container,
+  .notes-container,
+  .teaching-container {
+    max-width: 95%;
+  }
+
+  #about-me h1.name {
+    font-size: 32px;
   }
 }
 
@@ -407,13 +436,11 @@ footer {
   /* transition: transform 0.2s, box-shadow 0.2s; */
 }
 .preprint {
-  background-color: var(--card-shadow);
+  background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
   padding: 20px;
   margin-bottom: 15px;
-  /* box-shadow: var(--card-shadow); */
   border-left: 2px solid var(--highlight-color);
-  /* transition: transform 0.2s, box-shadow 0.2s; */
 }
 /* .publication:hover {
   transform: translateY(-2px);
@@ -530,7 +557,7 @@ footer {
   }
 }
 
-/* Dark mode support - more refined palette
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1a202c;
@@ -540,39 +567,35 @@ footer {
     --primary-color: #e2e8f0;
     --highlight-color: #9f7aea;
     --accent-color: #4a5568;
-  } */
-  
-  /* .publication {
-    border-left: 2px solid var(--highlight-color);
   }
-  
-  .card, .publication {
-    border-color: rgba(255, 255, 255, 0.05);
+
+  .subNavBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
-  
+
   .pub-link, .tag {
     background-color: #4a5568;
     border-color: #4a5568;
     color: #e2e8f0;
   }
-  
+
   .pub-link:hover {
     background-color: var(--highlight-color);
     border-color: var(--highlight-color);
   }
-  
-  header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  
+
   footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
-  
+
   h1, h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-} */
+
+  .contact-map iframe {
+    filter: invert(90%) hue-rotate(180deg);
+  }
+}
 .notes-container {
   max-width: 70%;
   margin: 40px auto;
