@@ -1,14 +1,11 @@
-title: Focso Lorengia
-subtitle: “When you meet your Buddha, kill him”
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
-email: your-email@domain.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Fosco Loregian
+subtitle: "逢佛殺佛"
+description: Category theory and everything about it.
+baseurl: ""
+url: "https://tetrapharmakon.github.io"
+email: fosco.loregian@gmail.com
+twitter_username: tetrapharmakon
+github_username: tetrapharmakon
 
 favicon: assets/favicon.png
 
@@ -23,22 +20,20 @@ js:
 
 markdown: kramdown
 
-keywords: nope
-description: nope
+keywords: category theory, mathematics, research
+description: Personal academic website of Fosco Loregian, mathematician working in category theory.
 
 collections:
   talks:
   organized:
   dida:
   misc:
-  # -
   automata:
   coends:
   homotopy:
   miscpaper:
   petri:
   twocat:
-  # -
   refcards:
 
 sass:
@@ -49,10 +44,6 @@ exclude:
   - Gemfile.lock
   - .gitignore
   - plugins
-  # olde stuffe
-  - itaca
-  - old_projects
-  - old_PSSL103
   - node_modules
   - vendor/bundle/
   - vendor/cache/
