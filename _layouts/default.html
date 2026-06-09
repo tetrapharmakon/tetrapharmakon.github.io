@@ -101,7 +101,15 @@ layout: compress
                         html.classList.toggle('dark-mode');
                         localStorage.setItem('theme', html.classList.contains('dark-mode') ? 'dark' : 'light');
                         btn.textContent = html.classList.contains('dark-mode') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+                        swapProfilePic();
                     });
+                }
+                swapProfilePic();
+                function swapProfilePic() {
+                    var pic = document.getElementById('profile-pic');
+                    if (pic) {
+                        pic.src = html.classList.contains('dark-mode') ? '../assets/headphones_me.jpg' : '../assets/hanten_me.jpg';
+                    }
                 }
             })();
         </script>
