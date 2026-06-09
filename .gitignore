@@ -9,11 +9,12 @@
 #### Jekyll.gitignore files ####################################################
 #_includes
 _site/
+site/
+old_junk/
+old_projects/
 .sass-cache/
 .jekyll-metadata
-# _includes/html/*
-# !_includes/html/simple.html
-# !_includes/html/Agda.css
+# _includes/html/ was removed (unused Agda HTML files)
 
 #### Ruby.gitignore files ######################################################
 
