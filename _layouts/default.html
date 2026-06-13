@@ -3,14 +3,27 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html{% if page.language %} lang="{{page.language}}"{% endif %}>
+<html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="author" content="{{site.author.name}}">
-        <title>{{page.title}}</title>
+        <meta name="author" content="{{site.title}}">
+        <meta name="description" content="{{site.description}}">
+        <meta name="keywords" content="{{site.keywords}}">
+        <title>{{page.title | default: site.title}}</title>
+
+        <link rel="canonical" href="{{site.url}}{{page.url}}">
+
+        <meta property="og:title" content="{{page.title | default: site.title}}">
+        <meta property="og:description" content="{{site.description}}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{site.url}}{{page.url}}">
+        <meta property="og:site_name" content="{{site.title}}">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@{{site.twitter_username}}">
 
         {% unless site.feedless %}
             <link rel='alternate' type='application/atom+xml'
@@ -45,12 +58,12 @@ layout: compress
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js"
             integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous" defer></script>
 
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/contrib/auto-render.min.js"
             integrity="sha384-cXpztMJlr2xFXyDSIfRWYSMVCXZ9HeGXvzyKTYrn03rsMAlOtIQVzjty5ULbaP8L"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous" defer></script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function() {
@@ -74,5 +87,31 @@ layout: compress
         {% for script in site.js.late %}
             <script type="text/javascript" src="{{script}}"/></script>
         {% endfor %}
+        <script>
+            (function() {
+                var html = document.documentElement;
+                var stored = localStorage.getItem('theme');
+                if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    html.classList.add('dark-mode');
+                }
+                var btn = document.getElementById('theme-toggle');
+                if (btn) {
+                    btn.textContent = html.classList.contains('dark-mode') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+                    btn.addEventListener('click', function() {
+                        html.classList.toggle('dark-mode');
+                        localStorage.setItem('theme', html.classList.contains('dark-mode') ? 'dark' : 'light');
+                        btn.textContent = html.classList.contains('dark-mode') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+                        swapProfilePic();
+                    });
+                }
+                swapProfilePic();
+                function swapProfilePic() {
+                    var pic = document.getElementById('profile-pic');
+                    if (pic) {
+                        pic.src = html.classList.contains('dark-mode') ? '../assets/headphones_me.jpg' : '../assets/hanten_me.jpg';
+                    }
+                }
+            })();
+        </script>
     </body>
 </html>

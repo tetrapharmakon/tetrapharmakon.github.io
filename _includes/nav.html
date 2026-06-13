@@ -1,0 +1,8 @@
+<nav>
+  {% if page.nav_active == "Home" %}<span class="subNavBtn active">Home</span>{% else %}<a href="index.html" class="subNavBtn">Home</a>{% endif %}
+  {% if page.nav_active == "Math" %}<span class="subNavBtn active">Math</span>{% else %}<a href="stuff-i-do.html" class="subNavBtn">Math</a>{% endif %}
+  {% if page.nav_active == "Contacts" %}<span class="subNavBtn active">Contacts</span>{% else %}<a href="index.html#contacts" class="subNavBtn">Contacts</a>{% endif %}
+  {% if page.nav_active == "Teaching" %}<span class="subNavBtn active">Teaching</span>{% else %}<a href="teaching.html" class="subNavBtn">Teaching</a>{% endif %}
+  {% if page.nav_active == "Notes" %}<span class="subNavBtn active">Notes</span>{% else %}<a href="notes.html" class="subNavBtn">Notes</a>{% endif %}
+  <button id="theme-toggle" class="subNavBtn" aria-label="Toggle dark mode">🌙</button>
+</nav>

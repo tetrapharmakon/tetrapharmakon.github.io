@@ -1,50 +1,54 @@
 ---
 layout: default
+title: Thesis Projects — Fosco G. Loregian
 ---
 
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      padding: 8rem;
-    }
-    .project {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-    .project-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    .project-description {
-      font-size: 1rem;
-      color: #333;
-    }
-    .project-type {
-  color: #999;
-  font-weight: normal;
-  font-size: 0.9em;
-  margin-left: 0.5em;
-}
-.project-references {
-  margin-top: 0.5rem;
-  font-size: 0.95em;
-}
-.project-references ul {
-  padding-left: 1.2rem;
-  margin: 0.3rem 0;
-}
-  </style>
-</head>
-<body>
+<style>
+  .project-list {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .project-list h1 {
+    margin-bottom: 20px;
+  }
+  .project {
+    background: var(--card-bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  .project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  .project-description {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  .project-type {
+    color: var(--light-text);
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+  }
+  .project-references {
+    margin-top: 0.5rem;
+    font-size: 0.95em;
+  }
+  .project-references ul {
+    padding-left: 1.2rem;
+    margin: 0.3rem 0;
+  }
+</style>
+
+{% include nav.html %}
+
+<div class="project-list">
 
   <h1>Thesis Projects</h1>
 <p>
@@ -83,5 +87,6 @@ This list is meant to counter the narrative. Instead of the dominant view, I'd l
     </div>
   {% endfor %}
 
-</body>
-</html>
+</div>
+
+{% include footer.html %}

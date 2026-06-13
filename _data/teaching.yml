@@ -1,6 +1,6 @@
 teaching_activities:
 # projects_4_students
-  - title: "ITI9200 - Sissejuhatus kategooriateooriasse | <a href='./CourseCategoryTheory-2026.html'>🌐</a>"
+  - title: "ITI9200 - Sissejuhatus kategooriateooriasse | <a href='./CourseCategoryTheory.html'>🌐</a>"
     date: "Spring semester"
     description: "An introductory course to category theory."
   - title: "Thesis Projects | <a href='./projects_4_students.html'>🌐</a>"
@@ -25,7 +25,7 @@ teaching_activities:
     description: "The 103rd Peripathetic Seminar on Sheaves and Logic took place in Brno."
     date: "April 2018"
 
-  - title: "Elements of Finite Mathematics (at <ahref='https://www.uwo.ca/'>🌐 UWO</a>)"
+  - title: "Elements of Finite Mathematics (at <a href='https://www.uwo.ca/'>🌐 UWO</a>)"
     description: "Techniques of counting, probability, discrete and continuous random variables."
     date: "Autumn 2016"
 

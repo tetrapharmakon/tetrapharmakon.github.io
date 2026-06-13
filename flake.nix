@@ -17,10 +17,16 @@
 
       inc_plugins = { jekyll-feed = "0.17"; };
 
+      extra_gems = { jekyll-sass-converter = "2"; };
+
       # Generation of the Gemfile
       generate_gemfile = let
         gems = builtins.concatStringsSep "\n" (pkgs.lib.attrsets.mapAttrsToList
           (name: version: ''gem "${name}", "~> ${version}"'') inc_gems);
+
+        extras = builtins.concatStringsSep "\n"
+          (pkgs.lib.attrsets.mapAttrsToList
+            (name: version: ''gem "${name}", "~> ${version}"'') extra_gems);
 
         plugins = builtins.concatStringsSep "\n"
           (pkgs.lib.attrsets.mapAttrsToList
@@ -32,6 +38,9 @@
 
         # Gems dependencies to be installed
         ${gems}
+
+        # Extra pinned gems
+        ${extras}
 
         # Jekyll plugins
         group :jekyll_plugins do
@@ -63,7 +72,7 @@
         # nix run -> serves the website locally
         default = simple_script "serve_blog" [ ] ''
           echo "Bundler env: ${env}"
-          ${env}/bin/bundler exec -- jekyll serve --trace
+          ${env}/bin/jekyll serve --trace --config config.yml
         '';
 
         # nix run .#generate -> Re-generate the gemfile, lockfile, build environment and gemset.nix

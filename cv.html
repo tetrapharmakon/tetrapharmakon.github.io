@@ -1,24 +1,14 @@
 ---
 layout: default
+title: CV — Fosco G. Loregian
+nav_active: Home
 ---
 
-<nav>
-	<a href="index.html" class="subNavBtn active">Home</a>
-	<a href="stuff-i-do.html" class="subNavBtn">Math</a>
-	<a href="#contacts" class="subNavBtn">Contacts</a>
-	<a href="teaching.html" class="subNavBtn">Teaching</a>
-	<a href="notes.html" class="subNavBtn">Notes</a>
-</nav>
+{% include nav.html %}
 
 <div class="cv-container">
 	<h1>{{ site.data.cv.personal_info.name }}</h1>
 	<p class="tagline">{{ site.data.cv.personal_info.tagline }}</p>
-	<!-- 
-	<p class="contact">
-					📧 <a href="mailto:{{ site.data.cv.personal_info.email }}">{{ site.data.cv.personal_info.email }}</a> | 
-					🌍 <a href="{{ site.data.cv.personal_info.website }}" target="_blank">Website</a> | 
-					🖥 <a href="{{ site.data.cv.personal_info.github }}" target="_blank">GitHub</a>
-	</p> -->
 
 	<h2>Current Position</h2>
 	{% for position in site.data.cv.current_position %}
@@ -61,51 +51,6 @@ layout: default
 		</div>
 </div>
 	{% endfor %}
-<!-- 
-	<h2>Teaching</h2>
-	{% for course in site.data.cv.teaching %}
-	<div class="cv-section">
-					<h3>{{ course.title }}</h3>
-					<p>{{ course.description }}</p>
-					<p><em>{{ course.location }} – {{ course.date }}</em></p>
-	</div>
-	{% endfor %} -->
-	
-	<!-- <h2>Skills</h2>
-	<ul>
-					{% for skill in site.data.cv.skills %}
-					<li>{{ skill }}</li>
-					{% endfor %}
-	</ul> -->
 </div>
 
-
-<footer>
-	<section id="contacts">
-			<div class="contact-container">
-					<div class="contact-map">
-						<iframe 
-						src="https://maps.google.com/maps?q=Akadeemia+tee+21B,+Tallinn,+Estonia&hl=en&output=embed" 
-						width="400" 
-						height="250" 
-						style="border:0;" 
-						allowfullscreen="" 
-						loading="lazy">
-				</iframe>
-				
-					</div>
-					<div class="contact-info">
-							<h2>Contacts</h2>
-							<h5>Fosco G. Loregian</h5>
-							<ul>
-									<li><strong>📍 Address:</strong> Akadeemia tee 21B | 12618 Tallinn | Estonia 🇪🇪</li>
-									<li><strong>📧 Email:</strong> <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
-									<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
-									</li>
-									<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon" target="_blank">tetrapharmakon</a></li>
-							</ul>
-					</div>
-			</div>
-	</section>
-</footer>
-
+{% include footer.html %}
