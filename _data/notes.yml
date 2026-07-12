@@ -2,7 +2,10 @@
   url: "stuff/beamers/bicat-automata-tallcats-talk.pdf"
   description: "Bicategories of automata, automata in bicategories"
   type: "talk"
-
+- title: "The Rosen Fibration"
+  url: "stuff/beamers/ACT26-rosen.pdf"
+  description: "Putting some category theory, for real, in Robert Rosen"
+  type: "talk"
 - title: "Chu Reading Group Talk (Part 1)"
   url: "stuff/beamers/chu-reading-group-talk.pdf"
   description: "a hint of Chu"
