@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+
+<main class="blog-container">
+  <article>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time>{% if page.tags.size > 0 %} &middot; {{ page.tags | join: ', ' | escape }}{% endif %}</p>
+    <div class="post-content">
+      {{ content }}
+    </div>
+    <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; All posts</a></p>
+  </article>
+</main>
+
+{% include footer.html %}

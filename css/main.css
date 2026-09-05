@@ -144,6 +144,10 @@ header {
 
 /* Navigation */
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -860,4 +864,89 @@ html.dark-mode .contact-map iframe {
 
 .cv-contact a:hover {
   color: var(--highlight-color);
+}
+
+/* Blog: existing colors and cards, with a comfortable reading width. */
+.blog-container {
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  max-width: 780px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--card-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  overflow-wrap: anywhere;
+}
+
+.blog-entry {
+  margin-top: 24px;
+}
+
+.post-meta {
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+.post-content {
+  line-height: 1.8;
+}
+
+.post-content h2,
+.post-content h3 {
+  margin-top: 1.5em;
+}
+
+.post-content [id] {
+  scroll-margin-top: 10rem;
+}
+
+.post-content a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content pre,
+.post-content table,
+.blog-container .katex-display {
+  overflow-x: auto;
+}
+
+.post-content pre {
+  padding: 16px;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.post-content table {
+  display: block;
+  border-collapse: collapse;
+}
+
+.post-content th,
+.post-content td {
+  padding: 8px 12px;
+  border: 1px solid var(--light-text);
+}
+
+.post-content blockquote {
+  margin-left: 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.post-back {
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .blog-container {
+    margin: 24px auto;
+    padding: 16px;
+  }
 }

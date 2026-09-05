@@ -10,29 +10,29 @@ layout: compress
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="author" content="{{site.title}}">
-        <meta name="description" content="{{site.description}}">
+        <meta name="description" content="{{ page.description | default: site.description | escape }}">
         <meta name="keywords" content="{{site.keywords}}">
-        <title>{{page.title | default: site.title}}</title>
+        <title>{{ page.title | default: site.title | escape }}</title>
 
-        <link rel="canonical" href="{{site.url}}{{page.url}}">
+        <link rel="canonical" href="{{ page.url | absolute_url }}">
 
-        <meta property="og:title" content="{{page.title | default: site.title}}">
-        <meta property="og:description" content="{{site.description}}">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="{{site.url}}{{page.url}}">
+        <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+        <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+        <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+        <meta property="og:url" content="{{ page.url | absolute_url }}">
         <meta property="og:site_name" content="{{site.title}}">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@{{site.twitter_username}}">
 
         {% unless site.feedless %}
-            <link rel='alternate' type='application/atom+xml'
-                title='Atom feed for {{site.url}}'
-                href='{{site.baseurl}}/atom.xml'>
+            <link rel="alternate" type="application/rss+xml"
+                title="{{ site.title | escape }}: Thoughts"
+                href="{{ '/feed.xml' | relative_url }}">
         {% endunless %}
 
         {% if site.favicon %}
-            <link rel="icon" type="image/png" href="{{site.favicon}}">
+            <link rel="icon" type="image/png" href="{{ site.favicon | relative_url }}">
         {% endif %}
 
         <link
@@ -43,10 +43,10 @@ layout: compress
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?display=swap&family=Lato|Oswald|Noto+Color+Emoji"/>
 
-        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}"/>
 
         {% for script in site.js.early %}
-            <script type="text/javascript" src="{{script}}"/></script>
+            <script type="text/javascript" src="{{ script | relative_url }}"></script>
         {% endfor %}
 
         <link
@@ -67,6 +67,16 @@ layout: compress
 
         <script>
             document.addEventListener("DOMContentLoaded", function() {
+                if (typeof katex === 'undefined' || typeof renderMathInElement === 'undefined') return;
+                /* Kramdown emits math/tex scripts for Markdown equations. */
+                document.querySelectorAll('script[type^="math/tex"]').forEach(function(math) {
+                    var element = document.createElement(math.type.indexOf('mode=display') !== -1 ? 'div' : 'span');
+                    katex.render(math.textContent, element, {
+                        displayMode: math.type.indexOf('mode=display') !== -1,
+                        throwOnError: false
+                    });
+                    math.parentNode.replaceChild(element, math);
+                });
                 renderMathInElement(
                     document.body,
                     {
@@ -85,7 +95,7 @@ layout: compress
     <body>
         {{content}}
         {% for script in site.js.late %}
-            <script type="text/javascript" src="{{script}}"/></script>
+            <script type="text/javascript" src="{{ script | relative_url }}"></script>
         {% endfor %}
         <script>
             (function() {
@@ -108,7 +118,7 @@ layout: compress
                 function swapProfilePic() {
                     var pic = document.getElementById('profile-pic');
                     if (pic) {
-                        pic.src = html.classList.contains('dark-mode') ? '../assets/headphones_me.jpg' : '../assets/hanten_me.jpg';
+                        pic.src = html.classList.contains('dark-mode') ? {{ '/assets/headphones_me.jpg' | relative_url | jsonify }} : {{ '/assets/hanten_me.jpg' | relative_url | jsonify }};
                     }
                 }
             })();

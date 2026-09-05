@@ -1,6 +1,5 @@
 title: Fosco Loregian
 subtitle: "逢佛殺佛"
-description: Category theory and everything about it.
 baseurl: ""
 url: "https://tetrapharmakon.github.io"
 email: fosco.loregian@gmail.com
@@ -13,12 +12,19 @@ js:
     early:
     late:
         - js/jquery.min.js
-        - js/jquery.scrollme.min.js
-        - js/stickUp.min.js
         - js/fchoue.js
         - js/bibtex-copy-button.js
 
 markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav_active: Blog
+      permalink: /blog/:year/:month/:day/:title/
 
 keywords: category theory, mathematics, research
 description: Personal academic website of Fosco Loregian, mathematician working in category theory.
@@ -40,6 +46,7 @@ sass:
   style: compressed
 
 exclude:
+  - README.md
   - Gemfile
   - Gemfile.lock
   - .gitignore

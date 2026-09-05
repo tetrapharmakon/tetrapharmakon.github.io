@@ -7,6 +7,7 @@
 *.bz
 
 #### Jekyll.gitignore files ####################################################
+/README.md
 #_includes
 _site/
 site/
@@ -14,6 +15,7 @@ old_junk/
 old_projects/
 .sass-cache/
 .jekyll-metadata
+.jekyll-cache/
 # _includes/html/ was removed (unused Agda HTML files)
 
 #### Ruby.gitignore files ######################################################

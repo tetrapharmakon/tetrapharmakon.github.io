@@ -1,0 +1,28 @@
+---
+layout: default
+title: Thoughts
+nav_active: Blog
+permalink: /blog/
+---
+
+{% include nav.html %}
+
+<main class="blog-container">
+  <h1>Thoughts</h1>
+  <p><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>
+  {% for post in site.posts %}
+  <article class="note-card blog-entry">
+    <h2 class="note-title"><a class="note-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%-d %B %Y' }}</time></p>
+    {% if post.description %}
+    <p>{{ post.description | escape }}</p>
+    {% else %}
+    {{ post.excerpt }}
+    {% endif %}
+  </article>
+  {% else %}
+  <p>No posts yet.</p>
+  {% endfor %}
+</main>
+
+{% include footer.html %}

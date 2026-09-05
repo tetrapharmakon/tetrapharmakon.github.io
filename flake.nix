@@ -72,7 +72,7 @@
         # nix run -> serves the website locally
         default = simple_script "serve_blog" [ ] ''
           echo "Bundler env: ${env}"
-          ${env}/bin/jekyll serve --trace --config config.yml
+          ${env}/bin/jekyll serve --trace "$@"
         '';
 
         # nix run .#generate -> Re-generate the gemfile, lockfile, build environment and gemset.nix

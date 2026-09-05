@@ -1,12 +1,13 @@
 ---
 layout: default
 title: Fosco G. Loregian
+nav_active: Home
 ---
 
 <header id="about-me">
 	<div class="card">
   <div class="card-image">
-    <img src="../assets/hanten_me.jpg" alt="Portrait" id="profile-pic">
+    <img src="{{ '/assets/hanten_me.jpg' | relative_url }}" alt="Portrait" id="profile-pic">
   </div>
   <div class="card-content">
     <h1 class="name">{{ site.data.profile.name }}</h1>
@@ -18,44 +19,6 @@ title: Fosco G. Loregian
 
 </header>
 <br>
-<nav>
-	<!-- <a href="#about-me" class="subNavBtn active">About</a> -->
-	<a href="stuff-i-do.html" class="subNavBtn">Math</a>
-	<a href="index.html#contacts" class="subNavBtn">Contacts</a>
-	<a href="teaching.html" class="subNavBtn">Teaching</a>
-	<a href="notes.html" class="subNavBtn">Notes</a>
-	<button id="theme-toggle" class="subNavBtn" aria-label="Toggle dark mode">🌙</button>
-</nav>
+{% include nav.html %}
 
-
-
-
-
-<footer>
-	<section id="contacts">
-			<div class="contact-container">
-					<div class="contact-map">
-						<iframe 
-						src="https://maps.google.com/maps?q=Akadeemia+tee+15a,+Tallinn,+Estonia&hl=en&output=embed" 
-						width="400" 
-						height="250" 
-						style="border:0;" 
-						allowfullscreen="" 
-						loading="lazy">
-				</iframe>
-				
-					</div>
-					<div class="contact-info">
-							<h2>Contacts</h2>
-							<h5>Fosco G. Loregian</h5>
-							<ul>
-									<li><strong>📍 Address:</strong> Akadeemia tee 15a | 12618 Tallinn | Estonia 🇪🇪</li>
-									<li><strong>📧 Email:</strong> <a href="mailto:fosco.loregian@gmail.com">fosco.loregian@gmail.com</a></li>
-									<li><strong>📧 Email:</strong> <a href="mailto:folore@ttu.ee">folore@ttu.ee</a>
-									</li>
-									<li><strong>💻 GitHub:</strong> <a href="https://github.com/tetrapharmakon" target="_blank">tetrapharmakon</a></li>
-							</ul>
-					</div>
-			</div>
-	</section>
-</footer>
+{% include footer.html %}
