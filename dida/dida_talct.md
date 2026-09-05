@@ -6,4 +6,4 @@ status: 🎓
 title: Introduction to category theory ITI9200
 ---
 
-ITI9200 is a course on basic category theory I teach at TalTech. All the information is published [here](CourseCategoryTheory.html).
+ITI9200 is a course on basic category theory I teach at TalTech. Materials from the completed Spring 2026 course are available [here]({{ '/CourseCategoryTheory-2026.html' | relative_url }}).

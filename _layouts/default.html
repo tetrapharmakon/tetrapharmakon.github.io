@@ -44,6 +44,9 @@ layout: compress
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?display=swap&family=Lato|Oswald|Noto+Color+Emoji"/>
 
         <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}"/>
+        {% if page.stylesheet %}
+            <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}"/>
+        {% endif %}
 
         {% for script in site.js.early %}
             <script type="text/javascript" src="{{ script | relative_url }}"></script>
