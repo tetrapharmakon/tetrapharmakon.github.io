@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 
 # Gems dependencies to be installed
-gem "activesupport", "~> 7.2.3.1"
+gem "activesupport", "~> 8.0.5.2"
 gem "jekyll", "~> 4.3"
 gem "minima", "~> 2.5"
 gem "webrick", "~> 1.8"
